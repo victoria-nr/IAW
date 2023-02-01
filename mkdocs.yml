@@ -55,6 +55,7 @@ plugins:
 extra_css:
   - stylesheets/extra.css
 
-analytics: 
-    provider: google 
-    property: G-3NX5MD5C8H
+extra:
+  analytics: 
+      provider: google 
+      property: G-3NX5MD5C8H
