@@ -7,3 +7,4 @@ Apuntes y prácticas del módulo **Despliegue de aplicaciones web** de <u>2º de
 5. Control de versiones
 6. Contenedores
 7. CI/CD (Integración y despliegue continuo)
+8. AWS
