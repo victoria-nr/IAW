@@ -56,4 +56,8 @@ nav:
         - cicd.md
       - Prácticas:
         - ... | P7.*.md    
+    - Tema 8:
+      - Teoría:
+        - aws.md    
+
 
