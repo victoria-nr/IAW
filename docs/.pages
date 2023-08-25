@@ -1,4 +1,8 @@
 nav:
+    - Talleres de introducción:
+      - tallerGitIntro.md
+      - tallerGitRamasUniones.md
+      - tallerMarkdown.md
     - Tema 1:
       - Teoría:
         - debian_teoria.md

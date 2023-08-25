@@ -1,5 +1,5 @@
-site_name: Despliegue de aplicaciones web
-site_url: https://victoria-nr.github.io/DAW
+site_name: Implantación de aplicaciones web
+site_url: https://victoria-nr.github.io/IAW
 
 theme:
   name: material
