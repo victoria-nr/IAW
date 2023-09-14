@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/commands/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/P1.1.InstallServWebLAMP/">
       
       
-        <link rel="prev" href="../cicd/">
+        <link rel="prev" href="../P1.5/">
       
       
-        <link rel="next" href="../containers/">
+        <link rel="next" href="../P1.2.PHPMyAdmin/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Comandos de git - Implantación de aplicaciones web</title>
+        <title>Práctica 1:Instalación de un servidor LAMP - Implantación de aplicaciones web</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-de-git" class="md-skip">
+        <a href="#que-vas-a-aprender-en-este-taller" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos de git
+              Práctica 1:Instalación de un servidor LAMP
             
           </span>
         </div>
@@ -430,14 +430,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -446,7 +448,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           3. Implantación aplicaciones web PHP
@@ -457,11 +459,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../P1.1.InstallServWebLAMP/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Práctica 1:Instalación de un servidor LAMP
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Práctica 1:Instalación de un servidor LAMP
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-vas-a-aprender-en-este-taller" class="md-nav__link">
+    ¿Qué vas a aprender en este taller?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-tienes-que-hacer" class="md-nav__link">
+    ¿Qué tienes que hacer?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -530,83 +576,122 @@
                   
 
 
-<h1 id="comandos-de-git">Comandos de git</h1>
-<p>Esta sección describe algunos de los comandos más interesantes de git</p>
-<h2 id="git-stash-reserva">Git stash (reserva)</h2>
-<p>La orden <code>git stash</code> nos permite salvar momentáneamente el espacio de trabajo cuando tenemos que cambiar de rama o preparar la rama actual para sincronizar cambios.</p>
-<p>Las operaciones más importantes que podemos hacer con <code>git stash</code> son:</p>
-<h3 id="git-stash-save">git stash save</h3>
-<p>Es equivalente a poner solo <code>git stash</code> pero nos permite realizar más acciones como:</p>
-<div class="highlight"><pre><span></span><code>git stash save &quot;Tu mensaje&quot;
-git stash save -u
+  <h1>Práctica 1:Instalación de un servidor LAMP</h1>
+
+<h2 id="que-vas-a-aprender-en-este-taller">¿Qué vas a aprender en este taller?</h2>
+<ul>
+<li>A instalar un servidor LAMP que nos permita el despliegue de aplicaciones PHP.</li>
+</ul>
+<h2 id="que-tienes-que-hacer">¿Qué tienes que hacer?</h2>
+<p>Realiza esta tarea en una máquina virtual. Puedes usar Vagrant para configurarla con el sistema operativo Ubuntu Server 22.04. Si utilizas la MV del tema anterior, recuerda que Nginx está escuchando en el puerto 80, por tanto, desactiva Nginx para que Apache pueda escuchar en el puerto 80.</p>
+<p>El acrónimo <em>LAMP</em> se refiere a un entorno configurado en un servidor que nos posibilita servir aplicaciones web escritas en PHP.</p>
+<p>El entorno que vamos a configurar se consigue mediante la unión de las siguientes tecnologías:</p>
+<ul>
+<li><strong>L</strong>inux, el sistema operativo;</li>
+<li><strong>A</strong>pache, el servidor web;</li>
+<li><strong>M</strong>ySQL, <strong>M</strong>ariaDB, el gestor de bases de datos;</li>
+<li><strong>P</strong>HP el lenguajes de programación.</li>
+</ul>
+<p>Ahora vamos a instalar los paquetes necesarios para tener un entorno LAMP en Ubuntu Server 22.04. Recuerda actualizar los paquetes disponibles con:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div></p>
+<ol>
+<li>
+<p>Realiza la instalación del servidor de base de datos:</p>
+<div class="highlight"><pre><span></span><code>apt install mariadb-server
 </code></pre></div>
-<p>El parámetro <code>-u</code> permite que se almacen también los ficheros sin seguimiento previo (<em>untracked</em> en inglés, aquellos ficheros que no se han metido nunca en el repositorio).</p>
-<h3 id="git-stash-list">git stash list</h3>
-<p>Permite mostrar la pila del stash.</p>
-<div class="highlight"><pre><span></span><code>$ git stash list
-stash@{0}: On master: Stash con mensaje
-stash@{1}: WIP on master: 4ab21df First commit
+<p>Por defecto el usuario <code>root</code> no tiene contraseña, para acceder necesitaremos hacerlo con el root del sistema. Es muy recomendable ejecutar el programa <code>mariadb-secure-installation</code> para configurar la base de datos de manera segura, por ejemplo para indicar una contraseña al root.</p>
+<p>Si necesitas crear una base de datos y un usuario que tenga acceso a la misma:</p>
+<div class="highlight"><pre><span></span><code>mysql -u root -p
+CREATE DATABASE newdb;
+CREATE USER &#39;username&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;userpassword&#39;;
+GRANT ALL PRIVILEGES ON newdb.* to &#39;username&#39;@&#39;localhost&#39;;
+FLUSH PRIVILEGES;
+quit
 </code></pre></div>
-<h3 id="git-stash-apply">git stash apply</h3>
-<p>Esta orden coge el stash que está arriba en la pila y lo aplica al espacio de trabajo actual. En este caso siempre es <code>stash@{0}</code>. El stash permanece en la pila.</p>
-<p>Se puede indicar como parámetro un stash en concreto.</p>
-<h3 id="git-stash-pop">git stash pop</h3>
-<p>Funciona igual que <code>git apply</code> con la diferencia de que el stash sí se borra de la pila.</p>
-<h3 id="git-stash-show">git stash show</h3>
-<p>Muestra un resumen de los ficheros que se han modificado en ese stash.</p>
-<div class="highlight"><pre><span></span><code>$ git stash show
-A.txt | 1 +
-B.txt | 3 +++
-2 file changed, 4 insertions(+)
+</li>
+<li>
+<p>Instalación de Apache y PHP. A continuación instalamos el interprete de PHP. Al menos instalamos la librerías de PHP necesarias para conectar los programas PHP con la base de datos (dependiendo de la aplicación que instalemos necesitaremos instalar las librerías PHP necesarias).</p>
+<p>También instalamos el servidor web. Además vamos a instalar el módulo que permite que apache2 interprete PHP (es decir, apache2 hará el papel de servidor web y de servidor de aplicaciones).</p>
+<div class="highlight"><pre><span></span><code>apt install apache2 libapache2-mod-php php php-mysql
 </code></pre></div>
-<p>Para ver los cambios podemos usar el parámetro <code>-p</code></p>
-<div class="highlight"><pre><span></span><code>$ git stash show -p
---- a/A.txt
-+++ b/A.txt
-@@ -45,6 +45,7 @@ nav:
-+ This is a change
+<ul>
+<li><code>apache2</code>: Servidor web apache2.</li>
+<li><code>libapache2-mod-php</code>: Módulo de apache2 que le permite ejecutar el código PHP. Es decir, apache2 será servidor web y servidor de aplicaciones PHP.</li>
+<li><code>php</code>: Es un metapaquete que apunta al paquete de Ubuntu 22.04, en este caso apunta al paquete <code>php8.1</code>.</li>
+<li><code>php-mysql</code>: Librería PHP que posibilita el acceso a la base de datos.</li>
+</ul>
+</li>
+<li>
+<p>El directorio web por defecto de apache es <code>/var/www/html</code> (el DocumentRoot), que inicialmente contiene el fichero <code>index.html</code>. Comprueba que apache está funcionando escribiendo en la barra de direcciones del navegador la IP de tu servidor.
+    Recuerda que los ficheros que sirve el servidor web deben tener como propietario el usuario <code>www-data:www-data</code>. <!-- chown -R www-data:www-data /var/www/html--></p>
+</li>
+<li>
+<p>Para comprobar si el servidor LAMP está funcionando, puedes crear un fichero <code>info.php</code> en el DocumentRoot (el directorio <code>/var/www/html</code>) con el siguiente contenido:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    &lt;html&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        &lt;head&gt;
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        &lt;/head&gt;
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        &lt;body&gt;
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>            &lt;h1&gt;Escribe aquí tu nombre&lt;/h1&gt;
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>            &lt;br &gt;
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>            &lt;?php phpinfo(); ?&gt;
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        &lt;/body&gt;
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    &lt;/html&gt;
 </code></pre></div>
-<p>Por defecto siempre muestra la cabeza de la pila. Igual que en casos anteriores podemos indicar un stash en concreto.</p>
-<div class="highlight"><pre><span></span><code>$ git stash show stash@{1}
+</li>
+<li>
+<p>A partir del DocumentRoot puedes crear directorios con ficheros que servirá el servidor web accediendo con la IP del servidor más el path correspondiente. Por ejemplo, crea dos directorios sitio1xxx y sitio2xxx (donde xxx son tus iniciales). Dentro de cada directorio crea un fichero llamado index.php (deben tener contenidos diferentes). Puedes utilizar los ejemplos siguientes:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>    &lt;html&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>        &lt;head&gt;
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>        &lt;/head&gt;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>        &lt;body&gt;
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>            &lt;h1&gt;Escribe aquí tu nombre&lt;/h1&gt;
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>            &lt;br &gt;
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>            &lt;?php echo ‘sitio 1’; ?&gt;
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        &lt;/body&gt;
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>    &lt;/html&gt;
 </code></pre></div>
-<h3 id="git-stash-branch">git stash branch</h3>
-<p>Permite crear una nueva rama a partir del último stash. Además, el mismo es borrado de la pila. Se puede especificar uno en concreto si lo queremos, como en el resto de comandos.</p>
-<div class="highlight"><pre><span></span><code>git stash branch nombre-de-nueva-rama stash@{1}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    &lt;html&gt;
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>        &lt;head&gt;
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>        &lt;/head&gt;
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>        &lt;body&gt;
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>            &lt;h1&gt;Escribe aquí tu nombre&lt;/h1&gt;
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>            &lt;br &gt;
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>            &lt;?php echo ‘sitio 2’; ?&gt;
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>        &lt;/body&gt;
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    &lt;/html&gt;
 </code></pre></div>
-<h3 id="git-stash-clear">git stash clear</h3>
-<p>Este comando borrar todos los stash de la pila. Es destructiva y no se puede deshacer.</p>
-<h3 id="git-stash-drop">git stash drop</h3>
-<p>Permite borrar un stash en concreto (o el último si no se indica ninguno). Como con clear, borrarlo implica que no se puede recuperar.</p>
-<h2 id="git-worktree">Git worktree</h2>
-<p>Uno de los problemas más habituales es tener que tocar una rama distinta a la que tenemos actualmente. Eso implica que si estamos en medio de un trabajo tendríamos que hacer un commit o un stash, lo cual a veces es bastante molesto.</p>
-<p>Con <code>git worktree</code> podemos crear un directorio de trabajo que contenga otra rama distinta, de forma temporal. No supone otro clon del repositorio porque ambos usan el mismo.</p>
-<h3 id="git-worktree-add">git worktree add</h3>
-<p>Esta función es la que crea el espacio de trabajo temporal. Imaginemos que estamos en una rama llamada <code>develop</code>:</p>
-<div class="highlight"><pre><span></span><code>$ git worktree add ../project-master master
-$ git worktree add -b fix ../project-fix master
+Comprueba que los dos dos ficheros se ven correctamente desde el navegador con las rutas http://IP/sitio1xxx y http://IP/sitio2xxx. </p>
+</li>
+<li>
+<p>Como ya hemos visto, para acceder a las páginas usamos la dirección IP del servidor. Sin embargo vamos a usar un nombre. Si queremos usar un nombre para acceder a la página, tenemos que tener un sistema para convertir el nombre en dirección IP. Como no tenemos servidor DNS vamos a usar la <strong>resolución estática</strong>.</p>
+<p>Para usar la <strong>resolución estática</strong>, modificamos el fichero <code>/etc/hosts</code> del ordenador desde el que vamos acceder a la página, de la siguiente forma:</p>
+<div class="highlight"><pre><span></span><code>&lt;direccion_ip_servidor_web&gt;      &lt;nombre_con_el_que_accedemos&gt;
 </code></pre></div>
-<p>La primera orden crea un directorio llamado project-master que contiene el estado de master. La segunda, que contiene el parámetro <code>-b</code> equivale a crear una nueva rama llamada fix, que se crea desde master (suponemos que no existe fix).</p>
-<h3 id="git-worktree-list">git worktree list</h3>
-<p>Muestra el listado de directorios y espacios de trabajo.</p>
-<div class="highlight"><pre><span></span><code>$git worktree list
-/home/sergio/taller-de-git  3b63b4b [master]
-/home/sergio/fix           3b63b4b [fix]
+<p>Por ejemplo:</p>
+<div class="highlight"><pre><span></span><code>192.168.121.10      www.example.org
 </code></pre></div>
-<h3 id="git-worktree-remove">git worktree remove</h3>
-<p>Borrar un espacio de trabajo. Hay que indicar el nombre entre corchetes que aparece en el listado</p>
-<div class="highlight"><pre><span></span><code>$ git worktree delete fix
-</code></pre></div>
-<h3 id="git-worktree-prune">git worktree prune</h3>
-<p>Una cuestión importante, es que las ramas que estén desplegadas en otro espacio de trabajo, se encuentran bloqueadas y no se pueden desbloquear en otro distinto.</p>
-<p>Esto significa que si estamos trabajando en la rama developer, creamos otro worktree en otro directorio de la rama master, no podemos hacer pasar a master. No es posible tener la misma rama en varios espacios de trabajo.</p>
-<p>Si se ha borrado el directorio a mano (en vez de usando remove), eso no implica que el bloqueo desparezca. Con esta orden podemos hacer que git compruebe que los espacios de trabajo secundario se comprueben de nuevo para ver si siguen existiendo y se elimine el bloqueo.</p>
-<h2 id="git-blame">Git blame</h2>
-<p>Lo ideal en un equipo de desarrollo es que el código pase por todas las manos para así mejorar su calidad.</p>
-<p>Con git blame podemos saber quién fue el último en modificar una línea concreta de código, en qué commit y en qué fecha lo hizo.</p>
-<div class="highlight"><pre><span></span><code>$ git blame ejemplo.php
-33cdd02c (Sergio Gómez 2020-01-20 16:58:52 +0100  8)   name: &quot;material&quot;
-33cdd02c (Sergio Gómez 2020-01-20 16:58:52 +0100  9)   language: &quot;es&quot;
-</code></pre></div>
+<p>Ahora podemos acceder a la URL: <code>http://www.example.org/info.php</code></p>
+</li>
+<li>
+<p>Si tenemos problemas de acceso podemos ver los logs del servidor:</p>
+<ul>
+<li>El fichero de logs de acceso por "defecto": <code>/var/log/apache/access.log</code>. Donde se registra los accesos al servidor desde los clientes.</li>
+<li>El fichero de logs de errores por" defecto": <code>/var/log/apache/error.log</code>.</li>
+<li>También podemos ver los logs del servicio ejecutando: <code>journalctl -u apache2</code>.</li>
+</ul>
+</li>
+</ol>
+<div class="admonition task">
+<p class="admonition-title">¿Qué tienes que entregar?</p>
+<ol>
+<li>Una captura de pantalla donde se vea la configuración de la resolución estática con el nombre <code>wwww.tunombreyapellidos.org</code></li>
+<li>Crea una base de datos y un usuario en la base de datos y entrega una comprobación de que se puede acceder a la base de datos con ese usuario y puede acceder a la base de datos creada.</li>
+<li>Una captura de pantalla accediendo desde un navegador a los dos ficheros del punto 5.</li>
+<li>Una captura de pantalla accediendo desde un navegador al fichero <code>info.php</code> usando el nombre que has configurando en la resolución estática.</li>
+</ol>
+</div>
 
 
   

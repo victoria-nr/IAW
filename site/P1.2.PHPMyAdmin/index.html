@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/commands/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/P1.2.PHPMyAdmin/">
       
       
-        <link rel="prev" href="../cicd/">
+        <link rel="prev" href="../P1.1.InstallServWebLAMP/">
       
       
-        <link rel="next" href="../containers/">
+        <link rel="next" href="../P1.3.VirtualhostingApache/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Comandos de git - Implantación de aplicaciones web</title>
+        <title>Práctica 2: phpMyAdmin - Implantación de aplicaciones web</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-de-git" class="md-skip">
+        <a href="#que-vas-a-aprender-en-este-taller" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos de git
+              Práctica 2: phpMyAdmin
             
           </span>
         </div>
@@ -430,14 +430,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -446,7 +448,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           3. Implantación aplicaciones web PHP
@@ -471,11 +473,55 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../P1.2.PHPMyAdmin/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Práctica 2: phpMyAdmin
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Práctica 2: phpMyAdmin
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-vas-a-aprender-en-este-taller" class="md-nav__link">
+    ¿Qué vas a aprender en este taller?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-tienes-que-hacer" class="md-nav__link">
+    ¿Qué tienes que hacer?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -530,83 +576,31 @@
                   
 
 
-<h1 id="comandos-de-git">Comandos de git</h1>
-<p>Esta sección describe algunos de los comandos más interesantes de git</p>
-<h2 id="git-stash-reserva">Git stash (reserva)</h2>
-<p>La orden <code>git stash</code> nos permite salvar momentáneamente el espacio de trabajo cuando tenemos que cambiar de rama o preparar la rama actual para sincronizar cambios.</p>
-<p>Las operaciones más importantes que podemos hacer con <code>git stash</code> son:</p>
-<h3 id="git-stash-save">git stash save</h3>
-<p>Es equivalente a poner solo <code>git stash</code> pero nos permite realizar más acciones como:</p>
-<div class="highlight"><pre><span></span><code>git stash save &quot;Tu mensaje&quot;
-git stash save -u
-</code></pre></div>
-<p>El parámetro <code>-u</code> permite que se almacen también los ficheros sin seguimiento previo (<em>untracked</em> en inglés, aquellos ficheros que no se han metido nunca en el repositorio).</p>
-<h3 id="git-stash-list">git stash list</h3>
-<p>Permite mostrar la pila del stash.</p>
-<div class="highlight"><pre><span></span><code>$ git stash list
-stash@{0}: On master: Stash con mensaje
-stash@{1}: WIP on master: 4ab21df First commit
-</code></pre></div>
-<h3 id="git-stash-apply">git stash apply</h3>
-<p>Esta orden coge el stash que está arriba en la pila y lo aplica al espacio de trabajo actual. En este caso siempre es <code>stash@{0}</code>. El stash permanece en la pila.</p>
-<p>Se puede indicar como parámetro un stash en concreto.</p>
-<h3 id="git-stash-pop">git stash pop</h3>
-<p>Funciona igual que <code>git apply</code> con la diferencia de que el stash sí se borra de la pila.</p>
-<h3 id="git-stash-show">git stash show</h3>
-<p>Muestra un resumen de los ficheros que se han modificado en ese stash.</p>
-<div class="highlight"><pre><span></span><code>$ git stash show
-A.txt | 1 +
-B.txt | 3 +++
-2 file changed, 4 insertions(+)
-</code></pre></div>
-<p>Para ver los cambios podemos usar el parámetro <code>-p</code></p>
-<div class="highlight"><pre><span></span><code>$ git stash show -p
---- a/A.txt
-+++ b/A.txt
-@@ -45,6 +45,7 @@ nav:
-+ This is a change
-</code></pre></div>
-<p>Por defecto siempre muestra la cabeza de la pila. Igual que en casos anteriores podemos indicar un stash en concreto.</p>
-<div class="highlight"><pre><span></span><code>$ git stash show stash@{1}
-</code></pre></div>
-<h3 id="git-stash-branch">git stash branch</h3>
-<p>Permite crear una nueva rama a partir del último stash. Además, el mismo es borrado de la pila. Se puede especificar uno en concreto si lo queremos, como en el resto de comandos.</p>
-<div class="highlight"><pre><span></span><code>git stash branch nombre-de-nueva-rama stash@{1}
-</code></pre></div>
-<h3 id="git-stash-clear">git stash clear</h3>
-<p>Este comando borrar todos los stash de la pila. Es destructiva y no se puede deshacer.</p>
-<h3 id="git-stash-drop">git stash drop</h3>
-<p>Permite borrar un stash en concreto (o el último si no se indica ninguno). Como con clear, borrarlo implica que no se puede recuperar.</p>
-<h2 id="git-worktree">Git worktree</h2>
-<p>Uno de los problemas más habituales es tener que tocar una rama distinta a la que tenemos actualmente. Eso implica que si estamos en medio de un trabajo tendríamos que hacer un commit o un stash, lo cual a veces es bastante molesto.</p>
-<p>Con <code>git worktree</code> podemos crear un directorio de trabajo que contenga otra rama distinta, de forma temporal. No supone otro clon del repositorio porque ambos usan el mismo.</p>
-<h3 id="git-worktree-add">git worktree add</h3>
-<p>Esta función es la que crea el espacio de trabajo temporal. Imaginemos que estamos en una rama llamada <code>develop</code>:</p>
-<div class="highlight"><pre><span></span><code>$ git worktree add ../project-master master
-$ git worktree add -b fix ../project-fix master
-</code></pre></div>
-<p>La primera orden crea un directorio llamado project-master que contiene el estado de master. La segunda, que contiene el parámetro <code>-b</code> equivale a crear una nueva rama llamada fix, que se crea desde master (suponemos que no existe fix).</p>
-<h3 id="git-worktree-list">git worktree list</h3>
-<p>Muestra el listado de directorios y espacios de trabajo.</p>
-<div class="highlight"><pre><span></span><code>$git worktree list
-/home/sergio/taller-de-git  3b63b4b [master]
-/home/sergio/fix           3b63b4b [fix]
-</code></pre></div>
-<h3 id="git-worktree-remove">git worktree remove</h3>
-<p>Borrar un espacio de trabajo. Hay que indicar el nombre entre corchetes que aparece en el listado</p>
-<div class="highlight"><pre><span></span><code>$ git worktree delete fix
-</code></pre></div>
-<h3 id="git-worktree-prune">git worktree prune</h3>
-<p>Una cuestión importante, es que las ramas que estén desplegadas en otro espacio de trabajo, se encuentran bloqueadas y no se pueden desbloquear en otro distinto.</p>
-<p>Esto significa que si estamos trabajando en la rama developer, creamos otro worktree en otro directorio de la rama master, no podemos hacer pasar a master. No es posible tener la misma rama en varios espacios de trabajo.</p>
-<p>Si se ha borrado el directorio a mano (en vez de usando remove), eso no implica que el bloqueo desparezca. Con esta orden podemos hacer que git compruebe que los espacios de trabajo secundario se comprueben de nuevo para ver si siguen existiendo y se elimine el bloqueo.</p>
-<h2 id="git-blame">Git blame</h2>
-<p>Lo ideal en un equipo de desarrollo es que el código pase por todas las manos para así mejorar su calidad.</p>
-<p>Con git blame podemos saber quién fue el último en modificar una línea concreta de código, en qué commit y en qué fecha lo hizo.</p>
-<div class="highlight"><pre><span></span><code>$ git blame ejemplo.php
-33cdd02c (Sergio Gómez 2020-01-20 16:58:52 +0100  8)   name: &quot;material&quot;
-33cdd02c (Sergio Gómez 2020-01-20 16:58:52 +0100  9)   language: &quot;es&quot;
-</code></pre></div>
+  <h1>Práctica 2: phpMyAdmin</h1>
+
+<h2 id="que-vas-a-aprender-en-este-taller">¿Qué vas a aprender en este taller?</h2>
+<ul>
+<li>A instalar y utilizar el administrador web phpMyAdmin para gestionar bases de datos MySQL.</li>
+</ul>
+<h2 id="que-tienes-que-hacer">¿Qué tienes que hacer?</h2>
+<p>Realiza esta tarea en la máquina virtual donde has instalado la pila LAMP.
+Sigue este <a href="https://gvaedu-my.sharepoint.com/:b:/g/personal/mv_nebotromero_edu_gva_es/EUBCLPXyqG1MvgHu0iCH3BgBlZdnkaWmALCeKBdM5z5m8g?e=GsoSJY">tutorial</a> sobre la instalación y uso de phpMyAdmin.</p>
+<div class="admonition task">
+<p class="admonition-title">¿Qué tienes que entregar?</p>
+<ol>
+<li>Sigue el ejemplo del documento para crear una base de datos y una tabla. Después crea una segunda tabla (su nombre deben ser tus iniciales) y debe contener 4 campos (los que quieras). Haz una captura la pantalla donde aparezca la base de datos con las dos tablas.</li>
+<li>Descarga el fichero <code>musica.sql</code>  desde AULES y después impórtalo a tu servidor MYSQL. Haz una captura la pantalla donde aparezcan desplegadas las tablas que tiene la base de datos.</li>
+<li>Ejecuta la consulta adecuada para obtener el número de discos que hay en la base de datos que acabas de importar. (En el documento de AULES sobre la descripción de la base de datos de música, encontrarás la estructura detallada de la base de datos). Haz una captura la pantalla donde aparezca la consulta que has ejecutado y el resultado obtenido.</li>
+</ol>
+</div>
+<div class="admonition task">
+<p class="admonition-title">Ejercicio de ampliación 1</p>
+<p>Realiza las consultas para practicar del documento de AULES sobre la descripción de la base de datos de música.</p>
+</div>
+<div class="admonition task">
+<p class="admonition-title">Ejercicio de ampliación 2</p>
+<p>Instala Adminer y explora su interfaz, comparándola con la de phpMyAdmin</p>
+</div>
 
 
   
