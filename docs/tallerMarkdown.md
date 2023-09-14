@@ -13,7 +13,7 @@ title: "Taller 3: Introducción a Markdown"
 
 ## ¿Qué tienes que hacer?
 
-1. En el repositorio que has creado en el taller anterior, crea un fichero llamado `markdown.md`. Este fichero tiene que tener los siguientes elementos en este orden:
+1. En el repositorio que has creado en el taller anterior, **repo_IAW_tu_nombre**, crea un fichero llamado `markdown.md`. Este fichero tiene que tener los siguientes elementos en este orden:
 
 * Un título principal
 * Un subtítulo

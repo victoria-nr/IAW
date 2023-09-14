@@ -14,7 +14,7 @@ title: "Taller 1: Introducción a git y GitHub"
 	* Copia el contenido de tu fichero `~/.ssh/id_rsa.pub`, para ello: añade una nueva clave SSH en el apartado "SSH keys" de tu perfil en GitHub y pega el contenido de tu clave pública.
 	* Si no tienes ese fichero, puedes generar una nueva clave ssh pública: [http://librosweb.es/pro_git/capitulo_4/generando_tu_clave_publica_ssh.html](http://librosweb.es/pro_git/capitulo_4/generando_tu_clave_publica_ssh.html).
 
-2. Crea en GitHub un repositorio con el nombre **prueba_tu_nombre** (inicializa el repositorio con un fichero README) y la descripción **Repositorio de prueba 2ASIR**.
+2. Crea en GitHub un repositorio con el nombre **repo_IAW_tu_nombre** (inicializa el repositorio con un fichero README) y la descripción **Repositorio para la asignatura de IAW de 2ASIX**.
 
 3. Instala git en tu ordenador (**si no lo tienes instalado!!!**).
 
@@ -70,4 +70,4 @@ title: "Taller 1: Introducción a git y GitHub"
     1. Una captura de pantalla donde se vea que has creado el repositorio.
     2. El contenido del fichero `.git/config` para que se vea que has clonado el repositorio con la URL ssh.
     3. La salida de la instrucción `git log` para ver los commits que has realizado (debe aparecer como autor tu nombre completo).
-    4. Buscar información para crear un nuevo repositorio llamado **prueba2_tu_nombre**. En esta ocasión, crea primero el repositorio local (usando `git init`) y luego busca información para sincronizarlo y crear el repositorio remoto en GitHub. Comenta los pasos que has realizado y manda alguna prueba de funcionamiento.
+    4. Buscar información para crear un nuevo repositorio llamado **repo2_tu_nombre**. En esta ocasión, crea primero el repositorio local (usando `git init`) y luego busca información para sincronizarlo y crear el repositorio remoto en GitHub. Comenta los pasos que has realizado y manda alguna prueba de funcionamiento.

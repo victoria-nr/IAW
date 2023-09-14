@@ -1,7 +1,18 @@
 nav:
-    - Talleres de introducción:
+    - 1. Talleres de introducción:
       - tallerGitIntro.md
       - tallerGitRamasUniones.md
       - tallerMarkdown.md
-    - Prácticas servidores web:
+    - 2. Arquitectura web. Implantación y administración de servidores web:
+      - ArqWeb.md
       - P1.1.md
+      - P1.2.md
+      - P1.3.md
+      - P1.4.md
+      - P1.5.md
+    - 3. Implantación aplicaciones web PHP:
+      - P1.1.InstallServWebLAMP.md
+      - P1.2.PHPMyAdmin.md
+      - P1.3.VirtualhostingApache.md
+      - P1.4.AppBookMedik.md
+      

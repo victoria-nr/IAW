@@ -1,5 +1,5 @@
 ---
-title: 'Tema 2 - Arquitectura Web. Implantación y administración de servidores web'
+title: 'Teoría - Arquitectura Web. Implantación y administración de servidores web'
 ---
 
 # **Arquitectura Web. Implantación y administración de servidores web**
