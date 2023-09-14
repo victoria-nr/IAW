@@ -8,20 +8,20 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/commands/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/P1.3.VirtualhostingApache/">
       
       
-        <link rel="prev" href="../cicd/">
+        <link rel="prev" href="../P1.2.PHPMyAdmin/">
       
       
-        <link rel="next" href="../containers/">
+        <link rel="next" href="../P1.4.AppBookMedik/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Comandos de git - Implantación de aplicaciones web</title>
+        <title>Práctica 3: VirtualHosting con Apache - Implantación de aplicaciones web</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#comandos-de-git" class="md-skip">
+        <a href="#que-vas-a-aprender-en-este-taller" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -122,7 +122,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Comandos de git
+              Práctica 3: VirtualHosting con Apache
             
           </span>
         </div>
@@ -430,14 +430,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
       
       
       
@@ -446,7 +448,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_3">
           <span class="md-nav__icon md-icon"></span>
           3. Implantación aplicaciones web PHP
@@ -485,11 +487,75 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../P1.3.VirtualhostingApache/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Práctica 3: VirtualHosting con Apache
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Práctica 3: VirtualHosting con Apache
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#que-vas-a-aprender-en-este-taller" class="md-nav__link">
+    ¿Qué vas a aprender en este taller?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recursos-para-realizar-este-taller" class="md-nav__link">
+    Recursos para realizar este taller
+  </a>
+  
+    <nav class="md-nav" aria-label="Recursos para realizar este taller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-al-virtualhosting" class="md-nav__link">
+    Introducción al VirtualHosting
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#que-tienes-que-hacer" class="md-nav__link">
+    ¿Qué tienes que hacer?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -530,83 +596,95 @@
                   
 
 
-<h1 id="comandos-de-git">Comandos de git</h1>
-<p>Esta sección describe algunos de los comandos más interesantes de git</p>
-<h2 id="git-stash-reserva">Git stash (reserva)</h2>
-<p>La orden <code>git stash</code> nos permite salvar momentáneamente el espacio de trabajo cuando tenemos que cambiar de rama o preparar la rama actual para sincronizar cambios.</p>
-<p>Las operaciones más importantes que podemos hacer con <code>git stash</code> son:</p>
-<h3 id="git-stash-save">git stash save</h3>
-<p>Es equivalente a poner solo <code>git stash</code> pero nos permite realizar más acciones como:</p>
-<div class="highlight"><pre><span></span><code>git stash save &quot;Tu mensaje&quot;
-git stash save -u
+  <h1>Práctica 3: VirtualHosting con Apache</h1>
+
+<h2 id="que-vas-a-aprender-en-este-taller">¿Qué vas a aprender en este taller?</h2>
+<ul>
+<li>Crear distintos <em>Host Virtuales</em> en apache2 que nos permiten tener sitios web diferenciados.</li>
+<li>Acceder a cada <em>Host Virtual</em> con un determinado nombre de dominio.</li>
+</ul>
+<h2 id="recursos-para-realizar-este-taller">Recursos para realizar este taller</h2>
+<h3 id="introduccion-al-virtualhosting">Introducción al VirtualHosting</h3>
+<p>El término <em>Hosting Virtual</em> se refiere a hacer funcionar más de un sitio web (tales como <code>www.company1.com</code> y <code>www.company2.com</code>) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres de dominio (estos últimos son los que vamos a trabajar en este taller). </p>
+<p>El servidor web Apache2 se instala por defecto con un host virtual. La configuración de este sitio la podemos encontrar en:</p>
+<div class="highlight"><pre><span></span><code>/etc/apache2/sites-available/000-default.conf
 </code></pre></div>
-<p>El parámetro <code>-u</code> permite que se almacen también los ficheros sin seguimiento previo (<em>untracked</em> en inglés, aquellos ficheros que no se han metido nunca en el repositorio).</p>
-<h3 id="git-stash-list">git stash list</h3>
-<p>Permite mostrar la pila del stash.</p>
-<div class="highlight"><pre><span></span><code>$ git stash list
-stash@{0}: On master: Stash con mensaje
-stash@{1}: WIP on master: 4ab21df First commit
+<p>Cuyo contenido podemos ver:</p>
+<div class="highlight"><pre><span></span><code>&lt;VirtualHost *:80&gt;
+        #ServerName www.example.com 
+        ServerAdmin webmaster@localhost
+        DocumentRoot /var/www/html  
+        ErrorLog ${APACHE_LOG_DIR}/error.log
+        CustomLog ${APACHE_LOG_DIR}/access.log combined 
+&lt;/VirtualHost&gt;
 </code></pre></div>
-<h3 id="git-stash-apply">git stash apply</h3>
-<p>Esta orden coge el stash que está arriba en la pila y lo aplica al espacio de trabajo actual. En este caso siempre es <code>stash@{0}</code>. El stash permanece en la pila.</p>
-<p>Se puede indicar como parámetro un stash en concreto.</p>
-<h3 id="git-stash-pop">git stash pop</h3>
-<p>Funciona igual que <code>git apply</code> con la diferencia de que el stash sí se borra de la pila.</p>
-<h3 id="git-stash-show">git stash show</h3>
-<p>Muestra un resumen de los ficheros que se han modificado en ese stash.</p>
-<div class="highlight"><pre><span></span><code>$ git stash show
-A.txt | 1 +
-B.txt | 3 +++
-2 file changed, 4 insertions(+)
+<p>Donde encontramos los siguientes parámetros:</p>
+<ul>
+<li><a href="https://httpd.apache.org/docs/2.4/mod/core.html#servername">ServerName</a>: El nombre con el que vamos acceder al sitio virtual. En el sitio virtual por defecto (como sólo tenemos uno) está comentado, podemos acceder por nombre o por dirección IP.</li>
+<li><a href="https://httpd.apache.org/docs/2.4/mod/core.html#serveradmin">ServerAdmin</a>: Dirección de correo del administrador responsable del servidor.</li>
+<li><a href="https://httpd.apache.org/docs/2.4/mod/core.html#documentroot">DocumentRoot</a>: Directorio donde guardamos los ficheros que se van a servir.</li>
+<li><a href="https://httpd.apache.org/docs/2.4/mod/core.html#errorlog">ErrorLog</a>: Fichero de errores del host virtual.</li>
+<li><a href="http://httpd.apache.org/docs/current/mod/mod_log_config.html#customlog">CustomLog</a>: Fichero de accesos al host virtual.</li>
+</ul>
+<p>Por defecto este sitio virtual está habilitado, por lo que podemos comprobar que existe un enlace simbólico a este fichero en el directorio <code>/etc/apache2/sites-enabled</code>:</p>
+<div class="highlight"><pre><span></span><code>lrwxrwxrwx 1 root root   35 Oct  3 15:24 000-default.conf -&gt; ../sites-available/000-default.conf
 </code></pre></div>
-<p>Para ver los cambios podemos usar el parámetro <code>-p</code></p>
-<div class="highlight"><pre><span></span><code>$ git stash show -p
---- a/A.txt
-+++ b/A.txt
-@@ -45,6 +45,7 @@ nav:
-+ This is a change
+<p>Podemos habilitar o deshabilitar nuestros host virtuales utilizando los siguientes comandos:</p>
+<div class="highlight"><pre><span></span><code>a2ensite
+a2dissite
 </code></pre></div>
-<p>Por defecto siempre muestra la cabeza de la pila. Igual que en casos anteriores podemos indicar un stash en concreto.</p>
-<div class="highlight"><pre><span></span><code>$ git stash show stash@{1}
+<p>En el fichero de configuración general <code>/etc/apache2/apache2.conf</code> nos encontramos las opciones de configuración del directorio padre del indicado en la directiva <code>DocumentRoot</code> (suponemos que todos los host virtuales van a estar guardados en subdirectorios de este directorio):</p>
+<div class="highlight"><pre><span></span><code>...
+&lt;Directory /var/www/&gt;
+    Options Indexes FollowSymLinks
+    AllowOverride None
+    Require all granted
+&lt;/Directory&gt;
+...
 </code></pre></div>
-<h3 id="git-stash-branch">git stash branch</h3>
-<p>Permite crear una nueva rama a partir del último stash. Además, el mismo es borrado de la pila. Se puede especificar uno en concreto si lo queremos, como en el resto de comandos.</p>
-<div class="highlight"><pre><span></span><code>git stash branch nombre-de-nueva-rama stash@{1}
+<h2 id="que-tienes-que-hacer">¿Qué tienes que hacer?</h2>
+<p>Queremos construir en nuestro servidor web apache dos sitios web con las siguientes características:</p>
+<ul>
+<li>El nombre de dominio del primero será <code>www.iescaminas.org</code>, su directorio base será <code>/var/www/iescaminas</code> y contendrá una página llamada <code>index.html</code>, donde sólo se verá una bienvenida a la página del Instituto El Caminàs.</li>
+<li>En el segundo sitio vamos a crear una página donde se pondrán noticias por parte de los departamentos, el nombre de este sitio será <code>www.departamentosiescaminas.org</code>, y su directorio base será <code>/var/www/departamentos</code>. En este sitio sólo tendremos una página inicial <code>index.html</code>, dando la bienvenida a la página de los departamentos del instituto.</li>
+</ul>
+<p>Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:</p>
+<ol>
+<li>
+<p>Los ficheros de configuración de los sitios webs se encuentran en el directorio <code>/etc/apache2/sites-available</code>, por defecto hay dos ficheros, uno se llama <code>000-default.conf</code> que es la configuración del sitio web por defecto. Necesitamos tener dos ficheros para realizar la configuración de los dos sitios virtuales, para ello vamos a copiar el fichero <code>000-default.conf</code>:</p>
+<div class="highlight"><pre><span></span><code>cd /etc/apache2/sites-available
+cp 000-default.conf iescaminas.conf
+cp 000-default.conf departamentos.conf
 </code></pre></div>
-<h3 id="git-stash-clear">git stash clear</h3>
-<p>Este comando borrar todos los stash de la pila. Es destructiva y no se puede deshacer.</p>
-<h3 id="git-stash-drop">git stash drop</h3>
-<p>Permite borrar un stash en concreto (o el último si no se indica ninguno). Como con clear, borrarlo implica que no se puede recuperar.</p>
-<h2 id="git-worktree">Git worktree</h2>
-<p>Uno de los problemas más habituales es tener que tocar una rama distinta a la que tenemos actualmente. Eso implica que si estamos en medio de un trabajo tendríamos que hacer un commit o un stash, lo cual a veces es bastante molesto.</p>
-<p>Con <code>git worktree</code> podemos crear un directorio de trabajo que contenga otra rama distinta, de forma temporal. No supone otro clon del repositorio porque ambos usan el mismo.</p>
-<h3 id="git-worktree-add">git worktree add</h3>
-<p>Esta función es la que crea el espacio de trabajo temporal. Imaginemos que estamos en una rama llamada <code>develop</code>:</p>
-<div class="highlight"><pre><span></span><code>$ git worktree add ../project-master master
-$ git worktree add -b fix ../project-fix master
+<p>De esta manera tendremos un fichero llamado <code>iescaminas.conf</code> para realizar la configuración del sitio web <code>www.iescaminas.org</code>, y otro llamado <code>departamentos.conf</code> para el sitio web <code>www.departamentosiescaminas.org</code>.</p>
+</li>
+<li>
+<p>Modificamos los ficheros <code>iescaminas.conf</code> y <code>departamentos.conf</code>, para indicar el nombre que vamos a usar para acceder al host virtual (<code>ServerName</code>) y el directorio de trabajo (<code>DocumentRoot</code>). Además vamos cambiar los nombre del fichero log de acceso y de error.</p>
+</li>
+<li>
+<p>No es suficiente crear los ficheros de configuración de cada sitio web, es necesario crear un enlace simbólico a estos ficheros dentro del directorio <code>/etc/apache2/sites-enabled</code>, para ello:</p>
+<div class="highlight"><pre><span></span><code>a2ensite iescaminas
+a2ensite departamentos
 </code></pre></div>
-<p>La primera orden crea un directorio llamado project-master que contiene el estado de master. La segunda, que contiene el parámetro <code>-b</code> equivale a crear una nueva rama llamada fix, que se crea desde master (suponemos que no existe fix).</p>
-<h3 id="git-worktree-list">git worktree list</h3>
-<p>Muestra el listado de directorios y espacios de trabajo.</p>
-<div class="highlight"><pre><span></span><code>$git worktree list
-/home/sergio/taller-de-git  3b63b4b [master]
-/home/sergio/fix           3b63b4b [fix]
-</code></pre></div>
-<h3 id="git-worktree-remove">git worktree remove</h3>
-<p>Borrar un espacio de trabajo. Hay que indicar el nombre entre corchetes que aparece en el listado</p>
-<div class="highlight"><pre><span></span><code>$ git worktree delete fix
-</code></pre></div>
-<h3 id="git-worktree-prune">git worktree prune</h3>
-<p>Una cuestión importante, es que las ramas que estén desplegadas en otro espacio de trabajo, se encuentran bloqueadas y no se pueden desbloquear en otro distinto.</p>
-<p>Esto significa que si estamos trabajando en la rama developer, creamos otro worktree en otro directorio de la rama master, no podemos hacer pasar a master. No es posible tener la misma rama en varios espacios de trabajo.</p>
-<p>Si se ha borrado el directorio a mano (en vez de usando remove), eso no implica que el bloqueo desparezca. Con esta orden podemos hacer que git compruebe que los espacios de trabajo secundario se comprueben de nuevo para ver si siguen existiendo y se elimine el bloqueo.</p>
-<h2 id="git-blame">Git blame</h2>
-<p>Lo ideal en un equipo de desarrollo es que el código pase por todas las manos para así mejorar su calidad.</p>
-<p>Con git blame podemos saber quién fue el último en modificar una línea concreta de código, en qué commit y en qué fecha lo hizo.</p>
-<div class="highlight"><pre><span></span><code>$ git blame ejemplo.php
-33cdd02c (Sergio Gómez 2020-01-20 16:58:52 +0100  8)   name: &quot;material&quot;
-33cdd02c (Sergio Gómez 2020-01-20 16:58:52 +0100  9)   language: &quot;es&quot;
-</code></pre></div>
+<p>La creación de los enlaces simbólicos se puede hacer con la instrucción <code>a2ensite nombre_fichero_configuracion</code>, para deshabilitar el sitio tenemos que borrar el enlace simbólico o usar la instrucción <code>a2dissite nombre_fichero_configuracion</code>.</p>
+</li>
+<li>
+<p>Crea los directorios y los ficheros index.html necesarios en <code>/var/www</code> y reiniciamos el servicio. Recuerda que los directorios y los ficheros deben pertenecer al usuario <code>www-data:www-data</code>.</p>
+</li>
+<li>
+<p>Para terminar lo único que tendremos que hacer es cambiar el fichero hosts (<strong>resolución estática</strong>) en los clientes y poner dos nuevas líneas donde se haga la conversión entre los dos nombre de dominio y la dirección IP del servidor.</p>
+</li>
+</ol>
+<div class="admonition task">
+<p class="admonition-title">¿Qué tienes que entregar?</p>
+<ol>
+<li>Lista los ficheros que se encuentran en el directorio <code>/etc/apache2/sites-enabled</code>.</li>
+<li>Muestra cómo has configurado la resolución estática.</li>
+<li>Capturas de pantallas accediendo a los sitios web.</li>
+</ol>
+</div>
+<!--4. Repite el ejercicio cambiando los directorios de trabajo a `/srv/www`. ¿Qué modificación debes hacer en el fichero `/etc/apache2/apache2.conf`?
+-->
 
 
   
