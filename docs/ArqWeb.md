@@ -166,7 +166,7 @@ Una solicitud HTTP es un conjunto de líneas que el navegador envía al servidor
 
 + El recurso solicitado, el método que se aplicará y la versión del protocolo utilizada. 
 
-+ Los campos del encabezado de solicitud: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la solicitud y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. 
++ Los campos del encabezado de solicitud, que suelen llamarse **cabeceras http**: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la solicitud y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. 
 
 + El cuerpo de la solicitud: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. 
 
@@ -177,17 +177,17 @@ La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor env�
 
  ![](img/response.png)
 
-+ Una línea de estado donde figura el versión del protocolo usada, un código de estado/error y un texto con el significado de dicho código. 
++ Una línea de estado donde figura la versión del protocolo usada, un código de estado/error y un texto con el significado de dicho código. 
 
-+ Los posibles códigos de estado se identifican con números de tres cifras y se clasifican en cinco grupos según sean informativos (1xx), de éxito en la solicitud (2xx), para redireccionar la solicitud (3xx), por error generado en el cliente (4xx) o bien por errores generados en el servidor (5xx) → <u>**Códigos de estado/error** </u>
++ Los posibles códigos de estado se identifican con números de tres cifras y se clasifican en cinco grupos según sean informativos (1xx), de éxito en la solicitud (2xx), para redireccionar la solicitud (3xx), por error generado en el cliente (4xx) o bien por errores generados en el servidor (5xx) → [Códigos de estado/error](https://developer.mozilla.org/es/docs/Web/HTTP/Status)
 
 + Los campos del encabezado de la respuesta. Conjunto de lineas opcionales que aportan información adicional sobre la respuesta y/o el servidor. 
 
-+ El cuerpo de la respuesta que contiene el recurso (objeto) solicitado
++ El cuerpo de la respuesta que contiene el recurso (objeto) solicitado.
 
 ### Cabeceras HTTP
 
-Las **cabeceras HTTP** son los parámetros que se envían en una petición o respuesta HTTP al cliente o al servidor para proporcionar información esencial sobre la transacción en curso. Estas cabeceras proporcionan información mediante la sintaxis ***'Cabecera: Valor'*** y son enviadas automáticamente por el navegador o el servidor Web.  → <u>Cabeceras HTTP</u> 
+Las **cabeceras HTTP** son los parámetros que se envían en una petición o respuesta HTTP al cliente o al servidor para proporcionar información esencial sobre la transacción en curso. Estas cabeceras proporcionan información mediante la sintaxis ***'Cabecera: Valor'*** y son enviadas automáticamente por el navegador o el servidor Web.  → [Cabeceras HTTP](https://developer.mozilla.org/es/docs/Web/HTTP/Headers) 
 
 ### Tipos MIME
 
@@ -197,13 +197,23 @@ Este problema ya había surgido en las aplicaciones de correo electrónico, cuan
 
 Para solucionar este problema se crearon los tipos MIME (Multipurpose Internet Mail Extensions), especificaciones para dar formato a mensajes no-ASCII, de forma que pudieran ser enviados por Internet e interpretados correctamente por los programas de correo locales. 
 
-Tipos de medios de Internet, previamente conocido como "tipos " o "tipos de contenido", es un estándar diseñado para indicar el tipo de información que presenta un archivo o un conjunto de datos. En , este identificador puede ser útil para conocer el tipo de un archivo antes de descarcarglo y tener acceso a él. Es una buena pŕactica proveer información de tipos de medios siempre que sea posible, como en el caso de los elementos que cuentan con atributos como type, enctype, formenctype y accept. 
+Tipos de medios de Internet, previamente conocido como "tipos " o "tipos de contenido", es un estándar diseñado para indicar el tipo de información que presenta un archivo o un conjunto de datos. En la práctica, este identificador puede ser útil para conocer el tipo de un archivo antes de descargarlo y tener acceso a él. Es una buena pŕactica proveer información de tipos de medios siempre que sea posible, como en el caso de los elementos que cuentan con atributos como type, enctype, formenctype y accept. 
 
 ![](img/Mime-types.png)
 
 Todo identificador de tipo de medio de Internet debe ajustarse al siguiente formato: 
 
-Así pues, el "tipo" y el "subtipo" deben estar presentes en cualquier tipo de medio de Internet. En la lista siguiente hay algunos ejemplos que contienen cada una da las partes delineadas anteriormente. 
+```[tipo]/[árbol] [subtipo][+sufijo] [;parámetros]```
+
+donde el "tipo" y el "subtipo" deben estar presentes en cualquier tipo de medio de Internet y los componentes restantes son opcionales. En la lista siguiente hay algunos ejemplos que contienen cada una da las partes delineadas anteriormente. 
+
+```image /png```
+
+```applications /rss +xml```
+
+```video /mp4 ; codecs="avcl.640028"```
+
+```application /vnd.google-earth .kmz```
 
 ## HTTPS
 
@@ -225,11 +235,11 @@ Es decir, lo importante aquí es que hasta ahora los navegadores consideran HTTP
 
 ## Servidores web: Apache vs Nginx
 
-Cuando vamos a poner en marcha un servidor web, lo primero que necesitamos es utilizar un sistema operativo sobre el cual vamos a ejecutar los diferentes servicios, sistema operativo que en más del 95% de las ocasiones suele ser un sistema Linux, así como un software que se encargue de la gestión de las bases de datos, MySQL habitualmente, y un software para gestionar el contenido dinámicos de las webs, que suele ser PHP. Además de este software esencial, otra de las partes más importantes del servidor suele ser la elección del servidor web, y aquí es donde entran las dudas. 
+Cuando vamos a poner en marcha un servidor web, lo primero que necesitamos es utilizar un sistema operativo sobre el cual vamos a ejecutar los diferentes servicios, sistema operativo que en más del 95% de las ocasiones suele ser un sistema Linux, así como un software que se encargue de la gestión de las bases de datos, MySQL habitualmente, y un software para gestionar el contenido dinámico de las webs, que suele ser PHP. Además de este software esencial, otra de las partes más importantes del servidor suele ser la elección del servidor web, y aquí es donde entran las dudas. 
 
 Cuando buscamos montar una web podemos elegir una gran cantidad de servidores web diferentes, desde Apache y Nginx, los más conocidos y utilizados con más de un 85% de uso entre ambos, hasta otros servidores menos conocidos como Microsoft IIS (si usamos un servidor Windows), LiteSpeed, Node.js, etc. 
 
-Los dos servidores más utilizados para montar páginas web hoy en día son Apache y Nginx, sin embargo, es imposible decir que uno es mejor que otro ya que cada uno de ellos tiene sus propias fortalezas y debilidades y puede mejorar mejor bajo ciertas circunstancias o simplemente ser más sencillo de utilizar. 
+Los dos servidores más utilizados para montar páginas web hoy en día son Apache y Nginx, sin embargo, es imposible decir que uno es mejor que otro ya que cada uno de ellos tiene sus propias fortalezas y debilidades y puede ir mejor bajo ciertas circunstancias o simplemente ser más sencillo de utilizar. 
 
 <u>*Nginx está orientado a mejorar el rendimiento, soportando mayores cargas de tráfico y usuarios que Apache (Problema C10K), además de ofrecer otras funcionalidades como hacer de proxy. En sus orígenes era especialmente eficiente ofreciendo contenido estático*.</u>
 

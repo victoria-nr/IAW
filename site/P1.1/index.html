@@ -444,13 +444,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#evaluacion" class="md-nav__link">
-    Evaluación
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -630,8 +623,12 @@
 
 <h1 id="practica-21-instalacion-y-configuracion-del-servidor-web-nginx">Práctica 2.1 – Instalación y configuración del servidor web Nginx</h1>
 <h2 id="instalacion-servidor-web-nginx">Instalación servidor web Nginx</h2>
-<p>Realiza esta tarea en una máquina virtual. Puedes usar Vagrant para configurarla con el sistema operativo Ubuntu Server 22.04.
-Para instalar el servidor nginx, primero actualizamos los repositorios y después instalamos el paquete correspondiente: </p>
+<p>Realiza esta tarea en una máquina virtual. Puedes usar Vagrant para configurarla con el sistema operativo Ubuntu Server 22.04.</p>
+<div class="admonition danger">
+<p class="admonition-title">Atención</p>
+<p>Recuerda que tanto Apache como Nginx escuchan en el puerto 80. Por tanto, si en la MV que estás utilizando ya tienes apache instalado, te recomiendo que lo pares o que redigiras el puerto para que escuche en un puerto distinto. Lo más sencillo es parar apache. Recuerda también que en <code>/var/www/html</code> tendrás el archivo index.html de apache que sirve para comprobar el correcto funcionamiento del servidor. Por tanto, al instalar nginx, el archivo <code>index.html</code> tendrá un nombre similar a <code>index.nginx-debian.html</code>. </p>
+</div>
+<p>Para instalar el servidor nginx, primero actualizamos los repositorios y después instalamos el paquete correspondiente: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nginx
@@ -862,37 +859,18 @@ Si no tuvieráis unzip instalado, lo instaláis:
 <p class="admonition-title">Cuestión 2</p>
 <p>¿Qué pasa si no le doy los permisos adecuados a <code>/var/www/nombre_web</code>? </p>
 </div>
-<h2 id="evaluacion">Evaluación</h2>
-<table>
-<thead>
-<tr>
-<th align="left">Criterio</th>
-<th align="center">Puntuación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Configuración correcta del servidor web</td>
-<td align="center"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Comprobación del correcto funcionamento del primer sitio web</td>
-<td align="center"><strong>3 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Configuración correcta y comprobación del funcionamento de una segunda web</td>
-<td align="center"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Cuestiones finales</td>
-<td align="center"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Se ha prestado especial atención al formato del documento, utilizando la plantilla actualizada y haciendo un correcto uso del lenguaje técnico</td>
-<td align="center"><strong>2 puntos</strong></td>
-</tr>
-</tbody>
-</table>
+<!--
+## Evaluación
+
+| Criterio      | Puntuación                         |
+| :--------- | :----------------------------------: |
+| Configuración correcta del servidor web   |**1 puntos**  |
+| Comprobación del correcto funcionamento del primer sitio web| **3 puntos**|
+| Configuración correcta y comprobación del funcionamento de una segunda web | **2 puntos**|
+| Cuestiones finales|**2 puntos**|
+| Se ha prestado especial atención al formato del documento, utilizando la plantilla actualizada y haciendo un correcto uso del lenguaje técnico |**2 puntos** |
+
+-->
 
 
   
