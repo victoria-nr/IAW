@@ -466,13 +466,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#tareas_1" class="md-nav__link">
-    Tareas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#cuestiones-finales" class="md-nav__link">
     Cuestiones finales
   </a>
@@ -676,7 +669,6 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;openssl passwd -apr1 &gt;&gt; /etc/nginx/.htpasswd&quot;</span>
 </code></pre></div>
 <p>Este proceso se podrá repetir para tantos usuarios como haga falta. </p>
-<!-- victoria:victoria  nebot:nebot-->
 <ul>
 <li>Crea dos usuarios, uno con tu nombre y otro con tu primer apellido</li>
 <li>Comprueba que el usuario y la contraseña aparecen cifrados en el fichero: </li>
@@ -720,7 +712,7 @@ Una vez terminada la configuración, reiniciamos el servicio para que aplique nu
 </div>
 <div class="admonition cuestión">
 <p class="admonition-title">Comprobación 2</p>
-<p>Comprueba que si decides cancelar la autenticación, se te negará el acceso al sitio con un error. ¿Qué error es? <!-- 401 Authorization Required--></p>
+<p>Comprueba que si decides cancelar la autenticación, se te negará el acceso al sitio con un error. ¿Qué error es? </p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Cuidado</p>
@@ -788,19 +780,18 @@ Una vez terminada la configuración, reiniciamos el servicio para que aplique nu
 <p><img alt="" src="../img/4.1-6.png" /></p>
 </li>
 </ol>
-<h2 id="tareas_1">Tareas</h2>
 <div class="admonition question">
-<p class="admonition-title">Tarea 1</p>
+<p class="admonition-title">Tarea 3</p>
 <p>Configura Nginx para que no deje acceder con la IP de la máquina anfitriona al directorio raíz de una de tus dos webs. Modifica su server block o archivo de configuración. Comprueba cómo se deniega el acceso mostrando la página de error en el navegador y el mensaje de error de error.log </p>
 </div>
 <div class="admonition question">
-<p class="admonition-title">Tarea 2</p>
+<p class="admonition-title">Tarea 4</p>
 <p>Configura Nginx para que desde tu máquina anfitriona se tenga que tener tanto una IP válida como un usuario válido, ambas cosas a la vez, y comprueba que sí puede acceder sin problemas</p>
 </div>
 <h2 id="cuestiones-finales">Cuestiones finales</h2>
 <div class="admonition task">
 <p class="admonition-title">Cuestión 1</p>
-<p>Supongamos que yo soy el cliente con la IP 172.1.10.15 e intento acceder al directorio <code>web_muy_guay</code> de mi sitio web, equivocándome al poner el usuario y contraseña. ¿Podré acceder?¿Por qué? <!-- No pq se tienen que satistaces todas las restricciones--></p>
+<p>Supongamos que yo soy el cliente con la IP 172.1.10.15 e intento acceder al directorio <code>web_muy_guay</code> de mi sitio web, equivocándome al poner el usuario y contraseña. ¿Podré acceder?¿Por qué? </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="w">    </span><span class="nb">location</span><span class="w"> </span><span class="sx">/web_muy_guay</span><span class="w"> </span>{
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">    </span><span class="c">#...</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nb">satisfy</span><span class="w"> </span><span class="k">all</span>;<span class="w">    </span>
@@ -815,7 +806,7 @@ Una vez terminada la configuración, reiniciamos el servicio para que aplique nu
 </div>
 <div class="admonition task">
 <p class="admonition-title">Cuestión 2</p>
-<p>Supongamos que yo soy el cliente con la IP 172.1.10.15 e intento acceder al directorio <code>web_muy_guay</code> de mi sitio web, introduciendo correctamente usuario y contraseña. ¿Podré acceder?¿Por qué? <!-- No pq "deny all" está antes y se evalúa en orden--></p>
+<p>Supongamos que yo soy el cliente con la IP 172.1.10.15 e intento acceder al directorio <code>web_muy_guay</code> de mi sitio web, introduciendo correctamente usuario y contraseña. ¿Podré acceder?¿Por qué? </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="w">    </span><span class="nb">location</span><span class="w"> </span><span class="sx">/web_muy_guay</span><span class="w"> </span>{
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="c">#...</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="nb">satisfy</span><span class="w"> </span><span class="k">all</span>;<span class="w">    </span>
@@ -831,7 +822,7 @@ Una vez terminada la configuración, reiniciamos el servicio para que aplique nu
 </div>
 <div class="admonition task">
 <p class="admonition-title">Cuestión 3</p>
-<p>Supongamos que yo soy el cliente con la IP 172.1.10.15 e intento acceder al directorio <code>web_muy_guay</code> de mi sitio web, introduciendo correctamente usuario y contraseña. ¿Podré acceder? ¿Por qué? <!-- Si, porque es satisfy ANY--></p>
+<p>Supongamos que yo soy el cliente con la IP 172.1.10.15 e intento acceder al directorio <code>web_muy_guay</code> de mi sitio web, introduciendo correctamente usuario y contraseña. ¿Podré acceder? ¿Por qué? </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="nb">location</span><span class="w"> </span><span class="sx">/web_muy_guay</span><span class="w"> </span>{
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span><span class="c">#...</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="nb">satisfy</span><span class="w"> </span><span class="k">any</span>;<span class="w">    </span>
@@ -872,19 +863,19 @@ Una vez terminada la configuración, reiniciamos el servicio para que aplique nu
 </thead>
 <tbody>
 <tr>
-<td align="left">Configuración correcta de la autorización básica de Nginx, comprobación e identificación del error</td>
+<td align="left">Comprobación 1 y 2: Configuración correcta de la autorización básica de Nginx, comprobación e identificación del error</td>
 <td align="center"><strong>2 puntos</strong></td>
 </tr>
 <tr>
-<td align="left">Capturas correctas del log</td>
+<td align="left">Tarea 1: Capturas correctas del log</td>
 <td align="center"><strong>1 puntos</strong></td>
 </tr>
 <tr>
-<td align="left">Configuración correcta de la autorización básica en <code>contact</code></td>
+<td align="left">Tarea 2: Configuración correcta de la autorización básica en <code>contact</code></td>
 <td align="center"><strong>1.5 puntos</strong></td>
 </tr>
 <tr>
-<td align="left">Correcta configuración y comprobación de las tareas de autenticación básica y restricción por IP</td>
+<td align="left">Tareas 3 y 4: Correcta configuración y comprobación de las tareas de autenticación básica y restricción por IP</td>
 <td align="center"><strong>1.5 puntos</strong></td>
 </tr>
 <tr>
