@@ -8,20 +8,18 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/P5.1/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/introModulo/">
       
       
-        <link rel="prev" href="../P4.1-DNS/">
       
-      
-        <link rel="next" href="../P5.2/">
+        <link rel="next" href="../tallerGitIntro/">
       
       <link rel="icon" href="../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.18">
     
     
       
-        <title>Ejercicios Git y Github - Implantación de aplicaciones web</title>
+        <title>Introducción al módulo - Implantación de aplicaciones web</title>
       
     
     
@@ -87,7 +85,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#enunciado-ejercicios-git-y-github" class="md-skip">
+        <a href="#que-veremos-en-este-modulo" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ejercicios Git y Github
+              Introducción al módulo
             
           </span>
         </div>
@@ -232,14 +230,16 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" checked>
       
       
       
@@ -248,7 +248,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
           1. Introducción
@@ -259,14 +259,16 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" checked>
       
       
       
@@ -275,7 +277,7 @@
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1_1">
           <span class="md-nav__icon md-icon"></span>
           ¿De qué va el módulo?
@@ -286,11 +288,52 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../introModulo/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introducción al módulo
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Introducción al módulo
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#como-lo-veremos" class="md-nav__link">
+    ¿Cómo lo veremos?
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -610,275 +653,152 @@
                   
 
 
-<h1 id="enunciado-ejercicios-git-y-github">Enunciado ejercicios Git y GitHub</h1>
-<h2 id="repositorio-deaw">Repositorio DEAW</h2>
-<ol>
-<li>
-<p>Crear un repositorio en vuestro GitHub llamado <strong>DEAW</strong>.</p>
-</li>
-<li>
-<p>Clonar vuestro repositorio en local.</p>
-</li>
-</ol>
-<h2 id="readme">README</h2>
-<ol>
-<li>Crear (si no lo habéis creado ya) en vuestro repositorio local
-un documento <strong>README.md</strong>.</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Escribir un pequeño texto en este README a propósito del repositorio y el módulo para el que se utilizará·</p>
-</div>
-<h2 id="commit-inicial">Commit inicial</h2>
-<ol>
-<li>Realizar un commit inicial con el comentario <code>Comenzamos con los ejercicios de Git</code></li>
-</ol>
-<h2 id="push-inicial">Push inicial</h2>
-<ol>
-<li>Subir los cambios al repositorio remoto.</li>
-</ol>
-<h2 id="ignorar-archivos">Ignorar archivos</h2>
-<ol>
-<li>
-<p>Crear en el repositorio local un fichero llamado <strong>privado.txt</strong>.</p>
-</li>
-<li>
-<p>Crear en el repositorio local una carpeta llamada <strong>privada</strong>.</p>
-</li>
-<li>
-<p>Realizar los cambios oportunos para que tanto el archivo como
-la carpeta sean ignorados por git.</p>
-</li>
-</ol>
-<h2 id="anadir-fichero-1txt">Añadir fichero 1.txt</h2>
-<ol>
-<li>Añadir fichero <strong>1.txt</strong> al repositorio local.</li>
-</ol>
-<h2 id="crear-el-tag-v01">Crear el tag v0.1</h2>
-<ol>
-<li>Crear un tag <strong>v0.1</strong>.</li>
-</ol>
-<h2 id="subir-el-tag-v01">Subir el tag v0.1</h2>
-<ol>
-<li>Subir los cambios al repositorio remoto.</li>
-</ol>
-<h2 id="cuenta-de-github">Cuenta de GitHub</h2>
-<ol>
-<li>
-<p>Poner una foto en vuestro perfil de GitHub.</p>
-</li>
-<li>
-<p>Poner el doble factor de autentificación en vuestra cuenta de GitHub.</p>
-</li>
-</ol>
-<h2 id="uso-social-de-github">Uso social de GitHub</h2>
-<ol>
-<li>
-<p>Preguntar los nombres de usuario de GitHub de 2 de tus compañeros de clase, búscalos, y sigueles.</p>
-</li>
-<li>
-<p>Seguir los repositorios <strong>DEAW</strong> del resto de tus compañeros.</p>
-</li>
-<li>
-<p>Añadir una estrella a los repositorios <strong>DEAW</strong> del resto de tus compañeros.</p>
-</li>
-</ol>
-<h2 id="crear-una-tabla">Crear una tabla</h2>
-<ol>
-<li>Crear una tabla de este estilo en el fichero <strong>README.md</strong>
-con la información de varios de tus compañeros de clase:</li>
-</ol>
-<table>
-<thead>
-<tr>
-<th>NOMBRE</th>
-<th>GITHUB</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>Nombre del compañero 1</td>
-<td><a href="http://github.com/asanzdiego">enlace a github 1</a></td>
-</tr>
-<tr>
-<td>Nombre del compañero 2</td>
-<td><a href="http://github.com/asanzdiego">enlace a github 1</a></td>
-</tr>
-<tr>
-<td>Nombre del compañero 3</td>
-<td><a href="http://github.com/asanzdiego">enlace a github 3</a></td>
-</tr>
-</tbody>
-</table>
-<h2 id="colaboradores">Colaboradores</h2>
-<ol>
-<li>Poner a <a href="http://github.com/asanzdiego">github.com/raul-profesor</a>
-como colaborador del repositorio <strong>DEAW</strong></li>
-</ol>
-<h2 id="notas">Notas</h2>
-<ol>
-<li>
-<p>Este ejercicio es continuación del anterior por lo que
-tendréis que seguir trabajando en el repositorio <strong>DEAW</strong>.</p>
-</li>
-<li>
-<p>También tendreís que ir poniendo los <strong>comandos</strong>
-que habéis tenido que utilizar durante todos los ejercicios
-y las <strong>explicaciones y capturas de pantalla</strong> que consideréis <strong>necesarias</strong>  en el informe.</p>
-</li>
-</ol>
-<h2 id="crear-una-rama-v02">Crear una rama v0.2</h2>
-<ol>
-<li>
-<p>Crear una rama <strong>v0.2</strong>.</p>
-</li>
-<li>
-<p>Posiciona tu carpeta de trabajo en esta rama.</p>
-</li>
-</ol>
-<h2 id="anadir-fichero-2txt">Añadir fichero 2.txt</h2>
-<ol>
-<li>Añadir un fichero <strong>2.txt</strong> en la rama <strong>v0.2</strong>.</li>
-</ol>
-<h2 id="crear-rama-remota-v02">Crear rama remota v0.2</h2>
-<ol>
-<li>Subir los cambios al repositorio remoto.</li>
-</ol>
-<h2 id="merge-directo">Merge directo</h2>
-<ol>
-<li>
-<p>Posicionarse en la rama <strong>master</strong>.</p>
-</li>
-<li>
-<p>Hacer un merge de la rama <strong>v0.2</strong> en la rama <strong>master</strong>.</p>
-</li>
-</ol>
-<h2 id="merge-con-conflicto">Merge con conflicto</h2>
-<ol>
-<li>
-<p>En la rama <strong>master</strong> poner <strong>Hola</strong> en el fichero <strong>1.txt</strong> y hacer commit.</p>
-</li>
-<li>
-<p>Posicionarse en la rama <strong>v0.2</strong> y poner <strong>Adios</strong> en el fichero "1.txt" y hacer commit.</p>
-</li>
-<li>
-<p>Posicionarse de nuevo en la rama <strong>master</strong> y hacer un merge con la rama <strong>v0.2</strong></p>
-</li>
-</ol>
-<h2 id="listado-de-ramas">Listado de ramas</h2>
-<ol>
-<li>Listar las ramas con merge y las ramas sin merge.</li>
-</ol>
-<h2 id="arreglar-conflicto">Arreglar conflicto</h2>
-<ol>
-<li>Arreglar el conflicto anterior y hacer un commit.</li>
-</ol>
-<h2 id="borrar-rama">Borrar rama</h2>
-<ol>
-<li>
-<p>Crear un tag <strong>v0.2</strong></p>
-</li>
-<li>
-<p>Borrar la rama <strong>v0.2</strong></p>
-</li>
-</ol>
-<h2 id="listado-de-cambios">Listado de cambios</h2>
-<ol>
-<li>Listar los distintos commits con sus ramas y sus tags.</li>
-</ol>
-<h2 id="referencias">Referencias</h2>
-<p><a href="https://git-scm.com/book/es/v2">Pro Git book, written by Scott Chacon and Ben Straub and published by Apress</a></p>
-<h2 id="evaluacion">Evaluación</h2>
-<table>
-<thead>
-<tr>
-<th align="left">Criterio</th>
-<th align="center">Puntuación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">README</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Commit inicial</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Push inicial</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Ignorar archivos</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Añadir fichero 1.txt</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Crear el tag v0.1</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Subir el tag v0.1</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Cuenta de GitHub</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Uso social de GitHub</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Crear una tabla</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Colaboradores</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Crear una rama v0.2</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Añadir fichero 2.txt</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Crear rama remota v0.2</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Merge directo</td>
-<td align="center"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Merge con conflicto</td>
-<td align="center"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Listado de ramas</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Arreglar conflicto</td>
-<td align="center"><strong>1.2 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Borrar rama</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Listado de cambios</td>
-<td align="center"><strong>0.4 puntos</strong></td>
-</tr>
-</tbody>
-</table>
+<h1 id="que-veremos-en-este-modulo">¿Qué veremos en este módulo?</h1>
+<p>En este módulo veremos distintas tecnologías y herramientas que deberemos utilizar para la implantación de aplicaciones en entornos web.</p>
+<p>Por un lado trataremos las técnicas y procesos esenciales para llevar a cabo la implantación exitosa de aplicaciones web en entornos de producción. Esto incluye la instalación y configuración básica de servidores web (nginx y apache) y la implantación de aplicaciones web sobre los servidores desplegados, así como la configuración y administración de los sistemas gestores de bases de datos que utilizan dichas aplicaciones. </p>
+<p>En particular, nos centraremos en la implantación de aplicaciones PHP en entornos LAMP y LEMP.</p>
+<p>Puesto que hoy en día es cada vez más habitual el uso de servidores virtualizados, veremos la implantación y el despliegue de todo lo anterior utilizando contenedores, que son tecnologías de virtualización más ligeras y portables que las tecnologías de virtualización tradicional.</p>
+<p>Otra de las partes importantes del módulo es adquirir nociones básicas de programación en un lenguaje de script de servidor. En este caso aprenderemos a programar en PHP y a desarrollar aplicaciones web sencillas con acceso a bases de datos, puesto que muchos gestores de contenido han sido desarrollados en PHP.</p>
+<p>También trataremos la implantación y administración de alguna aplicación de ofimática web.</p>
+<p>Finalmente estudiaremos qué es las funciones de un sistema gestor de contenidos (CMS), así como su instalación, configuración y administración. En este caso, utilizaremos Wordpress.</p>
+<!--
+Veamos cada uno de estos apartados con un poco más de detalle.
+
+### Implantación y administración de servidores web
+
+Para poder desplegar una aplicación web lo primero que necesitaremos será un servidor web. Así pues, en primer lugar deberemos conocer qué es un servidor web y qué tecnologías de servidores web existen.
+
+Seguidamente estudiaremos los protocolos utilizados en la transferencia de páginas web (http, https), su historia y funcionamiento.
+
+Continuaremos viendo los servidores web más utilizados actualmente (Apache y Nginx), sus diferencias y aplicaciones. Los instalaremos y configuraremos.
+
+### Servidores de aplicaciones
+
+En sus primeros tiempos la web fue estática, es decir, el creador de las páginas web definía su contenido y los usuarios simplemente lo consultaban. Con el tiempo fueron surgiendo escenarios de interactividad creciente, en los que las páginas servidas dependían de las acciones del usuario.
+
+Pero los servidores web habían sido desarrollados solamente para servir páginas web. Así pues, se hace necesaria la aparición de algún agente que pueda generar páginas web de forma dinámica, en función de los requerimientos del usuario, y entregarlos al servidor web para servirlas. Surge así el concepto de "servidor de aplicaciones"
+
+Veremos, pues, cómo funcionan este tipo de servidores, distintos tipos y aprenderemos a instalarlos y configurarlos.
+
+### Servicios de red implicados en el despliegue de aplicaciones web
+
+Además del propio servidor web se hacen necesarios una serie de servicios adicionales para el correcto funcionamiento del sistema. Necesitamos enviar las páginas al servidor web mediante un servicio FTP, traducir las IP a los nombres de dominio, alojar nuestro servidor en algún servicio de hosting accesible desde Internet...
+
+En esta parte del módulo veremos, entre otros, el servicio DNS o Domain Name System. Este sistema proporciona un mecanismo eficaz para llevar a cabo la resolución de nombres de dominio a direcciones IP.  A los humanos nos es más fácil recordar un nombre de dominio (de host, de web, de servidor de correo, etc.) utilizando un texto identificativo (por ejemplo, www.gva.es) que la dirección IP pertinente (por ejemplo, 193.144.127.85).
+
+En este apartado aprenderemos cómo funciona este sistema, los mecanismos de resolución directa e inversa, los tipos de servidores DNS (maestro, esclavo, caché, forwarder), las herramientas para utilizarlo y, como no, aprenderemos a instalar y configurar un servidor DNS.
+
+### Sistemas de control de versiones.
+
+Un sistema de control de versiones (VCS, por sus siglas en inglés, Version Control System) es una herramienta que permite rastrear y gestionar los cambios en el código fuente y otros archivos a lo largo del tiempo. Su objetivo principal es permitir a los desarrolladores trabajar en colaboración de manera eficiente, mantener un historial de cambios y revertir a versiones anteriores si es necesario.
+
+Actualmente, cualquier proyecto SW es imposible abordar de forma unipersonal. Los proyectos son cada vez más colaborativos y la utilización de un sistema de control de versiones ha pasado a ser una necesidad.
+
+De entre los sistemas de control de versiones más utilizados para el desarrollo de proyectos de desarrollo se encuentra git. Veremos sus aspectos básicos, uso del sistema y su relación con repositorios como github.
+
+### Contenedores
+
+Entre las distintas tecnologías de virtualización existentes ha alcanzado gran relevancia en los últimos tiempos la llamada de "contenedores". De entre las distintas implementaciones de contenedores existentes nos centraremos en docker.
+
+Veremos cómo docker puede ser útil a administradores de sistemas, pero también a desarrolladores. Aprenderemos los conceptos básicos de docker, a instalarlo, manejar imágenes y desplegar servicios como los que desplegamos al principio del tema sobre un contenedor.
+
+### CI/CD (Integración y despliegue continuo)
+
+Entre el desarrollo de una aplicación (o nueva versión de una existente) y que el usuario pueda usarla hay un paso, no trivial, la **puesta en producción**.
+
+En las empresas tradicionales dicho proceso es muy complicado y estresante. Se hace pocas veces, cuatro o cinco veces al año, durante el fin de semana cuando todos los servicios están parados. El proceso genera muchos trastornos y dolores de cabeza. Y los resultados, muchas veces, no son los esperados.
+
+Una idea fundamental de las metodologías "ágiles" es entregar valor frecuentemente para obtener una pronta retroalimentación del cliente. Para ello es necesario tener muy engrasados los procesos de despliegue y puesta en producción del software. Dentro de estas metodologías veremos CI/CD (Integración y despliegue continuo), que busca crear un proceso de desarrollo más fluido y controlado, con el objetivo de entregar software de alta calidad de manera más rápida y confiable
+-->
+
+<h2 id="como-lo-veremos">¿Cómo lo veremos?</h2>
+<p>Cada unidad constará de una parte de teoría donde se tratarán los conceptos que son necesarios conocer antes de ponernos "manos a la obra".</p>
+<p>Por otra parte se realizarán prácticas guiadas que nos permitirán instalar y configurar los distintos servicios que vayamos estudiando.</p>
+<!--
+Puesto que es un objetivo del módulo la instalación y configuración básica de tecnologías de virtualización de servidores en la nube y en contenedores, empezaremos creando nuestros servicios en AWS Academy (Amazon Web Services Academy). Allí crearemos nuestras máquinas virtuales y desplegaremos nuestros servicios.
+
+Una vez abordemos el tema de contenedores, pasaremos a desplegar los mismos servicios en un entorno "docker", añadiendo un grado más de complejidad.
+
+
+### ¿Cómo crearemos nuestras máquinas virtuales en AWS Academy?
+
+En las 2 prácticas de este módulo introductorio aprenderemos a crear servidores virtuales en AWS, conocidos como EC2. Aunque la creación es siempre igual, independientemente del sistema operativo que instalemos, el acceso posterior será diferente en función de que nos conectemos en modo comando o en modo gráfico. Así pues, crearemos una máquina linux a la que accederemos en modo comando por SSH y un servidor Windows al que accederemos en modo gráfico con RDP.
+
+Veamos a continuación las bases teóricas de la conexión SSH que nos permitirán entender la conexión que estableceremos posteriormente en las prácticas. No entraremos en detalle en el protocolo RDP.
+
+### ¿Cómo nos conectaremos por SSH a nuestras máquinas virtuales en AWS Academy? 
+
+Para conectarnos a una máquina de forma remota y segura en modo comando, la opción más recomendable es SSH.
+
+![](Ud1_1/ssh.webp)
+
+SSH o Secure Shell es un protocolo de red criptográfico para operar servicios de red de forma segura a través de una red no protegida. Las aplicaciones típicas incluyen línea de comandos remota, inicio de sesión y ejecución de comandos remota, pero cualquier servicio de red puede protegerse con SSH.
+
+SSH proporciona un canal seguro a través de una red no segura mediante el uso de una arquitectura cliente-servidor, conectando una aplicación cliente SSH con un servidor SSH.  El **puerto TCP estándar para SSH es 22** y se usa generalmente para acceder a sistemas operativos similares a Unix, pero también se puede usar en Microsoft Windows.
+
+Proporciona un mecanismo para autenticar un usuario remoto, transferir entradas desde el cliente al servidor y retransmitir la salida de vuelta al cliente.
+
+SSH tiene muchas aplicaciones diferentes:
+
++ Gestión de servidores a los que no se puede acceder localmente
++ Transferencia segura de archivos
++ Creación de copias de seguridad
++ Conexión entre dos ordenadores con encriptación de extremo a extremo
++ Mantenimiento remoto desde otros ordenadores
+
+##### Autenticación
+
+Los dos métodos de autenticación de usuario SSH más comunes que se utilizan son las contraseñas (cifrado simétrico) y las claves SSH (cifrado asimétrico o de clave pública). Los clientes envían contraseñas cifradas al servidor de forma segura. Sin embargo, las contraseñas son un método de autenticación arriesgado porque su solidez depende de que el usuario sepa qué hace que una contraseña sea segura. 
+
+Los pares de claves pública-privada SSH encriptados asimétricamente son una mejor opción. Una vez que el cliente descifra el mensaje, el servidor le otorga acceso al sistema.
+
+Es decir, SSH opta por el cifrado híbrido, donde se utiliza el cifrado asimétrico para intercambiar unas claves que serán las que se utilizarán posteriormente en el intercambio de información.
+
+##### Cifrados simétricos o de clave privada
+
+Este tipo de cifrado utiliza la misma clave para cifrar y para descifrar la información. Por este motivo, la clave debe ser secreta y sólo conocida por el emisor y el receptor del mensaje.
+
+![](Ud1_1/simetrico.png)
+
+**Ventajas**
+
++ Muy rápidos → cifrar y descifrar un mensaje cada vez requiere un cierto tiempo, que si el algoritmo es complejo, puede ser elevado. 
+
+**Inconvenientes**
+
++ Si alguien no autorizado consigue la clave, podrá espiar la comunicación sin problemas
++ ¿Cómo hacemos para que emisor y receptar conozcan la clave en un primer momento? → no se puede transmitir por el canal inseguro → hay que transmitirla por otro canal seguro
+    <u>Ejemplos:</u> PIN de la tarjeta del banco o archivo comprimido con contraseña
+
+##### Cifrados asimétricos o de clave pública
+
+En este tipo de cifrados cada usuario utiliza un par de claves: una clave pública y una clave privada. Un mensaje cifrado con la clave pública sólo se puede descifrar con su correspondiente clave privada y viceversa.
+
+![](Ud1_1/asimetrico.png)
+
+La *clave pública* es accesible a cualquier persona que quiera consultarla, no hace falta que sea transmitida por un canal seguro como en el caso anterior.
+
+La *clave privada* sólo la debe conocer su dueño.
+
+<u>**Funcionamiento:**</u>
+
+ 1. El emisor cifra un mensaje con la clave pública del receptor
+ 2. El receptor recibe el mensaje y es el único que podrá descifrarlo porque es el único que posee la clave cifrada asociada
+
+**Ventajas**
+
+  + No se necesita un nuevo canal independiente y seguro para transmitir la clave
+
+**Inconvenientes**
+
+  + Son más lentos que los cifrados simétricos
+  + Hay que proteger muy bien la clave privada y tenerla siempre disponible para poder descifrar los mensajes (no es una contraseña)
+  + Hay que asegurarse de que la clave pública es de quién dice ser y no de un impostor que se esté haciendo pasar por él
+
+
+!!!note "Nota"
+    En AWS deberemos crear un conjunto de claves pública-privada para acceder a nuestro servidor virtual. Crearemos el par de claves en el propio entorno AWS y lo descargaremos en nuestro ordenador para después poder realizar la conexión.
+-->
 
 
   

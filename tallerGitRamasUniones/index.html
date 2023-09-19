@@ -105,8 +105,7 @@
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
     <a href=".." title="Implantación de aplicaciones web" class="md-header__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logocaminas.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -219,8 +218,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Implantación de aplicaciones web" class="md-nav__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../assets/logocaminas.png" alt="logo">
 
     </a>
     Implantación de aplicaciones web
@@ -248,14 +246,91 @@
       
       
         <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
-          1. Talleres de introducción
+          1. Introducción
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="true">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          1. Talleres de introducción
+          1. Introducción
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_1" id="__nav_1_1_label" tabindex="0">
+          ¿De qué va el módulo?
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_1_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_1_1">
+          <span class="md-nav__icon md-icon"></span>
+          ¿De qué va el módulo?
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../introModulo/" class="md-nav__link">
+        Introducción al módulo
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+          Talleres de introdución
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_1_2">
+          <span class="md-nav__icon md-icon"></span>
+          Talleres de introdución
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -316,6 +391,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#como-trabajar-en-equipo-con-git" class="md-nav__link">
+    Cómo trabajar en equipo con git
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#que-tienes-que-hacer" class="md-nav__link">
     ¿Qué tienes que hacer?
   </a>
@@ -340,6 +422,13 @@
       <a href="../tallerMarkdown/" class="md-nav__link">
         Taller 3: Introducción a Markdown
       </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -585,25 +674,32 @@
 <li>Aprenderás el concepto de unión (merge) que nos posibilita la fusión de ramas.</li>
 <li>A solucionar los posibles conflictos que pueden aparecer en el momento del merge.</li>
 </ul>
+<h2 id="como-trabajar-en-equipo-con-git">Cómo trabajar en equipo con <code>git</code></h2>
+<p>Git nos permite trabajar de forma colaborativa en un proyecto mediante el concepto de "rama". Cada miembro del proyecto puede crear una rama del mismo, realizar modificaciones y, posteriormente, unir nuevamente las modificaciones realizadas por cada miembro en la rama principal. Git se encargará de detectar qué se ha modificado (incluso si más de un miembro han modificado la misma parte del proyecto) mostrándonos los cambios y permitiéndonos elegir qué integrar en la rama principal y qué no.</p>
+<p>La siguiente imagen muestra una secuencia de trabajo colaborativa en un proyecto git.</p>
+<p><img alt="" src="../img/git-trabajo-col.png" /></p>
+<p>Figura 2: Imagen extraída del blog de <a href="http://jameschambers.co/writing/git-team-workflow-cheatsheet/">James Chambers</a>.</p>
+<p>Se recomienda leer el <em>post</em> <a href="http://jameschambers.co/writing/git-team-workflow-cheatsheet/">Using Git in a team: a cheatsheet</a>. </p>
+<p>Veamos cómo llevar a cabo este trabajo con ramas aunque no abordaremos el proceso completo que muestra este diagrama. De momento nos centraremos en crear una nueva rama, trabajar en ella, unirla con la principal y finalmente eliminarla.</p>
 <h2 id="que-tienes-que-hacer">¿Qué tienes que hacer?</h2>
 <p>Trabaja con el repositorio de los talleres anteriores.</p>
 <ol>
 <li>Una rama representa una línea independiente de desarrollo, es como crear un nuevo área de trabajo que tendrá su historial propio de commits.</li>
 <li>
 <p>Para  listar las ramas locales ejecuta:</p>
-<div class="highlight"><pre><span></span><code>$ git branch
-* main
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>branch
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span>*<span class="w"> </span>main
 </code></pre></div>
 <p>La rama en la que estás trabajando actualmente se señala con un asterisco <em>. La rama </em><em>main</em><em> (en proyectos antiguos se llama </em><em>master</em>*) es la rama con la que se comienza en cualquier proyecto, y es la que se utiliza como rama principal donde se encuentra el proyecto en su estado final. </p>
 </li>
 <li>
 <p>Crea una nueva rama con la instrucción:</p>
-<div class="highlight"><pre><span></span><code>$ git branch [rama]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>nuevarama
 </code></pre></div>
 </li>
 <li>
 <p>Vuelve a lista las ramas, comprueba que todavía estás en la rama <code>main</code>, para pasar a la nueva rama utiliza el comando:</p>
-<div class="highlight"><pre><span></span><code>$ git checkout [rama]
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>nuevarama
 </code></pre></div>
 <ul>
 <li>Comprueba que en la nueva rama tienes los mismos ficheros que en la rama principal.</li>
@@ -611,24 +707,23 @@
 <li>Truco: con el comando <code>git checkout -b [rama]</code> se crea una nueva rama y te posicionas en ella.</li>
 <li>Con el comando <code>git branch -v</code> se ve el último commit de cada rama. Comprueba que coinciden el último commit en las dos ramas.</li>
 <li>Truco: Puedes usar una extensión de tu shell (bash, zsh,...) para que te muestre en el prompt la rama en la que estás trabajando.</li>
-<li>Comprueba a modificar algún fichero y crea un nuevo fichero en esta rama. Realiza el commit y comprueba que estos cambios no se han reflejado en los ficheros de la rama principal. Ejecuta <code>git branch -v</code> para ver el último commit de cada rama.</li>
-<li>
-<p>Las ramas no se crean automáticamente en GitHub, hay que realizar un <code>push</code> para crearlas en remoto. <strong>Nota: <code>origin</code> es el nombre del repositorio remoto.</strong> Por lo tanto ejecutamos: </p>
-<p>$ git push origin [rama]</p>
-</li>
 </ul>
 </li>
 <li>
-<p>Es bastante frecuente crear una rama, hacer los cambios que sean necesarios, unirla a una rama principal y después eliminar la rama que se había creado.  Para eliminar una rama ejecutamos (<strong>No elimines la rama en este ejercicio</strong>): </p>
-<div class="highlight"><pre><span></span><code>$ git branch -d [rama]
+<p>Prueba a modificar algún fichero y crea un nuevo fichero en esta rama. Realiza el commit y comprueba que estos cambios no se han reflejado en los ficheros de la rama principal. Ejecuta <code>git branch -v</code> para ver el último commit de cada rama.</p>
+</li>
+<li>
+<p>Las ramas no se crean automáticamente en GitHub, hay que realizar un <code>push</code> para crearlas en remoto. <strong>Nota: <code>origin</code> es el nombre del repositorio remoto.</strong> Por lo tanto ejecutamos: </p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>nuevarama
 </code></pre></div>
+Comprueba en GitHub que se ha creado la nueva rama y que puedes seleccionar las 2 ramas existentes.</p>
 </li>
 <li>
 <p>Una vez que has trabajado en una rama, lo normal es querer incorporar los cambios a la rama principal. Para <strong>unir</strong> una rama a la principal, ejecutamos:</p>
-<div class="highlight"><pre><span></span><code>$ git checkout main
-$ git merge [rama]
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>checkout<span class="w"> </span>main
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>nuevarama
 </code></pre></div>
-<p>Cuando sólo se han <strong>añadido o eliminado</strong> archivos en una rama, es fácil unirla a la principal. El resultado simplemente será la suma o resta de esos archivos en la principal. Cuando se hacen <strong>modificaciones</strong> en archivos, incluyendo cambios en los nombres de los archivos, git detecta esos cambios y los adapta automáticamente, pero a veces surgen <strong>conflictos</strong>.</p>
+Cuando sólo se han <strong>añadido o eliminado</strong> archivos en una rama, es fácil unirla a la principal. El resultado simplemente será la suma o resta de esos archivos en la principal. Cuando se hacen <strong>modificaciones</strong> en archivos, incluyendo cambios en los nombres de los archivos, git detecta esos cambios y los adapta automáticamente, pero a veces surgen <strong>conflictos</strong>.</p>
 <p>Realiza la fusión de la nueva rama a la principal. ¿Se han producido conflictos?</p>
 </li>
 <li>
@@ -640,35 +735,52 @@ $ git merge [rama]
 <li>Vuelve a la rama principal. Y modifica de nuevo el fichero antes de realizar el merge.</li>
 <li>
 <p>Realiza la unión y aparece el conflicto:</p>
-<div class="highlight"><pre><span></span><code>$ git merge nuevo 
-Auto-fusionando prueba.txt
-CONFLICTO (contenido): Conflicto de fusión en prueba.txt
-Fusión automática falló; arregle los conflictos y luego realice un commit con el resultado.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>merge<span class="w"> </span>nuevo<span class="w"> </span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span>Auto-fusionando<span class="w"> </span>prueba.txt
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span>CONFLICTO<span class="w"> </span><span class="o">(</span>contenido<span class="o">)</span>:<span class="w"> </span>Conflicto<span class="w"> </span>de<span class="w"> </span>fusión<span class="w"> </span>en<span class="w"> </span>prueba.txt
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span>Fusión<span class="w"> </span>automática<span class="w"> </span>falló<span class="p">;</span><span class="w"> </span>arregle<span class="w"> </span>los<span class="w"> </span>conflictos<span class="w"> </span>y<span class="w"> </span>luego<span class="w"> </span>realice<span class="w"> </span>un<span class="w"> </span>commit<span class="w"> </span>con<span class="w"> </span>el<span class="w"> </span>resultado.
 </code></pre></div>
 </li>
 <li>
 <p>Si miramos el fichero:</p>
-<div class="highlight"><pre><span></span><code>$ cat prueba.txt
-
-&lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
-Hola cómo estás
-=======
-hola que tal
-&gt;&gt;&gt;&gt;&gt;&gt;&gt; nuevo
-</code></pre></div>
 </li>
 </ul>
-<p>Tenemos el contenido que estaba en la rama principal (<strong>HEAD</strong>) y lo que estaba en la rama <strong>nuevo</strong>. Será el usuario el que tendrá que dejar el contenido del fichero como quiera.</p>
+<p>```sh
+        $ cat prueba.txt </p>
+<div class="highlight"><pre><span></span><code>    &lt;&lt;&lt;&lt;&lt;&lt;&lt; HEAD
+    Hola cómo estás
+    =======
+    hola que tal
+    &gt;&gt;&gt;&gt;&gt;&gt;&gt; nuevo
+```
+</code></pre></div>
+<p>Tenemos el contenido que estaba en la rama principal (<strong>HEAD</strong>) y lo que estaba en la rama <strong>nuevo</strong>. Será el usuario el que tendrá que dejar el contenido del fichero como quiera editando directamente el fichero en la rama main.</p>
+</li>
+<li>
+<p>Es bastante frecuente crear una rama, hacer los cambios que sean necesarios, unirla a una rama principal y después eliminar la rama que se había creado.  Para eliminar una rama en local ejecutamos: 
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="w">    </span>$<span class="w"> </span>git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </span>nuevarama
+</code></pre></div>
+    Para eliminarla en remoto
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="w">    </span>git<span class="w"> </span>push<span class="w"> </span>origin<span class="w"> </span>--delete<span class="w"> </span>nuevarama
+</code></pre></div>
+    Si queremos eliminarla tanto en local como en remoto deberemos ejecutar ambos comandos.</p>
+</li>
+<li>
+<p>Acaba la práctica eliminando el repositorio remoto en GitHub y el directorio local que has creado.</p>
+<ol>
+<li>En GitHub ve al proyecto, Settings, General, "Danger zone" y selecciona "Delete this repository"</li>
+<li>En local utiliza <code>rm -Rf pruebanombre</code> para eliminar todos el directorio del proyecto.</li>
+</ol>
 </li>
 </ol>
 <div class="admonition task">
-<p class="admonition-title">¿Qué tienes que entregar?</p>
+<p class="admonition-title">Hazlo tú solo</p>
 <ol>
 <li>Crea una rama que se llame <code>primera</code> en tu local, y ejecuta la instrucción necesaria para comprobar que se ha creado.</li>
 <li>Crea un nuevo fichero en esta rama y fusiónalo con la principal. ¿Se ha producido conflicto? Razona la respuesta.</li>
 <li>Borra la rama <code>primera</code>.</li>
-<li>Crea una rama que se llame <code>segunda</code>, y modifica un fichero en ella para producir un conflicto al unirlo a la rama principal. Entrega el contenido del fichero donde se ha producido el conflicto.</li>
-<li>Soluciona el conflicto que has creado en el punto anterior y sincroniza la rama <code>segunda</code> en el remoto. Entrega una captura de pantalla donde se vea que se ha creado la rama en el repositorio de GitHub.</li>
+<li>Crea una rama que se llame <code>segunda</code>, y modifica un fichero en ella para producir un conflicto al unirlo a la rama principal. Observa el contenido del fichero donde se ha producido el conflicto.</li>
+<li>Soluciona el conflicto que has creado en el punto anterior y sincroniza la rama <code>segunda</code> en el remoto. Comprueba que se ha creado la rama en el repositorio de GitHub.</li>
 </ol>
 </div>
 
