@@ -477,6 +477,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#comprobacion-de-la-instalacion" class="md-nav__link">
+    Comprobación de la instalación
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#creacion-de-las-carpeta-del-sitio-web" class="md-nav__link">
     Creación de las carpeta del sitio web
   </a>
@@ -720,28 +727,29 @@
 <p class="admonition-title">Info</p>
 <p><strong>Esta práctica se ha hecho con Nginx 1.18.0</strong></p>
 </div>
+<h2 id="comprobacion-de-la-instalacion">Comprobación de la instalación</h2>
+<p>Igual que ocurre en Apache, todos los archivos que formarán parte de un sitio web que servirá nginx y se organizarán en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code>.</p>
+<p>Tras instalarlo podemos encontrar un fichero de muestra <code>/var/www/html/index.nginx-debian.html</code> que nos permitirá comprobar que el sistema está funcionando correctamente. Vamos a intentar acceder al servidor web instalado usando la IP pública de la VM.</p>
+<p>Para comprobar que el servidor está funcionando y sirviendo páginas correctamente, podéis acceder desde vuestro cliente a: </p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>http://IP-maq-virtual
+</code></pre></div>
+Y os deberá aparecer algo así: </p>
+<p><img alt="" src="../img/4.1-1.png" /></p>
+<p>Lo que demuestra que todo es correcto hasta ahora. </p>
 <h2 id="creacion-de-las-carpeta-del-sitio-web">Creación de las carpeta del sitio web</h2>
 <p>Igual que ocurre en Apache, todos los archivos que formarán parte de un sitio web que servirá nginx se organizarán en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code>. </p>
 <p>Así pues, vamos a crear la carpeta de nuestro sitio web o dominio: </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/nombre_web/html
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/nombre_web/html
 </code></pre></div>
 Donde el nombre de dominio puede ser la palabra que queráis, sin espacios. </p>
 <p>Ahí, dentro de esa carpeta html, debéis clonar el siguiente repositorio:</p>
 <p><code>https://github.com/cloudacademy/static-website-example</code></p>
 <p>Además, haremos que el propietario de esta carpeta y todo lo que haya dentro sea el usuario <code>www-data</code>, típicamente el usuario del servicio web.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/nombre_web/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/nombre_web/
 </code></pre></div>
 <p>Y le daremos los permisos adecuados para que no nos de un error de acceso no autorizado al entrar en el sitio web: </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/nombre_web
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/nombre_web
 </code></pre></div>
-Para comprobar que el servidor está funcionando y sirviendo páginas correctamente, podéis acceder desde vuestro cliente a: </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>http://IP-maq-virtual
-</code></pre></div>
-Y os deberá aparecer algo así: </p>
-<p><img alt="" src="../img/4.1-1.png" /></p>
-<p>Lo que demuestra que todo es correcto hasta ahora. </p>
-<!--Si ya estaba apache instalado antes y lo has parado, el index.html de nginx que se copia en /var/www/html es index.nginx-debian.html -->
-
 <h2 id="configuracion-de-servidor-web-nginx">Configuración de servidor web NGINX</h2>
 <p>Antes de entrar en materia, cabe aclarar que el término <em>Hosting Virtual</em> se refiere a hacer funcionar más de un sitio web (tales como <code>www.company1.com</code> y <code>www.company2.com</code>) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres de dominio (estos últimos son los que vamos a trabajar en este taller). </p>
 <p>En Nginx hay dos rutas importantes. La primera de ellas es <strong><code>sites-available</code></strong>, que contiene los archivos de configuración de los hosts virtuales o bloques disponibles en el servidor. Es decir, cada uno de los sitios webs que alberga el servidor. La otra es <strong><code>sites-enabled</code></strong>, que contiene los archivos de configuración de los sitios habilitados, es decir, los que funcionan en ese momento. </p>
