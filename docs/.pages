@@ -1,8 +1,11 @@
 nav:
-    - 1. Talleres de introducción:
-      - tallerGitIntro.md
-      - tallerGitRamasUniones.md
-      - tallerMarkdown.md
+    - 1. Introducción:
+      - ¿De qué va el módulo?:
+        - introModulo.md
+      - Talleres de introdución:
+        - tallerGitIntro.md
+        - tallerGitRamasUniones.md
+        - tallerMarkdown.md
     - 2. Arquitectura web. Implantación y administración de servidores web:
       - ArqWeb.md
       - P1.1.md

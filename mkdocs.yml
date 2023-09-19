@@ -3,6 +3,7 @@ site_url: https://victoria-nr.github.io/IAW
 
 theme:
   name: material
+  logo: assets/logocaminas.png
   palette: 
     - media: "(prefers-color-scheme: light)"    
     # Palette toggle for light mode
