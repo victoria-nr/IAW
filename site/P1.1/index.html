@@ -474,40 +474,12 @@
     Instalación servidor web Nginx
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprobacion-de-la-instalacion" class="md-nav__link">
-    Comprobación de la instalación
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creacion-de-las-carpeta-del-sitio-web" class="md-nav__link">
-    Creación de las carpeta del sitio web
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#configuracion-de-servidor-web-nginx" class="md-nav__link">
-    Configuración de servidor web NGINX
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#comprobaciones" class="md-nav__link">
-    Comprobaciones
-  </a>
-  
-    <nav class="md-nav" aria-label="Comprobaciones">
+    <nav class="md-nav" aria-label="Instalación servidor web Nginx">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#comprobacion-del-correcto-funcionamiento" class="md-nav__link">
-    Comprobación del correcto funcionamiento
+  <a href="#comprobacion-de-la-instalacion" class="md-nav__link">
+    Comprobación de la instalación
   </a>
   
 </li>
@@ -515,6 +487,40 @@
           <li class="md-nav__item">
   <a href="#comprobar-registros-del-servidor" class="md-nav__link">
     Comprobar registros del servidor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sitios-virtuales" class="md-nav__link">
+    Sitios virtuales
+  </a>
+  
+    <nav class="md-nav" aria-label="Sitios virtuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creamos-la-estructura-para-el-nuevo-sitio-web" class="md-nav__link">
+    Creamos la estructura para el nuevo sitio web
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificamos-la-configuracion" class="md-nav__link">
+    Modificamos la configuración
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-del-correcto-funcionamiento" class="md-nav__link">
+    Comprobación del correcto funcionamiento
   </a>
   
 </li>
@@ -715,8 +721,8 @@
 <p class="admonition-title">Atención</p>
 <p>Recuerda que tanto Apache como Nginx escuchan en el puerto 80. Por tanto, si en la MV que estás utilizando ya tienes apache instalado, te recomiendo que lo pares o que redigiras el puerto para que escuche en un puerto distinto. Lo más sencillo es parar apache. Recuerda también que en <code>/var/www/html</code> tendrás el archivo index.html de apache que sirve para comprobar el correcto funcionamiento del servidor. Por tanto, al instalar nginx, el archivo <code>index.html</code> tendrá un nombre similar a <code>index.nginx-debian.html</code>. </p>
 </div>
-<p>Para instalar el servidor nginx, primero actualizamos los repositorios y después instalamos el paquete correspondiente: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update
+<p>Para instalar el servidor nginx, primero actualizamos los repositorios y actualizamos el sistema para después instalar el paquete correspondiente: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>nginx
 </code></pre></div>
@@ -727,35 +733,52 @@
 <p class="admonition-title">Info</p>
 <p><strong>Esta práctica se ha hecho con Nginx 1.18.0</strong></p>
 </div>
-<h2 id="comprobacion-de-la-instalacion">Comprobación de la instalación</h2>
-<p>Igual que ocurre en Apache, todos los archivos que formarán parte de un sitio web que servirá nginx y se organizarán en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code>.</p>
-<p>Tras instalarlo podemos encontrar un fichero de muestra <code>/var/www/html/index.nginx-debian.html</code> que nos permitirá comprobar que el sistema está funcionando correctamente. Vamos a intentar acceder al servidor web instalado usando la IP pública de la VM.</p>
+<h3 id="comprobacion-de-la-instalacion">Comprobación de la instalación</h3>
+<p>Igual que ocurre en Apache, todos los archivos que forman parte de un sitio web que servirá nginx se organizan en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code>.</p>
+<p>Tras instalarlo podemos encontrar un fichero de muestra <code>/var/www/html/index.nginx-debian.html</code> que nos permitirá comprobar que el sistema está funcionando correctamente. Vamos a intentar acceder al servidor web instalado usando la IP de la VM.</p>
 <p>Para comprobar que el servidor está funcionando y sirviendo páginas correctamente, podéis acceder desde vuestro cliente a: </p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>http://IP-maq-virtual
 </code></pre></div>
 Y os deberá aparecer algo así: </p>
 <p><img alt="" src="../img/4.1-1.png" /></p>
 <p>Lo que demuestra que todo es correcto hasta ahora. </p>
-<h2 id="creacion-de-las-carpeta-del-sitio-web">Creación de las carpeta del sitio web</h2>
-<p>Igual que ocurre en Apache, todos los archivos que formarán parte de un sitio web que servirá nginx se organizarán en carpetas. Estas carpetas, típicamente están dentro de <code>/var/www</code>. </p>
-<p>Así pues, vamos a crear la carpeta de nuestro sitio web o dominio: </p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/nombre_web/html
+<p>Comprueba que realmente estás viendo la página <code>/var/www/html/index.nginx-debian.html</code>. Editala para que muestre tu nombre en la bienvenida.</p>
+<h3 id="comprobar-registros-del-servidor">Comprobar registros del servidor</h3>
+<p>Comprobad que las peticiones se están registrando correctamente en los archivos de logs, tanto las correctas como las erróneas: </p>
+<ul>
+<li>
+<p><code>/var/log/nginx/access.log</code>: cada solicitud a su servidor web se registra en este archivo de registro, a menos que Nginx esté configurado para hacer algo diferente. </p>
+</li>
+<li>
+<p><code>/var/log/nginx/error.log</code>: cualquier error de Nginx se asentará en este registro.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Si no os aparece nada en los logs, podría pasar que el navegador ha cacheado la página web y que, por tanto, ya no está obteniendo la página del navegador sino de la propia memoria.
+Para solucionar esto, podéis acceder con el <em>modo privado</em> del navegador y ya os debería registrar esa actividad en los logs.</p>
+</div>
+<h2 id="sitios-virtuales">Sitios virtuales</h2>
+<p>Un servidor nginx puede estar sirviendo varias páginas web. A cada una de ellas la denominaremos un "sitio virtual" o "host virtual". Veamos cómo podemos hacer que nuestro servidor sirva varias páginas.</p>
+<h3 id="creamos-la-estructura-para-el-nuevo-sitio-web">Creamos la estructura para el nuevo sitio web</h3>
+<p>En primer lugar vamos a crear la nueva página web.</p>
+<p>Creamos la carpeta de nuestro nuevo sitio web que llamaremos ejemplo2:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/ejemplo2/html
 </code></pre></div>
-Donde el nombre de dominio puede ser la palabra que queráis, sin espacios. </p>
 <p>Ahí, dentro de esa carpeta html, debéis clonar el siguiente repositorio:</p>
 <p><code>https://github.com/cloudacademy/static-website-example</code></p>
 <p>Además, haremos que el propietario de esta carpeta y todo lo que haya dentro sea el usuario <code>www-data</code>, típicamente el usuario del servicio web.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/nombre_web/
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/ejemplo2/
 </code></pre></div>
 <p>Y le daremos los permisos adecuados para que no nos de un error de acceso no autorizado al entrar en el sitio web: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/nombre_web
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/ejemplo2
 </code></pre></div>
-<h2 id="configuracion-de-servidor-web-nginx">Configuración de servidor web NGINX</h2>
-<p>Antes de entrar en materia, cabe aclarar que el término <em>Hosting Virtual</em> se refiere a hacer funcionar más de un sitio web (tales como <code>www.company1.com</code> y <code>www.company2.com</code>) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres de dominio (estos últimos son los que vamos a trabajar en este taller). </p>
+<h3 id="modificamos-la-configuracion">Modificamos la configuración</h3>
+<p>Los archivos de configuración de nginx los podemos encontrar en <code>/etc/nginx</code>.</p>
 <p>En Nginx hay dos rutas importantes. La primera de ellas es <strong><code>sites-available</code></strong>, que contiene los archivos de configuración de los hosts virtuales o bloques disponibles en el servidor. Es decir, cada uno de los sitios webs que alberga el servidor. La otra es <strong><code>sites-enabled</code></strong>, que contiene los archivos de configuración de los sitios habilitados, es decir, los que funcionan en ese momento. </p>
 <p>Dentro de <code>sites-available</code> hay un archivo de configuración por defecto (default), que es la página que se muestra si accedemos al servidor sin indicar ningún sitio web o cuando el sitio web no es encontrado en el servidor (debido a una mala configuración por ejemplo). Esta es la página que nos ha aparecido en el apartado anterior. </p>
-<p>Para que Nginx presente el contenido de nuestra web, es necesario crear un bloque de servidor con las directivas correctas. En vez de modificar el archivo de configuración predeterminado directamente, crearemos uno nuevo en <code>/etc/nginx/sites-available/nombre_web</code>: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="go">sudo nano /etc/nginx/sites-available/vuestro_dominio </span>
+<p>Para que Nginx presente el contenido de nuestra web, es necesario crear un bloque de servidor con las directivas correctas. En vez de modificar el archivo de configuración predeterminado directamente, crearemos uno nuevo en <code>/etc/nginx/sites-available/ejemplo2</code>: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="go">sudo nano /etc/nginx/sites-available/ejemplo2 </span>
 </code></pre></div>
 <p>Y el contenido de ese archivo de configuración: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nb">server</span><span class="w"> </span>{
@@ -777,34 +800,19 @@ Donde el nombre de dominio puede ser la palabra que queráis, sin espacios. </p>
 <p>Ruta → /var/www/ejemplo2/html/2016_soft_landing</p>
 </div>
 <p>Y crearemos un archivo simbólico entre este archivo y el de sitios que están habilitados, para que se dé de alta automáticamente. </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">sudo ln -s /etc/nginx/sites-available/nombre_web /etc/nginx/sites-enabled/</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="go">sudo ln -s /etc/nginx/sites-available/ejemplo2 /etc/nginx/sites-enabled/</span>
 </code></pre></div>
 <p>Y reiniciamos el servidor para aplicar la configuración: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
 </code></pre></div>
-<h2 id="comprobaciones">Comprobaciones</h2>
 <h3 id="comprobacion-del-correcto-funcionamiento">Comprobación del correcto funcionamiento</h3>
 <p>Como aún no poseemos un servidor DNS que traduzca los nombres a IPs, debemos hacerlo de forma manual. Vamos a editar el archivo <code>/etc/hosts</code> <u><strong>de nuestra máquina anfitriona</strong></u> para que asocie la IP de la máquina virtual, a nuestro <code>server_name</code>.</p>
 <p>Este archivo, en Linux, está en: <code>/etc/hosts</code></p>
 <p>Y en Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
 <p>Y deberemos añadirle la línea:</p>
-<p><code>192.168.X.X nombre_web</code></p>
+<p><code>192.168.X.X ejemplo2</code></p>
 <p>donde debéis sustituir la IP por la que tenga vuestra máquina virtual.</p>
-<h3 id="comprobar-registros-del-servidor">Comprobar registros del servidor</h3>
-<p>Comprobad que las peticiones se están registrando correctamente en los archivos de logs, tanto las correctas como las erróneas: </p>
-<ul>
-<li>
-<p><code>/var/log/nginx/access.log</code>: cada solicitud a su servidor web se registra en este archivo de registro, a menos que Nginx esté configurado para hacer algo diferente. </p>
-</li>
-<li>
-<p><code>/var/log/nginx/error.log</code>: cualquier error de Nginx se asentará en este registro.</p>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Si no os aparece nada en los logs, podría pasar que el navegador ha cacheado la página web y que, por tanto, ya no está obteniendo la página del navegador sino de la propia memoria.
-Para solucionar esto, podéis acceder con el <em>modo privado</em> del navegador y ya os debería registrar esa actividad en los logs.</p>
-</div>
+<p>Si queremos tener varios dominios o sitios web en el mismo servidor nginx (es decir, que tengan la misma IP) debemos repetir todo el proceso anterior con el nuevo nombre de dominio que queramos configurar.</p>
 <div class="admonition task">
 <p class="admonition-title">Tarea</p>
 <p>Configura un nuevo dominio (nombre web) para el sitio web estático que puedes descargarte del siguiente repositorio:</p>
