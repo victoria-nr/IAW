@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://victoria-nr.github.io/IAW/P1.4/">
       
       
-        <link rel="prev" href="../P1.3/">
+        <link rel="prev" href="../P1.3-HTTPS/">
       
       
         <link rel="next" href="../P1.5/">
@@ -21,7 +21,7 @@
     
     
       
-        <title>Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx - Implantación de aplicaciones web</title>
+        <title>Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx - Implantación de aplicaciones web</title>
       
     
     
@@ -87,7 +87,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-24-balanceo-de-carga-con-proxy-inverso-en-nginx" class="md-skip">
+        <a href="#practica-voluntaria-25-balanceo-de-carga-con-proxy-inverso-en-nginx" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
+              Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx
             
           </span>
         </div>
@@ -476,6 +476,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../P1.3-HTTPS/" class="md-nav__link">
+        Practica 2.4 - Activación HTTPS en proxy inverso NGINX
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -488,12 +502,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
+          Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx
+        Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx
       </a>
       
         
@@ -512,8 +526,8 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#requisitos-aantes-de-comenzar-la-practica" class="md-nav__link">
-    Requisitos aantes de comenzar la práctica
+  <a href="#requisitos-antes-de-comenzar-la-practica" class="md-nav__link">
+    Requisitos antes de comenzar la práctica
   </a>
   
 </li>
@@ -619,13 +633,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#evaluacion" class="md-nav__link">
-    Evaluación
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -642,7 +649,7 @@
   
     <li class="md-nav__item">
       <a href="../P1.5/" class="md-nav__link">
-        Practica 2.5 - Proxy inverso y balanceo de carga con SSL en NGINX
+        Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX
       </a>
     </li>
   
@@ -761,8 +768,8 @@
                   
 
 
-<h1 id="practica-24-balanceo-de-carga-con-proxy-inverso-en-nginx">Práctica 2.4 – Balanceo de carga con proxy inverso en Nginx</h1>
-<h2 id="requisitos-aantes-de-comenzar-la-practica">Requisitos aantes de comenzar la práctica</h2>
+<h1 id="practica-voluntaria-25-balanceo-de-carga-con-proxy-inverso-en-nginx">Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx</h1>
+<h2 id="requisitos-antes-de-comenzar-la-practica">Requisitos antes de comenzar la práctica</h2>
 <div class="admonition danger">
 <p class="admonition-title">Atención, muy importante antes de empezar</p>
 <ul>
@@ -781,7 +788,7 @@
 <p>Un <a href="https://www-nginx-com.translate.goog/resources/glossary/load-balancing?_x_tr_sl=en&amp;_x_tr_tl=es&amp;_x_tr_hl=es">balanceador de carga</a>     distribuye las solicitudes entrantes del cliente entre un grupo de servidores, en cada caso devolviendo la respuesta del servidor seleccionado al cliente apropiado. </p>
 </li>
 </ul>
-<p>Suenan bastante similares, ¿verdad? Ambos tipos de aplicaciones se ubican entre clientes y servidores, aceptando solicitudes del primero y entregando respuestas del segundo. No es de extrañar que haya confusión sobre qué es un proxy inverso y un balanceador de carga. Para ayudar a diferenciarlos, exploremos cuándo y por qué normalmente se implementan en un sitio web. .</p>
+<p>Suenan bastante similares, ¿verdad? Ambos tipos de aplicaciones se ubican entre clientes y servidores, aceptando solicitudes del primero y entregando respuestas del segundo. No es de extrañar que haya confusión sobre qué es un proxy inverso y un balanceador de carga. Para ayudar a diferenciarlos, exploremos cuándo y por qué normalmente se implementan en un sitio web.</p>
 <h3 id="proxy-inverso">Proxy inverso</h3>
 <p>Ya conocemos este concepto de la práctica anterior. </p>
 <p>Mientras que implementar un balanceador de carga solo tiene sentido cuando se tienen varios servidores, a menudo tiene sentido implementar un proxy inverso incluso con un solo servidor web o servidor de aplicaciones. </p>
@@ -790,7 +797,6 @@
 <p>Los balanceadores de carga se implementan con mayor frecuencia cuando un sitio necesita varios servidores porque el volumen de solicitudes es demasiado para que un solo servidor lo maneje de manera eficiente. </p>
 <p>La implementación de varios servidores también elimina un solo punto de fallo, lo que hace que el sitio web sea más confiable. Por lo general, todos los servidores alojan el mismo contenido, y el trabajo del balanceador de carga es distribuir la carga de trabajo de  manera que se haga el mejor uso de la capacidad de cada servidor, evite la sobrecarga en cualquiera de ellos y dé como resultado la respuesta más rápida posible al cliente. . </p>
 <p><u>Un balanceador de carga también puede mejorar la experiencia del usuario al reducir la cantidad de respuestas de error que ve el cliente. Lo hace detectando cuándo los servidores caen y desviando las solicitudes de ellos a los otros servidores del grupo</u>. En la implementación más simple, el balanceador de carga detecta el estado del servidor al interceptar las respuestas de error a las solicitudes regulares. </p>
-<p>En esta práctica tendremos el escenario donde Nginx hará tanto de proxy inverso como de balanceador de carga al mismo tiempo.  </p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>En esta práctica tendremos un escenario donde Nginx hará tanto de proxy inverso como de balanceador de carga <u>al mismo tiempo</u></p>
@@ -924,42 +930,24 @@ Donde: </p>
 <p class="admonition-title">Cuestión 2</p>
 <p>Si quiero añadir 2 servidores web más al balanceo de carga, describe detalladamente qué configuración habría que añadir y dónde.</p>
 </div>
-<div class="admonition task">
-<p class="admonition-title">Cuestión 3</p>
-<p>Describe todos los pasos que deberíamos seguir y configurar para realizar el balanceo de carga con una de las webs de prácticas anteriores.</p>
-<p>Indicad la configuración de todas las máquinas (webservers, proxy...) y de sus servicios</p>
-</div>
-<h2 id="evaluacion">Evaluación</h2>
-<table>
-<thead>
-<tr>
-<th align="left">Criterio</th>
-<th align="center">Puntuación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">Configuración correcta y completa del servidor web 1</td>
-<td align="center"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Configuración correcta y completa del servidor web 2</td>
-<td align="center"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Configuración correcta y completa del proxy inverso</td>
-<td align="center"><strong>3 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Cuestiones finales</td>
-<td align="center"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td align="left">Se ha prestado especial atención al formato del documento, utilizando la plantilla actualizada y haciendo un correcto uso del lenguaje técnico</td>
-<td align="center"><strong>2 puntos</strong></td>
-</tr>
-</tbody>
-</table>
+<!--   
+!!!Task "Cuestión 3"
+    Describe todos los pasos que deberíamos seguir y configurar para realizar el balanceo de carga con una de las webs de prácticas anteriores.
+
+    Indicad la configuración de todas las máquinas (webservers, proxy...) y de sus servicios
+
+
+## Evaluación
+
+| Criterio      | Puntuación                         |
+| :--------- | :----------------------------------: |
+|  Configuración correcta y completa del servidor web 1   |**2 puntos**  |
+|  Configuración correcta y completa del servidor web 2   |**2 puntos**  |
+|  Configuración correcta y completa del proxy inverso| **3 puntos** |
+| Cuestiones finales | **1 puntos** |
+| Se ha prestado especial atención al formato del documento, utilizando la plantilla actualizada y haciendo un correcto uso del lenguaje técnico |**2 puntos** |
+
+-->
 
 
   
