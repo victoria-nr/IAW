@@ -30,7 +30,9 @@ Los servidores web sirven para almacenar contenidos de Internet y facilitar su d
 ![](img/servodpr2.jpeg){: style="height:300px;width:550px"}
 
 
-Toda página accesible en Internet necesita un servidor especial para sus contenidos web. A menudo, las grandes empresas y organizaciones cuentan con un servidor web propio para disponer sus contenidos en Intranet e Internet. Sin embargo, la mayoría de administradores recurren a los centros de datos de proveedores de alojamiento web para sus proyectos. Independientemente de si tienes un servidor web propio o de si alquilas uno externo, siempre necesitarás un software para gestionar los datos de tu página y mantenerla actualizada. En este sentido, tienes la posibilidad de elegir entre varias soluciones de software para servidores web diseñadas para diferentes aplicaciones y sistemas operativos. 
+Toda página accesible en Internet necesita un servidor especial para sus contenidos web. A menudo, las grandes empresas y organizaciones cuentan con un servidor web propio para disponer sus contenidos en Intranet e Internet. Sin embargo, la mayoría de administradores recurren a los centros de datos de proveedores de alojamiento web para sus proyectos. Y cada vez más la tendencia es a usar servicios "cloud" que nos proporcionen los servicios requeridos sin necesidad de instalar, gestionar y mantener el HW asociado.
+
+Independientemente de si tienes un servidor web propio o de si alquilas uno externo, siempre necesitarás un software para gestionar los datos de tu página y mantenerla actualizada. En este sentido, tienes la posibilidad de elegir entre varias soluciones de software para servidores web diseñadas para diferentes aplicaciones y sistemas operativos. 
 
 ### Tecnología de servidores web
 
@@ -201,19 +203,20 @@ Tipos de medios de Internet, previamente conocido como "tipos " o "tipos de cont
 
 ![](img/Mime-types.png)
 
-Todo identificador de tipo de medio de Internet debe ajustarse al siguiente formato: 
+Todo identificador de tipo de medio de Internet debe ajustarse al siguiente formato: `tipo/subtipo`
 
-```[tipo]/[árbol] [subtipo][+sufijo] [;parámetros]```
+Donde:
 
-donde el "tipo" y el "subtipo" deben estar presentes en cualquier tipo de medio de Internet y los componentes restantes son opcionales. En la lista siguiente hay algunos ejemplos que contienen cada una da las partes delineadas anteriormente. 
+**tipo**: Es la categoría general del recurso, como "text" (texto), "image" (imagen), "audio" (audio), "video" (video), etc.
+**subtipo**: Es una descripción más específica del formato del recurso dentro de la categoría de tipo. Por ejemplo, "plain" (texto sin formato), "html" (página web HTML), "jpeg" (imagen JPEG), "mp3" (archivo de audio MP3), "mp4" (archivo de video MP4), etc.
 
-```image /png```
+Algunos ejemplos de identificadores de tipo de medio comunes son:
 
-```applications /rss +xml```
-
-```video /mp4 ; codecs="avcl.640028"```
-
-```application /vnd.google-earth .kmz```
+- text/plain: Archivo de texto sin formato.
+- text/html: Página web en formato HTML.
+- image/jpeg: Imagen en formato JPEG.
+- audio/mp3: Archivo de audio en formato MP3.
+- video/mp4: Archivo de video en formato MP4.
 
 ## HTTPS
 
@@ -231,11 +234,15 @@ Es decir, lo importante aquí es que hasta ahora los navegadores consideran HTTP
 
 ### Funcionamiento de HTTPS
 
+El funcionamiento básico de HTTPS se muestra en la página siguiente. Como se puede observar, utiliza conceptos de cifrado con clave simétrica y asimétrica.
+
 ![](img/https2.png)
 
 ## Servidores web: Apache vs Nginx
 
-Cuando vamos a poner en marcha un servidor web, lo primero que necesitamos es utilizar un sistema operativo sobre el cual vamos a ejecutar los diferentes servicios, sistema operativo que en más del 95% de las ocasiones suele ser un sistema Linux, así como un software que se encargue de la gestión de las bases de datos, MySQL habitualmente, y un software para gestionar el contenido dinámico de las webs, que suele ser PHP. Además de este software esencial, otra de las partes más importantes del servidor suele ser la elección del servidor web, y aquí es donde entran las dudas. 
+Cuando vamos a poner en marcha un servidor web, lo primero que necesitamos es utilizar un sistema operativo sobre el cual vamos a ejecutar los diferentes servicios, sistema operativo que en más del 95% de las ocasiones suele ser un sistema Linux. Sobre el S.O. se ha de instalar el servicio de servidor web, que es el que se encargara de recibir las peticiones de páginas y servirlas. Y actualmente con esto no suele ser suficiente, ya que raramente un servidor web se limitará a servir páginas estáticas. Se hará necesario un software que se encargue de la gestión de las bases de datos, MySQL habitualmente, y un software para gestionar los contenidos dinámicos de las webs, que suele ser PHP.
+
+En este apartado vamos a centrarnos en el software del servidor web y aquí es donde entran las dudas.
 
 Cuando buscamos montar una web podemos elegir una gran cantidad de servidores web diferentes, desde Apache y Nginx, los más conocidos y utilizados con más de un 85% de uso entre ambos, hasta otros servidores menos conocidos como Microsoft IIS (si usamos un servidor Windows), LiteSpeed, Node.js, etc. 
 
