@@ -58,7 +58,7 @@ Aunque su principal función es la transferencia de contenido web, muchos progra
 ----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------
  Autenticación del usuario  | Autenticación HTTP para áreas específicas de una aplicación web                                                                           
  Redirección                | Redirección de una solicitud de documento por medio de Rewrite Engine                                                                     
- Redirección                | Almacenamiento en caché de documentos dinámicos para la respuesta eficiente de solicitudes y para evitar una sobrecarga del servidor web  
+ Caché                | Almacenamiento en caché de documentos dinámicos para la respuesta eficiente de solicitudes y para evitar una sobrecarga del servidor web  
  Asignación de cookies      | Envío y procesamiento de cookies HTTP    
 
 Además del software del servidor, un host puede contener otro tipo de programas, como por ejemplo un servidor FTP para la carga de archivos o un servidor de base de datos para contenidos dinámicos. En general, existen diferentes tipos de servidores web que pueden ser utilizados para numerosos propósitos, por ejemplo, los servidores de correo, los servidores de juegos o los servidores proxy. 
