@@ -89,7 +89,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#que-vas-a-aprender-en-este-taller" class="md-skip">
+        <a href="#que-vas-a-aprender-en-esta-practica" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -754,35 +754,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#que-vas-a-aprender-en-este-taller" class="md-nav__link">
-    ¿Qué vas a aprender en este taller?
+  <a href="#que-vas-a-aprender-en-esta-practica" class="md-nav__link">
+    ¿Qué vas a aprender en esta práctica?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#recursos-para-realizar-este-taller" class="md-nav__link">
-    Recursos para realizar este taller
-  </a>
-  
-    <nav class="md-nav" aria-label="Recursos para realizar este taller">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#introduccion-al-virtualhosting" class="md-nav__link">
     Introducción al VirtualHosting
   </a>
   
 </li>
-        
-      </ul>
-    </nav>
-  
-</li>
       
         <li class="md-nav__item">
-  <a href="#que-tienes-que-hacer" class="md-nav__link">
-    ¿Qué tienes que hacer?
+  <a href="#tarea" class="md-nav__link">
+    Tarea
   </a>
   
 </li>
@@ -840,27 +827,26 @@
 
   <h1>Práctica 3: VirtualHosting con Apache</h1>
 
-<h2 id="que-vas-a-aprender-en-este-taller">¿Qué vas a aprender en este taller?</h2>
+<h2 id="que-vas-a-aprender-en-esta-practica">¿Qué vas a aprender en esta práctica?</h2>
 <ul>
 <li>Crear distintos <em>Host Virtuales</em> en apache2 que nos permiten tener sitios web diferenciados.</li>
 <li>Acceder a cada <em>Host Virtual</em> con un determinado nombre de dominio.</li>
 </ul>
-<h2 id="recursos-para-realizar-este-taller">Recursos para realizar este taller</h2>
-<h3 id="introduccion-al-virtualhosting">Introducción al VirtualHosting</h3>
-<p>El término <em>Hosting Virtual</em> se refiere a hacer funcionar más de un sitio web (tales como <code>www.company1.com</code> y <code>www.company2.com</code>) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres de dominio (estos últimos son los que vamos a trabajar en este taller). </p>
+<h2 id="introduccion-al-virtualhosting">Introducción al VirtualHosting</h2>
+<p>El término <em>Hosting Virtual</em> se refiere a hacer funcionar más de un sitio web (tales como <code>www.company1.com</code> y <code>www.company2.com</code>) en una sola máquina. Los sitios web virtuales pueden estar "basados en direcciones IP", lo que significa que cada sitio web tiene una dirección IP diferente, o <strong>"basados en nombres diferentes"</strong>, lo que significa que con una sola dirección IP están funcionando sitios web con diferentes nombres de dominio (estos últimos son los que vamos a trabajar en esta práctica).</p>
 <p>El servidor web Apache2 se instala por defecto con un host virtual. La configuración de este sitio la podemos encontrar en:</p>
 <div class="highlight"><pre><span></span><code>/etc/apache2/sites-available/000-default.conf
 </code></pre></div>
-<p>Cuyo contenido podemos ver:</p>
-<div class="highlight"><pre><span></span><code>&lt;VirtualHost *:80&gt;
-        #ServerName www.example.com 
-        ServerAdmin webmaster@localhost
-        DocumentRoot /var/www/html  
-        ErrorLog ${APACHE_LOG_DIR}/error.log
-        CustomLog ${APACHE_LOG_DIR}/access.log combined 
-&lt;/VirtualHost&gt;
+<p>Cuyo contenido podemos ver:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="w">    </span><span class="nt">&lt;VirtualHost</span><span class="w"> </span><span class="s">*:80</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">            </span><span class="c">#ServerName www.example.com </span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">            </span><span class="nb">ServerAdmin</span><span class="w"> </span>webmaster@localhost
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">            </span><span class="nb">DocumentRoot</span><span class="w"> </span><span class="sx">/var/www/html</span><span class="w">  </span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">            </span><span class="nb">ErrorLog</span><span class="w"> </span>${APACHE_LOG_DIR}/error.log
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">            </span><span class="nb">CustomLog</span><span class="w"> </span>${APACHE_LOG_DIR}/access.log<span class="w"> </span>combined<span class="w"> </span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">&lt;/VirtualHost&gt;</span>
 </code></pre></div>
-<p>Donde encontramos los siguientes parámetros:</p>
+Donde encontramos los siguientes parámetros:</p>
 <ul>
 <li><a href="https://httpd.apache.org/docs/2.4/mod/core.html#servername">ServerName</a>: El nombre con el que vamos acceder al sitio virtual. En el sitio virtual por defecto (como sólo tenemos uno) está comentado, podemos acceder por nombre o por dirección IP.</li>
 <li><a href="https://httpd.apache.org/docs/2.4/mod/core.html#serveradmin">ServerAdmin</a>: Dirección de correo del administrador responsable del servidor.</li>
@@ -871,60 +857,63 @@
 <p>Por defecto este sitio virtual está habilitado, por lo que podemos comprobar que existe un enlace simbólico a este fichero en el directorio <code>/etc/apache2/sites-enabled</code>:</p>
 <div class="highlight"><pre><span></span><code>lrwxrwxrwx 1 root root   35 Oct  3 15:24 000-default.conf -&gt; ../sites-available/000-default.conf
 </code></pre></div>
-<p>Podemos habilitar o deshabilitar nuestros host virtuales utilizando los siguientes comandos:</p>
-<div class="highlight"><pre><span></span><code>a2ensite
-a2dissite
+<p>Podemos habilitar o deshabilitar nuestros hosts virtuales utilizando los siguientes comandos:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span>a2ensite
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>a2dissite
 </code></pre></div>
-<p>En el fichero de configuración general <code>/etc/apache2/apache2.conf</code> nos encontramos las opciones de configuración del directorio padre del indicado en la directiva <code>DocumentRoot</code> (suponemos que todos los host virtuales van a estar guardados en subdirectorios de este directorio):</p>
-<div class="highlight"><pre><span></span><code>...
-&lt;Directory /var/www/&gt;
-    Options Indexes FollowSymLinks
-    AllowOverride None
-    Require all granted
-&lt;/Directory&gt;
-...
-</code></pre></div>
-<h2 id="que-tienes-que-hacer">¿Qué tienes que hacer?</h2>
+En el fichero de configuración general <code>/etc/apache2/apache2.conf</code> nos encontramos las opciones de configuración del directorio padre del indicado en la directiva <code>DocumentRoot</code> (suponemos que todos los host virtuales van a estar guardados en subdirectorios de este directorio):
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>...
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nt">&lt;Directory</span><span class="w"> </span><span class="s">/var/www/</span><span class="nt">&gt;</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">        </span><span class="nb">Options</span><span class="w"> </span>Indexes<span class="w"> </span>FollowSymLinks
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">        </span><span class="nb">AllowOverride</span><span class="w"> </span><span class="k">None</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">        </span><span class="nb">Require</span><span class="w"> </span><span class="k">all</span><span class="w"> </span>granted
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nt">&lt;/Directory&gt;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span>...
+</code></pre></div></p>
+<h2 id="tarea">Tarea</h2>
+<div class="admonition question">
+<p class="admonition-title">Tarea 1</p>
 <p>Queremos construir en nuestro servidor web apache dos sitios web con las siguientes características:</p>
 <ul>
 <li>El nombre de dominio del primero será <code>www.iescaminas.org</code>, su directorio base será <code>/var/www/iescaminas</code> y contendrá una página llamada <code>index.html</code>, donde sólo se verá una bienvenida a la página del Instituto El Caminàs.</li>
 <li>En el segundo sitio vamos a crear una página donde se pondrán noticias por parte de los departamentos, el nombre de este sitio será <code>www.departamentosiescaminas.org</code>, y su directorio base será <code>/var/www/departamentos</code>. En este sitio sólo tendremos una página inicial <code>index.html</code>, dando la bienvenida a la página de los departamentos del instituto.</li>
 </ul>
+</div>
 <p>Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:</p>
 <ol>
 <li>
-<p>Los ficheros de configuración de los sitios webs se encuentran en el directorio <code>/etc/apache2/sites-available</code>, por defecto hay dos ficheros, uno se llama <code>000-default.conf</code> que es la configuración del sitio web por defecto. Necesitamos tener dos ficheros para realizar la configuración de los dos sitios virtuales, para ello vamos a copiar el fichero <code>000-default.conf</code>:</p>
-<div class="highlight"><pre><span></span><code>cd /etc/apache2/sites-available
-cp 000-default.conf iescaminas.conf
-cp 000-default.conf departamentos.conf
+<p>Los ficheros de configuración de los sitios webs se encuentran en el directorio <code>/etc/apache2/sites-available</code>. Por defecto está el fichero <code>000-default.conf</code> que es la configuración del sitio web por defecto. Necesitamos tener dos ficheros para realizar la configuración de los dos sitios virtuales, para ello vamos a copiar el fichero <code>000-default.conf</code> dos veces, una para cada sitio virtual:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>    cd /etc/apache2/sites-available
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>    cp 000-default.conf iescaminas.conf
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>    cp 000-default.conf departamentos.conf
 </code></pre></div>
-<p>De esta manera tendremos un fichero llamado <code>iescaminas.conf</code> para realizar la configuración del sitio web <code>www.iescaminas.org</code>, y otro llamado <code>departamentos.conf</code> para el sitio web <code>www.departamentosiescaminas.org</code>.</p>
+    De esta manera tendremos un fichero llamado <code>iescaminas.conf</code> para realizar la configuración del sitio web <code>www.iescaminas.org</code>, y otro llamado <code>departamentos.conf</code> para el sitio web <code>www.departamentosiescaminas.org</code>.</p>
 </li>
 <li>
-<p>Modificamos los ficheros <code>iescaminas.conf</code> y <code>departamentos.conf</code>, para indicar el nombre que vamos a usar para acceder al host virtual (<code>ServerName</code>) y el directorio de trabajo (<code>DocumentRoot</code>). Además vamos cambiar los nombre del fichero log de acceso y de error.</p>
+<p>Modificamos los ficheros <code>iescaminas.conf</code> y <code>departamentos.conf</code>, para indicar el nombre que vamos a usar para acceder al host virtual (<code>ServerName</code>) y el directorio de trabajo (<code>DocumentRoot</code>). Además vamos cambiar los nombres de los ficheros log de acceso y de error.</p>
 </li>
 <li>
-<p>No es suficiente crear los ficheros de configuración de cada sitio web, es necesario crear un enlace simbólico a estos ficheros dentro del directorio <code>/etc/apache2/sites-enabled</code>, para ello:</p>
-<div class="highlight"><pre><span></span><code>a2ensite iescaminas
-a2ensite departamentos
+<p>No es suficiente con crear los ficheros de configuración de cada sitio web, necesitambos también crear un enlace simbólico a estos ficheros dentro del directorio <code>/etc/apache2/sites-enabled</code>, para ello: 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>    a2ensite iescaminas
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>    a2ensite departamentos
 </code></pre></div>
-<p>La creación de los enlaces simbólicos se puede hacer con la instrucción <code>a2ensite nombre_fichero_configuracion</code>, para deshabilitar el sitio tenemos que borrar el enlace simbólico o usar la instrucción <code>a2dissite nombre_fichero_configuracion</code>.</p>
+    Es decir, la creación de los enlaces simbólicos se puede hacer con la instrucción <code>a2ensite nombre_fichero_configuracion</code>. Para deshabilitar el sitio tenemos que borrar el enlace simbólico o usar la instrucción <code>a2dissite nombre_fichero_configuracion</code>.</p>
 </li>
 <li>
-<p>Crea los directorios y los ficheros index.html necesarios en <code>/var/www</code> y reiniciamos el servicio. Recuerda que los directorios y los ficheros deben pertenecer al usuario <code>www-data:www-data</code>.</p>
+<p>Crea los directorios y los ficheros index.html necesarios en <code>/var/www</code> y reiniciamos el servicio apache2. Recuerda que los directorios y los ficheros deben pertenecer al usuario <code>www-data:www-data</code> y deben tener los permisos adecuados.</p>
 </li>
 <li>
-<p>Para terminar lo único que tendremos que hacer es cambiar el fichero hosts (<strong>resolución estática</strong>) en los clientes y poner dos nuevas líneas donde se haga la conversión entre los dos nombre de dominio y la dirección IP del servidor.</p>
+<p>Para terminar lo único que tendremos que hacer es cambiar el fichero hosts (<strong>resolución estática</strong>) en el cliente y poner dos nuevas líneas donde se haga la conversión entre los dos nombre de dominio y la dirección IP del servidor.</p>
 </li>
 </ol>
-<div class="admonition task">
-<p class="admonition-title">¿Qué tienes que entregar?</p>
-<ol>
-<li>Lista los ficheros que se encuentran en el directorio <code>/etc/apache2/sites-enabled</code>.</li>
-<li>Muestra cómo has configurado la resolución estática.</li>
-<li>Capturas de pantallas accediendo a los sitios web.</li>
-</ol>
-</div>
+<!--
+
+!!!Task "¿Qué tienes que entregar?"
+    1. Lista los ficheros que se encuentran en el directorio `/etc/apache2/sites-enabled`.
+    2. Muestra cómo has configurado la resolución estática.
+    3. Capturas de pantallas accediendo a los sitios web.
+-->
+
 <!--4. Repite el ejercicio cambiando los directorios de trabajo a `/srv/www`. ¿Qué modificación debes hacer en el fichero `/etc/apache2/apache2.conf`?
 -->
 
