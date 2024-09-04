@@ -30,6 +30,7 @@ theme:
     - toc.integrate
     - search.highlight
     - content.code.annotate
+    - content.code.copy
 markdown_extensions:
   - meta
   - tables
@@ -37,6 +38,8 @@ markdown_extensions:
   - pymdownx.superfences
   - admonition
   - pymdownx.inlinehilite
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.snippets
   - pymdownx.highlight:
       anchor_linenums: true
@@ -60,3 +63,10 @@ extra:
   analytics: 
       provider: google 
       property: G-3NX5MD5C8H
+
+nav:
+  - ... | Unidad 1/*.md
+  - ... | Unidad 2/*.md
+  - ... | Unidad 3/*.md
+  - ... | Unidad 4/*.md
+ 
