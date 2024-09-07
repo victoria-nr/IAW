@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/Ud2_4_Serv_web/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/P2_2_sitios_virtuales/">
       
       
-        <link rel="prev" href="../Ud2_3_HTTP/">
+        <link rel="prev" href="../P2_1_nginx/">
       
       
-        <link rel="next" href="../P2_1_nginx/">
+        <link rel="next" href="../P2_3_autenticacion_nginx/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>2.4. Servidores web: Nginx vs Apache - Implantación de aplicaciones web</title>
+        <title>Práctica 2.2 – Creación de un sitio virtual - Implantación de aplicaciones web</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#servidores-web-nginx-vs-apache" class="md-skip">
+        <a href="#sitios-virtuales" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.4. Servidores web: Nginx vs Apache
+              Práctica 2.2 – Creación de un sitio virtual
             
           </span>
         </div>
@@ -514,7 +514,7 @@
         
   
   <span class="md-ellipsis">
-    2.1. Implantación de arquitecturas web
+    2.1. Arquitecturas web
   </span>
   
 
@@ -531,11 +531,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Ud2_2_ArqWeb_serweb/" class="md-nav__link">
+      <a href="../Ud2_2_Func_app_web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2.2. Arquitectura Web. Implantación y administración de servidores web
+    2.2. Funcionamiento de una aplicación Web
   </span>
   
 
@@ -552,11 +552,111 @@
   
   
     <li class="md-nav__item">
-      <a href="../Ud2_3_HTTP/" class="md-nav__link">
+      <a href="../Ud2_3_ArqWeb_serweb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2.3. Los protocolos HTTP y HTTPS
+    2.3. Implantación y administración de servidores web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ud2_4_HTTP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4. Los protocolos HTTP y HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ud2_5_Serv_web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5. Servidores web: Nginx vs Apache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2_1_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.1 – Instalación y configuración de servidor web Nginx
   </span>
   
 
@@ -579,14 +679,12 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
   
   <span class="md-ellipsis">
-    2.4. Servidores web: Nginx vs Apache
+    Práctica 2.2 – Creación de un sitio virtual
   </span>
   
 
@@ -597,7 +695,7 @@
         
   
   <span class="md-ellipsis">
-    2.4. Servidores web: Nginx vs Apache
+    Práctica 2.2 – Creación de un sitio virtual
   </span>
   
 
@@ -609,8 +707,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -619,9 +715,66 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#razones-para-usar-nginx" class="md-nav__link">
+  <a href="#sitios-virtuales" class="md-nav__link">
     <span class="md-ellipsis">
-      Razones para usar Nginx
+      Sitios virtuales
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sitios virtuales">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creamos-la-estructura-para-el-nuevo-sitio-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creamos la estructura para el nuevo sitio web
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificamos-la-configuracion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificamos la configuración
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprobaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-del-correcto-funcionamiento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación del correcto funcionamiento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cuestiones-finales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestiones finales
     </span>
   </a>
   
@@ -642,68 +795,12 @@
   
   
   
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_5" >
-        
-          
-          <label class="md-nav__link" for="__nav_2_5" id="__nav_2_5_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Prácticas
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_5">
-            <span class="md-nav__icon md-icon"></span>
-            Prácticas
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
     <li class="md-nav__item">
-      <a href="../P2_1_nginx/" class="md-nav__link">
+      <a href="../P2_3_autenticacion_nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 2.1 – Instalación y configuración del servidor web Nginx
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_2_autenticacion_nginx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2.2 – Autenticación en Nginx
+    Práctica 2.3 – Autenticación en Nginx
   </span>
   
 
@@ -1038,57 +1135,79 @@
                   
 
 
-<h1 id="servidores-web-nginx-vs-apache"><strong>Servidores web: Nginx vs Apache</strong></h1>
-<p>Cuando vamos a poner en marcha un servidor web, lo primero que necesitamos es utilizar un sistema operativo sobre el cual vamos a ejecutar los diferentes servicios, sistema operativo que en más del 95% de las ocasiones suele ser un sistema Linux. Sobre el S.O. se ha de instalar el servicio de servidor web, que es el que se encargara de recibir las peticiones de páginas y servirlas. Y actualmente con esto no suele ser suficiente, ya que raramente un servidor web se limitará a servir páginas estáticas. Se hará necesario un software que se encargue de la gestión de las bases de datos, MySQL habitualmente, y un software para gestionar los contenidos dinámicos de las webs, que suele ser PHP.</p>
-<p>En este apartado vamos a centrarnos en el software del servidor web y aquí es donde entran las dudas.</p>
-<p>Cuando buscamos montar una web podemos elegir una gran cantidad de servidores web diferentes, desde Apache y Nginx, los más conocidos y utilizados con más de un 85% de uso entre ambos, hasta otros servidores menos conocidos como Microsoft IIS (si usamos un servidor Windows), LiteSpeed, Node.js, etc. </p>
-<p>Los dos servidores más utilizados para montar páginas web hoy en día son Apache y Nginx, sin embargo, es imposible decir que uno es mejor que otro ya que cada uno de ellos tiene sus propias fortalezas y debilidades y puede ir mejor bajo ciertas circunstancias o simplemente ser más sencillo de utilizar. </p>
-<p><u><em>Nginx está orientado a mejorar el rendimiento, soportando mayores cargas de tráfico y usuarios que Apache (Problema C10K), además de ofrecer otras funcionalidades como hacer de proxy. En sus orígenes era especialmente eficiente ofreciendo contenido estático</em>.</u></p>
-<p><img alt="" src="../../img/nginx1.png" /> </p>
-<p>Después de ser lanzado, Nginx fue usado principalmente para servir archivos estáticos y como un balanceador de carga o proxy inverso en frente de instalaciones Apache.</p>
-<p>Ejemplos de servicios de despliegue de páginas estáticas:</p>
-<ul>
-<li>Netlify</li>
-<li>Surge</li>
-<li>GitHub Pages</li>
-<li>GitLab Pages</li>
-<li>Firebase</li>
-<li>Vercel</li>
-<li>Neocities</li>
-</ul>
-<p>Mientras evolucionaba la red, y la necesidad de exprimir hasta la última gota de la velocidad y eficiencia de uso de hardware con este, más sitios empezaron a reemplazar Apache con Nginx por completo, gracias a un software mucho más maduro.</p>
-<p><img alt="" src="../../img/nginx2.png" style="height:450px;width:700px" /></p>
-<h3 id="razones-para-usar-nginx">Razones para usar Nginx</h3>
-<ol>
-<li>
-<p><u>Es ligero</u></p>
-<p>Nginx reduce el consumo de RAM. </p>
-</li>
-<li>
-<p><u>Es multiplataforma y fácil de instalar </u></p>
-<p>La mayoría de las grandes distribuciones de GNU/Linux, tienen Nginx en sus repositorios. </p>
-</li>
-<li>
-<p><u>¡Se puede usar junto a Apache! </u></p>
-<p>Sí, como lo lees, algunas empresas solo usan Nginx para servir contenido estático y Apache para el contenido dinámico. </p>
-</li>
-<li>
-<p><u>Caché</u></p>
-<p>Puedes usar Nginx como caché, con algo de configuración, permitiendo mejorar la eficiencia de tu aplicación sin tocar la programación de la misma. </p>
-</li>
-<li>
-<p><u>Balanceador de carga </u></p>
-<p>Este servidor web puede funcionar como balanceador de carga, distribuyendo el tráfico entre varios servidores, permitiendo mayor escalabilidad. </p>
-</li>
-<li>
-<p><u>Soporte comunitario y profesional </u></p>
-<p>Nginx, Inc está detrás del desarrollo de Nginx, además de la comunidad en general, permitiendo tener un soporte tanto profesional como comunitario. </p>
-</li>
-<li>
-<p><u>Compatibilidad con las aplicaciones web más populares</u></p>
-<p>Nginx es compatible con una gran cantidad de CMS existentes en el mercado, y hay un muchos tutoriales y documentación para instalar estos bajo Nginx, como por ejemplo: Wordpress, Joomla, Drupal, phpBB ¡y más! </p>
-</li>
-</ol>
+  <h1>Práctica 2.2 – Creación de un sitio virtual</h1>
+
+<h2 id="sitios-virtuales">Sitios virtuales</h2>
+<p>Un servidor nginx puede estar sirviendo varias páginas web. A cada una de ellas la denominaremos un "sitio virtual" o "host virtual". Veamos cómo podemos hacer que nuestro servidor sirva varias páginas.</p>
+<h3 id="creamos-la-estructura-para-el-nuevo-sitio-web">Creamos la estructura para el nuevo sitio web</h3>
+<p>En primer lugar vamos a crear la nueva página web.</p>
+<p>Creamos la carpeta de nuestro nuevo sitio web que llamaremos practica2_2: </p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/var/www/practica2_2/html
+</code></pre></div>
+Ahí, dentro de esa carpeta html crea un archivo index.html. Puedes copiar el que hemos usado antes cambiando el contenido a "Práctica 2.2"</p>
+<p>Además, haremos que el propietario de esta carpeta y todo lo que haya dentro sea el usuario <code>www-data</code>, típicamente el usuario del servicio web.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>chown<span class="w"> </span>-R<span class="w"> </span>www-data:www-data<span class="w"> </span>/var/www/practica2_2/html
+</code></pre></div>
+<p>Y le daremos los permisos adecuados para que no nos de un error de acceso no autorizado al entrar en el sitio web: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>chmod<span class="w"> </span>-R<span class="w"> </span><span class="m">755</span><span class="w"> </span>/var/www/practica2_2/html
+</code></pre></div>
+<h3 id="modificamos-la-configuracion">Modificamos la configuración</h3>
+<p>Los archivos de configuración de nginx los podemos encontrar en <code>/etc/nginx</code>.</p>
+<p><img alt="InstalacionNginx" src="../P2_1/P2_1_8.png" /></p>
+<p>En Nginx hay dos rutas importantes. La primera de ellas es <strong><code>sites-available</code></strong>, que contiene los archivos de configuración de los hosts virtuales o bloques disponibles en el servidor. Es decir, cada uno de los sitios webs que alberga el servido. La otra es <strong><code>sites-enabled</code></strong>, que contiene los archivos de configuración de los sitios habilitados, es decir, los que funcionan en ese momento. </p>
+<p>Dentro de <code>sites-available</code> hay un archivo de configuración por defecto (default), que es la página que se muestra si accedemos al servidor sin indicar ningún sitio web o cuando el sitio web no es encontrado en el servidor (debido a una mala configuración por ejemplo). Esta es la página que nos ha aparecido en el apartado anterior. </p>
+<p>Para que Nginx presente el contenido de nuestra web, es necesario crear un bloque de servidor con las directivas correctas. En vez de modificar el archivo de configuración predeterminado directamente, crearemos uno nuevo en <code>/etc/nginx/sites-available/nombre_web</code>: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="go">sudo nano /etc/nginx/sites-available/practica2_2 </span>
+</code></pre></div>
+<p>Y el contenido de ese archivo de configuración: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nb">server</span><span class="w"> </span>{
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">        </span><span class="nb">listen</span><span class="w"> </span><span class="m">80</span>;
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">        </span><span class="nb">listen</span><span class="w"> </span>[::]:80;
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">        </span><span class="nb">root</span><span class="w"> </span><span class="sx">/var/www/practica2_2/html</span>;
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">        </span><span class="nb">index</span><span class="w"> </span>index.html<span class="w"> </span>index.htm<span class="w"> </span>index.nginx-debian.html;
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">        </span><span class="nb">server_name</span><span class="w"> </span>practica2_2;
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">        </span><span class="nb">location</span><span class="w"> </span>/<span class="w"> </span>{
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">                </span><span class="nb">try_files</span><span class="w"> </span>$uri<span class="w"> </span>$uri/<span class="w"> </span>=404;
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">        </span><span class="err">}</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="err">}</span>
+</code></pre></div>
+<p>Aquí la directiva root debe ir seguida de la ruta absoluta dónde se encuentre el archivo index.html de nuestra página web.</p>
+<p>Y crearemos un archivo simbólico entre este archivo y el de sitios que están habilitados, para que se dé de alta automáticamente. </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="go">sudo ln -s /etc/nginx/sites-available/practica2_2 /etc/nginx/sites-enabled/</span>
+</code></pre></div>
+<p>Y reiniciamos el servidor para aplicar la configuración: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>nginx
+</code></pre></div>
+<h2 id="comprobaciones">Comprobaciones</h2>
+<h3 id="comprobacion-del-correcto-funcionamiento">Comprobación del correcto funcionamiento</h3>
+<p>Como aún no poseemos un servidor DNS que traduzca los nombres a IPs, debemos hacerlo de forma local en nuestro equipo. Vamos a editar el archivo <code>/etc/hosts</code> <u><strong>de nuestra máquina anfitriona</strong></u> para que asocie la IP de la máquina virtual, a nuestro <code>server_name</code>.</p>
+<p>Este archivo, en Linux, está en: <code>/etc/hosts</code></p>
+<p>Y en Windows: <code>C:\Windows\System32\drivers\etc\hosts</code></p>
+<p>Y deberemos añadirle la línea:</p>
+<p><code>ip_publica_servidor practica2_2</code></p>
+<p>donde debéis sustituir la <em>ip_publica_servidor</em> por la que tenga vuestra máquina virtual.
+Si queremos tener varios dominios o sitios web en el mismo servidor nginx (es decir, que tendrán la misma IP) debemos repetir todo el proceso anterior con el nuevo nombre de dominio que queramos configurar.</p>
+<div class="admonition task">
+<p class="admonition-title">Tarea 1</p>
+<p>Configura un nuevo dominio (nombre web) para el sitio web estático que puedes descargarte del siguiente repositorio:</p>
+<p><code>https://github.com/cloudacademy/static-website-example</code></p>
+<p>Para ello, crea en <code>/var/www</code>  la carpeta del nuevo sitio (por ejemplo, <code>tarea1</code>) y dentro de ésta la carpeta <code>html</code>. Dentro de la carpeta <code>html</code> debéis clonar el repositorio y habrá que cambiar el propietario de la carpeta del sitio y asignar los permisos adecuados.</p>
+</div>
+<div class="admonition task">
+<p class="admonition-title">Tarea 2</p>
+<p>Configura un nuevo dominio (nombre web) para el sitio web estático que puedes descargarte del siguiente repositorio:</p>
+<p><code>https://github.com/The-Codesis/simple-static-website.git</code></p>
+<p>Deberás realizar los mismos pasos que en la tarea anterior.</p>
+</div>
+<h2 id="cuestiones-finales">Cuestiones finales</h2>
+<div class="admonition task">
+<p class="admonition-title">Cuestión 1</p>
+<p>¿Qué pasa si no hago el link simbólico entre <code>sites-available</code> y <code>sites-enabled</code> de mi sitio web?</p>
+</div>
+<div class="admonition task">
+<p class="admonition-title">Cuestión 2</p>
+<p>¿Qué pasa si no le doy los permisos adecuados a <code>/var/www/nombre_web</code>? </p>
+</div>
 
 
 
