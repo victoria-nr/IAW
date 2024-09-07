@@ -1,36 +1,72 @@
 ---
-title: '2.1. Implantación de arquitecturas web'
+title: '2.1. Arquitecturas web'
 ---
 
-# **Implantación de arquitecturas web**
+# **Arquitecturas web**
 
 ## Aspectos generales de arquitecturas web.
 
 La arquitectura de aplicaciones en entornos web difiere bastante de la de aplicaciones de escritorio, en la cual un programa se ejecuta directamente sobre la máquina en la que trabaja el usuario.
 
-El modelo de arquitectura básico que existe en toda **aplicación web** es el modelo llamado cliente-servidor, en el cual entran en juego diversas máquinas o plataformas, cada una de las cuales desarrolla un rol diferenciado en la ejecución de la aplicación. Según las necesidades y la complejidad de la aplicación, este modelo básico de arquitectura puede complicarse más o menos para lograr una mejor distribución de tareas, mejor rendimiento, fiabilidad, aumento de la capacidad de proceso, etc.
+El modelo de arquitectura básico que existe en toda **aplicación web** es el modelo llamado cliente/servidor, en el cual entran en juego diversas máquinas o plataformas, cada una de las cuales desarrolla un rol diferenciado en la ejecución de la aplicación. Según las necesidades y la complejidad de la aplicación, este modelo básico de arquitectura puede complicarse más o menos para lograr una mejor distribución de tareas, mejor rendimiento, fiabilidad, aumento de la capacidad de proceso, etc.
 
-## Arquitecturas web. Modelos
+Las aplicaciones web utilizan lo que se conoce como clientes livianos, los cuales no ejecutan demasiadas labores de procesamiento para la ejecución de la aplicación misma. Desde el punto de vista de la arquitectura se distinguen dos lados; uno es el **cliente**, donde se encuentra el usuario final utilizando la aplicación por medio de un navegador (Google Chrome o Mozilla Firefox). A través de este cliente web, el usuario interactúa con la aplicación localizada al otro lado, en el **servidor**, que es donde residen los datos, reglas y lógica de la aplicación.
 
-Una aplicación distribuida está compuesta por una colección de ordenadores autónomos enlazados por una red de ordenadores y respaldados por un software que hace el conjunto actúe como un servicio integrado.
+Con esta división en dos partes, se logra centralizar la administración en un solo lado: el servidor. Por tanto, se resuelven una gran cantidad de problemas existentes en las aplicaciones de escritorio monousuario, como son:
 
-### El modelo cliente-servidor
+* Duplicidad de datos por falta de unificación de los mismos.
+* Diseminación de la información y lógica en muchas partes.
+* Falta de portabilidad de la aplicación a diferentes sistemas operativos.
+* Dificultad para realizar actualizaciones al programa, ya que las instalaciones están diseminadas.
+* Dificultad para controlar el acceso de los usuarios a información privada.
+* Dificultad para controlar cada una de las instalaciones dependiendo de las necesidades de cada usuario.
 
-El modelo cliente-servidor es un modelo de arquitectura de aplicaciones en el cual se definen o se asignan principalmente dos roles a los ordenadores, que son, como el nombre del modelo indica, los roles de cliente y de servidor.
+Gracias al desarrollo de la web y la generalizacion de la arquitectura cliente/servidor en las aplicaciones web se logran solucionar los problemas anteriores. En particular, podemos destacar las siguientes ventajas de las aplicaciones web:
+
+* No requieren instalar software especial en los clientes, ya que solo necesitamos disponer de un navegador web (Firefox, Chrome, etc).
+* Bajo coste en actualizar los equipos con una nueva versión. Los navegadores visualizan las páginas web que son servidas por el servidor web dinámicamente y, por tanto, no hay que instalar nada en los clientes, ya que la actualización se produce en el servidor y automáticamente la ven todos los usuarios.
+* Acceso a la última versión. Como consecuencia del punto anterior, se evita que pueda existir algún equipo que ejecute una versión diferente y desactualizada.
+* Información centralizada. En una aplicación web, no solamente la lógica de negocio está centralizada en el servidor, sino también los datos que se ubican en una base de datos centralizada.
+* Seguridad y copias de seguridad. La centralizacion de los datos permite llevar el control de una política de copias de seguridad centralizada.
+* Movilidad. Si la aplicación web está ubicada en un servidor web en Internet, cualquier usuario con un portátil y una conexión a Internet móvil podría acceder a la aplicación.
+* Reducción de coste en los clientes, ya que no es necesario disponer de un hardware potente en los puestos de trabajo.
+
+
+## El modelo cliente/servidor
+
+El modelo cliente/servidor es un modelo de arquitectura de aplicaciones en el cual se definen o se asignan principalmente dos roles a los ordenadores, que son, como el nombre del modelo indica, los roles de cliente y de servidor.
 
 [![Client-server model](https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/Client-server_model.svg/512px-Client-server_model.svg.png)](https://commons.wikimedia.org/wiki/File:Client-server_model.svg)
 *Imagen: Lubaochuan, CC BY-SA 4.0 [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Client-server_model.svg)*
 
-En el modelo cliente-servidor, existen dos tipos de componentes:
+En el modelo cliente/servidor, existen dos tipos de componentes:
 
-* **Clientes**: realizan peticiones de servicio. Por lo general, los clientes inician la comunicación con el servidor.
+* **Clientes**: El cliente es el que inicia las solicitudes o peticiones y espera y recibe las respuestas del servidor. Por lo general, un cliente puede conectarse a varios servidores a la vez e interactúa directamente con los usuarios finales mediante una interfaz gráfica de usuario.
 
-* **Servidores**: proveen servicios. Normalmente, los servidores esperan recibir peticiones. Una vez que han recibido una petición, la resuelven y devuelven el resultado al cliente.
+* **Servidores**: Los servidores al iniciarse esperan a que les lleguen solicitudes de los clientes. Tras la recepción de la solicitud, la procesan y luego envían la respuesta al cliente, es decir, proveen servicios. Por lo general, aceptan conexiones desde un gran número de clientes y no suelen interactuar directamente con los usuarios finales.
 
 
-El modelo cliente-servidor básico de la figura anterior es válido para aplicaciones web pequeñas, simples y que no tengan una gran carga de trabajo, es decir, un número reducido de clientes conectados simultáneamente.
+La separación entre cliente y servidor es una separación de tipo lógico, donde el servidor no se ejecuta necesariamente sobre una sola máquina ni es necesariamente un solo programa. Los tipos específicos de servidores incluyen los servidores web, los servidores de archivo, los servidores de correo, etc.
 
-En entornos reales, es común que estas tres características no estén presentes, por lo que es necesario implementar una arquitectura más compleja pero también basada en el modelo cliente-servidor. Esta arquitectura puede presentar diferencias o extensiones al modelo básico para garantizar un buen rendimiento de las aplicaciones web, su fiabilidad y/o la capacidad de atender un gran número de peticiones de los clientes de forma simultánea en aplicaciones web de tamaño mediano o grande, y con un nivel de complejidad medio/alto. De esta necesidad surge el modelo siguiente.
+
+Entre las ventajas de la arquitectura cliente/servidor destacan las siguientes:
+
+* Centralización de recursos: Los datos y procesos principales se gestionan en el servidor.
+* Facilidad de mantenimiento: Los cambios en la aplicación se hacen en el servidor, sin requerir actualizaciones en los clientes.
+* Escalabilidad: Se pueden agregar más clientes y servidores por separado.
+* Seguridad: Los datos sensibles se almacenan en el servidor, no en los clientes.
+* Tecnologías: Están suficientemente desarrolladas y aseguran la seguridad en las transacciones, la amigabilidad de la interfaz y la facilidad de empleo.
+
+Sin embargo, dicha arquitectura cliente/servidor cuenta a su vez con varios desafíos o desventajas que conviene no obviar:
+
+* Dependencia del servidor: Si el servidor falla, la aplicación se vuelve inaccesible, a diferencia de la arquitectura peer-to-peer (P2P) que suele ser más robusta al estar los recursos distribuidos en varios nodos de la red.
+* Costos: El servidor requiere hardware y mantenimiento costosos.
+* Rendimiento: La congestión del tráfico ha sido siempre un problema del paradigma cliente/servidor. Un número elevado de clientes puede ralentizar el servidor.
+* Complejidad de red: La arquitectura depende de una buena infraestructura de red.
+
+El modelo cliente/servidor básico de la figura anterior es válido para aplicaciones web pequeñas, simples y que no tengan una gran carga de trabajo, es decir, un número reducido de clientes conectados simultáneamente.
+
+En entornos reales, es común que estas tres características no estén presentes, por lo que es necesario implementar una arquitectura más compleja pero también basada en el modelo cliente/servidor. Esta arquitectura puede presentar diferencias o extensiones al modelo básico para garantizar un buen rendimiento de las aplicaciones web, su fiabilidad y/o la capacidad de atender un gran número de peticiones de los clientes de forma simultánea en aplicaciones web de tamaño mediano o grande, y con un nivel de complejidad medio/alto. De esta necesidad surge el modelo siguiente.
 
 ### Modelo Cliente-Servidor con Servidores Encadenados
 
@@ -43,14 +79,15 @@ Cuando en una aplicación el servidor debe realizar tareas muy complejas o costo
 Por ejemplo, cuando un cliente de una entidad bancaria accede a los servicios en línea de su banco a través de un navegador web (cliente), el cliente inicia una solicitud al servidor web del banco. Las credenciales de inicio de sesión del cliente se almacenan en una base de datos y el servidor web accede a la base de datos como cliente. Un servidor de aplicaciones interpreta los datos devueltos aplicando la lógica de negocios del banco y proporciona la salida al servidor web. Finalmente, el servidor web devuelve el resultado al navegador web del cliente para su visualización.
 
 
-
+<!--
 ### Aplicaciones Basadas en la Web
 
 Un caso particular de aplicaciones cliente-servidor son las aplicaciones que se ejecutan aprovechando la arquitectura web. Estas aplicaciones se basan en tener toda la capacidad de procesamiento en un servidor web (o conjunto de servidores) al que se accede desde un navegador web.
 
 Cuando un usuario hace clic en un enlace en una página web de su navegador, este genera una solicitud al servidor que contiene la información. Una vez que el servidor recibe la solicitud, devuelve el contenido. La comunicación entre el cliente y el servidor se realiza a través del protocolo HTTP.
+-->
 
-### Modelo Peer-to-Peer (P2P)
+## Modelo Peer-to-Peer (P2P)
 
 Existe un tipo de arquitectura en la cual todas las computadoras actúan simultáneamente como clientes y servidores. Estas redes se conocen como redes peer-to-peer (igual a igual).
 
@@ -59,6 +96,7 @@ Existe un tipo de arquitectura en la cual todas las computadoras actúan simult�
 
 Un sistema peer-to-peer se caracteriza por ser un sistema distribuido en el cual todos los nodos tienen las mismas capacidades y responsabilidades, es decir, todos son clientes y servidores al mismo tiempo, lo que implica que toda la comunicación es simétrica.
 
+<!--
 ## Servidores web y de aplicaciones. Instalación y configuración básica
 
 Durante las fases de desarrollo, puesta en producción y mantenimiento de una aplicación web, nos encontramos con varios tipos de servidores que llevan a cabo tareas específicas en el funcionamiento global.
@@ -108,6 +146,7 @@ Un servidor de directorio es un servidor que permite gestionar información admi
 La utilidad principal de los servidores de directorio es facilitar la gestión de información relacionada con la explotación de aplicaciones web. La ventaja de gestionar esta información mediante este tipo de servidores es la centralización de datos y la facilidad de acceso mediante protocolos estándar como LDAP.
 
 Algunos ejemplos de servidores de directorio son OpenLDAP, para Linux, y Active Directory, para Windows.
+-->
 
 ## Estructura y Recursos de una Aplicación Web
 
@@ -119,7 +158,7 @@ Dejando de lado la organización o estructura impuesta por la elección de ciert
 
 ### Arquitectura Multinivel
 
-La arquitectura multinivel (multitier architecture) es un tipo específico de la arquitectura cliente-servidor en la cual los componentes y recursos de una aplicación se separan según su función. Una de las divisiones más utilizadas es la que separa el nivel de presentación, el nivel de lógica de aplicación y el nivel de gestión de datos.
+La arquitectura multinivel (multitier architecture) es un tipo específico de la arquitectura cliente/servidor en la cual los componentes y recursos de una aplicación se separan según su función. Una de las divisiones más utilizadas es la que separa el nivel de presentación, el nivel de lógica de aplicación y el nivel de gestión de datos.
 
 En este caso, la estructura concreta sería de tres niveles (3-tier architecture). El modelo se define como N-tier architecture (multinivel), ya que propone una división flexible de las aplicaciones en los niveles que sean necesarios para hacer más eficiente su desarrollo, mantenimiento y explotación.
 
@@ -131,6 +170,7 @@ En este modelo, la división por niveles se realiza de forma lineal: el nivel 1 
 !!!warning
     Es importante diferenciar entre el concepto de multinivel (multitier o N-tier) y multicapa (multilayer o N-layer). En el caso del modelo multinivel, se considera que cada nivel, además de implementar una función concreta, es ejecutado por un hardware diferente al del resto de los niveles. En el modelo multicapa, cada capa desarrolla una función concreta que puede ser ejecutada por una misma computadora que se encarga también de la ejecución de otras capas.
 
+<!--
 ### Arquitectura Modelo-Vista-Controlador
 
 La arquitectura Modelo-Vista-Controlador (Model-View-Controller o MVC) es una arquitectura que separa la representación de la información y la lógica de una aplicación de la interacción del usuario.
@@ -161,6 +201,9 @@ Las plataformas avanzadas de desarrollo de aplicaciones web suelen definir una e
 
 Existe un archivo de configuración en el cual se puede especificar el nombre, ubicación y parámetros de configuración de los diferentes componentes que conforman una aplicación. Esto permite tener dicha información centralizada, accesible y actualizable sin necesidad de modificar el código fuente de la aplicación. Este descriptor describe cómo se debe desplegar la aplicación en el servidor.
 
+-->
+
+<!--
 ## Plataformas Web libres y propietarias
 
 Una plataforma web es el entorno de desarrollo de software empleado para diseñar y ejecutar un sitio web. En términos generales, una plataforma web consta de cuatro componentes básicos:
@@ -202,6 +245,7 @@ Existen muchas otras plataformas que trabajan con distintos sistemas operativos 
 
 **XAMPP:** [XAMPP](https://www.apachefriends.org/es/index.html) es una forma fácil de instalar y usar el servidor web Apache con un sistema gestor de bases de datos (MariaDB), PHP y Perl. Basta con descargarlo, extraerlo y comenzar. En este momento hay cuatro versiones de XAMPP para Linux, Windows, Mac OS X y Solaris.
 
+-->
 
 ## Escalabilidad
 

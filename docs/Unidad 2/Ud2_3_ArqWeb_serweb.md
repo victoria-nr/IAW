@@ -1,8 +1,8 @@
 ---
-title: '2.2. Arquitectura Web. Implantación y administración de servidores web'
+title: '2.3. Implantación y administración de servidores web'
 ---
 
-# **Arquitectura Web. Implantación y administración de servidores web**
+# **Implantación y administración de servidores web**
 
 ## Introducción
 

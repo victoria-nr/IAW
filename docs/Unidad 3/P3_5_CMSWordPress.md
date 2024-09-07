@@ -79,6 +79,3 @@ Documenta todo el proceso de instalación tanto con explicaciones como con captu
 |  Captura de las pantallas de configuración de Wordpress en el navegador | **2 puntos**|
 |  Captura de la creación de la primera entrada en el blog | **2 puntos**|
 |  Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico y *documentando de forma correcta todos los pasos del proceso*|**2 puntos** |
-
-
-
