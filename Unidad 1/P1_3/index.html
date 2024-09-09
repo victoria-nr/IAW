@@ -1177,8 +1177,9 @@
 <p>En primer lugar nos crearemos el par de claves para <code>profe</code>, pública y privada, <strong>desde del ordenador local o bien desde el terminal de Linux o desde PowerShell en Windows</strong>, utiliza el comando (<strong>sin sudo</strong>):</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ssh-keygen -b 4096
 </code></pre></div>
-<p>Si dejáis las opciones por defecto, creará una clave privada <code>id_rsa</code> y una clave pública <code>id_rsa.pub</code> en el directorio <code>/home/nombreusuario/.ssh</code>. Compruébalo.</p>
+<p>Si no tenéis un par de claves creadas y dejáis las opciones por defecto, creará una clave privada <code>id_rsa</code> y una clave pública <code>id_rsa.pub</code> en el directorio <code>/home/nombreusuario/.ssh</code>. Compruébalo. Si ya tenéis un par de claves, os pedirá el nombre para ese nuevo par.</p>
 <p>Os pedirá una contraseña para proteger el uso de la clave privada. Puesto que precisamente queremos agilizar el proceso de conexión por SSH para no introducir contraseñas, <strong>debéis dejarla vacía</strong>.</p>
+<p>Si vas a generar y usar varias claves para distintas finalidades podría ser interesante asignarles nombres descriptivos según las mismas.</p>
 <p>Una vez creado el par de claves, tal y como hemos visto en el apartado anterior, <em>el servidor SSH (Debian) debe poseer nuestra clave pública para que podamos autenticarnos con nuestra clave privada</em>, que como su nombre indica, sólo debemos poseer nosotros y por eso nos identifica unívocamente.</p>
 <h3 id="copia-la-clave-publica-desde-el-ordenador-local-al-servidor-debian">Copia la clave pública desde el ordenador local al servidor Debian</h3>
 <p>Este proceso de copia se puede realizar fácilmente con el comando <code>ssh-copy-id</code> si nuestro servidor aceptara login por contraseña. </p>
@@ -1198,28 +1199,37 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>admin@ip-172-31-42-159:~$ su profe
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>profe@ip-172-31-42-159:~$
 </code></pre></div>
+<p>Puede que te pida la contraseña de <code>profe</code> para ejecutar el comando anterior pero el usuario <code>profe</code> no tiene contraseña. Para desactivarlo seguiremos los siguientes pasos:</p>
+<p>Cambia al usuario root y abre el archivo sudoers
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>admin@ip-172-31-42-159:~$ sudo su -
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>root@ip-172-31-42-159:~# sudo visudo
+</code></pre></div></p>
+<p>Añade la siguiente configuración debajo de la línea <code>%sudo ALL=(ALL:ALL) ALL</code>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>admin  ALL=NOPASSWD: /bin/su – profe
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>profe ALL=(ALL) NOPASSWD:ALL
+</code></pre></div></p>
+<p>Guarda y cierra el archivo. Ahora sal del modo root, y desde el usuario <code>admin</code>  cambia al usuario <code>profe</code> con el comando <code>sudo su - profe</code></p>
 <p>Cambiaremos a la carpeta raiz de profe:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>profe@ip-172-31-42-159:~$ cd
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>profe@ip-172-31-42-159:~$ pwd
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>/home/profe
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>profe@ip-172-31-42-159:~$ cd
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>profe@ip-172-31-42-159:~$ pwd
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>/home/profe
 </code></pre></div>
 <p>Ahora creamos la carpeta .ssh y creamos y editamos authorized_keys</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>profe@ip-172-31-42-159:~$ mkdir .ssh
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>profe@ip-172-31-42-159:~$ cd .ssh/
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>profe@ip-172-31-42-159:~/.ssh$ nano authorized_keys
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>profe@ip-172-31-42-159:~$ mkdir .ssh
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>profe@ip-172-31-42-159:~$ cd .ssh/
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>profe@ip-172-31-42-159:~/.ssh$ nano authorized_keys
 </code></pre></div>
 <p>Ahora pegamos el contenido del portapapeles que copiamos anteriormente con CTRL+U y cerramos guardando con CTRL+X.</p>
 <p>Deberemos cambiar los permisos del fichero authorized_keys.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>profe@ip-172-31-42-159:~/.ssh$ chmod 600 ~/.ssh/authorized_keys
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>profe@ip-172-31-42-159:~/.ssh$ chmod 600 ~/.ssh/authorized_keys
 </code></pre></div>
 <p>Reinicia el servicio SSH para aplicar los cambios:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>profe@ip-172-31-42-159:~/.ssh$ sudo service ssh restart 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>profe@ip-172-31-42-159:~/.ssh$ sudo service ssh restart 
 </code></pre></div>
 <h2 id="comprobacion-de-acceso-al-servidor-con-ese-nuevo-usuario">Comprobación de acceso al servidor con ese nuevo usuario</h2>
 <p>Ahora ya podemos conectarnos <strong>desde nuestro equipo local</strong> a la máquina remota usando la clave privada que generamos para <code>profe</code>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>$ ssh -i ~/.ssh/id_rsa profe@direccion-ip-publica-servidor-debian
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>$ ssh -i ~/.ssh/id_rsa profe@direccion-ip-publica-servidor-debian
 </code></pre></div>
-<p>Para finalizar, si vas a generar y usar varias claves para distintas finalidades podría ser interesante asignarles nombres descriptivos según las mismas.</p>
 <blockquote>
 <p><em>Lógicamente, ahora deberíamos proporcionarle al profesor la clave privada para que se pudiera conectarse al servidor. Lógicamente deberíamos hacerlo desde un entorno securizado para evitar que terceros pudieran capturarla. Sin embargo, este no sería el proceso habitual. Lo hemos hecho así para aprender el funcionamiento. Pero en un entorno real sería el profesor el que generaría el par de claves y facilitaría al alumno la clave pública. De esta forma el profesor mantendría su clave privada y podría acceder a la máquina del alumno sin haber expuesto en ningún momento su clave privada.</em></p>
 </blockquote>
