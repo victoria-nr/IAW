@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/P2_3_proxy_inv_nginx/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/P2_4_proxy_inv_nginx/">
       
       
-        <link rel="prev" href="../P2_3_autenticacion_nginx/">
+        <link rel="prev" href="../P2_4_HTTPS_nginx/">
       
       
-        <link rel="next" href="../P2_4_HTTPS_nginx/">
+        <link rel="next" href="../P2_5_Balanceo_carga/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Práctica 2.3 – Proxy inverso con Nginx - Implantación de aplicaciones web</title>
+        <title>Práctica 2.4 – Proxy inverso con Nginx - Implantación de aplicaciones web</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-23-proxy-inverso-con-nginx" class="md-skip">
+        <a href="#practica-24-proxy-inverso-con-nginx" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 2.3 – Proxy inverso con Nginx
+              Práctica 2.4 – Proxy inverso con Nginx
             
           </span>
         </div>
@@ -712,6 +712,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2_3_proxy_inv_nginx%20copy.md_mv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.3 – Proxy inverso con Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2_4_HTTPS_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2.4 - Activación HTTPS en proxy inverso NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -728,7 +770,7 @@
           
   
   <span class="md-ellipsis">
-    Práctica 2.3 – Proxy inverso con Nginx
+    Práctica 2.4 – Proxy inverso con Nginx
   </span>
   
 
@@ -739,7 +781,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 2.3 – Proxy inverso con Nginx
+    Práctica 2.4 – Proxy inverso con Nginx
   </span>
   
 
@@ -823,18 +865,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clonacion-maquina-virtual" class="md-nav__link">
+  <a href="#configuracion-servidor-web-nginx-de-la-practica-22" class="md-nav__link">
     <span class="md-ellipsis">
-      Clonación máquina virtual
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#configuracion-servidor-web-nginx" class="md-nav__link">
-    <span class="md-ellipsis">
-      Configuración servidor web nginx
+      Configuración servidor web nginx de la Práctica 2.2
     </span>
   </a>
   
@@ -887,27 +920,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_4_HTTPS_nginx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Practica 2.4 - Activación HTTPS en proxy inverso NGINX
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1196,13 +1208,13 @@
                   
 
 
-<h1 id="practica-23-proxy-inverso-con-nginx">Práctica 2.3 – Proxy inverso con Nginx</h1>
+<h1 id="practica-24-proxy-inverso-con-nginx">Práctica 2.4 – Proxy inverso con Nginx</h1>
 <h2 id="requisitos-antes-de-comenzar-la-practica">Requisitos antes de comenzar  la práctica</h2>
 <div class="admonition danger">
 <p class="admonition-title">Atención, importante antes de comenzar</p>
 <ul>
-<li>La práctica 2.1 ha de estar funcionando correctamente</li>
-<li>No comenzar la práctica antes de tener la 2.1 <strong><em>funcionando y comprobada</em></strong></li>
+<li>La práctica 2.2 ha de estar funcionando correctamente</li>
+<li>No comenzar la práctica antes de tener la 2.2 <strong><em>funcionando y comprobada</em></strong></li>
 </ul>
 </div>
 <h2 id="introduccion">Introducción</h2>
@@ -1272,45 +1284,31 @@
 <p><img alt="" src="../P2_3/Reverse_Proxy.png" /></p>
 <h2 id="tarea">Tarea</h2>
 <h3 id="configuraciones">Configuraciones</h3>
-<h4 id="clonacion-maquina-virtual">Clonación máquina virtual</h4>
-<p>Vamos a configurar dos Ubuntus con sendos servidores Nginx. Tenéis la máquina virtual inicial y debéis clonarla para tener una segunda: </p>
+<p>Vamos a configurar dos Debian con sendos servidores Nginx. </p>
 <ul>
 <li>
-<p>Uno servirá las páginas web que ya hemos configurado, así pues utilizaremos el servidor que ya tenemos configurado de la Práctica 2.1. </p>
+<p>Uno ya lo tenemos de la Práctica 2.2 y servirá la web de la tarea2 que ya hemos configurado. </p>
 </li>
 <li>
-<p>El nuevo servidor clon Ubuntu con Nginx lo configuraremos como proxy inverso</p>
-</li>
-<li>
-<p>Realizaremos las peticiones HTTP desde el navegador web de nuestra máquina física/anfitrión hacia el proxy clonado, que nos redirigirá al servidor web original.</p>
+<p>Crearemos un nuevo servidor Debian en AWS, instalaremos nginx y lo configuraremos como proxy inverso.</p>
 </li>
 </ul>
-<div class="admonition info">
-<p class="admonition-title">Clonación MV con Vagrant</p>
-<p>Para hacer la clonación desde Vagrant podéis ejecutar los siguientes comandos:</p>
-<ul>
-<li>Ve al directorio de la MV (donde está el archivo Vagrantfile)</li>
-<li>Ejecuta <code>vagrant package</code> para exportar la MV a un archivo package.box</li>
-<li>Ejecuta <code>vagrant box add serv-nginx package.box</code> para añadir la MV exportada a la lista de boxes.</li>
-<li>Ejecuta <code>vagrant box list</code> para verificar que se ha añadido.</li>
-<li>Crea una nueva carpeta para la nueva MV y ejecuta <code>vagrant init</code> estableciendo como box <code>config.vm.box = "serv-nginx"</code> y añade también la siguiente linea: <code>config.vm.network "public_network", type: "dhcp"</code> para que se le asigne una IP.</li>
-</ul>
-</div>
+<p>Realizaremos las peticiones HTTP desde el navegador web de nuestra máquina física/anfitrión hacia el proxy inverso, que nos redirigirá al servidor web original de la Práctica 2.2.</p>
 <p>El diagrama de red quedaría así: </p>
 <p><img alt="" src="../P2_3/p2.3.png" /></p>
 <p>Para que todo quede más diferenciado y os quede más claro que la petición está pasando por el proxy inverso y llega al servidor web destino, vamos a hacer que cada uno de los servidores escuche las peticiones en un puerto distinto. </p>
-<h4 id="configuracion-servidor-web-nginx">Configuración servidor web nginx</h4>
+<h4 id="configuracion-servidor-web-nginx-de-la-practica-22">Configuración servidor web nginx de la Práctica 2.2</h4>
 <p>Vamos a cambiar el nombre que tuviera vuestra web por el de <code>webserver</code>, para ello: </p>
 <ul>
-<li>Cambiad el nombre del archivo de configuración del sitio, es decir, el fichero <code>ejemplo2.conf</code> por <code>webserver.conf</code>.</li>
+<li>Cambiad el nombre del archivo de configuración del sitio, es decir, el fichero <code>tarea2</code> por <code>webserver</code>.</li>
 <li>Cambiad el nombre del sitio web dentro de este archivo de configuración donde haga falta, que será en la directiva <code>server-name</code>. </li>
 <li>En ese mismo fichero, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080. </li>
 </ul>
 <p>No os olvidéis de eliminar el link simbólico antiguo  con el comando <code>unlink nombre_del_link</code> dentro de la carpeta <code>sites-enabled</code> y crear el nuevo para el nuevo nombre de archivo. </p>
 <p>Por último, reiniciad Nginx.</p>
 <h4 id="configuracion-proxy-inverso-nginx">Configuración proxy inverso Nginx</h4>
-<p>Lo que queremos conseguir es que al acceder a <code>http://ejemplo-proxy</code> (o el nombre que tuvieráis de vuestra web de las prácticas anteriores) se acceda al proxy, que nos redirigirá a <code>http://webserver:8080</code>, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.</p>
-<p>Para ello, en la MV clonada seguid los siguientes pasos: </p>
+<p>En el nuevo servidor Debian en el que acabamos de instalar nginx, crearemos un sitio virtual llamado <code>ejemplo-proxy</code>. Lo que queremos conseguir es que al acceder a <code>http://ejemplo-proxy</code> se acceda al proxy, que nos redirigirá a <code>http://webserver:8080</code>, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.</p>
+<p>Para ello, en el nuevo servidor hay que seguir los siguientes pasos: </p>
 <ul>
 <li>
 <p>Cread un archivo de configuración en <em>sites-available</em> con el nombre <code>ejemplo-proxy.conf</code>.</p>
@@ -1345,7 +1343,7 @@
 <p>Esto es para simular la situación en la que nosotros, como clientes, cuando accedamos a nuestro sitio web, no necesitemos saber cómo está todo configurado, sólo necesitamos saber el nombre de la web. </p>
 <div class="admonition warning">
 <p class="admonition-title">¡Atención, muy importante!</p>
-<p><strong>Debéis modificar el archivo host que configurastéis en la práctica 2.1. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina clon que hace de proxy</strong>. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.</p>
+<p><strong>Debéis modificar el archivo host que configurastéis en la práctica 2.2. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina que hace de proxy</strong>. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.</p>
 </div>
 <h2 id="comprobaciones">Comprobaciones</h2>
 <p>Si accedéis a vuestro sitio web, debéis poder seguir accediendo sin problemas. </p>
@@ -1354,7 +1352,7 @@
 <p>Comprobad en los access.log de los dos servidores que llega la petición </p>
 </li>
 <li>
-<p>Comprobad además la petición y respuesta con las herramientas de desarrollador de Firefox en Xubuntu. Pulsando F12 en el navegador os aparecerán estas herramientas</p>
+<p>Comprobad además la petición y respuesta con las herramientas de desarrollador de Firefox. Pulsando F12 en el navegador os aparecerán estas herramientas</p>
 </li>
 </ul>
 <p><img alt="" src="../P2_3/4.1-10.png" /></p>
