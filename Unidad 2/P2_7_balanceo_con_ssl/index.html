@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/P2_4_HTTPS_nginx/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/P2_7_balanceo_con_ssl/">
       
       
-        <link rel="prev" href="../P2_3_proxy_inv_nginx%20copy.md_mv/">
+        <link rel="prev" href="../P2_6_Balanceo_carga/">
       
       
-        <link rel="next" href="../P2_4_proxy_inv_nginx/">
+        <link rel="next" href="../../Unidad%203/Ud3_1_App_Web/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Practica 2.4 - Activación HTTPS en proxy inverso NGINX - Implantación de aplicaciones web</title>
+        <title>Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX - Implantación de aplicaciones web</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#practica-24-activacion-https-en-proxy-inverso-nginx" class="md-skip">
+        <a href="#practica-voluntaria-26-proxy-inverso-y-balanceo-de-carga-con-ssl-en-nginx" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Practica 2.4 - Activación HTTPS en proxy inverso NGINX
+              Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX
             
           </span>
         </div>
@@ -715,11 +715,53 @@
   
   
     <li class="md-nav__item">
-      <a href="../P2_3_proxy_inv_nginx%20copy.md_mv/" class="md-nav__link">
+      <a href="../P2_4_proxy_inv_nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 2.3 – Proxy inverso con Nginx
+    Práctica 2.4 – Proxy inverso con Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2_5_HTTPS_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2.5 - Activación HTTPS en proxy inverso NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2_6_Balanceo_carga/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx
   </span>
   
 
@@ -749,7 +791,7 @@
           
   
   <span class="md-ellipsis">
-    Practica 2.4 - Activación HTTPS en proxy inverso NGINX
+    Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX
   </span>
   
 
@@ -760,7 +802,7 @@
         
   
   <span class="md-ellipsis">
-    Practica 2.4 - Activación HTTPS en proxy inverso NGINX
+    Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX
   </span>
   
 
@@ -866,6 +908,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#cuestiones-finals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cuestiones finals
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#evaluacion" class="md-nav__link">
     <span class="md-ellipsis">
       Evaluación
@@ -878,69 +929,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_4_proxy_inv_nginx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2.4 – Proxy inverso con Nginx
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_5_Balanceo_carga/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_6_balanceo_con_ssl/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1187,34 +1175,39 @@
                   
 
 
-<h1 id="practica-24-activacion-https-en-proxy-inverso-nginx">Practica 2.4 - Activación HTTPS en proxy inverso NGINX</h1>
+<h1 id="practica-voluntaria-26-proxy-inverso-y-balanceo-de-carga-con-ssl-en-nginx">Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX</h1>
 <h2 id="requisitos-antes-de-comenzar-la-practica">Requisitos antes de comenzar la práctica</h2>
 <div class="admonition danger">
 <p class="admonition-title">Atención, muy importante antes de comenzar</p>
 <ul>
-<li>La práctica 2.3 ha de estar funcionando correctamente</li>
-<li>No comenzar la práctica antes de tener la 2.3 <strong><em>funcionando y comprobada</em></strong></li>
+<li>La práctica 2.4 tiene que funcionar correctamente</li>
+<li>No comenzar la práctica antes de tener la 1.3 <strong><em>funcionando y comprobada</em></strong></li>
 </ul>
 </div>
 <h2 id="introduccion">Introducción</h2>
-<p>Como vimos en la teoría el protocolo HTTP es un procotoco inseguro ya que las comunicaciones entre cliente web y servidor web no están cifradas. Por tanto, no podemos tener la seguridad de que la página que estamos visualizando no ha sido modificada en el trayecto del servidor al cliente. Gracias a HTTPS, las comunicaciones están cifradas mediante un certificado SSL/TSL. Veamos cómo hacer que las comunicaciones en el escenario que definimos en la práctica anterior estén cifradas.</p>
+<p>A partir de las prácticas anteriores hemos llegado a un escenario donde un proxy inverso actúa de intermediario entre dos servidores web Nginx, balanceando la carga entre ellos. </p>
+<p>Ya dijimos que una importante función que podía tener un proxy inverso era realizar el cifrado y descifrado de SSL para utilizar HTTPS en los servidores web. De esta forma se aliviaba la carga de trabajo de los servidores web, ya que es una tarea que consume recursos. </p>
+<p>En definitiva, tendríamos un esquema como este: </p>
+<p><img alt="" src="../P2_6/4.1-16.png" /></p>
+<p>Podría llegarse a pensar que en términos de seguridad no es adecuado que el tráfico de red entre el balanceador de carga y los servidores web vaya sin cifrar (HTTP). Sin embargo, pensando en un caso real, la red privada y el proxy inverso/balanceador de carga, además de estar en la misma red privada, suelen estar administrados por las mismas personas de la misma empresa, por lo que no supone un peligro real que ese tráfico vaya sin cifrar. </p>
+<p>Podría cifrarse si fuera necesario, pero entonces pierde sentido que el proxy inverso se encargue del cifrado SSL para HTTPS, ya que haríamos el mismo trabajo dos veces. </p>
+<p>Así las cosas, nos quedaremos con el esquema de la imagen de más arriba para la práctica. </p>
 <h3 id="certificados">Certificados</h3>
 <p>HTTPS se basa en el uso de certificados digitales. </p>
-<p>Grosso modo, cuando entramos en una web vía HTTPS, esta nos presenta un certificado digital para asegurar que es quién dice ser. ¿Cómo sabemos que ese certificado es válido? Debemos consultar a la Autoridad de Certificación (CA) que emitió ese certificado si es válido. </p>
+<p>Grosso modo, cuando entramos en una web vía HTTPS, ésta nos presenta un certificado digital para asegurar que es quién dice ser. ¿Cómo sabemos que ese certificado es válido? Debemos consultar a la Autoridad de Certificación (CA) que emitió ese certificado si es válido. </p>
 <p>Las CA son entidades que emiten certificados y su funcionamiento se basa en la confianza. Confiamos en que los certificados emitidos y firmados por esas entidades son reales y funcionales.  </p>
-<p><img alt="" src="../P2_4/4.1-17.png" /></p>
+<p><img alt="" src="../P2_6/4.1-17.png" /></p>
 <p>Los navegadores web tienen precargadas las Autoridades de Certificación en las que confían por defecto a la hora de navegar por webs HTTPS: </p>
-<p><img alt="" src="../P2_4/4.1-18.png" /></p>
+<p><img alt="" src="../P2_6/4.1-18.png" /></p>
 <p>Si accedemos a una web cuyo certificado no haya sido emitido y firmado por una de estas entidades, nos saltará el famoso aviso: </p>
-<p><img alt="" src="../P2_4/4.1-19.png" /></p>
+<p><img alt="" src="../P2_6/4.1-19.png" /></p>
 <p>Ya que si el certificado no ha sido emitido y firmado por una CA de confianza, puede que se trate de una web maliciosa que nos suponga un riesgo de seguridad, como bien dice el aviso. </p>
 <h2 id="tarea">Tarea</h2>
-<p>A partir de las prácticas anteriores hemos llegado a un escenario donde un proxy inverso actúa de intermediario entre el cliente y un servidor web Nginx.</p>
-<p>Ya dijimos que una importante función que podía tener un proxy inverso era realizar el cifrado y descifrado de SSL para utilizar HTTPS en los servidores web. De esta forma se aliviaba la carga de trabajo de los servidores web, ya que es una tarea que consume recursos.</p>
-<p>Podría llegarse a pensar que en términos de seguridad no es adecuado que el tráfico de red entre el proxy inverso y el servidor web vaya sin cifrar (HTTP). Sin embargo, pensando en un caso real, la red privada y el proxy inverso, además de estar en la misma red privada, suelen estar administrados por las mismas personas de la misma empresa, por lo que no supone un peligro real que ese tráfico vaya sin cifrar.</p>
-<p>Podría cifrarse si fuera necesario, pero entonces pierde sentido que el proxy inverso se encargue del cifrado SSL para HTTPS, ya que haríamos el mismo trabajo dos veces.</p>
-<p>En definitiva, tendríamos un esquema como el siguiente:</p>
-<p><img alt="" src="../P2_4/p2.3https.png" /></p>
+<p>Partimos de la configuración exacta de la práctica anterior, que recordemos era esta: </p>
+<p><img alt="" src="../P2_6/4.1-14.png" /></p>
+<p>Por lo que en esta práctica simplemente debemos añadir la configuración SSL para el cifrado en el Proxy Inverso: </p>
+<p><img alt="" src="../P2_6/4.1-21.png" /></p>
+<p>Tal y como quedará la configuración, desde el cliente aún podríamos acceder a los dos servidores web con HTTP (podéis probarlo) pero es algo que solucionaremos en siguientes temas, configurando un firewall para que sólo la IP del proxy inverso pueda acceder por HTTP a los servidores web y nadie más. </p>
 <h3 id="creacion-de-certificado-autofirmado">Creación de certificado autofirmado</h3>
 <p>Nosotros no utilizaremos certificados de ninguna CA de confianza, básicamente porque: </p>
 <ul>
@@ -1228,10 +1221,10 @@
 <p>Así pues, nosotros crearemos nuestros propios certificados y los firmaremos nosotros mismos como si fuéramos una CA auténtica para poder simular este escenario.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Esto provocará que cuando accedamos por HTTPS a nuestro sitio web por primera vez, nos salté el aviso de seguridad que se comentábamos en la introducción. </p>
+<p>Esto provocará que cuando accedamos por HTTPS a nuestro sitio web por primera vez, nos salté el aviso de seguridad que se comentaba en la introducción. </p>
 </div>
-<p>En este caso no habrá peligro, puesto que estamos 100% seguros que ese certificado lo hemos emitido nosotros para esta práctica, no hay dudas. </p>
-<p>Veamos pues el proceso para generar los certificados y las claves asociadas a ellos (privada/pública). En primer lugar, en el servidor que hace de proxy inverso debemos crear el siguiente directorio: </p>
+<p>En este caso no habrá peligro puesto que estamos 100% seguros que ese certificado lo hemos emitido nosotros para esta práctica, no hay dudas. </p>
+<p>Veamos pues el proceso para generar los certificados y las claves asociadas a ellos (privada/pública). En primer lugar debemos crear el siguiente directorio: </p>
 <p><code>/etc/nginx/ssl</code></p>
 <p>Podemos crear el certificado y las claves de forma simultánea con un único comando, donde: </p>
 <ul>
@@ -1251,7 +1244,7 @@
 <p><strong><code>-days 365</code></strong>: esta opción establece el tiempo durante el cual el certificado se considerará válido. Lo configuramos para un año. </p>
 </li>
 <li>
-<p><strong><code>-newkey rsa: 2048</code></strong> : Esto especifica que queremos generar un nuevo certificado y una nueva clave al mismo tiempo. No creamos la clave necesaria para firmar el certificado en un paso anterior, por lo que debemos crearla junto con el certificado. La parte rsa:2048 le dice que cree una clave RSA de 2048 bits de longitud. </p>
+<p><strong><code>-newkey rsa: 2048</code></strong> : Esto especifica que queremos generar un nuevo certificado y una nueva clave al mismo tiempo. No creamos la clave necesaria para firmar el certificado en un paso anterior, por lo que debemos crearla junto con el certificado. La rsa:2048parte le dice que cree una clave RSA de 2048 bits de longitud. </p>
 </li>
 <li>
 <p><strong><code>-keyout</code></strong>: este parámetro le dice a OpenSSL dónde colocar el archivo de clave privada generado que estamos creando. </p>
@@ -1261,19 +1254,12 @@
 </li>
 </ul>
 <p>El comando completo sería así: </p>
-<p><img alt="" src="../P2_4/4.1-22.png" /></p>
-<p>Os solicitará que introduzcáis una serie de parámetros, como véis en la imagen. Debéis introducir los mismos parámetros que en la imagen excepto en el “Organizational Unit Name”. Ahí deberéis poner  <code>2ASIX – IAW - VuestroNombre</code>.</p>
-<p>Si no te ha dado ningún error comprueba los archivos creados en <code>etc/nginx/ssl</code> y el contenido de cada uno de ellos.</p>
+<p><img alt="" src="../P2_6/4.1-22.png" /></p>
+<p>Os solicitará que introduzcáis una serie de parámetros, como véis en el recuadro rojo de abajo de la imagen. Debéis introducir los mismos parámetros que en la imagen excepto en el “Organizational Unit Name” que véis recuadrado en amarillo. Ahí deberéis poner <code>2DAW – DEAW - Vuestronombre</code> </p>
 <h3 id="configuracion-ssl-en-el-proxy-inverso">Configuración SSL en el proxy inverso</h3>
-<p>De la práctica anterior, dentro del directorio <code>/etc/nginx/sites-available</code> ya debéis tener el archivo de configuración llamado <code>ejemplo-proxy</code>. Es precisamente aquí donde realizaremos la configuración para que el acceso al sitio web se realice mediante SSL (HTTPS). </p>
+<p>De la práctica anterior, dentro del directorio <code>/etc/nginx/sites-available</code> ya debéis tener el archivo de configuración llamado “balanceo”. Es precisamente aquí donde realizaremos la configuración para que el acceso  al sitio web se realice mediante SSL (HTTPS). </p>
 <p>Dentro del bloque <code>server {…}</code> debéis cambiar el puerto de escucha (<code>listen 80</code>) por lo que véis en la imagen de abajo, añadiendo las siguientes líneas de configuración también, de tal forma que quede: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>        listen 443 ssl;
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        ssl_certificate /etc/nginx/ssl/server.crt;
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>        ssl_certificate_key     /etc/nginx/ssl/server.key;
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        ssl_ciphers &#39;TLS_AES_128_GCM_SHA256:TLS_AES_256_GCM_SHA384:TLS_CHACHA20_POLY1305_SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-CHACHA20-POLY1305-SHA256:ECDHE-RSA-AES128-SHA256:ECDHE-RSA-AES256-SHA384&#39;;
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        ssl_protocols TLSv1.2 TLSv1.3;
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>        access_log /var/log/nginx/https_access.log;
-</code></pre></div>
+<p><img alt="" src="../P2_6/4.1-23.png" /></p>
 <p>Donde le estáis diciendo que: </p>
 <ul>
 <li>
@@ -1299,35 +1285,38 @@
 <h3 id="comprobaciones">Comprobaciones</h3>
 <ul>
 <li>
-<p>Si accedéis ahora a <code>https://ejemplo-proxy</code> os debería saltar un aviso de seguridad debido a que nuestro certificado es autofirmado, como comentábamos anteriormente. </p>
+<p>Si accedéis ahora a https://balanceo os debería saltar un aviso de seguridad debido a que nuestro certificado es autofirmado, como comentábamos anteriormente. </p>
+</li>
+<li>
+<p>Si añadís una una excepción podréis acceder al sitio web y recargando repetidamente la página con F5, veréis que el balanceo de carga se hace correctamente accediendo mediante HTTPS. </p>
 </li>
 <li>
 <p>Para comprobar que los datos del certificado son, efectivamente, los vuestros podéis comprobarlo así. Pulsando en el candado de la barra de búsqueda: </p>
 </li>
 </ul>
-<p><img alt="" src="../P2_4/4.1-24.png" /></p>
-<p>Podéis ver también el certificado:</p>
-<p><img alt="" src="../P2_4/4.1-26.png" /></p>
-<p>Y finalmente accedemos a nuestra web:</p>
-<p><img alt="" src="../P2_4/4.1-27.png" /></p>
-<p>Si ahora intentáis acceder a <strong><code>http://ejemplo-proxy</code></strong>, ¿deberíais poder acceder? Comprobadlo y describid qué pasa y por qué. </p>
+<p><img alt="" src="../P2_6/4.1-24.png" /></p>
+<p>Con más información:</p>
+<p><img alt="" src="../P2_6/4.1-25.png" /></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Aquí también podréis eliminar la excepción que habéis añadido en la página de la advertencia de seguridad, por si necesitáis reiniciar las pruebas. </p>
+</div>
+<p>Y por último, ver certificado: </p>
+<p><img alt="" src="../P2_6/4.1-26.png" /></p>
+<p>Y podremos ver los detalles: </p>
+<p><img alt="" src="../P2_6/4.1-27.png" /></p>
+<p>Si ahora intentáis acceder a <strong><code>http://balanceo</code></strong>, ¿deberíais poder acceder? Comprobadlo y describid qué pasa y por qué. </p>
 <h3 id="redireccion-forzosa-a-https">Redirección forzosa a HTTPS</h3>
-<p>Para que, indistintamente de la forma por la que accedamos al sitio web, siempre se fuerce a utilizar HTTPS, necesitaremos una configuración adicional. </p>
-<p>Necesitamos añadir un bloque “server” adicional y separado del otro, al archivo de configuración de “ejemplo-proxy”. Algo así: </p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>server {
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>        listen 80;
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>        server_name ejemplo-proxy;
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>        access_log /var/log/nginx/http_access.log;
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>        return 301 https://ejemplo-proxy$request_uri;
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>}
-</code></pre></div>
+<p>Para que, indistintamente de la forma por la que accedamos al sitio web balanceo, siempre se fuerce a utilizar HTTPS, necesitaremos una configuración adicional. </p>
+<p>Necesitamos añadir un bloque “server” adicional y separado del otro, al archivo de configuración de “balanceo”. Algo así: </p>
+<p><img alt="" src="../P2_6/4.1-28.png" /></p>
 <p>Con esta configuración le estamos diciendo que: </p>
 <ul>
 <li>
 <p>Escuche en el puerto 80 (HTTP) </p>
 </li>
 <li>
-<p>Que el nombre al que responderá el servidor/sitio web es <code>ejemplo-proxy</code> </p>
+<p>Que el nombre al que responderá el servidor/sitio web es balanceo </p>
 </li>
 <li>
 <p>Que guarde los logs de este bloque en ese directorio y con ese nombre </p>
@@ -1336,7 +1325,7 @@
 <p>Cuando se recibe una petición con las dos condiciones anteriores, se devuelve un código HTTP 301: </p>
 <ul>
 <li>
-<p><strong>HTTP 301 Moved Permanently</strong> (Movido permanentemente en español) es un código de estado de HTTP que indica que el host ha sido capaz de comunicarse con el servidor pero que el recurso solicitado ha sido movido a otra dirección permanentemente. Es muy importante configurar las redirecciones 301 en los sitios web y para ello hay diferentes métodos y sintaxis para realizar la redirección 301. </p>
+<p><strong>HTTP 301 Moved Permanently</strong> (Movido permanentemente en español) es un código de estado de HTTP que indica que el host ha sido capaz de comunicarse con el servidor pero que el recurso solicitado ha sido movido a otra dirección permanentementeEs muy importante configurar las redirecciones 301 en los sitios web y para ello hay diferentes métodos y sintaxis para realizar la redirección 301. </p>
 </li>
 <li>
 <p>La <strong>redirección 301</strong> es un código o comando insertado por un Webmaster que permite redirigir a los usuarios y buscadores de un sitio web de un sitio a otro. </p>
@@ -1344,7 +1333,7 @@
 </ul>
 <div class="admonition note">
 <p class="admonition-title">Aclaración</p>
-<p>Es decir, lo que estamos haciendo es que cuando se reciba una petición HTTP (puerto 80) en <code>http://ejemplo-proxy</code>, se redirija a <code>https://ejemplo-proxy</code> (HTTPS).</p>
+<p>Es decir, lo que estamos haciendo es que cuando se reciba una petición HTTP (puerto 80) en <code>http://balanceo</code>, se redirija a <code>https://balanceo</code> (HTTPS) </p>
 </div>
 </li>
 </ul>
@@ -1358,12 +1347,38 @@
 <p>Reiniciad el servicio </p>
 </li>
 <li>
-<p>Comprobad ahora que cuando entráis en <code>http://ejemplo-proxy</code>, automáticamente os redirige a la versión segura de la web. </p>
+<p>Comprobad ahora que cuando entráis en <code>http://balanceo</code>, automáticamente os redirige a la versión segura de la web. </p>
 </li>
 <li>
 <p>Comprobad que cuando realizáis una petición en el archivo de log <code>http_access.log</code> aparece la redirección 301 y que, de la misma manera, aparece una petición GET en <code>https_access.log</code>. </p>
 </li>
 </ul>
+</div>
+<h2 id="cuestiones-finals">Cuestiones finals</h2>
+<div class="admonition task">
+<p class="admonition-title">Cuestión 1</p>
+<p>Hemos configurado nuestro proxy inverso con todo lo que nos hace falta pero no nos funciona y da un error del tipo <code>This site can't provide a secure connection, ERR_SSL_PROTOCOL_ERROR.</code></p>
+<p>Dentro de nuestro server block tenemos esto:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nb">server</span><span class="w"> </span>{
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">    </span><span class="nb">listen</span><span class="w"> </span><span class="m">443</span>;
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">    </span><span class="nb">ssl_certificate</span><span class="w"> </span><span class="sx">/etc/nginx/ssl/enrico-berlinguer/server.crt</span>;
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="nb">ssl_certificate_key</span><span class="w"> </span><span class="sx">/etc/nginx/ssl/enrico-berlinguer/server.key</span>;
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">    </span><span class="nb">ssl_protocols</span><span class="w"> </span>TLSv1.3;
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nb">ssl_ciphers</span><span class="w"> </span>ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS;
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nb">server_name</span><span class="w"> </span>enrico-berlinguer;
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">    </span><span class="nb">access_log</span><span class="w"> </span><span class="sx">/var/log/nginx/https_access.log</span>;
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nb">location</span><span class="w"> </span>/<span class="w"> </span>{
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">        </span><span class="nb">proxy_pass</span><span class="w"> </span>http://red-party;
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">        </span><span class="err">}</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="err">}</span>
+</code></pre></div>
+</div>
+<div class="admonition task">
+<p class="admonition-title">Cuestión 2</p>
+<p>Imaginad que intentamos acceder a nuestro sitio web HTTPS y nos encontramos con el siguiente error:</p>
+<p><img alt="" src="../../img/Your-connection-isnt-private-NET-ERR_CERT_REVOKED.png" /></p>
+<p>Investigad qué está pasando y como se ha de solucionar.</p>
 </div>
 <h2 id="evaluacion">Evaluación</h2>
 <table>
@@ -1375,65 +1390,31 @@
 </thead>
 <tbody>
 <tr>
-<td style="text-align: left;">Configuración correcta y completa del servidor web</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Configuración correcta y completa del proxy inverso</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
 <td style="text-align: left;">Creación correcta del certificado</td>
 <td style="text-align: center;"><strong>1 puntos</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;">Configuración SSL correcta del proxy</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
+<td style="text-align: center;"><strong>3 puntos</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;">Comprobaciones</td>
-<td style="text-align: center;"><strong>1 puntos</strong></td>
+<td style="text-align: center;"><strong>2 puntos</strong></td>
 </tr>
 <tr>
 <td style="text-align: left;">Configuración correcta de la redirección forzosa a HTTPS y comprobaciones</td>
 <td style="text-align: center;"><strong>1 puntos</strong></td>
 </tr>
 <tr>
-<td style="text-align: left;">Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico</td>
-<td style="text-align: center;"><strong>1 puntos</strong></td>
+<td style="text-align: left;">Cuestiones finales</td>
+<td style="text-align: center;"><strong>2 puntos</strong></td>
+</tr>
+<tr>
+<td style="text-align: left;">SSe ha prestado especial atención al formato del documento, utilizando la plantilla actualizada y haciendo un correcto uso del lenguaje técnico</td>
+<td style="text-align: center;"><strong>1 punto</strong></td>
 </tr>
 </tbody>
 </table>
-<!--
-## Cuestiones finales
-
-!!!Task "Cuestión 1"
-    Hemos configurado nuestro servidor con todo lo que nos hace falta pero no nos funciona y da un error del tipo `This site can't provide a secure connection, ERR_SSL_PROTOCOL_ERROR.`
-
-    Dentro de nuestro server block tenemos esto:
-
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nb">server</span><span class="w"> </span>{
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">    </span><span class="nb">listen</span><span class="w"> </span><span class="m">443</span>;
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nb">ssl_certificate</span><span class="w"> </span><span class="sx">/etc/nginx/ssl/enrico-berlinguer/server.crt</span>;
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nb">ssl_certificate_key</span><span class="w"> </span><span class="sx">/etc/nginx/ssl/enrico-berlinguer/server.key</span>;
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nb">ssl_protocols</span><span class="w"> </span>TLSv1.3;
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="nb">ssl_ciphers</span><span class="w"> </span>ECDH+AESGCM:DH+AESGCM:ECDH+AES256:DH+AES256:ECDH+AES128:DH+AES:ECDH+3DES:DH+3DES:RSA+AESGCM:RSA+AES:RSA+3DES:!aNULL:!MD5:!DSS;
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nb">server_name</span><span class="w"> </span>enrico-berlinguer;
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nb">access_log</span><span class="w"> </span><span class="sx">/var/log/nginx/https_access.log</span>;
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>...
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="err">}</span>
-</code></pre></div>
-
-
-!!!Task "Cuestión 2"
-    Imaginad que intentamos acceder a nuestro sitio web HTTPS y nos encontramos con el siguiente error:
-
-    ![](../P2_4/Your-connection-isnt-private-NET-ERR_CERT_REVOKED.png)
-
-    Investigad qué está pasando y como se ha de solucionar.
-
--->
 
 
 

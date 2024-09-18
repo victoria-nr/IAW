@@ -11,10 +11,10 @@
         <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/P2_4_proxy_inv_nginx/">
       
       
-        <link rel="prev" href="../P2_4_HTTPS_nginx/">
+        <link rel="prev" href="../P2_3_autenticacion_nginx/">
       
       
-        <link rel="next" href="../P2_5_Balanceo_carga/">
+        <link rel="next" href="../P2_5_HTTPS_nginx/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -712,48 +712,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_3_proxy_inv_nginx%20copy.md_mv/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2.3 – Proxy inverso con Nginx
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P2_4_HTTPS_nginx/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Practica 2.4 - Activación HTTPS en proxy inverso NGINX
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -932,7 +890,28 @@
   
   
     <li class="md-nav__item">
-      <a href="../P2_5_Balanceo_carga/" class="md-nav__link">
+      <a href="../P2_5_HTTPS_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2.5 - Activación HTTPS en proxy inverso NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P2_6_Balanceo_carga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -953,7 +932,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../P2_6_balanceo_con_ssl/" class="md-nav__link">
+      <a href="../P2_7_balanceo_con_ssl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1302,12 +1281,13 @@
 <ul>
 <li>Cambiad el nombre del archivo de configuración del sitio, es decir, el fichero <code>tarea2</code> por <code>webserver</code>.</li>
 <li>Cambiad el nombre del sitio web dentro de este archivo de configuración donde haga falta, que será en la directiva <code>server-name</code>. </li>
-<li>En ese mismo fichero, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080. </li>
+<li>En ese mismo fichero, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080. En la configuración de la instancia en AWS, tendrás que habilitar también las conexiones http al puerto 8080. Averigua cómo hacerlo y hazlo. Pista: deberás ir a grupos de seguridad y añadir una nueva regla de entrada.</li>
 </ul>
 <p>No os olvidéis de eliminar el link simbólico antiguo  con el comando <code>unlink nombre_del_link</code> dentro de la carpeta <code>sites-enabled</code> y crear el nuevo para el nuevo nombre de archivo. </p>
+<p>Utiliza <code>nginx -t</code> para comprobar los cambios en la configuración. </p>
 <p>Por último, reiniciad Nginx.</p>
 <h4 id="configuracion-proxy-inverso-nginx">Configuración proxy inverso Nginx</h4>
-<p>En el nuevo servidor Debian en el que acabamos de instalar nginx, crearemos un sitio virtual llamado <code>ejemplo-proxy</code>. Lo que queremos conseguir es que al acceder a <code>http://ejemplo-proxy</code> se acceda al proxy, que nos redirigirá a <code>http://webserver:8080</code>, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.</p>
+<p>Crea una nueva instancia Debian y configura para que admita peticiones HTTP. Actualiza repositorios e instala nginx. A continuacion, crearemos un sitio virtual llamado <code>ejemplo-proxy</code>. Lo que queremos conseguir es que al acceder a <code>http://ejemplo-proxy</code> se acceda al proxy, que nos redirigirá a <code>http://webserver:8080</code>, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.</p>
 <p>Para ello, en el nuevo servidor hay que seguir los siguientes pasos: </p>
 <ul>
 <li>
@@ -1334,7 +1314,7 @@
 <p>El nombre de vuestro dominio o sitio web original al que accedemos en el proxy </p>
 </li>
 <li>
-<p>La directiva <code>proxy_pass</code> indica a dónde se van a redirigir las peticiones, esto es, al servidor web. Por tanto, debéis poner la IP (o mejor, el nombre de dominio) y número de puerto adecuados de vuestro sitio web configurado en el apartado anterior. </p>
+<p>La directiva <code>proxy_pass</code> indica a dónde se van a redirigir las peticiones, esto es, al servidor web. Por tanto, debéis poner la IP (o mejor, el nombre de dominio, teniendo en cuenta que hay que modificar también el archivo <code>/etc/hosts</code> ) y número de puerto adecuados de vuestro sitio web configurado en el apartado anterior. </p>
 </li>
 <li>
 <p>Crear el link simbólico pertinente </p>
@@ -1343,7 +1323,7 @@
 <p>Esto es para simular la situación en la que nosotros, como clientes, cuando accedamos a nuestro sitio web, no necesitemos saber cómo está todo configurado, sólo necesitamos saber el nombre de la web. </p>
 <div class="admonition warning">
 <p class="admonition-title">¡Atención, muy importante!</p>
-<p><strong>Debéis modificar el archivo host que configurastéis en la práctica 2.2. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina que hace de proxy</strong>. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.</p>
+<p><strong>Debéis modificar el archivo /etc/hosts de vuestra máquina local que configurastéis en la práctica 2.2. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina que hace de proxy</strong>. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.</p>
 </div>
 <h2 id="comprobaciones">Comprobaciones</h2>
 <p>Si accedéis a vuestro sitio web, debéis poder seguir accediendo sin problemas. </p>
@@ -1362,7 +1342,7 @@
 <p>Además de haber mirado los logs, vamos a demostrar aún de forma más clara que la petición está pasando por el proxy inverso y que está llegando al servidor web y que vuelve por el mismo camino. </p>
 <p>Si recordáis de teoría, el servidor web es capaz de añadir cabeceras en las respuestas a las peticiones. </p>
 <p>Así pues, vamos a configurar tanto el proxy inverso como el servidor web para que añadan cada uno la cabecera “Host” que también vimos en teoría. </p>
-<p>Para añadir cabeceras, en el archivo de configuración del sitio web debemos añadir dentro del bloque <code>location / { … }</code> debemos añadir la directiva: </p>
+<p>Para añadir cabeceras, en el archivo de configuración del sitio web debemos añadir dentro del bloque <code>location / { … }</code>  la directiva: </p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nb">add_header</span><span class="w"> </span>Host<span class="w"> </span>nombre_del_host;
 </code></pre></div>
 <ol>
