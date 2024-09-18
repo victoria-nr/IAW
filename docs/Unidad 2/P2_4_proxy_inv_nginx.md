@@ -132,14 +132,14 @@ Donde, ***mirando el diagrama de red y teniendo en cuenta la configuración hech
 
 * El nombre de vuestro dominio o sitio web original al que accedemos en el proxy 
 
-* La directiva `proxy_pass` indica a dónde se van a redirigir las peticiones, esto es, al servidor web. Por tanto, debéis poner la IP (o mejor, el nombre de dominio) y número de puerto adecuados de vuestro sitio web configurado en el apartado anterior. 
+* La directiva `proxy_pass` indica a dónde se van a redirigir las peticiones, esto es, al servidor web. Por tanto, debéis poner la IP (o mejor, el nombre de dominio, teniendo en cuenta que hay que modificar también el archivo `/etc/hosts` ) y número de puerto adecuados de vuestro sitio web configurado en el apartado anterior. 
 
 * Crear el link simbólico pertinente 
 
 Esto es para simular la situación en la que nosotros, como clientes, cuando accedamos a nuestro sitio web, no necesitemos saber cómo está todo configurado, sólo necesitamos saber el nombre de la web. 
 
 !!!warning "¡Atención, muy importante!"
-    **Debéis modificar el archivo host que configurastéis en la práctica 2.2. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina que hace de proxy**. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.
+    **Debéis modificar el archivo /etc/hosts de vuestra máquina local que configurastéis en la práctica 2.2. Si miráis el diagrama de red, ahora el nombre de vuestro sitio web se corresponderá con la IP de la nueva máquina que hace de proxy**. Será ésta la encargada de redirigirnos automáticamente al verdadero sitio web.
 
 ## Comprobaciones
 
@@ -163,7 +163,7 @@ Si recordáis de teoría, el servidor web es capaz de añadir cabeceras en las r
 
 Así pues, vamos a configurar tanto el proxy inverso como el servidor web para que añadan cada uno la cabecera “Host” que también vimos en teoría. 
 
-Para añadir cabeceras, en el archivo de configuración del sitio web debemos añadir dentro del bloque `location / { … }` debemos añadir la directiva: 
+Para añadir cabeceras, en el archivo de configuración del sitio web debemos añadir dentro del bloque `location / { … }`  la directiva: 
 
 ```aconf
 add_header Host nombre_del_host;
