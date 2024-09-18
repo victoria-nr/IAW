@@ -1,11 +1,11 @@
-# Practica 2.5 - Activación HTTPS en proxy inverso NGINX
+# Practica 2.4 - Activación HTTPS en proxy inverso NGINX
 
 ## Requisitos antes de comenzar la práctica
 
 !!!danger "Atención, muy importante antes de comenzar"
 
-    + La práctica 2.4 ha de estar funcionando correctamente
-    + No comenzar la práctica antes de tener la 2.4 ***funcionando y comprobada***
+    + La práctica 2.3 ha de estar funcionando correctamente
+    + No comenzar la práctica antes de tener la 2.3 ***funcionando y comprobada***
 
 ## Introducción
 

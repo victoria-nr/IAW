@@ -97,15 +97,17 @@ Vamos a cambiar el nombre que tuviera vuestra web por el de `webserver`, para el
 
   * Cambiad el nombre del archivo de configuración del sitio, es decir, el fichero `tarea2` por `webserver`.
   * Cambiad el nombre del sitio web dentro de este archivo de configuración donde haga falta, que será en la directiva `server-name`. 
-  * En ese mismo fichero, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080. 
+  * En ese mismo fichero, en lugar de hacer que el servidor escuche en el puerto 80, cambiadlo al 8080. En la configuración de la instancia en AWS, tendrás que habilitar también las conexiones http al puerto 8080. Averigua cómo hacerlo y hazlo. Pista: deberás ir a grupos de seguridad y añadir una nueva regla de entrada.
 
 No os olvidéis de eliminar el link simbólico antiguo  con el comando `unlink nombre_del_link` dentro de la carpeta `sites-enabled` y crear el nuevo para el nuevo nombre de archivo. 
+
+Utiliza `nginx -t` para comprobar los cambios en la configuración. 
 
 Por último, reiniciad Nginx.
 
 #### Configuración proxy inverso Nginx
 
-En el nuevo servidor Debian en el que acabamos de instalar nginx, crearemos un sitio virtual llamado `ejemplo-proxy`. Lo que queremos conseguir es que al acceder a `http://ejemplo-proxy` se acceda al proxy, que nos redirigirá a `http://webserver:8080`, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.
+Crea una nueva instancia Debian y configura para que admita peticiones HTTP. Actualiza repositorios e instala nginx. A continuacion, crearemos un sitio virtual llamado `ejemplo-proxy`. Lo que queremos conseguir es que al acceder a `http://ejemplo-proxy` se acceda al proxy, que nos redirigirá a `http://webserver:8080`, el servidor web que acabamos de configurar para que escuche con ese nombre en el puerto 8080.
 
 Para ello, en el nuevo servidor hay que seguir los siguientes pasos: 
 
