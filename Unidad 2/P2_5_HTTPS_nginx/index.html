@@ -865,15 +865,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#evaluacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluación
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -894,7 +885,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx
+    Práctica Voluntaria 2.6 – Balanceo de carga con proxy inverso en Nginx
   </span>
   
 
@@ -915,7 +906,7 @@
         
   
   <span class="md-ellipsis">
-    Practica Voluntaria 2.6 - Proxy inverso y balanceo de carga con SSL en NGINX
+    Practica Voluntaria 2.7 - Proxy inverso y balanceo de carga con SSL en NGINX
   </span>
   
 
@@ -1241,7 +1232,12 @@
 </ul>
 <p>El comando completo sería así: </p>
 <p><img alt="" src="../P2_4/4.1-22.png" /></p>
-<p>Os solicitará que introduzcáis una serie de parámetros, como véis en la imagen. Debéis introducir los mismos parámetros que en la imagen excepto en el “Organizational Unit Name”. Ahí deberéis poner  <code>2ASIX – IAW - VuestroNombre</code>.</p>
+<p>Os solicitará que introduzcáis una serie de parámetros. Introduce los parámetros que se adecuen a nuestro contexto y, en concreto en los últimos:</p>
+<ul>
+<li>Organizational Unit Name:   <code>2ASIX – IAW</code></li>
+<li>Common Name: <code>Tu nombre</code></li>
+<li>Email Address: <code>Tu email</code></li>
+</ul>
 <p>Si no te ha dado ningún error comprueba los archivos creados en <code>etc/nginx/ssl</code> y el contenido de cada uno de ellos.</p>
 <h3 id="configuracion-ssl-en-el-proxy-inverso">Configuración SSL en el proxy inverso</h3>
 <p>De la práctica anterior, dentro del directorio <code>/etc/nginx/sites-available</code> ya debéis tener el archivo de configuración llamado <code>ejemplo-proxy</code>. Es precisamente aquí donde realizaremos la configuración para que el acceso al sitio web se realice mediante SSL (HTTPS). </p>
@@ -1279,6 +1275,9 @@
 <ul>
 <li>
 <p>Si accedéis ahora a <code>https://ejemplo-proxy</code> os debería saltar un aviso de seguridad debido a que nuestro certificado es autofirmado, como comentábamos anteriormente. </p>
+</li>
+<li>
+<p>Si añadís una excepción podréis acceder al sitio web mediante HTTPS.</p>
 </li>
 <li>
 <p>Para comprobar que los datos del certificado son, efectivamente, los vuestros podéis comprobarlo así. Pulsando en el candado de la barra de búsqueda: </p>
@@ -1344,45 +1343,19 @@
 </li>
 </ul>
 </div>
-<h2 id="evaluacion">Evaluación</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Criterio</th>
-<th style="text-align: center;">Puntuación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Configuración correcta y completa del servidor web</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Configuración correcta y completa del proxy inverso</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Creación correcta del certificado</td>
-<td style="text-align: center;"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Configuración SSL correcta del proxy</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Comprobaciones</td>
-<td style="text-align: center;"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Configuración correcta de la redirección forzosa a HTTPS y comprobaciones</td>
-<td style="text-align: center;"><strong>1 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico</td>
-<td style="text-align: center;"><strong>1 puntos</strong></td>
-</tr>
-</tbody>
-</table>
+<!--
+## Evaluación
+
+| Criterio      | Puntuación                         |
+| :--------- | :----------------------------------: |
+|  Configuración correcta y completa del servidor web   |**2 puntos**  |
+|  Configuración correcta y completa del proxy inverso| **2 puntos** |
+| Creación correcta del certificado    |**1 puntos**  |
+| Configuración SSL correcta del proxy  | **2 puntos** |
+|Comprobaciones | **1 puntos**|
+| Configuración correcta de la redirección forzosa a HTTPS y comprobaciones | **1 puntos**|
+| Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico |**1 puntos** |
+-->
 <!--
 ## Cuestiones finales
 
