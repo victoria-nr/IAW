@@ -88,11 +88,7 @@ El comando completo sería así:
 
 ![](P2_4/4.1-22.png)
 
-Os solicitará que introduzcáis una serie de parámetros. Introduce los parámetros que se adecuen a nuestro contexto y, en concreto en los últimos:
-
-  + Organizational Unit Name:   `2ASIX – IAW`
-  + Common Name: `Tu nombre`
-  + Email Address: `Tu email`
+Os solicitará que introduzcáis una serie de parámetros, como véis en la imagen. Debéis introducir los mismos parámetros que en la imagen excepto en el “Organizational Unit Name”. Ahí deberéis poner  `2ASIX – IAW - VuestroNombre`.
 
 Si no te ha dado ningún error comprueba los archivos creados en `etc/nginx/ssl` y el contenido de cada uno de ellos.
 
@@ -130,8 +126,6 @@ Recordad que tras modificar cualquier configuración de un servicio, hay que rei
 ### Comprobaciones
 
 + Si accedéis ahora a `https://ejemplo-proxy` os debería saltar un aviso de seguridad debido a que nuestro certificado es autofirmado, como comentábamos anteriormente. 
-  
-+ Si añadís una excepción podréis acceder al sitio web mediante HTTPS.
 
 + Para comprobar que los datos del certificado son, efectivamente, los vuestros podéis comprobarlo así. Pulsando en el candado de la barra de búsqueda: 
 
@@ -189,7 +183,6 @@ Con esta configuración le estamos diciendo que:
 
     + Comprobad que cuando realizáis una petición en el archivo de log `http_access.log` aparece la redirección 301 y que, de la misma manera, aparece una petición GET en `https_access.log`. 
 
-<!--
 ## Evaluación
 
 | Criterio      | Puntuación                         |
@@ -201,7 +194,7 @@ Con esta configuración le estamos diciendo que:
 |Comprobaciones | **1 puntos**|
 | Configuración correcta de la redirección forzosa a HTTPS y comprobaciones | **1 puntos**|
 | Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico |**1 puntos** |
--->
+
 <!--
 ## Cuestiones finales
 

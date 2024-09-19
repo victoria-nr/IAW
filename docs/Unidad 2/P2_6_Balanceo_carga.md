@@ -1,4 +1,4 @@
-# Práctica Voluntaria 2.5 – Balanceo de carga con proxy inverso en Nginx 
+# Práctica Voluntaria 2.6 – Balanceo de carga con proxy inverso en Nginx 
 
 ## Requisitos antes de comenzar la práctica
 
