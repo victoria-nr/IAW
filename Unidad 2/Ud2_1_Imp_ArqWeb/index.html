@@ -736,11 +736,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Ud2_4_HTTP/" class="md-nav__link">
+      <a href="../Ud2_4_Serv_web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2.4. Los protocolos HTTP y HTTPS
+    2.4. Servidores web: Nginx vs Apache
   </span>
   
 
@@ -757,11 +757,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../Ud2_5_Serv_web/" class="md-nav__link">
+      <a href="../Ud2_5_HTTP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    2.5. Servidores web: Nginx vs Apache
+    2.5. Los protocolos HTTP y HTTPS
   </span>
   
 
@@ -1418,17 +1418,11 @@ Existen muchas otras plataformas que trabajan con distintos sistemas operativos 
 <ul>
 <li><strong>Verticalmente:</strong> de manera ascendente "upgrades" a cada nodo.</li>
 <li><strong>Horizontalmente:</strong> consiste en aumentar el número de nodos.</li>
-<li><strong>Cluster:</strong> consiste en crear agrupaciones de servidores.</li>
 </ul>
 <h4 id="escalabilidad-vertical">Escalabilidad vertical</h4>
-<p>Habitualmente, la separación lógica en capas se implementa de tal forma que se permita una separación física de las mismas. Interponiendo elementos conectores que actúen de "middlewares" es posible distribuir la aplicación de forma vertical (una máquina por cada capa del sistema), e incluso si esto no fuera suficiente, distribuyendo los elementos de una misma capa entre distintas máquinas servidoras.</p>
+<p>Habitualmente, la separación lógica en capas se implementa de tal forma que se permita una separación física de las mismas. Interponiendo elementos conectores que actúen de "middlewares" es posible distribuir la aplicación de forma vertical (una máquina por cada capa del sistema), e incluso si esto no fuera suficiente, distribuyendo los elementos de una misma capa entre distintas máquinas servidoras. Además, es posible aumentar los recursos de cada uno de los servidores en lo que respecta a la capacidad de procesamiento, memoria y almacenamiento.</p>
 <h4 id="escalabilidad-horizontal">Escalabilidad horizontal</h4>
-<p>Se trata de clonar el sistema en otra máquina de características similares y balancear la carga de trabajo mediante un dispositivo externo. El balanceador de carga puede ser:</p>
-<p><strong>Balanceador Software:</strong> Por ejemplo, es común encontrar un servidor web Apache junto con el módulo <code>mod_jk</code>, que permite redirigir las solicitudes HTTP configuradas entre las diferentes máquinas que conforman la granja de servidores. Estos balanceadores examinan el paquete HTTP e identifican la sesión del usuario, registrando qué máquina de la granja está atendiendo dicha sesión. Esto es crucial, ya que nos permite diseñar la aplicación teniendo en cuenta el objeto de sesión del usuario y almacenar información relevante de la sesión del mismo. Con esta garantía, todas las peticiones de una misma sesión HTTP se redirigen a la misma máquina.</p>
-<p><strong>Balanceador hardware:</strong> Son dispositivos que, siguiendo algoritmos de reparto de carga (como Round Robin, LRU - Menos Usado Recientemente, etc.), redirigen una solicitud HTTP del usuario a la máquina que corresponde según dicho algoritmo. Estos son más rápidos que los anteriores, ya que se basan en conmutación de circuitos y no examinan ni interpretan el paquete HTTP. Sin embargo, no aseguran el mantenimiento de la misma sesión de usuario en la misma máquina. Esto condiciona el diseño, ya que obliga a almacenar la información de sesión del usuario por parte del desarrollador, en cookies o en una base de datos.</p>
-<p><strong>Balanceador hardware HTTP:</strong> Son dispositivos hardware que examinan el paquete HTTP y mantienen la relación entre el usuario y la máquina servidora. Son más rápidos que los balanceadores software, pero ligeramente menos que los balanceadores hardware. Hoy en día, representan una de las soluciones más aceptadas en el mercado.</p>
-<p><strong>Cluster:</strong></p>
-<p>Con la introducción de servidores de aplicaciones en cluster se abre una nueva capacidad de escalabilidad que puede clasificarse como vertical u horizontal, dependiendo de su implementación. Un cluster de servidores de aplicaciones permite desplegar una aplicación web convencional, distribuyendo su carga de trabajo entre la granja de servidores del cluster. Esto ocurre de manera transparente tanto para el usuario como para el administrador. Mediante el mecanismo de replicación de sesión, el cluster garantiza que sin importar cuál máquina atienda la solicitud HTTP, esta tendrá acceso a la sesión del usuario (objeto HttpSession en Java). Sin embargo, debido a la replicación de sesión, este tipo de sistemas suele presentar problemas de rendimiento.</p>
+<p>Se trata de clonar el sistema en otras máquinas de características similares y balancear la carga de trabajo mediante un dispositivo externo. Para ello, un grupo de distintos servidores se configura para atender las peticiones de manera conjunta (es lo que se denomina cluster) y la carga de trabajo se distribuye entre ellos a través de un balanceador. Cada uno de esos servidores se conoce como nodo y el escalado se realiza simplimente agregando un nuevo nodo al cluster.</p>
 <h2 id="referencias">Referencias</h2>
 <p><a href="https://ioc.xtec.cat/materials/FP/Recursos/fp_daw_m08_/web/fp_daw_m08_htmlindex/WebContent/u1/a1/continguts.html">IOC - Institut obert de Catalunya</a></p>
 <p><a href="https://apuntes-daw.javiergutierrez.trade/despliegue-de-aplicaciones/ut1/recopila.html">https://apuntes-daw.javiergutierrez.trade/despliegue-de-aplicaciones/ut1/recopila.html</a></p>
