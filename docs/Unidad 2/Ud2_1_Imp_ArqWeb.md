@@ -259,25 +259,15 @@ La escalabilidad de un sistema web puede ser:
 
 - **Verticalmente:** de manera ascendente "upgrades" a cada nodo.
 - **Horizontalmente:** consiste en aumentar el número de nodos.
-- **Cluster:** consiste en crear agrupaciones de servidores.
+
 
 #### Escalabilidad vertical
 
-Habitualmente, la separación lógica en capas se implementa de tal forma que se permita una separación física de las mismas. Interponiendo elementos conectores que actúen de "middlewares" es posible distribuir la aplicación de forma vertical (una máquina por cada capa del sistema), e incluso si esto no fuera suficiente, distribuyendo los elementos de una misma capa entre distintas máquinas servidoras.
+Habitualmente, la separación lógica en capas se implementa de tal forma que se permita una separación física de las mismas. Interponiendo elementos conectores que actúen de "middlewares" es posible distribuir la aplicación de forma vertical (una máquina por cada capa del sistema), e incluso si esto no fuera suficiente, distribuyendo los elementos de una misma capa entre distintas máquinas servidoras. Además, es posible aumentar los recursos de cada uno de los servidores en lo que respecta a la capacidad de procesamiento, memoria y almacenamiento.
 
 #### Escalabilidad horizontal
 
-Se trata de clonar el sistema en otra máquina de características similares y balancear la carga de trabajo mediante un dispositivo externo. El balanceador de carga puede ser:
-
-**Balanceador Software:** Por ejemplo, es común encontrar un servidor web Apache junto con el módulo `mod_jk`, que permite redirigir las solicitudes HTTP configuradas entre las diferentes máquinas que conforman la granja de servidores. Estos balanceadores examinan el paquete HTTP e identifican la sesión del usuario, registrando qué máquina de la granja está atendiendo dicha sesión. Esto es crucial, ya que nos permite diseñar la aplicación teniendo en cuenta el objeto de sesión del usuario y almacenar información relevante de la sesión del mismo. Con esta garantía, todas las peticiones de una misma sesión HTTP se redirigen a la misma máquina.
-
-**Balanceador hardware:** Son dispositivos que, siguiendo algoritmos de reparto de carga (como Round Robin, LRU - Menos Usado Recientemente, etc.), redirigen una solicitud HTTP del usuario a la máquina que corresponde según dicho algoritmo. Estos son más rápidos que los anteriores, ya que se basan en conmutación de circuitos y no examinan ni interpretan el paquete HTTP. Sin embargo, no aseguran el mantenimiento de la misma sesión de usuario en la misma máquina. Esto condiciona el diseño, ya que obliga a almacenar la información de sesión del usuario por parte del desarrollador, en cookies o en una base de datos.
-
-**Balanceador hardware HTTP:** Son dispositivos hardware que examinan el paquete HTTP y mantienen la relación entre el usuario y la máquina servidora. Son más rápidos que los balanceadores software, pero ligeramente menos que los balanceadores hardware. Hoy en día, representan una de las soluciones más aceptadas en el mercado.
-
-**Cluster:**
-
-Con la introducción de servidores de aplicaciones en cluster se abre una nueva capacidad de escalabilidad que puede clasificarse como vertical u horizontal, dependiendo de su implementación. Un cluster de servidores de aplicaciones permite desplegar una aplicación web convencional, distribuyendo su carga de trabajo entre la granja de servidores del cluster. Esto ocurre de manera transparente tanto para el usuario como para el administrador. Mediante el mecanismo de replicación de sesión, el cluster garantiza que sin importar cuál máquina atienda la solicitud HTTP, esta tendrá acceso a la sesión del usuario (objeto HttpSession en Java). Sin embargo, debido a la replicación de sesión, este tipo de sistemas suele presentar problemas de rendimiento.
+Se trata de clonar el sistema en otras máquinas de características similares y balancear la carga de trabajo mediante un dispositivo externo. Para ello, un grupo de distintos servidores se configura para atender las peticiones de manera conjunta (es lo que se denomina cluster) y la carga de trabajo se distribuye entre ellos a través de un balanceador. Cada uno de esos servidores se conoce como nodo y el escalado se realiza simplimente agregando un nuevo nodo al cluster.
 
 
 

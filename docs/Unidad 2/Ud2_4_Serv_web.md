@@ -1,5 +1,5 @@
 ---
-title: '2.5. Servidores web: Nginx vs Apache'
+title: '2.4. Servidores web: Nginx vs Apache'
 ---
 
 # **Servidores web: Nginx vs Apache**

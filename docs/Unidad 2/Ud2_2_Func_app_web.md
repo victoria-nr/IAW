@@ -63,13 +63,13 @@ El servidor de aplicaciones lee el código de la página, finaliza la página en
 
 ## Acceso a una base de datos
 
-Un servidor de aplicaciones le permite trabajar con recursos del lado del servidor, como las bases de datos. Por ejemplo, una página dinámica puede indicar al servidor de aplicaciones que extraiga datos de una base de datos y los inserte en el código HTML de la página. Para más información, consulte www.adobe.com/go/learn_dw_dbguide_es.
+Un servidor de aplicaciones le permite trabajar con recursos del lado del servidor, como las bases de datos. Por ejemplo, una página dinámica puede indicar al servidor de aplicaciones que extraiga datos de una base de datos y los inserte en el código HTML de la página. 
 
-El uso de una base de datos para almacenar contenido permite separar el diseño del sitio Web del contenido que se desea mostrar a los usuarios del sitio. En lugar de escribir archivos HTML individuales para cada página, sólo se necesita escribir una página —o plantilla— para los distintos tipos de información que se desea presentar. Posteriormente, podrá cargar contenido en una base de datos y, seguidamente, hacer que el sitio Web recupere el contenido en respuesta a una solicitud del usuario. También puede actualizar la información en un único origen y, posteriormente, implantar ese cambio en todo el sitio Web sin necesidad de editar manualmente cada página. Puede utilizar Adobe Dreamweaver para diseñar formularios web que inserten, actualicen o eliminen datos de la base de datos.
+El uso de una base de datos para almacenar contenido permite separar el diseño del sitio Web del contenido que se desea mostrar a los usuarios del sitio. En lugar de escribir archivos HTML individuales para cada página, sólo se necesita escribir una página —o plantilla— para los distintos tipos de información que se desea presentar. Posteriormente, podrá cargar contenido en una base de datos y, seguidamente, hacer que el sitio Web recupere el contenido en respuesta a una solicitud del usuario. 
 
-La instrucción para extraer datos de una base de datos recibe el nombre de consulta de base de datos. Una consulta consta de criterios de búsqueda expresados en un lenguaje de base de datos denominado SQL (Structured Query Language, lenguaje de consulta estructurado). La consulta SQL se escribe en los scripts o etiquetas del lado del servidor de la página.
+La instrucción para extraer datos de una base de datos recibe el nombre de consulta de base de datos. Una consulta consta de criterios de búsqueda expresados en un lenguaje de base de datos denominado SQL (Structured Query Language). La consulta SQL se escribe en los scripts o etiquetas del lado del servidor de la página.
 
-Un servidor de aplicaciones no se puede comunicar directamente con una base de datos porque el formato de esta última impide que se descifren los datos, de una forma bastante similar a cuando un documento de Microsoft Word no puede descifrarse al abrirlo con el Bloc de Notas o BBEdit. El servidor de aplicaciones sólo se puede comunicar con la base de datos a través de un controlador que actúe de intermediario con la base de datos: el software actúa entonces como un intérprete entre el servidor de aplicaciones y la base de datos.
+Un servidor de aplicaciones no se puede comunicar directamente con una base de datos porque el formato de esta última impide que se descifren los datos. El servidor de aplicaciones sólo se puede comunicar con la base de datos a través de un controlador que actúe de intermediario con la base de datos: el software actúa entonces como un intérprete entre el servidor de aplicaciones y la base de datos.
 
 Una vez que el controlador establece la comunicación, la consulta se ejecuta en la base de datos y se crea un juego de registros. Un juego de registros es un conjunto de datos extraídos de una o varias tablas de una base de datos. El juego de registros se devuelve al servidor de aplicaciones, que emplea los datos para completar la página.
 
@@ -80,7 +80,7 @@ SELECT lastname, firstname, fitpoints
 FROM employees
 ```
 
-Esta instrucción crea un juego de registros de tres columnas y lo completa con filas que contienen el apellido, el nombre y los puntos de forma física de todos los empleados de la base de datos. Para más información, consulte www.adobe.com/go/learn_dw_sqlprimer_es.
+Esta instrucción crea un juego de registros de tres columnas y lo completa con filas que contienen el apellido, el nombre y los puntos de forma física de todos los empleados de la base de datos. 
 
 En el siguiente ejemplo se muestra el proceso de consulta de base de datos y de devolución de los datos al navegador:
 
