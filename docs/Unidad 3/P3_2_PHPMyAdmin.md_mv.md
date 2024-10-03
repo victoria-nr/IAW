@@ -50,61 +50,18 @@ Inconvenientes de Adminer:
 
 En resumen, la elección entre Adminer y phpMyAdmin dependerá de las necesidades y preferencias individuales. Adminer es ideal para aquellos que buscan simplicidad y facilidad de uso, mientras que phpMyAdmin es más adecuado para usuarios que requieren una amplia gama de características avanzadas y están dispuestos a invertir tiempo en aprender su interfaz más compleja.
 
-## Instalación phpmyadmin
 
-
-Para ello
-
-```bash
-sudo apt install phpmyadmin
-```
-
-La instalación es bastante automática, aunque nos hará algunas preguntas. 
-
-* Primero nos preguntará por el servidor web que tenemos instalado. Lógicamente le diremos que `apache2`.
-
-    ![Imagen LAMP](P3_1/03.png)
-
-* Después nos preguntará si gestionamos la configuración de phpMyAdmin con "dbconfig-common". Le diremos que si.
-
-* Y finalmente nos pedirá la contraseña de root de MySQL. Recuerda que le pusimos "ieselcaminas".
-  
-* Reinicia apache con `sudo systemctl restart apache2`
-
-Ahora ya puedes acceder a la página de phpMyAdmin con
-
-`http://IPservidorDebian/phpmyadmin`
-
-Te pedirá el usuario y contraseña. Recuerda usuario:`root` y pass:`ieselcaminas`.
-
-![Imagen LAMP](P3_1/05.png)
-
-Y si todo va bien estarás dentro para poder gestionar las bases de datos de tu MariaDB.
-
-![Imagen LAMP](P3_1/06.png)
-
-Si con lo anterior no pudieras acceder a Phpmyadmin, añade este enlace simbólico:
-
-```sh
-sudo ln -s /usr/share/phpmyadmin/ /var/www/html/phpmyadmin
-```
-<!--
 
 !!!Question "Tarea 1"
     Realiza esta tarea en la máquina virtual donde has instalado la pila LAMP. Sigue el siguiente [tutorial](https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/ESF1fgeUWEJLrcbYgA2K2csBAGQgqFCbXzH4mH_R_56qCw?e=uezLXZ) sobre la instalación y uso de **phpMyAdmin**.
--->
 
-!!!Question "Tarea de ampliación 1"
+!!!Question "Tarea de ampliación 1.1"
     Descarga el fichero [`musica.sql`](https://gvaedu-my.sharepoint.com/:u:/g/personal/mv_nebotromero_edu_gva_es/EdJz98PHcQdCtK6hqcguKPIBSChQuGW8JEHrcdKn6m6BWQ?e=XFqphF) y después impórtalo a tu servidor MySQL a través de la interfaz de **phpMyAdmin**. Despliega y observa todas las tablas que tiene la base de datos.
 
-!!!Question "Tarea de ampliación 2"
+!!!Question "Tarea de ampliación 1.2"
     En la interfaz de **phpMyAdmin**, realiza las consultas del Anexo I del siguiente [documento](https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/EWPqtwnNL3BPu65FBNHw1TQBCMqvp8Zmc5ai1_nRDdlwaw?e=mDsTFU), en donde tienes una descripción de la base de datos `musica.sql` que acabas de importar en la tarea anterior.
-
-## Instalación Adminer
-
-La instalación de Adminer es muy sencilla. Te propongo que lo investigues y lo instales en la siguiente tarea.
-
-!!!Question "Tarea de ampliación 3"
+    
+!!!Question "Tarea de ampliación 1.3"
     Instala **Adminer** en tu servidor web y explora su interfaz, comparándola con la de phpMyAdmin.
 
 
