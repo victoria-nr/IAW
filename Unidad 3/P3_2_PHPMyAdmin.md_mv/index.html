@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%203/P3_1_InstallServWebLAMP/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%203/P3_2_PHPMyAdmin.md_mv/">
       
       
-        <link rel="prev" href="../Ud3_1_App_Web/">
+        <link rel="prev" href="../P3_2_PHPMyAdmin/">
       
       
-        <link rel="next" href="../P3_2_PHPMyAdmin/">
+        <link rel="next" href="../P3_3_VirtualhostingApache/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Práctica 1: Instalación de un servidor LAMP - Implantación de aplicaciones web</title>
+        <title>Práctica 2: Herramientas relacionadas con la pila LAMP - Implantación de aplicaciones web</title>
       
     
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 1: Instalación de un servidor LAMP
+              Práctica 2: Herramientas relacionadas con la pila LAMP
             
           </span>
         </div>
@@ -851,7 +851,7 @@
         
   
   <span class="md-ellipsis">
-    3.1. Implantación de aplicaciones web PHP. La pila LAMP
+    3.1. Implantación de aplicaciones web PHP.
   </span>
   
 
@@ -902,6 +902,48 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_1_InstallLAMP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3.1 - Instalación de la pila LAMP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_2_PHPMyAdmin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2: Herramientas relacionadas con la pila LAMP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -916,7 +958,7 @@
           
   
   <span class="md-ellipsis">
-    Práctica 1: Instalación de un servidor LAMP
+    Práctica 2: Herramientas relacionadas con la pila LAMP
   </span>
   
 
@@ -927,7 +969,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 1: Instalación de un servidor LAMP
+    Práctica 2: Herramientas relacionadas con la pila LAMP
   </span>
   
 
@@ -956,37 +998,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#introduccion-a-php" class="md-nav__link">
+  <a href="#herramientas-de-administracion-de-bases-de-datos-basadas-en-la-web" class="md-nav__link">
     <span class="md-ellipsis">
-      Introducción a PHP
+      Herramientas de administración de bases de datos basadas en la web.
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#servidor-lamp" class="md-nav__link">
-    <span class="md-ellipsis">
-      Servidor LAMP
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tarea" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tarea
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Tarea">
+    <nav class="md-nav" aria-label="Herramientas de administración de bases de datos basadas en la web.">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#paso-1-instalacion-y-configuracion-del-servidor-de-base-de-datos" class="md-nav__link">
+  <a href="#phpmyadmin" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 1: Instalación y configuración del servidor de base de datos.
+      phpMyAdmin
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adminer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adminer
     </span>
   </a>
   
@@ -998,29 +1031,35 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#paso-2-instalacion-de-apache-y-php" class="md-nav__link">
+  <a href="#herramientas-de-analisis-de-logs" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 2: Instalación de Apache y PHP
+      Herramientas de análisis de logs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herramientas de análisis de logs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#goaccess" class="md-nav__link">
+    <span class="md-ellipsis">
+      GoAccess
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#paso-3-comprobacion-del-servidor-web-y-lamp" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#awstats" class="md-nav__link">
     <span class="md-ellipsis">
-      Paso 3: Comprobación del servidor web y LAMP
+      AWStats
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#paso-4-comprobacion-acceso-a-la-base-de-datos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Paso 4: Comprobación acceso a la base de datos
-    </span>
-  </a>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1028,27 +1067,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../P3_2_PHPMyAdmin/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Práctica 2: Herramientas relacionadas con la pila LAMP
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1147,157 +1165,112 @@
                   
 
 
-  <h1>Práctica 1: Instalación de un servidor LAMP</h1>
+  <h1>Práctica 2: Herramientas relacionadas con la pila LAMP</h1>
 
 <h2 id="que-vas-a-aprender-en-esta-practica">¿Qué vas a aprender en esta práctica?</h2>
 <ul>
-<li>A instalar un servidor LAMP que nos permita el despliegue de aplicaciones PHP.</li>
+<li>A instalar y usar varias herramientas relacionadas con la administración de la base de datos. </li>
+<li>A instalar y usar herramientas de análisis de logs del servidor web.</li>
 </ul>
-<h2 id="introduccion-a-php">Introducción a PHP</h2>
-<p>PHP es un lenguaje de programación interpretado de propósito general, pero se ha generalizado su uso en el desarrollo web. Aunque se puede ejecutar desde la línea de comandos, normalmente nos lo encontraremos embebido en el HTML.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi primera página <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>PHP<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>        <span class="cp">&lt;?php&gt;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="cp">            echo &quot;Hello world!&quot;;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="cp">        ?&gt;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>Podemos servir páginas web PHP de varias formas:</p>
+<h2 id="herramientas-de-administracion-de-bases-de-datos-basadas-en-la-web">Herramientas de administración de bases de datos basadas en la web.</h2>
+<p>Las herramientas de administración de bases de datos basadas en la web han ganado una gran popularidad en los últimos años debido a su facilidad de uso y accesibilidad desde cualquier lugar con una conexión a Internet. Estas aplicaciones permiten a los administradores de bases de datos y desarrolladores gestionar, mantener y consultar bases de datos de manera eficiente, sin necesidad de instalar software adicional en sus dispositivos locales. Dos de las herramientas de administración de bases de datos más conocidas y ampliamente utilizadas son phpMyAdmin y Adminer.</p>
+<h3 id="phpmyadmin">phpMyAdmin</h3>
+<p>phpMyAdmin es una de las herramientas de administración de bases de datos basadas en la web más antiguas y populares. Está escrita en PHP y ofrece una amplia gama de características.</p>
+<p>Ventajas de phpMyAdmin:</p>
 <ul>
-<li>Con un <strong>servidor web</strong> (por ejemplo, <strong>apache2</strong>) y el módulo <strong>libapache2-mod-php</strong>. El servidor web sirve el contenido estático y el contenido dinámico generado por el PHP.</li>
-<li>Con un <strong>servidor web</strong> y un servidor de aplicaciones, por ejemplo, <strong>fpm-php</strong>. El servidor web sirve el contendio estático y hace de proxy inverso para las peticiones PHP, es decir, pasa a <strong>fpm-php</strong> las peticiones en las que hay que ejecutar el código PHP.</li>
+<li>
+<p>Amplias características: phpMyAdmin proporciona una amplia gama de funcionalidades avanzadas, como la gestión de usuarios, la importación/exportación de datos y la ejecución de consultas SQL complejas.</p>
+</li>
+<li>
+<p>Amplia comunidad: Debido a su larga historia, phpMyAdmin cuenta con una comunidad activa que proporciona soporte y numerosos complementos.</p>
+</li>
+<li>
+<p>Soporte multiplataforma: Puede funcionar en diversas plataformas y es compatible con varias bases de datos, incluyendo MySQL y MariaDB.</p>
+</li>
 </ul>
-<h2 id="servidor-lamp">Servidor LAMP</h2>
-<p>El acrónimo <em>LAMP</em> se refiere a un entorno configurado en un servidor que nos posibilita servir aplicaciones web escritas en PHP.</p>
-<p>El entorno que vamos a configurar se consigue mediante la unión de las siguientes tecnologías:</p>
+<p>Inconvenientes de phpMyAdmin:</p>
 <ul>
-<li><strong>L</strong>inux, el sistema operativo;</li>
-<li><strong>A</strong>pache, el servidor web;</li>
-<li><strong>M</strong>ySQL, <strong>M</strong>ariaDB, el gestor de bases de datos;</li>
-<li><strong>P</strong>HP, el lenguaje de programación.</li>
+<li>
+<p>Interfaz compleja: Su interfaz de usuario puede parecer abrumadora para los usuarios principiantes debido a la gran cantidad de características disponibles.</p>
+</li>
+<li>
+<p>Requisitos de recursos: PhpMyAdmin tiende a requerir más recursos en comparación con Adminer, lo que puede ser un problema en servidores con limitaciones de recursos.</p>
+</li>
 </ul>
-<p>Existe también el entorno <strong>LEMP</strong>, en donde cambiamos apache2 por nginx. En nuestro caso, configuraremos el entorno <strong>LAMP</strong>.</p>
-<h2 id="tarea">Tarea</h2>
-<p>En esta práctica, aprenderemos a configurar un entorno <em>LAMP</em>. A medida que vayamos instalando y configurando las distintas herramientas aprovecharemos para introducir algunas características de las mismas.</p>
+<h3 id="adminer">Adminer</h3>
+<p>Adminer es una herramienta de administración de bases de datos basada en la web que se destaca por su simplicidad y eficiencia.</p>
+<p>Ventajas de Adminer:</p>
+<ul>
+<li>
+<p>Interfaz de usuario intuitiva: Adminer ofrece una interfaz de usuario sencilla y fácil de entender, lo que la hace ideal para usuarios principiantes.</p>
+</li>
+<li>
+<p>Tamaño pequeño: Adminer es una aplicación ligera y de código abierto que no requiere una gran cantidad de recursos para funcionar.</p>
+</li>
+<li>
+<p>Soporte para múltiples bases de datos: Adminer no se limita a MySQL; también admite PostgreSQL, SQLite, MS SQL y otros sistemas de gestión de bases de datos.</p>
+</li>
+<li>
+<p>Actualizaciones regulares: Se actualiza regularmente para corregir errores y agregar nuevas características.</p>
+</li>
+</ul>
+<p>Inconvenientes de Adminer:</p>
+<ul>
+<li>Menos características avanzadas: Aunque es fácil de usar, Adminer puede carecer de algunas de las características avanzadas que ofrecen otras herramientas.</li>
+</ul>
+<p>En resumen, la elección entre Adminer y phpMyAdmin dependerá de las necesidades y preferencias individuales. Adminer es ideal para aquellos que buscan simplicidad y facilidad de uso, mientras que phpMyAdmin es más adecuado para usuarios que requieren una amplia gama de características avanzadas y están dispuestos a invertir tiempo en aprender su interfaz más compleja.</p>
 <div class="admonition question">
 <p class="admonition-title">Tarea 1</p>
-<p>Sigue todos los pasos que se describen a continuación para configurar un entorno LAMP.</p>
+<p>Realiza esta tarea en la máquina virtual donde has instalado la pila LAMP. Sigue el siguiente <a href="https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/ESF1fgeUWEJLrcbYgA2K2csBAGQgqFCbXzH4mH_R_56qCw?e=uezLXZ">tutorial</a> sobre la instalación y uso de <strong>phpMyAdmin</strong>.</p>
 </div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Realiza esta tarea en una máquina virtual. Puedes usar Vagrant para configurarla con el sistema operativo Ubuntu Server 22.04. Si utilizas la MV del tema anterior, recuerda que Nginx está escuchando en el puerto 80, por tanto, desactiva Nginx para que Apache pueda escuchar en el puerto 80. Si no, realiza los pasos sobre una máquina limpia. Recuerda actualizar los paquetes disponibles con:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
-</code></pre></div></p>
+<div class="admonition question">
+<p class="admonition-title">Tarea de ampliación 1.1</p>
+<p>Descarga el fichero <a href="https://gvaedu-my.sharepoint.com/:u:/g/personal/mv_nebotromero_edu_gva_es/EdJz98PHcQdCtK6hqcguKPIBSChQuGW8JEHrcdKn6m6BWQ?e=XFqphF"><code>musica.sql</code></a> y después impórtalo a tu servidor MySQL a través de la interfaz de <strong>phpMyAdmin</strong>. Despliega y observa todas las tablas que tiene la base de datos.</p>
 </div>
-<h3 id="paso-1-instalacion-y-configuracion-del-servidor-de-base-de-datos">Paso 1: Instalación y configuración del servidor de base de datos.</h3>
-<p>Podemos instalar MySQL o MariaDB, en este caso optaremos por MySQL:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="w">    </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mysql-server
-</code></pre></div></p>
-<p>Para iniciar, parar, reiniciar y consultar el estado de MySQL server podemos utilizar los siguientes comandos:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">    </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>start<span class="w"> </span>mysql
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>mysql
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>mysql
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mysql
-</code></pre></div></p>
-<p>Por defecto el usuario <code>root</code> no tiene contraseña, para acceder necesitaremos hacerlo con el root del sistema. Es muy recomendable ejecutar el programa <code>mysql_secure_installation</code> para configurar la base de datos de manera segura, por ejemplo para indicar una contraseña al root.</p>
-<p>Si necesitas crear una base de datos y un usuario que tenga acceso a la misma, deberás entrar en el servidor de la base de datos con el comando <code>mysql -u root -p</code> y una vez dentro ejecutar los siguientes pasos:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">    </span>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>newdb<span class="p">;</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span>CREATE<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;username&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;userpassword&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span>GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>newdb.*<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;username&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span>FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span>quit
-</code></pre></div>
-Observa que el usuario creado tiene todos los privilegios sobre la base de datos creada pero sólo puede conectarse al servidor desde la máquina local. Para poder conectarse desde una máquina remota utilizaríamos el comodín '%' en lugar de localhost.</p>
-<h2 id="paso-2-instalacion-de-apache-y-php">Paso 2: Instalación de Apache y PHP</h2>
-<p>A continuación instalamos el interprete de PHP. Al menos instalamos la librerías de PHP necesarias para conectar los programas PHP con la base de datos (dependiendo de la aplicación que instalemos necesitaremos instalar las librerías PHP necesarias).</p>
-<p>También instalamos el servidor web. Además vamos a instalar el módulo que permite que apache2 interprete PHP (es decir, apache2 hará el papel de servidor web y de servidor de aplicaciones).
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="w">    </span>apt<span class="w"> </span>install<span class="w"> </span>apache2<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php<span class="w"> </span>php-mysql
-</code></pre></div>
-A continuación se describe cada librería:</p>
+<div class="admonition question">
+<p class="admonition-title">Tarea de ampliación 1.2</p>
+<p>En la interfaz de <strong>phpMyAdmin</strong>, realiza las consultas del Anexo I del siguiente <a href="https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/EWPqtwnNL3BPu65FBNHw1TQBCMqvp8Zmc5ai1_nRDdlwaw?e=mDsTFU">documento</a>, en donde tienes una descripción de la base de datos <code>musica.sql</code> que acabas de importar en la tarea anterior.</p>
+</div>
+<div class="admonition question">
+<p class="admonition-title">Tarea de ampliación 1.3</p>
+<p>Instala <strong>Adminer</strong> en tu servidor web y explora su interfaz, comparándola con la de phpMyAdmin.</p>
+</div>
+<h2 id="herramientas-de-analisis-de-logs">Herramientas de análisis de logs</h2>
+<p>El análisis de logs en servidores web es una práctica esencial para comprender y optimizar el rendimiento, la seguridad y la usabilidad de un sitio web. Los logs son registros de eventos que el servidor web genera de forma automática, registrando información sobre las solicitudes de los usuarios, los errores, el tráfico y otros datos importantes.</p>
+<p>Dos herramientas populares para el análisis de logs en servidores web son GoAccess y AWStats:</p>
+<h3 id="goaccess">GoAccess</h3>
+<p>Se trata de una herramienta de línea de comandos y una aplicación web que proporciona análisis en tiempo real de los logs del servidor web. Es altamente configurable y puede utilizarse para analizar logs de Apache, Nginx y otros servidores web. Entre las ventajas de la herramienta destacan las siguientes:</p>
 <ul>
-<li><code>apache2</code>: servidor web apache2.</li>
-<li><code>libapache2-mod-php</code>: módulo de apache2 que le permite ejecutar el código PHP. Es decir, apache2 será servidor web y servidor de aplicaciones PHP.</li>
-<li><code>php</code>: es un metapaquete que apunta al paquete de Ubuntu 22.04, en este caso apunta al paquete <code>php8.1</code>.</li>
-<li><code>php-mysql</code>: librería PHP que posibilita el acceso a la base de datos.</li>
+<li>Interfaz en tiempo real que muestra estadísticas actualizadas en tiempo real.</li>
+<li>Soporte para múltiples formatos de logs.</li>
+<li>Fácil de instalar y usar.</li>
+<li>Genera informes interactivos y visuales.</li>
 </ul>
-<h2 id="paso-3-comprobacion-del-servidor-web-y-lamp">Paso 3: Comprobación del servidor web y LAMP</h2>
-<p>El directorio web por defecto de apache es <code>/var/www/html</code> (el DocumentRoot), que inicialmente contiene el fichero <code>index.html</code>. Comprueba que apache está funcionando escribiendo en la barra de direcciones del navegador la IP de tu servidor.
-    Recuerda que los ficheros que sirve el servidor web deben tener como propietario el usuario <code>www-data:www-data</code>. <!-- chown -R www-data:www-data /var/www/html--></p>
-<p>Para comprobar si el servidor LAMP está funcionando, puedes crear un fichero <code>info.php</code> en el DocumentRoot (el directorio <code>/var/www/html</code>) con el siguiente contenido:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Escribe aquí tu nombre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>            <span class="p">&lt;</span><span class="nt">br</span> <span class="p">&gt;</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>            <span class="cp">&lt;?php phpinfo(); ?&gt;</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<p>A partir del DocumentRoot puedes crear directorios con ficheros que servirá el servidor web accediendo con la IP del servidor más el path correspondiente. Por ejemplo, crea dos directorios <em>sitio1xxx</em> y <em>sitio2xxx</em> (donde xxx son tus iniciales). Dentro de cada directorio crea un fichero llamado <code>index.php</code> (deben tener contenidos diferentes). Puedes utilizar los ejemplos siguientes:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Escribe aquí tu nombre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>            <span class="p">&lt;</span><span class="nt">br</span> <span class="p">&gt;</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>            <span class="cp">&lt;?php echo ‘sitio 1’; ?&gt;</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>             <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Escribe aquí tu nombre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>             <span class="p">&lt;</span><span class="nt">br</span> <span class="p">&gt;</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>            <span class="cp">&lt;?php echo ‘sitio 2’; ?&gt;</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></div></p>
-<p>Comprueba que los dos dos ficheros se ven correctamente desde el navegador con las rutas <code>http://IP/sitio1xxx</code> y <code>http://IP/sitio2xxx</code>.</p>
-<p>Como ya hemos visto, para acceder a las páginas usamos la dirección IP del servidor. Sin embargo vamos a usar un nombre. Si queremos usar un nombre para acceder a la página, tenemos que tener un sistema para convertir el nombre en dirección IP. Como no tenemos servidor DNS vamos a usar la <strong>resolución estática</strong>.</p>
-<p>Para usar la resolución estática, modificamos el fichero <code>/etc/hosts</code> del ordenador desde el que vamos acceder a la página, de la siguiente forma:</p>
-<div class="highlight"><pre><span></span><code>&lt;direccion_ip_servidor_web&gt;      &lt;nombre_con_el_que_accedemos&gt;
-</code></pre></div>
-<p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code>192.168.121.10      www.example.org
-</code></pre></div>
-<p>Ahora podemos acceder a la URL: <code>http://www.example.org/info.php</code></p>
-<p>Si tenemos problemas de acceso podemos ver los logs del servidor:</p>
+<p>Respecto a sus incovenientes destacan los siguientes:</p>
 <ul>
-<li>El fichero de logs de acceso por "defecto": <code>/var/log/apache/access.log</code>. Donde se registra los accesos al servidor desde los clientes.</li>
-<li>El fichero de logs de errores por" defecto": <code>/var/log/apache/error.log</code>.</li>
-<li>También podemos ver los logs del servicio ejecutando: <code>journalctl -u apache2</code>.</li>
+<li>No es tan completo en términos de características detalladas como AWStats.</li>
+<li>La interfaz de línea de comandos puede no ser adecuada para todos los usuarios.</li>
 </ul>
-<h2 id="paso-4-comprobacion-acceso-a-la-base-de-datos">Paso 4: Comprobación acceso a la base de datos</h2>
-<p>Para comprobar que podemos acceder a la base de datos creada en la paso 1 con el usuario y contraseña indicados, completa el siguiente script con los datos correctos y pruébalo desde un navegador:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">&lt;?php</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>    <span class="nv">$username</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">;</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="nv">$password</span><span class="o">=</span><span class="s2">&quot;userpassword&quot;</span><span class="p">;</span>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>    <span class="nv">$database</span><span class="o">=</span><span class="s2">&quot;newdb&quot;</span><span class="p">;</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>    <span class="nv">$mysqli</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$database</span><span class="p">);</span>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="nv">$mysqli</span><span class="o">-&gt;</span><span class="na">select_db</span><span class="p">(</span><span class="nv">$database</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span> <span class="s2">&quot;Unable to select database&quot;</span><span class="p">);</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a>    <span class="k">echo</span> <span class="s2">&quot;PRUEBA DE CONEXIÓN A LA BD </span><span class="si">$database</span><span class="s2"> CON EL USER </span><span class="si">$username</span><span class="s2"> OK&quot;</span><span class="p">;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>
-<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a>    <span class="nv">$mysqli</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
-<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="cp">?&gt;</span>
-</code></pre></div>
-<!--
-!!!Task "¿Qué tienes que entregar?"
-    1. Una captura de pantalla donde se vea la configuración de la resolución estática con el nombre `wwww.tunombreyapellidos.org`
-    2. Crea una base de datos y un usuario en la base de datos y entrega una comprobación de que se puede acceder a la base de datos con ese usuario y puede acceder a la base de datos creada.
-    3. Una captura de pantalla accediendo desde un navegador a los dos ficheros del punto 5.
-    4. Una captura de pantalla accediendo desde un navegador al fichero `info.php` usando el nombre que has configurando en la resolución estática.
-
--->
+<p>Para usar GoAccess, puedes ejecutarlo en la línea de comandos y apuntarlo a tus archivos de logs. Por ejemplo: <code>goaccess -f /var/log/apache2/access.log</code>.</p>
+<h3 id="awstats">AWStats</h3>
+<p>Se trata de una herramienta de análisis de logs más antigua y ampliamente utilizada. Proporciona informes detallados y estáticos sobre el tráfico del servidor web, la información demográfica de los visitantes y más. Entre sus ventajas destacan las siguientes:</p>
+<ul>
+<li>Ofrece informes detallados y personalizables.</li>
+<li>Funciona con una variedad de servidores web y formatos de logs.</li>
+<li>Muestra gráficos y tablas detalladas.</li>
+</ul>
+<p>Entre los inconvenientes de la herramientas destacan los siguientes:</p>
+<ul>
+<li>No proporciona análisis en tiempo real.</li>
+<li>La configuración inicial puede ser más complicada que GoAccess.</li>
+<li>Los informes son estáticos y no se actualizan en tiempo real.</li>
+</ul>
+<p>Después de configurar AWStats para analizar tus logs, puedes acceder a los informes a través de un navegador web. Los informes suelen estar disponibles en una URL específica, como <code>http://tusitio.com/awstats/awstats.pl</code>.</p>
+<p>En resumen, GoAccess es una opción ideal para obtener análisis en tiempo real de logs de servidores web con una interfaz interactiva, mientras que AWStats es más adecuado para informes detallados y estáticos sobre el tráfico web. La elección entre estas herramientas dependerá de las necesidades específicas y preferencias.</p>
+<div class="admonition question">
+<p class="admonition-title">Tarea 2</p>
+<p>Averigua cómo instalar GoAccess en tu máquina virtual, instálalo y genera los logs del servidor web apache en tiempo real y guárdalos en un archivo llamado <code>report.html</code> accesible desde la raíz de apache.</p>
+</div>
 
 
 

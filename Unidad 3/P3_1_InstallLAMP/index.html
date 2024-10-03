@@ -1,0 +1,1509 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%203/P3_1_InstallLAMP/">
+      
+      
+        <link rel="prev" href="../Ud3_1_App_Web/">
+      
+      
+        <link rel="next" href="../P3_2_PHPMyAdmin/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+    
+    
+      
+        <title>Practica 3.1 - Instalación de la pila LAMP - Implantación de aplicaciones web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-3NX5MD5C8H"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-3NX5MD5C8H",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-3NX5MD5C8H",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#practica-31-instalacion-de-la-pila-lamp" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../.." title="Implantación de aplicaciones web" class="md-header__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Implantación de aplicaciones web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Practica 3.1 - Instalación de la pila LAMP
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="green" data-md-color-accent="blue"  aria-label="Cambiar a modo oscuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo oscuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-orange"  aria-label="Cambiar a modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Cambiar a modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6m0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4M7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Implantación de aplicaciones web" class="md-nav__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
+      
+  <img src="../../assets/logocaminas.png" alt="logo">
+
+    </a>
+    Implantación de aplicaciones web
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_1" id="__nav_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unidad 1
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1">
+            <span class="md-nav__icon md-icon"></span>
+            Unidad 1
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/Ud1_1_introModulo/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Introducción al módulo
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_1_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_1_2" id="__nav_1_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_1_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_1_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/P1_1/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    P1.1. Linux Server en AWSAcademy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/P1_2/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    P1.2 Windows Server en AWSAcademy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/P1_3/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    P1.3. Conceder acceso a un segundo administrador
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/P1_4_tallerGitIntro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taller 1: Introducción a git y GitHub
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/P1_5_tallerGitRamasUniones/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taller 2: Git. Trabajando con ramas y uniones
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%201/P1_6_tallerMarkdown/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Taller 3: Introducción a Markdown
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unidad 2
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Unidad 2
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/Ud2_1_Imp_ArqWeb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.1. Arquitecturas web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/Ud2_2_Func_app_web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.2. Funcionamiento de una aplicación Web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/Ud2_3_ArqWeb_serweb/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.3. Implantación y administración de servidores web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/Ud2_4_Serv_web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.4. Servidores web: Nginx vs Apache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/Ud2_5_HTTP/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5. Los protocolos HTTP y HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_6">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_1_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.1 – Instalación y configuración de servidor web Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_2_sitios_virtuales/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.2 – Creación de un sitio virtual
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_3_autenticacion_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.3 – Autenticación en Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_4_proxy_inv_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2.4 – Proxy inverso con Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_5_HTTPS_nginx/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica 2.5 - Activación HTTPS en proxy inverso NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_6_Balanceo_carga/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica Voluntaria 2.6 – Balanceo de carga con proxy inverso en Nginx
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Unidad%202/P2_7_balanceo_con_ssl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Practica Voluntaria 2.7 - Proxy inverso y balanceo de carga con SSL en NGINX
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unidad 3
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Unidad 3
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ud3_1_App_Web/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3.1. Implantación de aplicaciones web PHP.
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Practica 3.1 - Instalación de la pila LAMP
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Practica 3.1 - Instalación de la pila LAMP
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduccion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerrequisitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerrequisitos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-del-servidor-apache" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación del servidor Apache.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacion-de-mariadb" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación de MariaDB.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lenguaje-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lenguaje PHP
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Lenguaje PHP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduccion-a-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introducción a PHP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#instalacion-de-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalación de PHP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comprobaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comprobaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-php" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación PHP
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comprobacion-acceso-a-la-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comprobación acceso a la base de datos
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusión
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_2_PHPMyAdmin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2: Herramientas relacionadas con la pila LAMP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_2_PHPMyAdmin.md_mv/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2: Herramientas relacionadas con la pila LAMP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_3_VirtualhostingApache/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 3: VirtualHosting con Apache
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_4_AppBookMedik/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 4: Instalación de la aplicación BookMedik
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_5_CMSWordPress/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 5: Instalación del CMS WordPress
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="practica-31-instalacion-de-la-pila-lamp">Practica 3.1 - Instalación de la pila LAMP</h1>
+<h2 id="introduccion">Introducción</h2>
+<p>Vimos en la teoría que existen distintas plataformas web libres, como LAMP y propietarias, como WISA. En esta práctica instalaremos una plataforma web LAMP completa, formada por: </p>
+<ul>
+<li><strong>Linux</strong>: sistema operativo. En nuestro caso usaremos Debian.</li>
+<li><strong>Apache</strong>: servidor web.</li>
+<li><strong>MySQL o MariaDB</strong>: gestor de bases de datos. Nosotros instalaremos MariaDb.</li>
+<li><strong>PHP</strong>: lenguaje interpretado PHP, aunque a veces se sustituye por Perl o Python.</li>
+</ul>
+<h2 id="prerrequisitos">Prerrequisitos</h2>
+<p>Antes de empezar con la instalación de los distintos componentes de la plataforma web necesitaremos:</p>
+<ul>
+<li>Crea en AWS Academy un EC2 Debian con los requisitos por defecto. Llámale <strong><em>PracticaLAMP</em></strong></li>
+<li>Crea un Grupo de seguridad y llámale también <strong><em>PracticaLAMP</em></strong>. De momento abre los puertos para SSH, HTTP y HTTPS.</li>
+</ul>
+<p>Conéctate por SSH al EC2 creado y actualiza el sistema.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>update<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</code></pre></div>
+<p>Ahora ya podemos empezar a instalar los elementos de la plataforma uno a uno.</p>
+<h2 id="instalacion-del-servidor-apache">Instalación del servidor Apache.</h2>
+<p>Como todo servidor LAMP, lo principal es la A de Apache. Para instalar Apache únicamente debemos de ejecutar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apache2
+</code></pre></div>
+<p>Comprobamos que se ha instalado correctamente y el servicio está en ejecución:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</code></pre></div>
+<p>Si no estuviera arrancado recuerda que puedes usar <code>sudo systemctl enable apache2</code> para activarlo y que se arranque al inicio y <code>sudo systemctl start apache2</code> para arrancarlo.</p>
+<p>Y listo, ya tenemos servidor web instalado. Ahora desde nuestro navegador favorito escribimos la IP pública de nuestro  servidor Debian (con http:// recuerda) y nos debería de salir el index de Apache por defecto.</p>
+<p><img alt="Imagen LAMP" src="../P3_1/01.png" /></p>
+<h2 id="instalacion-de-mariadb">Instalación de MariaDB.</h2>
+<p>Ahora vamos a instalar un servidor de bases de datos para las aplicaciones que podamos instalar en nuestro servidor web, para ello instalaremos MariaDB que está basado en MySQL.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>mariadb-server
+</code></pre></div>
+<p>Como antes, comprobamos que el servicio está en marcha. Como MariaDB está basado en Mysql mantiene el nombre de servicio <code>mysql</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>mysql
+</code></pre></div>
+<p>Una vez iniciado, no podremos iniciar sesión con MariaDB porque no hemos configurado aún el servidor para ello. Vamos a ejecutar este script que ayuda a securizar el servicio:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>mysql_secure_installation
+</code></pre></div>
+<p>Te hará varias preguntas. Importante contestar:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Change<span class="w"> </span>the<span class="w"> </span>root<span class="w"> </span>password?<span class="w"> </span><span class="o">[</span>Y/n<span class="o">]</span><span class="w"> </span>Y
+</code></pre></div>
+<p>Y ponle de password a root: <code>ieselcaminas</code>.</p>
+<p>El resto de preguntas puedes mantener la base de datos en entorno de pruebas. Ten en cuenta que si fuera un entorno de producción las respuestas deberían ser distintas.</p>
+<p>Y finalmente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Reload<span class="w"> </span>privilege<span class="w"> </span>tables<span class="w"> </span>now?<span class="w"> </span><span class="o">[</span>Y/n<span class="o">]</span><span class="w"> </span>y
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w"> </span>...<span class="w"> </span>Success!
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>Cleaning<span class="w"> </span>up...
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>All<span class="w"> </span><span class="k">done</span>!<span class="w">  </span>If<span class="w"> </span>you<span class="err">&#39;</span>ve<span class="w"> </span>completed<span class="w"> </span>all<span class="w"> </span>of<span class="w"> </span>the<span class="w"> </span>above<span class="w"> </span>steps,<span class="w"> </span>your<span class="w"> </span>MariaDB
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>installation<span class="w"> </span>should<span class="w"> </span>now<span class="w"> </span>be<span class="w"> </span>secure.
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>Thanks<span class="w"> </span><span class="k">for</span><span class="w"> </span>using<span class="w"> </span>MariaDB!
+</code></pre></div>
+<p>Ya hemos configurado MariaDB, ahora podemos conectarnos mediante terminal:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="c1"># mysql -u root -p</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Enter<span class="w"> </span>password:<span class="w"> </span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Welcome<span class="w"> </span>to<span class="w"> </span>the<span class="w"> </span>MariaDB<span class="w"> </span>monitor.<span class="w">  </span>Commands<span class="w"> </span>end<span class="w"> </span>with<span class="w"> </span><span class="p">;</span><span class="w"> </span>or<span class="w"> </span><span class="se">\g</span>.
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>Your<span class="w"> </span>MariaDB<span class="w"> </span>connection<span class="w"> </span>id<span class="w"> </span>is<span class="w"> </span><span class="m">35</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>Server<span class="w"> </span>version:<span class="w"> </span><span class="m">10</span>.11.4-MariaDB-1~deb12u1<span class="w"> </span>Debian<span class="w"> </span><span class="m">12</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>Copyright<span class="w"> </span><span class="o">(</span>c<span class="o">)</span><span class="w"> </span><span class="m">2000</span>,<span class="w"> </span><span class="m">2018</span>,<span class="w"> </span>Oracle,<span class="w"> </span>MariaDB<span class="w"> </span>Corporation<span class="w"> </span>Ab<span class="w"> </span>and<span class="w"> </span>others.
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>Type<span class="w"> </span><span class="s1">&#39;help;&#39;</span><span class="w"> </span>or<span class="w"> </span><span class="s1">&#39;\h&#39;</span><span class="w"> </span><span class="k">for</span><span class="w"> </span>help.<span class="w"> </span>Type<span class="w"> </span><span class="s1">&#39;\c&#39;</span><span class="w"> </span>to<span class="w"> </span>clear<span class="w"> </span>the<span class="w"> </span>current<span class="w"> </span>input<span class="w"> </span>statement.
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>MariaDB<span class="w"> </span><span class="o">[(</span>none<span class="o">)]</span>&gt;
+</code></pre></div>
+Puedes conocer los distintos comandos con <code>help</code> o <code>\h</code>. Para salir <code>\q</code>.</p>
+<h2 id="lenguaje-php">Lenguaje PHP</h2>
+<h3 id="introduccion-a-php">Introducción a PHP</h3>
+<p>PHP es un lenguaje de programación interpretado de propósito general, pero se ha generalizado su uso en el desarrollo web. Aunque se puede ejecutar desde la línea de comandos, normalmente nos lo encontraremos embebido en el HTML.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="cp">&lt;!DOCTYPE HTML&gt;</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Mi primera página <span class="p">&lt;</span><span class="nt">strong</span><span class="p">&gt;</span>PHP<span class="p">&lt;/</span><span class="nt">strong</span><span class="p">&gt;&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>        <span class="cp">&lt;?php&gt;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="cp">            echo &quot;Hello world!&quot;;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="cp">        ?&gt;</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a>    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>PHP es el componente que procesará código para mostrar contenido dinámico. Puede ejecutar secuencias de comandos, establecer conexión con sus bases de datos de MariaDB para obtener información y entregar el contenido procesado a su servidor web para su visualización.</p>
+<p>Podemos servir páginas web PHP de varias formas:</p>
+<ul>
+<li>Con un <strong>servidor web</strong> (por ejemplo, <strong>apache2</strong>) y el módulo <strong>libapache2-mod-php</strong>. El servidor web sirve el contenido estático y el contenido dinámico generado por el PHP.</li>
+<li>Con un <strong>servidor web</strong> y un servidor de aplicaciones, por ejemplo, <strong>fpm-php</strong>. El servidor web sirve el contendio estático y hace de proxy inverso para las peticiones PHP, es decir, pasa a <strong>fpm-php</strong> las peticiones en las que hay que ejecutar el código PHP.</li>
+</ul>
+<h3 id="instalacion-de-php">Instalación de PHP</h3>
+<p>Una vez más, utiliza el sistema apt-get para instalar PHP. Además, incluye algunos paquetes de helper esta vez para que el código de PHP pueda ejecutarse con el servidor Apache y comunicarse con su base de datos de MariaDB:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>php<span class="w"> </span>libapache2-mod-php<span class="w"> </span>php-mysql
+</code></pre></div>
+<p>A continuación se describe cada librería:</p>
+<ul>
+<li><code>php</code>: instalará la versión más reciente disponible en los repositorios del sistema.</li>
+<li><code>libapache2-mod-php</code>: módulo de apache2 que le permite ejecutar el código PHP. Es decir, apache2 será servidor web y servidor de aplicaciones PHP.</li>
+<li><code>php-mysql</code>: librería PHP que posibilita el acceso a la base de datos mysql o mariadb.</li>
+</ul>
+<p>Para que Apache aplique los cambios, es necesario reiniciar el servicio para que PHP esté activo.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>apache2
+</code></pre></div>
+<h2 id="comprobaciones">Comprobaciones</h2>
+<h3 id="comprobacion-php">Comprobación PHP</h3>
+<p>A fin de verificar que tu sistema esté configurado de forma adecuada para PHP, crearemos un fichero con una secuencia de comandos PHP muy básica, a este fichero lo llamaremos <code>info.php</code>. Para que Apache encuentre este archivo y lo presente correctamente, debe guardarse en un directorio muy específico llamado DocumentRoot. Este directorio se encuentra en <code>/var/www/html</code>. Crea el archivo en esa ubicación ejecutando lo siguiente:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>sudo<span class="w"> </span>nano<span class="w"> </span>/var/www/html/info.php
+</code></pre></div>
+<p>Con esto se abrirá un archivo vacío. Añade el siguiente texto, que es el código PHP válido embebido en html, dentro del archivo <code>/var/www/html/info.php</code></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Escribe aquí tu nombre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>            <span class="p">&lt;</span><span class="nt">br</span> <span class="p">&gt;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>            <span class="cp">&lt;?php phpinfo(); ?&gt;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<p>Cuando termines, guarda y cierra el archivo. Recuerda que los ficheros que sirve el servidor web deben tener como propietario el usuario <code>www-data:www-data</code>.</p>
+<p>Ahora puedes probar si tu servidor web puede mostrar correctamente el contenido generado por esta secuencia de comandos PHP. Para probar esto, visita esta página en tu navegador web. Necesitarás de nuevo la dirección IP pública de tu servidor Debian.</p>
+<p><code>http://IPservidorDebian/info.php</code></p>
+<p>La página a la que llegues debería tener un aspecto similar a este:</p>
+<p><img alt="Imagen LAMP" src="../P3_1/02.png" /></p>
+<p>A partir del DocumentRoot <code>/var/www/html</code> puedes crear directorios con ficheros que servirá el servidor web accediendo con la IP del servidor más el path correspondiente. Por ejemplo, crea dos directorios <em>sitio1xxx</em> y <em>sitio2xxx</em> (donde xxx son tus iniciales). Dentro de cada directorio crea un fichero llamado <code>index.php</code> (deben tener contenidos diferentes). Puedes utilizar los ejemplos siguientes:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>            <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Escribe aquí tu nombre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>            <span class="p">&lt;</span><span class="nt">br</span> <span class="p">&gt;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>            <span class="cp">&lt;?php echo ‘sitio 1’; ?&gt;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>     <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>    <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>        <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>        <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>        <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>             <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Escribe aquí tu nombre<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>             <span class="p">&lt;</span><span class="nt">br</span> <span class="p">&gt;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a>            <span class="cp">&lt;?php echo ‘sitio 2’; ?&gt;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>        <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a>    <span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></div></p>
+<p>Comprueba que los dos ficheros se ven correctamente desde el navegador con las rutas <code>http://IP/sitio1xxx</code> y <code>http://IP/sitio2xxx</code>.</p>
+<p>Si tenemos problemas de acceso podemos ver los logs del servidor:</p>
+<ul>
+<li>El fichero de logs de acceso por "defecto": <code>/var/log/apache2/access.log</code>. Donde se registra los accesos al servidor desde los clientes.</li>
+<li>El fichero de logs de errores por" defecto": <code>/var/log/apache2/error.log</code>.</li>
+<li>También podemos ver los logs del servicio ejecutando: <code>journalctl -u apache2</code>.</li>
+</ul>
+<h3 id="comprobacion-acceso-a-la-base-de-datos">Comprobación acceso a la base de datos</h3>
+<p>Si necesitas crear una base de datos y un usuario que tenga acceso a la misma, deberás entrar en el servidor de la base de datos con el comando <code>mysql -u root -p</code> y una vez dentro ejecutar los siguientes pasos:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="w">    </span>CREATE<span class="w"> </span>DATABASE<span class="w"> </span>newdb<span class="p">;</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">    </span>CREATE<span class="w"> </span>USER<span class="w"> </span><span class="s1">&#39;username&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="w"> </span>IDENTIFIED<span class="w"> </span>BY<span class="w"> </span><span class="s1">&#39;userpassword&#39;</span><span class="p">;</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span>GRANT<span class="w"> </span>ALL<span class="w"> </span>PRIVILEGES<span class="w"> </span>ON<span class="w"> </span>newdb.*<span class="w"> </span>to<span class="w"> </span><span class="s1">&#39;username&#39;</span>@<span class="s1">&#39;localhost&#39;</span><span class="p">;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span>FLUSH<span class="w"> </span>PRIVILEGES<span class="p">;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">    </span>quit
+</code></pre></div>
+<p>Observa que el usuario creado tiene todos los privilegios sobre la base de datos creada pero sólo puede conectarse al servidor desde la máquina local. Para poder conectarse desde una máquina remota utilizaríamos el comodín '%' en lugar de localhost.</p>
+<p>Para comprobar que podemos acceder a la base de datos que acabamos de crear con el usuario y contraseña indicados, crea un fichero llamado <code>prueba_base_datos.php</code> con el siguiente contenido y guárdalo en el DocumentRoot.</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="cp">&lt;?php</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>    <span class="nv">$username</span><span class="o">=</span><span class="s2">&quot;username&quot;</span><span class="p">;</span>
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>    <span class="nv">$password</span><span class="o">=</span><span class="s2">&quot;userpassword&quot;</span><span class="p">;</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>    <span class="nv">$database</span><span class="o">=</span><span class="s2">&quot;newdb&quot;</span><span class="p">;</span>
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>    <span class="nv">$mysqli</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">mysqli</span><span class="p">(</span><span class="s2">&quot;localhost&quot;</span><span class="p">,</span> <span class="nv">$username</span><span class="p">,</span> <span class="nv">$password</span><span class="p">,</span> <span class="nv">$database</span><span class="p">);</span>
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>
+<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a>    <span class="nv">$mysqli</span><span class="o">-&gt;</span><span class="na">select_db</span><span class="p">(</span><span class="nv">$database</span><span class="p">)</span> <span class="k">or</span> <span class="k">die</span><span class="p">(</span> <span class="s2">&quot;Unable to select database&quot;</span><span class="p">);</span>
+<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a>
+<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a>    <span class="k">echo</span> <span class="s2">&quot;PRUEBA DE CONEXIÓN A LA BD </span><span class="si">$database</span><span class="s2"> CON EL USER </span><span class="si">$username</span><span class="s2"> OK&quot;</span><span class="p">;</span>
+<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a>
+<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>    <span class="nv">$mysqli</span><span class="o">-&gt;</span><span class="na">close</span><span class="p">();</span>
+<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="cp">?&gt;</span>
+</code></pre></div>
+Accede desde el navegador a este fichero con la ruta <code>http://IP/prueba_base_datos.php</code>.</p>
+<!--
+
+## Instalación de phpMyAdmin
+
+En estos momentos ya tenemos la pila LAMP creada y operativa y ya podríamos instalar cualquier servicio sobre ella: Moodle, Wordpress, NextCloud...
+
+Pero vamos a instalar una cosa más que, no siendo imprescindible, si que nos será muy útil para gestionar las bases de datos de forma gráfica: phpMyAdmin.
+
+Para ello
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>phpmyadmin
+</code></pre></div>
+
+La instalación es bastante automática, aunque nos hará algunas preguntas. 
+
+* Primero nos preguntará por el servidor web que tenemos instalado. Lógicamente le diremos que `apache2`.
+
+    ![Imagen LAMP](P3_1/03.png)
+
+* Después nos preguntará si gestionamos la configuración de phpMyAdmin con "dbconfig-common". Le diremos que si.
+
+* Y finalmente nos pedirá la contraseña de root de MySQL. Recuerda que le pusimos "ieselcaminas".
+
+* Reinicia apache con `sudo systemctl restart apache2`
+
+Ahora ya puedes acceder a la página de phpMyAdmin con
+
+`http://IPservidorDebian/phpmyadmin`
+
+Te pedirá el usuario y contraseña. Recuerda usuario:`root` y pass:`ieselcaminas`.
+
+![Imagen LAMP](P3_1/05.png)
+
+Y si todo va bien estarás dentro para poder gestionar las bases de datos de tu MariaDB.
+
+![Imagen LAMP](P3_1/06.png)
+
+Si con lo anterior no pudieras acceder a Phpmyadmin, añade este enlace simbólico:
+
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>sudo<span class="w"> </span>ln<span class="w"> </span>-s<span class="w"> </span>/usr/share/phpmyadmin/<span class="w"> </span>/var/www/html/phpmyadmin
+</code></pre></div>
+
+-->
+
+<h2 id="conclusion">Conclusión</h2>
+<p>Hemos instalado la plataforma web LAMP completa con las últimas versiones de cada uno de sus elementos.</p>
+<p>Ahora ya podrás instalar cualquier aplicación o servicio que requiera dicha plataforma para funcionar.</p>
+<p>Recuerda al finalizar la práctica parar el laboratorio AWS Academy para no seguir consumiendo recursos innecesariamente.</p>
+<h2 id="referencias">Referencias</h2>
+<ul>
+<li><a href="https://voidnull.es/instalacion-de-servidor-web-lamp-en-debian-11/">Instalación de servidor web LAMP en Debian 11</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/how-to-install-linux-apache-mariadb-php-lamp-stack-debian9-es">Cómo instalar la pila Linux, Apache, MariaDB, PHP (LAMP) en Debian 9</a></li>
+</ul>
+<!--
+* [phpMyAdmin - Debian 11 Stable](https://usuariodebian.blogspot.com/2022/01/phpmyadmin-debian-11-stable.html)
+  -->
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Volver al principio
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      
+    
+  </body>
+</html>

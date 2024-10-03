@@ -14,7 +14,7 @@
         <link rel="prev" href="../../Unidad%202/P2_7_balanceo_con_ssl/">
       
       
-        <link rel="next" href="../P3_1_InstallServWebLAMP/">
+        <link rel="next" href="../P3_1_InstallLAMP/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>3.1. Implantación de aplicaciones web PHP. La pila LAMP - Implantación de aplicaciones web</title>
+        <title>3.1. Implantación de aplicaciones web PHP. - Implantación de aplicaciones web</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#implantacion-de-aplicaciones-web-php-la-pila-lamp" class="md-skip">
+        <a href="#implantacion-de-aplicaciones-web-php" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              3.1. Implantación de aplicaciones web PHP. La pila LAMP
+              3.1. Implantación de aplicaciones web PHP.
             
           </span>
         </div>
@@ -856,15 +856,72 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3.1. Implantación de aplicaciones web PHP.
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    3.1. Implantación de aplicaciones web PHP. La pila LAMP
+    3.1. Implantación de aplicaciones web PHP.
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#plataforma-lamp" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plataforma LAMP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#plataforma-wisa" class="md-nav__link">
+    <span class="md-ellipsis">
+      Plataforma WISA
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#otras-plataformas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Otras plataformas
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -913,11 +970,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../P3_1_InstallServWebLAMP/" class="md-nav__link">
+      <a href="../P3_1_InstallLAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Práctica 1: Instalación de un servidor LAMP
+    Practica 3.1 - Instalación de la pila LAMP
   </span>
   
 
@@ -935,6 +992,27 @@
   
     <li class="md-nav__item">
       <a href="../P3_2_PHPMyAdmin/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Práctica 2: Herramientas relacionadas con la pila LAMP
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P3_2_PHPMyAdmin.md_mv/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1041,7 +1119,40 @@
                   
 
 
-<h1 id="implantacion-de-aplicaciones-web-php-la-pila-lamp"><strong>Implantación de aplicaciones web PHP. La pila LAMP</strong></h1>
+<h1 id="implantacion-de-aplicaciones-web-php"><strong>Implantación de aplicaciones web PHP.</strong></h1>
+<p>Tal y como hemos visto, un servidor web es un software que se encarga de almacenar, procesar y entregar páginas web a los usuarios a través de la red, generalmente mediante el protocolo HTTP o HTTPS. Actúa como intermediario entre el navegador del usuario y el contenido solicitado, como páginas HTML, archivos multimedia, o aplicaciones web dinámicas. El servidor web escucha las solicitudes del cliente (navegador) y responde enviando el contenido adecuado, ya sea estático o dinámico.</p>
+<p>En la actualidad, el servidor web raramente funciona solo. Cada vez hay menos páginas web estáticas y más servicios y aplicaciones que no solo necesitan el servidor web, sino que necesitan una plataforma web que contiene, además, un gestor de base de datos y algún lenguaje de programación interpretado.</p>
+<p>Hoy en día son muchos los servicios que necesitan una plataforma web corriendo en el servidor antes de poder instalarlos. Estamos hablando de entornos de aprendizaje virtual, como Moodle, o gestores de blogs y páginas web como Wordpress.</p>
+<p>Una plataforma web es el entorno de desarrollo de software empleado para diseñar y ejecutar un sitio web. En términos generales, una plataforma web consta de cuatro componentes básicos:</p>
+<ol>
+<li><strong>Sistema operativo:</strong> Bajo el cual opera el equipo donde se hospedan las páginas web y que representa la base misma del funcionamiento del computador. En ocasiones limita la elección de otros componentes.</li>
+<li><strong>Servidor web:</strong> El software que maneja las peticiones desde equipos remotos a través de la Internet. En el caso de páginas estáticas, el servidor web simplemente provee el archivo solicitado, el cual se muestra en el navegador. En el caso de sitios dinámicos, el servidor web se encarga de pasar las solicitudes a otros programas que puedan gestionarlas adecuadamente.</li>
+<li><strong>Gestor de bases de datos:</strong> Se encarga de almacenar sistemáticamente un conjunto de registros de datos relacionados para ser usados posteriormente.</li>
+<li><strong>Lenguaje de programación interpretado:</strong> Controla las aplicaciones de software que corren en el sitio web.</li>
+</ol>
+<p>Diferentes combinaciones de los cuatro componentes señalados, basadas en las distintas opciones de software disponibles en el mercado, dan lugar a numerosas plataformas web, aunque, sin duda, hay dos que sobresalen del resto por su popularidad y difusión: <strong>LAMP</strong> y <strong>WISA</strong>.</p>
+<h3 id="plataforma-lamp">Plataforma LAMP</h3>
+<p>La plataforma LAMP trabaja enteramente con componentes de software libre y no está sujeta a restricciones propietarias. El nombre LAMP surge de las iniciales de los componentes de software que la integran:</p>
+<ul>
+<li><strong>Linux:</strong> sistema operativo.</li>
+<li><strong>Apache:</strong> servidor web.</li>
+<li><strong>MySQL:</strong> gestor de bases de datos.</li>
+<li><strong>PHP:</strong> lenguaje interpretado PHP, aunque a veces se sustituye por Perl o Python.</li>
+</ul>
+<h3 id="plataforma-wisa">Plataforma WISA</h3>
+<p>La plataforma WISA está basada en tecnologías desarrolladas por la compañía Microsoft; se trata, por lo tanto, de software propietario. La componen los siguientes elementos:</p>
+<ul>
+<li><strong>Windows:</strong> sistema operativo.</li>
+<li><strong>Internet Information Services (IIS):</strong> servidor web.</li>
+<li><strong>SQL Server:</strong> gestor de bases de datos.</li>
+<li><strong>ASP o ASP.NET:</strong> como lenguaje para scripting del lado del servidor.</li>
+</ul>
+<h3 id="otras-plataformas">Otras plataformas</h3>
+<p>Existen otras plataformas, como por ejemplo la configuración <strong>WAMP</strong> (Windows-Apache-MySQL-PHP), que es bastante común pero sólo como plataforma de desarrollo local. De forma similar, un servidor Windows puede correr con IIS y con MySQL y PHP. A esta configuración se la conoce como plataforma <strong>WIMP</strong>.</p>
+<p>Entre los servidores web más utilizados hoy en día, aparte de Apache e IIS, tenemos también a <strong>Nginx</strong>, un servidor web software libre que está demostrando un alto rendimiento. Nginx es capaz de atender una gran cantidad de peticiones simultáneas y tiene un mejor rendimiento que sus competidores al servir contenido estático. Sin embargo, su configuración es menos flexible que otros.</p>
+<p>Nginx también puede integrarse con PHP, dando lugar a plataformas tipo <strong>LNMP</strong> (Linux + Nginx + MySQL o MariaDB + PHP). Esta opción es también posible en Windows, dando lugar a plataformas <strong>WNMP</strong> (Windows + Nginx + MySQL o MariaDB + PHP).</p>
+<p>Existen muchas otras plataformas que trabajan con distintos sistemas operativos (Unix, MacOS, Solaris), servidores web (incluyendo algunos que se han cobrado relativa popularidad como Lighttpd y LiteSpeed), bases de datos (MariaDB, PostgreSQL, MongoDB) y otros lenguajes de programación.</p>
+<p><strong>XAMPP:</strong> <a href="https://www.apachefriends.org/es/index.html">XAMPP</a> es una forma fácil de instalar y usar el servidor web Apache con un sistema gestor de bases de datos (MariaDB), PHP y Perl. Basta con descargarlo, extraerlo y comenzar. En este momento hay cuatro versiones de XAMPP para Linux, Windows, Mac OS X y Solaris.</p>
 
 
 
