@@ -1,5 +1,5 @@
 ---
-title: "Práctica 2: Herramientas relacionadas con la pila LAMP"
+title: "Práctica 3.2: Herramientas relacionadas con la pila LAMP"
 ---
 
 ## ¿Qué vas a aprender en esta práctica?
