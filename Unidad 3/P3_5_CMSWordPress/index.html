@@ -20,7 +20,7 @@
     
     
       
-        <title>Práctica 5: Instalación del CMS WordPress - Implantación de aplicaciones web</title>
+        <title>Práctica 3.5: Instalación del CMS WordPress - Implantación de aplicaciones web</title>
       
     
     
@@ -119,7 +119,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 5: Instalación del CMS WordPress
+              Práctica 3.5: Instalación del CMS WordPress
             
           </span>
         </div>
@@ -949,7 +949,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 3: VirtualHosting con Apache
+    Práctica 3.3: VirtualHosting con Apache
   </span>
   
 
@@ -970,7 +970,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 4: Instalación de la aplicación BookMedik
+    Práctica 3.4: Instalación de la aplicación BookMedik
   </span>
   
 
@@ -998,7 +998,7 @@
           
   
   <span class="md-ellipsis">
-    Práctica 5: Instalación del CMS WordPress
+    Práctica 3.5: Instalación del CMS WordPress
   </span>
   
 
@@ -1009,7 +1009,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 5: Instalación del CMS WordPress
+    Práctica 3.5: Instalación del CMS WordPress
   </span>
   
 
@@ -1064,15 +1064,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#evaluacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluación
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1112,7 +1103,7 @@
                   
 
 
-  <h1>Práctica 5: Instalación del CMS WordPress</h1>
+  <h1>Práctica 3.5: Instalación del CMS WordPress</h1>
 
 <h2 id="que-vas-a-aprender-en-esta-practica">¿Qué vas a aprender en esta práctica?</h2>
 <ul>
@@ -1162,7 +1153,7 @@
 </ol>
 <p>Estos son solo ejemplos de CMS populares en sus respectivas categorías, y existen muchas otras opciones disponibles, tanto de código abierto como comerciales, que se adaptan a diversas necesidades y niveles de habilidad. La elección del CMS adecuado dependerá de los objetivos específicos y la complejidad del proyecto web que se desee desarrollar.</p>
 <h2 id="principales-pasos-para-instalar-un-cms-php">Principales pasos para instalar un CMS PHP</h2>
-<p>A continuación, se describen los pasos principales para instalar un CMS basado en PHP en un entorno LAMP.</p>
+<p>A continuación, se describen los pasos principales para instalar un CMS basado en PHP en un entorno LAMP. Este caso utilizaremos como ejemplo Wordpress.</p>
 <ol>
 <li>Crear la base de datos y el usuario de la base de datos que vamos a utilizar para que la aplicación acceda a los datos.</li>
 <li>
@@ -1173,7 +1164,7 @@
 </ul>
 </li>
 <li>
-<p>Descargar los ficheros del CMS y subirlos al servidor. Esto se puede hacer de varias formas, una de las más sencillas es con el comando wget.</p>
+<p>Descargar los ficheros del CMS y subirlos al servidor. Esto se puede hacer de varias formas, una de las más sencillas es con el comando wget: <code>wget https://wordpress.org/latest.tar.gz</code>. Luego habrá que descomprimir el fichero y ajustar el virtual host según la ruta a los ficheros de wordpress.</p>
 </li>
 <li>
 <p>Acceso a la URL de instalación e iniciar el proceso de configuración.</p>
@@ -1194,40 +1185,22 @@
 <h2 id="tarea">Tarea</h2>
 <div class="admonition question">
 <p class="admonition-title">Tarea 1</p>
-<p>Siguiendo los pasos anteriores, la tarea consiste en instalar la última versión del CMS WordPress, en un virtual host al cual se accederá mediante <code>wordpress.tunombre.org</code>.</p>
+<p>La tarea consiste en instalar la última versión del CMS WordPress, en un virtual host al cual se accederá mediante <code>wordpress.tunombre.org</code>. Puedes seguir los pasos anteriores o, si necesitas una guía más detallada, puedes acceder al siguiente <a href="https://es-mx.wordpress.org/support/article/how-to-install-wordpress/">enlace</a>, en donde se explican los mismos pasos de una forma mucho más detallada.</p>
 </div>
-<h2 id="evaluacion">Evaluación</h2>
-<p>Documenta todo el proceso de instalación tanto con explicaciones como con capturaas de pantalla para que pueda valores los siguientes aspectos: </p>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Criterio</th>
-<th style="text-align: center;">Puntuación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Creación correcta de la base de datos y el usuario</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Configuración del virtualhost</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Captura de las pantallas de configuración de Wordpress en el navegador</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Captura de la creación de la primera entrada en el blog</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico y <em>documentando de forma correcta todos los pasos del proceso</em></td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-</tbody>
-</table>
+<!--
+## Evaluación
+
+Documenta todo el proceso de instalación tanto con explicaciones como con capturaas de pantalla para que pueda valores los siguientes aspectos: 
+
+| Criterio      | Puntuación                         |
+| :--------- | :----------------------------------: |
+|  Creación correcta de la base de datos y el usuario  |**2 puntos**  |
+|  Configuración del virtualhost | **2 puntos** |
+|  Captura de las pantallas de configuración de Wordpress en el navegador | **2 puntos**|
+|  Captura de la creación de la primera entrada en el blog | **2 puntos**|
+|  Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico y *documentando de forma correcta todos los pasos del proceso*|**2 puntos** |
+
+-->
 
 
 

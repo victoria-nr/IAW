@@ -22,7 +22,7 @@
     
     
       
-        <title>Práctica 4: Instalación de la aplicación BookMedik - Implantación de aplicaciones web</title>
+        <title>Práctica 3.4: Instalación de la aplicación BookMedik - Implantación de aplicaciones web</title>
       
     
     
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Práctica 4: Instalación de la aplicación BookMedik
+              Práctica 3.4: Instalación de la aplicación BookMedik
             
           </span>
         </div>
@@ -951,7 +951,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 3: VirtualHosting con Apache
+    Práctica 3.3: VirtualHosting con Apache
   </span>
   
 
@@ -979,7 +979,7 @@
           
   
   <span class="md-ellipsis">
-    Práctica 4: Instalación de la aplicación BookMedik
+    Práctica 3.4: Instalación de la aplicación BookMedik
   </span>
   
 
@@ -990,7 +990,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 4: Instalación de la aplicación BookMedik
+    Práctica 3.4: Instalación de la aplicación BookMedik
   </span>
   
 
@@ -1036,15 +1036,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#evaluacion" class="md-nav__link">
-    <span class="md-ellipsis">
-      Evaluación
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1065,7 +1056,7 @@
         
   
   <span class="md-ellipsis">
-    Práctica 5: Instalación del CMS WordPress
+    Práctica 3.5: Instalación del CMS WordPress
   </span>
   
 
@@ -1105,7 +1096,7 @@
                   
 
 
-  <h1>Práctica 4: Instalación de la aplicación BookMedik</h1>
+  <h1>Práctica 3.4: Instalación de la aplicación BookMedik</h1>
 
 <h2 id="que-vas-a-aprender-en-esta-practica">¿Qué vas a aprender en esta práctica?</h2>
 <ul>
@@ -1121,70 +1112,59 @@
 <p>Nosotros utilizaremos la segunda opción.</p>
 <p>La configuración de php está dividida según desde donde se use:</p>
 <ul>
-<li><code>/etc/php/8.1/cli</code>: Configuración de php para <code>php8.1-cli</code>, cuando se utiliza php desde la línea de comandos.</li>
-<li><code>/etc/php/8.1/apache2</code>: Configuración de php para apache2 cuando utiliza el módulo.</li>
-<li><code>/etc/php/8.1/fpm</code>: Configuración de php para php-fpm.</li>
-<li><code>/etc/php/8.1/mods-available</code>: Módulos disponibles de php que puedes estar configurados en cualquiera de los escenarios anteriores.</li>
+<li><code>/etc/php/8.2/cli</code>: Configuración de php para <code>php8.2-cli</code>, cuando se utiliza php desde la línea de comandos.</li>
+<li><code>/etc/php/8.2/apache2</code>: Configuración de php para apache2 cuando utiliza el módulo.</li>
+<li><code>/etc/php/8.2/fpm</code>: Configuración de php para php-fpm.</li>
+<li><code>/etc/php/8.2/mods-available</code>: Módulos disponibles de php que puedes estar configurados en cualquiera de los escenarios anteriores.</li>
 </ul>
 <p>Si nos fijamos en la configuración de php para apache2 con el módulo:</p>
 <ul>
-<li><code>/etc/php/8.1/apache2/conf.d</code>: Módulos instalados en esta configuración de php.</li>
-<li><code>/etc/php/8.1/apache2/php.ini</code>: Configuración de php para este escenario.</li>
+<li><code>/etc/php/8.2/apache2/conf.d</code>: Módulos instalados en esta configuración de php.</li>
+<li><code>/etc/php/8.2/apache2/php.ini</code>: Configuración de php para este escenario.</li>
 </ul>
 <h2 id="tarea">Tarea</h2>
 <div class="admonition question">
 <p class="admonition-title">Tarea 1</p>
-<p>La tarea consiste en instalar la aplicación BookMedik, una aplicación web a medida para llevar el control de citas médicas, pacientes, médicos, historiales de citas, áreas médicas y mucho mas, pensado para centros médicos, clínicas y médicos independientes. Puedes encontrar la aplicación en <a href="https://github.com/evilnapsis/bookmedik">https://github.com/evilnapsis/bookmedik</a>.</p>
+<p>La tarea consiste en instalar la aplicación BookMedik, una aplicación web a medida para llevar el control de citas médicas, pacientes, médicos, historiales de citas, áreas médicas y mucho mas, pensado para centros médicos, clínicas y médicos independientes. Puedes encontrar la aplicación en este <a href="https://github.com/victoria-nr/bookmedik">enlace</a>.</p>
 </div>
 <p>Para realizar la instalación sigue los siguientes pasos:</p>
 <ol>
 <li>
-<p>Crea un virtualhost con el que accederás con el nombre <code>bookmedik.tunombre.org</code>. Copia en el <em>DocumentRoot</em> (<code>/var/www</code>) el directorio con los ficheros de la aplicación (para ello, puedes clonar con git el repositorio en <code>/var/www</code>). </p>
+<p>Crea un virtualhost con el que accederás con el nombre <code>bookmedik.tunombre.org</code>.  Copia en el <em>DocumentRoot</em> (<code>/var/www</code>) el directorio con los ficheros de la aplicación. Para ello, puedes clonar con git el repositorio en <code>/var/www</code>. </p>
 </li>
 <li>
-<p>Crea la base de datos y las tablas necesarias recuperando la copia de seguridad de la base de datos que encuentras en el fichero <code>schema.sql</code>. Se creará una base de datos llamada <code>bookmedik</code>. Crea un usuario que tenga privilegios sobre dicha base de datos. </p>
+<p>Crea la base de datos y las tablas necesarias recuperando la copia de seguridad de la base de datos que encuentras en el fichero <code>schema.sql</code>. Este fichero se encuentra dentro del directorio <code>bookmedik</code>. Para ello, puedes restaurar la copia de seguridad desde el terminal ejecutando <code>mariadb -u root -p &lt; schema.sql</code> o bien importando el fichero <code>schema.sql</code> desde phpmyadmin. En cualquier caso, comprueba que se ha creado la base de datos  <code>bookmedik</code> con sus correspondientes tablas. </p>
 </li>
 <li>
-<p>Vamos a configurar el acceso a la base de datos desde la aplicación, para ello cambia el fichero <code>core\controller\Database.php</code> indicando el usuario de acceso (el que has creado en el punto 2), su contraseña, la base de datos que se llama <code>bookmedik</code> y la dirección donde se encuentra la base de datos, que en este caso es <code>localhost</code>.</p>
+<p>Crea un usuario que tenga privilegios sobre dicha base de datos. Para ello, puedes hacerlo desde el terminal accediendo a mariadb con  <code>mariadb -u root -p</code> tal y como hicimos en la primera práctica o desde la interfaz de phpmyadmin.</p>
 </li>
 <li>
-<p>Accede a la aplicación web usando la URL configurada en el virtualhost (usa el usuario <code>admin</code> y contraseña <code>admin</code>).</p>
+<p>Vamos a configurar el acceso a la base de datos desde la aplicación, para ello cambia el fichero <code>core\controller\Database.php</code> indicando el usuario de acceso (el que has creado en el punto 3), su contraseña, la base de datos que se llama <code>bookmedik</code> y la dirección donde se encuentra la base de datos, que en este caso es <code>localhost</code>. Esto lo tienes que cambiar en la línea donde se establece la conexión a la base de datos <code>$con = new myssqli(...)</code>.</p>
+</li>
+<li>
+<p>Accede a la aplicación web desde el navegador usando la URL configurada en el virtualhost. Debería aparecer la siguiente imagen:
+   <img alt="Imagen inicio aplicación bookmedik" src="../P3_1/bookmedik_ini.png" /> </p>
+</li>
+<li>
+<p>Accede a la aplicación con el usuario <code>admin</code> y contraseña <code>admin</code>. Deberías poder ver la aplicación con sus menus.
+   <img alt="Imagen aplicación bookmedik" src="../P3_1/bookmedik_dentro.png" /> </p>
 </li>
 <li>
 <p>Para esta aplicación no es necesario, pero en determinadas aplicaciones es posible que necesitemos cambiar la memoria RAM que puede utilizar. Cambia la memoria máxima de uso de un script PHP (parámetro <code>memory_limit</code>) a 256Mb. ¿En qué fichero lo tienes que cambiar?.</p>
 </li>
 </ol>
-<h2 id="evaluacion">Evaluación</h2>
-<table>
-<thead>
-<tr>
-<th style="text-align: left;">Criterio</th>
-<th style="text-align: center;">Puntuación</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align: left;">Configuración del virtualhost</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Contenido del fichero  <code>Database.php</code></td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Captura con el acceso a <code>bookmedik</code>, después del login</td>
-<td style="text-align: center;"><strong>3 puntos</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Indica el fichero que has modificado (con el path completo) para modificar el límite de memoria. Muestra un pantallazo de la salida del fichero <code>info.php</code> donde se vea el cambio</td>
-<td style="text-align: center;"><strong>1 punto</strong></td>
-</tr>
-<tr>
-<td style="text-align: left;">Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico y documentando de forma correcta todos los pasos del proceso</td>
-<td style="text-align: center;"><strong>2 puntos</strong></td>
-</tr>
-</tbody>
-</table>
+<!--
+## Evaluación
+
+| Criterio      | Puntuación                         |
+| :--------- | :----------------------------------: |
+|  Configuración del virtualhost   |**2 puntos**  |
+|  Contenido del fichero  `Database.php` | **2 puntos** |
+|  Captura con el acceso a `bookmedik`, después del login| **3 puntos**|
+|  Indica el fichero que has modificado (con el path completo) para modificar el límite de memoria. Muestra un pantallazo de la salida del fichero `info.php` donde se vea el cambio | **1 punto**|
+| Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico y documentando de forma correcta todos los pasos del proceso|**2 puntos** |
+
+-->
 
 
 
