@@ -95,7 +95,7 @@ sudo ln -s /usr/share/phpmyadmin/ /var/www/html/phpmyadmin
 -->
 
 !!!Question "Tarea de ampliación 1"
-    Descarga el fichero [`musica.sql`](https://gvaedu-my.sharepoint.com/:u:/g/personal/mv_nebotromero_edu_gva_es/EdJz98PHcQdCtK6hqcguKPIBSChQuGW8JEHrcdKn6m6BWQ?e=XFqphF) y después impórtalo a tu servidor MySQL a través de la interfaz de **phpMyAdmin**. Despliega y observa todas las tablas que tiene la base de datos.
+    Descarga el fichero [`musica.sql`](https://gvaedu-my.sharepoint.com/:u:/g/personal/mv_nebotromero_edu_gva_es/EbWYNXryFetAg32Gl1qijfUBgQLyYqXHoaphd00rjt9YwA?e=qY2lF5) y después impórtalo a tu servidor MySQL a través de la interfaz de **phpMyAdmin**. Despliega y observa todas las tablas que tiene la base de datos.
 
 !!!Question "Tarea de ampliación 2"
     En la interfaz de **phpMyAdmin**, realiza las consultas del Anexo I del siguiente [documento](https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/EWPqtwnNL3BPu65FBNHw1TQBCMqvp8Zmc5ai1_nRDdlwaw?e=mDsTFU), en donde tienes una descripción de la base de datos `musica.sql` que acabas de importar en la tarea anterior.
@@ -105,7 +105,7 @@ sudo ln -s /usr/share/phpmyadmin/ /var/www/html/phpmyadmin
 La instalación de Adminer es muy sencilla. Te propongo que lo investigues y lo instales en la siguiente tarea.
 
 !!!Question "Tarea de ampliación 3"
-    Instala **Adminer** en tu servidor web y explora su interfaz, comparándola con la de phpMyAdmin.
+    Instala **Adminer** en tu servidor web y explora su interfaz, comparándola con la de phpMyAdmin. Para ello simplemente tendrás que poner el fichero PHP de adminer en el DocumentRoot de apache. Puedes copiar dicho fichero a tu servidor mediante scp. 
 
 
 ## Herramientas de análisis de logs
@@ -149,4 +149,4 @@ Después de configurar AWStats para analizar tus logs, puedes acceder a los info
 En resumen, GoAccess es una opción ideal para obtener análisis en tiempo real de logs de servidores web con una interfaz interactiva, mientras que AWStats es más adecuado para informes detallados y estáticos sobre el tráfico web. La elección entre estas herramientas dependerá de las necesidades específicas y preferencias.
 
 !!!Question "Tarea 2"
-    Averigua cómo instalar GoAccess en tu máquina virtual, instálalo y genera los logs del servidor web apache en tiempo real y guárdalos en un archivo llamado `report.html` accesible desde la raíz de apache.
+    Averigua cómo instalar GoAccess en tu servidor, instálalo y genera los logs del servidor web apache en tiempo real y guárdalos en un archivo llamado `report.html` accesible desde la raíz de apache. Visualiza ese fichero de logs desde el navegador.

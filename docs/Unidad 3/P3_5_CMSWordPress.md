@@ -1,5 +1,5 @@
 ---
-title: "Práctica 5: Instalación del CMS WordPress"
+title: "Práctica 3.5: Instalación del CMS WordPress"
 ---
 
 ## ¿Qué vas a aprender en esta práctica?
@@ -42,7 +42,7 @@ Estos son solo ejemplos de CMS populares en sus respectivas categorías, y exist
 
 ## Principales pasos para instalar un CMS PHP
 
-A continuación, se describen los pasos principales para instalar un CMS basado en PHP en un entorno LAMP.
+A continuación, se describen los pasos principales para instalar un CMS basado en PHP en un entorno LAMP. Este caso utilizaremos como ejemplo Wordpress.
 
 1. Crear la base de datos y el usuario de la base de datos que vamos a utilizar para que la aplicación acceda a los datos.
 2. ¿Dónde vamos a implantar la aplicación? Se puede implantar en un virtual host o en un directorio dentro de un virtual host. Por ejemplo, si instalo WordPress:
@@ -50,7 +50,8 @@ A continuación, se describen los pasos principales para instalar un CMS basado 
     * En un virtual host accederíamos con `wordpress.victoria.org` y los ficheros del CMS estarían en la raíz del DocumentRoot.
     * En un directorio dentro de un virtual host, se accedería, por ejemplo, con `victoria.org/wordpress` y los ficheros del CMS estarían en el directorio wordpress dentro del DocumentRoot.
   
-3. Descargar los ficheros del CMS y subirlos al servidor. Esto se puede hacer de varias formas, una de las más sencillas es con el comando wget.
+3. Descargar los ficheros del CMS y subirlos al servidor. Esto se puede hacer de varias formas, una de las más sencillas es con el comando wget: `wget https://wordpress.org/latest.tar.gz`. Luego habrá que descomprimir el fichero y ajustar el virtual host según la ruta a los ficheros de wordpress.
+   
 4. Acceso a la URL de instalación e iniciar el proceso de configuración.
    
     * Un punto importante en el proceso de configuración es indicar las credenciales para el acceso a la base de datos: hay que indicar el usuario y contraseña que vamos a utilizar, el nombre de la base de datos y la dirección donde se encuentra el servidor de base de datos. Si el servidor de base de datos está en la misma máquina que el servidor web, se pondrá localhost, si no se pondrá la IP o el nombre del servidor.
@@ -65,9 +66,9 @@ A continuación, se describen los pasos principales para instalar un CMS basado 
 ## Tarea
 
 !!!Question "Tarea 1"
-    Siguiendo los pasos anteriores, la tarea consiste en instalar la última versión del CMS WordPress, en un virtual host al cual se accederá mediante `wordpress.tunombre.org`.
+    La tarea consiste en instalar la última versión del CMS WordPress, en un virtual host al cual se accederá mediante `wordpress.tunombre.org`. Puedes seguir los pasos anteriores o, si necesitas una guía más detallada, puedes acceder al siguiente [enlace](https://es-mx.wordpress.org/support/article/how-to-install-wordpress/), en donde se explican los mismos pasos de una forma mucho más detallada.
 
-
+<!--
 ## Evaluación
 
 Documenta todo el proceso de instalación tanto con explicaciones como con capturaas de pantalla para que pueda valores los siguientes aspectos: 
@@ -79,3 +80,5 @@ Documenta todo el proceso de instalación tanto con explicaciones como con captu
 |  Captura de las pantallas de configuración de Wordpress en el navegador | **2 puntos**|
 |  Captura de la creación de la primera entrada en el blog | **2 puntos**|
 |  Se ha prestado especial atención al formato del documento, haciendo un correcto uso del lenguaje técnico y *documentando de forma correcta todos los pasos del proceso*|**2 puntos** |
+
+-->
