@@ -12,7 +12,8 @@ Para esta práctica necesitarás los siguientes [archivos](../Unidad%204/CursoIn
 
 [Caso práctico 02 - Proxy Nginx y balanceo escalado con Docker Compose](../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.05%20-%20Caso%20practico%2003%20-%20Proxy%20Nginx%20y%20balenceo%20escalado%20con%20Docker%20Compose%20(1).pdf)
 
-Para esta práctica necesitarás los siguientes [archivos](../Unidad%204/CursoIntroDocker_sergab1_2024/UD06-CasoPractico03-EscaladoProxyNginxYApache.zip).
+Para esta práctica necesitarás los siguientes [archivos](../Unidad%204/CursoIntroDocker_sergab1_2024/UD06-CasoPractico03-EscaladoProxyNginxYApache_nuevo.zip). Estos archivos presentan alguna modificación respecto a los archivos que aparecen en la práctica. En concreto, en el fichero de configuración de nginx se han añadido algunas líneas extra. Además, en el docker-compose.yml, se ha creado una red y se han añadido ambos servicios (apache y nginxproxy) a esa red.
+
 
 ## Ampliación
 
