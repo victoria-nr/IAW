@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/docker-compose/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%205/T01_docker-compose/">
       
       
-        <link rel="prev" href="../dns/">
+        <link rel="prev" href="../../Unidad%204/T05_redes_y_volumes/">
       
       
-        <link rel="next" href="../dockerfile/">
+        <link rel="next" href="../P5_1_docker-compose-practicas/">
       
       
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
     
     
       
-        <title>Levantar un WordPress con Docker Compose - Implantación de aplicaciones web</title>
+        <title>5.1. Docker Compose - Implantación de aplicaciones web</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35f28582.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,9 +48,9 @@
       
     
     
-      <link rel="stylesheet" href="../stylesheets/extra.css">
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
   
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#levantar-un-wordpress-con-docker-compose" class="md-skip">
+        <a href="#introduccion" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -102,9 +102,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Cabecera">
-    <a href=".." title="Implantación de aplicaciones web" class="md-header__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
+    <a href="../.." title="Implantación de aplicaciones web" class="md-header__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
       
-  <img src="../assets/logocaminas.png" alt="logo">
+  <img src="../../assets/logocaminas.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Levantar un WordPress con Docker Compose
+              5.1. Docker Compose
             
           </span>
         </div>
@@ -224,9 +224,9 @@
 
 <nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navegación" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Implantación de aplicaciones web" class="md-nav__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
+    <a href="../.." title="Implantación de aplicaciones web" class="md-nav__button md-logo" aria-label="Implantación de aplicaciones web" data-md-component="logo">
       
-  <img src="../assets/logocaminas.png" alt="logo">
+  <img src="../../assets/logocaminas.png" alt="logo">
 
     </a>
     Implantación de aplicaciones web
@@ -276,7 +276,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/Ud1_1_introModulo/" class="md-nav__link">
+      <a href="../../Unidad%201/Ud1_1_introModulo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -332,7 +332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/P1_1/" class="md-nav__link">
+      <a href="../../Unidad%201/P1_1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -353,7 +353,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/P1_2/" class="md-nav__link">
+      <a href="../../Unidad%201/P1_2/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -374,7 +374,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/P1_3/" class="md-nav__link">
+      <a href="../../Unidad%201/P1_3/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -395,7 +395,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/P1_4_tallerGitIntro/" class="md-nav__link">
+      <a href="../../Unidad%201/P1_4_tallerGitIntro/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,7 +416,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/P1_5_tallerGitRamasUniones/" class="md-nav__link">
+      <a href="../../Unidad%201/P1_5_tallerGitRamasUniones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%201/P1_6_tallerMarkdown/" class="md-nav__link">
+      <a href="../../Unidad%201/P1_6_tallerMarkdown/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -508,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/Ud2_1_Imp_ArqWeb/" class="md-nav__link">
+      <a href="../../Unidad%202/Ud2_1_Imp_ArqWeb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -529,7 +529,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/Ud2_2_Func_app_web/" class="md-nav__link">
+      <a href="../../Unidad%202/Ud2_2_Func_app_web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -550,7 +550,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/Ud2_3_ArqWeb_serweb/" class="md-nav__link">
+      <a href="../../Unidad%202/Ud2_3_ArqWeb_serweb/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -571,7 +571,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/Ud2_4_Serv_web/" class="md-nav__link">
+      <a href="../../Unidad%202/Ud2_4_Serv_web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -592,7 +592,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/Ud2_5_HTTP/" class="md-nav__link">
+      <a href="../../Unidad%202/Ud2_5_HTTP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -648,7 +648,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_1_nginx/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_1_nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -669,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_2_sitios_virtuales/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_2_sitios_virtuales/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -690,7 +690,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_3_autenticacion_nginx/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_3_autenticacion_nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -711,7 +711,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_4_proxy_inv_nginx/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_4_proxy_inv_nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -732,7 +732,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_5_HTTPS_nginx/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_5_HTTPS_nginx/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -753,7 +753,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_6_Balanceo_carga/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_6_Balanceo_carga/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%202/P2_7_balanceo_con_ssl/" class="md-nav__link">
+      <a href="../../Unidad%202/P2_7_balanceo_con_ssl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -845,7 +845,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%203/Ud3_1_App_Web/" class="md-nav__link">
+      <a href="../../Unidad%203/Ud3_1_App_Web/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -901,7 +901,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%203/P3_1_InstallLAMP/" class="md-nav__link">
+      <a href="../../Unidad%203/P3_1_InstallLAMP/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -922,7 +922,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%203/P3_2_PHPMyAdmin/" class="md-nav__link">
+      <a href="../../Unidad%203/P3_2_PHPMyAdmin/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -943,7 +943,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%203/P3_3_VirtualhostingApache/" class="md-nav__link">
+      <a href="../../Unidad%203/P3_3_VirtualhostingApache/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -964,7 +964,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%203/P3_4_AppBookMedik/" class="md-nav__link">
+      <a href="../../Unidad%203/P3_4_AppBookMedik/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -985,7 +985,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%203/P3_5_CMSWordPress/" class="md-nav__link">
+      <a href="../../Unidad%203/P3_5_CMSWordPress/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1056,7 +1056,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%204/T01_introduction/" class="md-nav__link">
+      <a href="../../Unidad%204/T01_introduction/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1077,7 +1077,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%204/T02_installation/" class="md-nav__link">
+      <a href="../../Unidad%204/T02_installation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1098,7 +1098,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%204/T03_principales_acciones/" class="md-nav__link">
+      <a href="../../Unidad%204/T03_principales_acciones/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1119,7 +1119,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%204/T04_images/" class="md-nav__link">
+      <a href="../../Unidad%204/T04_images/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1140,7 +1140,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%204/T05_redes_y_volumes/" class="md-nav__link">
+      <a href="../../Unidad%204/T05_redes_y_volumes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1165,17 +1165,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1189,7 +1191,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Unidad 5
@@ -1200,10 +1202,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../Unidad%205/T01_docker-compose/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1212,6 +1223,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1259,7 +1271,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Unidad%205/P5_1_docker-compose-practicas/" class="md-nav__link">
+      <a href="../P5_1_docker-compose-practicas/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1303,19 +1315,23 @@
                   
 
 
-<h1 id="levantar-un-wordpress-con-docker-compose">Levantar un WordPress con Docker Compose</h1>
-<p>El cliente de <em>Docker</em> es engorroso para crear contenedores, así como para crear el resto de objetos y vincularlos entre sí.</p>
+<h1 id="introduccion">Introducción</h1>
+<p>En la unidad anterior hemos usado el cliente de <em>Docker</em> para crear contenedores, así como para crear el resto de objetos y vincularlos entre sí. Si recuerdas, los comandos son complejos y extensos. En particular, en la práctica sobre la creación de un escenario con Worpress, hemos de ejecutar primero la creación del contenedor con la base de datos y luego el contenedor con Wordpress. Vemos que sería mucho más cómodo poder configurarlo todo en un solo archivo y lanzar todos los contenedores, convenientemente enlazados, con un solo comando. </p>
 <p>Para automatizar la creación, inicio y parada de un contenedor o un conjunto de ellos, <em>Docker</em> proporciona una herramiento llamada <em>Docker Compose</em>.</p>
-<p>Para esta parte vamos a detener y borrar lo que hemos creado:</p>
+<h1 id="instalar-docker-compose">Instalar Docker Compose</h1>
+<p>Si has instalado una versión reciente de <code>Docker</code> es muy probable que ya tengas también la herramienta <code>Docker Compose</code> instalada, ya que se ha añadido a las últimas instalaciones debido a su gran importancia. Puedes comprobarlo mediante el siguiente comando:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span>version
+</code></pre></div>
+<p>Si tienes una versión de  <code>Docker</code> antigua puedes instalarlo con las instrucciones que hay en la página de <a href="https://docs.docker.com/compose/install/">Instalación de Docker Compose</a>.</p>
+<p>Sin embargo, si usas <em>Ubuntu</em> o <em>Debian</em> puedes instalarlo de forma más fácil con <em>apt</em>:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Borra el trabajo actual:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>docker<span class="w"> </span>container<span class="w"> </span>stop<span class="w"> </span>wordpress<span class="w"> </span>wordpress-db
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>docker<span class="w"> </span>container<span class="w"> </span>rm<span class="w"> </span>wordpress<span class="w"> </span>wordpress-db
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>docker<span class="w"> </span>volume<span class="w"> </span>rm<span class="w"> </span>wordpress-db
-</code></pre></div></p>
+<p>Instalación de <em>Docker Compose</em>:</p>
+<div class="highlight"><pre><span></span><code>sudo apt install docker-compose
+</code></pre></div>
 </div>
-<h2 id="docker-compose">Docker Compose</h2>
+<p>No obstante, te recomiendo que actualices  <code>Docker</code> a su última versión para tener todo integrado.</p>
+<h1 id="usos-de-docker-compose">Usos de Docker Compose</h1>
 <p><em>Compose</em> es una herramienta para definir y ejecutar aplicaciones multi-contenedor. Con un solo comando podremos crear e iniciar todos los servicios que necesitamos para nuestra aplicación.</p>
 <p>Los casos de uso más habituales para docker-compose son:</p>
 <ul>
@@ -1330,8 +1346,14 @@
 <li>Visualizar los logs.</li>
 <li>Ejecutar un comando en un servicio.</li>
 </ul>
+<h1 id="como-funciona-docker-compose">Cómo funciona Docker Compose</h1>
+<p>Para iniciarse en el funcionamiento de <code>Docker Compose</code> seguiremos el siguiente tutorial:</p>
+<p><a href="../../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.01%20-%20Docker%20Compose.pdf">Docker Compose</a></p>
+<p>En este cheatsheet tienes los principales comandos de Docker Compose:</p>
+<p><a href="../../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.02%20-%20Docker%20CheatSheet%20-%20Version%20UD06.pdf">Cheatsheet</a></p>
+<p>No obstante, vamos a resumir los contenidos más destacables del tutorial de una manera organizada.</p>
 <h2 id="creacion-de-contenedores-automatizada">Creación de contenedores automatizada</h2>
-<p>En el mismo directorio donde estábamos en el paso anterior (<code>~/Sites/wordpress</code>), vamos a crear un fichero llamado <code>docker-compose.yaml</code> con el siguiente contenido:</p>
+<p>La forma de automatizar la creación de todos los servicios que necesita nuestra aplicación es mediante un fichero llamado <code>docker-compose.yaml</code> . A continuación se muestra un ejemplo:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="s">&#39;3&#39;</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">services</span><span class="p">:</span>
@@ -1365,21 +1387,17 @@
 <p>YAML es un lenguaje de serialización de datos diseñado para ser leído y escrito por personas. Se recomienda que sigas algún tutorial para entender su formato: <a href="https://learnxinyminutes.com/docs/es-es/yaml-es/">Aprende YAML en Y minutos</a>.</p>
 </div>
 <p>Los ficheros de <em>Compose</em> están divididos en tres secciones: <em>services</em>, <em>volumes</em> y <em>networks</em>; y deben indicar un número de versión. Nos permite realizar practicamente lo mismo que podemos hacer con el cliente de <em>docker</em>, pero de forma automática.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>En este taller no entramos en el apartado de <em>networks</em>.</p>
-</div>
-<p>Con este fichero podemos hacer lo mismo que hemos hecho en el capítulo anterior, pero con la ventaja de describir todos nuestros requisitos en un solo archivo.</p>
+<p>Con este fichero podemos hacer lo mismo que hemos hecho en la unidad anterior, pero con la ventaja de describir todos nuestros requisitos en un solo archivo.</p>
 <h2 id="iniciar-servicios">Iniciar servicios</h2>
 <p>Vamos a ejecutar esta aplicación y luego procederemos a explicarla:</p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Arranca la aplicación con <em>Compose</em>:</p>
-<div class="highlight"><pre><span></span><code>docker-compose up -d
+<div class="highlight"><pre><span></span><code>docker compose up -d
 </code></pre></div>
 </div>
 <p>Cuando arrancamos la aplicación, <em>Compose</em> nos informa de los servicios que ha ido levantando:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>docker-compose<span class="w"> </span>up<span class="w"> </span>-d
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span>up<span class="w"> </span>-d
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="go">Creating network &quot;wordpress_default&quot; with the default driver</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="go">Creating volume &quot;wordpress_data&quot; with local driver</span>
 <a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="go">Creating wordpress_db_1 ... </span>
@@ -1395,29 +1413,29 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="go">d9204884cec5  mariadb:10.3.9   &quot;docker.s…&quot;  11 seconds ago  Up 10 seconds  3306/tcp               wordpress_db_1</span>
 </code></pre></div>
 También podemos ver los contenedores con <em>Compose</em>:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>docker-compose<span class="w"> </span>ps
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>docker-compose<span class="w"> </span>ps
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="go">    Name                    Command               State          Ports        </span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">-------------------------------------------------------------------------------</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">wordpress_db_1    docker-entrypoint.sh mysqld      Up      3306/tcp            </span>
 <a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="go">wordpress_web_1   docker-entrypoint.sh apach ...   Up      0.0.0.0:8080-&gt;80/tcp</span>
 </code></pre></div>
-Lo que tenemos que tener en cuenta es lo siguiente:</p>
+<p>Lo que tenemos que tener en cuenta es lo siguiente:</p>
 <ul>
-<li><code>docker-compose ps</code> solo muestra información de los servicios que se define en <code>docker-compose.yaml</code>, mientras que <code>docker</code> muestra todos.</li>
+<li><code>docker compose ps</code> solo muestra información de los servicios que se define en <code>docker-compose.yaml</code>, mientras que <code>docker</code> muestra todos.</li>
 <li>Cuando creamos contenedores con <code>docker</code> sin indicar un nombre, por defecto asigna uno aleatorio; mientras que en <em>Compose</em> el prefijo es el nombre del directorio y el sufijo el nombre del servicio: <em><strong>wordpress</strong>_<strong>db</strong>_1</em>. El número indica el número de instancia. Es posible levantar más de una instancia de un mismo servicio.</li>
 </ul>
-<p>Si accedemos a la dirección <a href="http://localhost:8080/">http://localhost:8080/</a>, veremos de nuevo la instalación de WordPress.</p>
+<p>Si accedemos a la dirección <a href="http://IPSERVIDOR:8080/">http://IPSERVIDOR:8080/</a>, veremos de nuevo la instalación de WordPress.</p>
 <h2 id="detener-servicios">Detener servicios</h2>
 <p>Podemos detener servicios con</p>
-<div class="highlight"><pre><span></span><code>docker-compose stop
+<div class="highlight"><pre><span></span><code>docker compose stop
 </code></pre></div>
 <h2 id="borrar-servicios">Borrar servicios</h2>
 <p>Podemos borrar servicios con</p>
-<div class="highlight"><pre><span></span><code>docker-compose down
+<div class="highlight"><pre><span></span><code>docker compose down
 </code></pre></div>
 <p>Esto borra los contenedores, pero no los volúmenes. Así que si hemos creado bien la aplicación nuestros datos están a salvo.</p>
 <p>Si queremos borrar también los volúmenes:</p>
-<div class="highlight"><pre><span></span><code>docker-compose down -v
+<div class="highlight"><pre><span></span><code>docker compose down -v
 </code></pre></div>
 <h2 id="estructura-de-la-configuracion">Estructura de la configuración</h2>
 <p>Veamos la configuración por partes:</p>
@@ -1428,13 +1446,13 @@ Lo que tenemos que tener en cuenta es lo siguiente:</p>
 </span><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="nt">data</span><span class="p">:</span>
 </code></pre></div>
 <p>Ya hemos indicado que es importante guardar los datos volátiles de las aplicaciones en volúmenes. En este caso hemos creado un volumen llamado <code>data</code>. Recordemos que <em>Compose</em> siempre añade como prefijo el nombre del directorio, con lo que el nombre real del volumen es <code>wordpress_data</code>. Podemos comprobarlo con el cliente de docker como hicimos en el capítulo de volúmenes:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="gp">$ </span>docker<span class="w"> </span>volume<span class="w"> </span>ls
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="go">DRIVER              VOLUME NAME</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="go">local               wordpress_data</span>
 </code></pre></div>
-Nos saltamos la sección de redes (<em>networks</em>) y vamos a la sección de servicios, que son los contenedores que precisa o componen nuestra aplicación.</p>
+<p>Vamos a la sección de servicios, que son los contenedores que precisa o componen nuestra aplicación.</p>
 <p>Primero la base de datos:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">services</span><span class="p">:</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">services</span><span class="p">:</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="hll"><span class="w">    </span><span class="nt">db</span><span class="p">:</span>
 </span><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">mariadb:10.3.9</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">        </span><span class="nt">volumes</span><span class="p">:</span>
@@ -1445,7 +1463,7 @@ Nos saltamos la sección de redes (<em>networks</em>) y vamos a la sección de s
 <a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_USER=manager</span>
 <a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">MYSQL_PASSWORD=secret</span>
 </code></pre></div>
-Después de abrir la parte de servicios, el primer nivel indica el nombre del servicio <code>db</code>, que genera el contenedor <code>wordpress_db</code>. Lo que vemos a continuación es lo mismo que hicimos en la sección anterior pero de forma parametrizada. Si recordamos, para levantar nuestra base de datos, indicamos la imagen (línea 3), luego montamos los volúmenes (línea 4), y después indicamos las variables de entorno que configuraban el contenedor (línea 6).</p>
+<p>Después de abrir la parte de servicios, el primer nivel indica el nombre del servicio <code>db</code>, que genera el contenedor <code>wordpress_db</code>. Lo que vemos a continuación es lo mismo que hicimos en la sección anterior pero de forma parametrizada. Si recordamos, para levantar nuestra base de datos, indicamos la imagen (línea 3), luego montamos los volúmenes (línea 4), y después indicamos las variables de entorno que configuraban el contenedor (línea 6).</p>
 <p>Es decir, lo anterior es equivalente, excepto por el nombre, a:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>wordpress-db<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">        </span>--mount<span class="w"> </span><span class="nv">source</span><span class="o">=</span>wordpress-db,target<span class="o">=</span>/var/lib/mysql<span class="w"> </span><span class="se">\</span>
@@ -1454,7 +1472,7 @@ Después de abrir la parte de servicios, el primer nivel indica el nombre del se
 <a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">        </span>-e<span class="w"> </span><span class="nv">MYSQL_USER</span><span class="o">=</span>manager<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span>-e<span class="w"> </span><span class="nv">MYSQL_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span>mariadb:10.3.9
 </code></pre></div>
-<p>Y después nuestro <em>WordPress</em>:</p>
+<p>Y después vemos el contenedor para <em>WordPress</em> :</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">services</span><span class="p">:</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">    </span><span class="nt">web</span><span class="p">:</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">wordpress:4.9.8</span>
@@ -1470,8 +1488,8 @@ Después de abrir la parte de servicios, el primer nivel indica el nombre del se
 <a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">            </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8080:80</span>
 </code></pre></div>
 <p>En este caso la equivalencia es al comando:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>wordpress<span class="w"> </span><span class="se">\</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>--link<span class="w"> </span>wordpress-db:mysql<span class="w"> </span><span class="se">\</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>-d<span class="w"> </span>--name<span class="w"> </span>web<span class="w"> </span><span class="se">\</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">    </span>--link<span class="w"> </span>wordpress-web:wordpress-db<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span>--mount<span class="w"> </span><span class="nv">type</span><span class="o">=</span>bind,source<span class="o">=</span><span class="s2">&quot;</span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span><span class="s2">&quot;</span>/target,target<span class="o">=</span>/var/www/html<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_USER</span><span class="o">=</span>manager<span class="w"> </span><span class="se">\</span>
 <a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span>-e<span class="w"> </span><span class="nv">WORDPRESS_DB_PASSWORD</span><span class="o">=</span>secret<span class="w"> </span><span class="se">\</span>
@@ -1511,7 +1529,7 @@ La equivalencia de los parámetros es la siguiente:</p>
 </table>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Si reiniciamos el ordenador, los contenedores estarán detenidos (stop), podremos reiniciarlos con <code>docker start</code> o <code>docker-compose start</code>. Este es el comportamiento predeterminado y el que nos interesa en un entorno de desarrollo.</p>
+<p>Si reiniciamos el ordenador, los contenedores estarán detenidos (stop), podremos reiniciarlos con <code>docker start</code> o <code>docker compose start</code>. Este es el comportamiento predeterminado y el que nos interesa en un entorno de desarrollo.</p>
 <p>Sin embargo, en otros entornos, o para casos concretos, igual queremos que un contenedor tenga el mismo estado en el que estaba antes de reiniciar la máquina (iniciado o parado).</p>
 <p>Para eso usaremos el parámetro <code>restart</code>. En el caso de la base de datos de nuestro ejemplo, la configuración quedaría como:</p>
 <p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nt">services</span><span class="p">:</span>
@@ -1543,6 +1561,9 @@ El equivalente en la consola sería:</p>
 
 
 
+
+  
+  
 
 
 
@@ -1591,10 +1612,10 @@ El equivalente en la consola sería:</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.top", "toc.integrate", "search.highlight", "content.code.annotate", "content.code.copy"], "search": "../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../assets/javascripts/bundle.56dfad97.min.js"></script>
       
     
   </body>
