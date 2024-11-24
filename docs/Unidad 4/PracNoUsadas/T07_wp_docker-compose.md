@@ -1,5 +1,5 @@
 ---
-title: '7 Docker Compose'
+title: '2. WordPress con Docker Compose'
 ---
 
 # Levantar un WordPress con Docker Compose
