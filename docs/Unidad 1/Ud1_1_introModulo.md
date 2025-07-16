@@ -8,15 +8,16 @@ En este módulo veremos distintas tecnologías y herramientas que deberemos util
 
 Por un lado trataremos las técnicas y procesos esenciales para llevar a cabo la implantación exitosa de aplicaciones web en entornos de producción. Esto incluye la instalación y configuración básica de servidores web (nginx y apache) y la implantación de aplicaciones web sobre los servidores desplegados, así como la configuración y administración de los sistemas gestores de bases de datos que utilizan dichas aplicaciones. 
 
-En particular, nos centraremos en la implantación de aplicaciones PHP en entornos LAMP y LEMP.
+En particular, nos centraremos en la implantación de aplicaciones PHP en entornos LAMP y LEMP. Abordaremos tanto la implantación de aplicaciones web hechas a medida como la implantación de aplicaciones web basadas en sistemas gestores de contenidos (CMS). 
 
 Puesto que hoy en día es cada vez más habitual el uso de servidores virtualizados, veremos la implantación y el despliegue de todo lo anterior utilizando contenedores, que son tecnologías de virtualización más ligeras y portables que las tecnologías de virtualización tradicional.
 
+Además, aprenderemos a automatizar el despliegue mediante contenedores de los distintos servicios que pueda necesitar una aplicación web utilizando Docker Compose.
+
 Otra de las partes importantes del módulo es adquirir nociones básicas de programación en un lenguaje de script de servidor. En este caso aprenderemos a programar en PHP y a desarrollar aplicaciones web sencillas con acceso a bases de datos, puesto que muchos gestores de contenido han sido desarrollados en PHP.
 
-También trataremos la implantación y administración de alguna aplicación de ofimática web.
+Por último, trataremos la implantación y administración de alguna aplicación de ofimática web.
 
-Finalmente estudiaremos qué es las funciones de un sistema gestor de contenidos (CMS), así como su instalación, configuración y administración. En este caso, utilizaremos Wordpress.
 
 <!--
 Veamos cada uno de estos apartados con un poco más de detalle.
