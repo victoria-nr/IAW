@@ -70,7 +70,7 @@ Gráficamente podemos resumir el proceso de comunicación HTTP como sigue:
 
 ![](../img/funcionamiento-http.png)
 
-  1. Un usuario accede a una URL, seleccionando un enlace de un documento HTML o introduciéndola directamente en el campo correspondiente del cliente Web. 
+  1. Un usuario accede a una [URL](https://es.wikipedia.org/wiki/Localizador_de_recursos_uniforme), seleccionando un enlace de un documento HTML o introduciéndola directamente en el campo correspondiente del cliente Web. 
 
   2. El cliente Web descodifica la URL, separando sus diferentes partes: el protocolo de acceso, la dirección DNS o IP del servidor, el posible puerto opcional (el valor por defecto es 80) y el objeto requerido del servidor. `http://direccion[:puerto][path]`
 
@@ -105,11 +105,11 @@ Algunos de los métodos más comunes son:
 
 Una petición HTTP es un conjunto de líneas que el navegador envía al servidor. Incluye: 
 
-+ En la primera linea, el método que se aplicará, el recurso solicitado y la versión del protocolo utilizada. 
++ En la primera linea, el **método** que se aplicará, el **recurso solicitado** y la **versión** del protocolo utilizada. 
 
 + Los campos del encabezado de petición, que suelen llamarse **cabeceras http**: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la petición y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. 
 
-+ El cuerpo de la petición: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. 
++ El **cuerpo** de la petición: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. 
 
 ![](../img/request.png)
  
@@ -118,13 +118,13 @@ Una petición HTTP es un conjunto de líneas que el navegador envía al servidor
 
 La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor envía al navegador. Incluye: 
 
-+ Una línea de estado donde figura la versión del protocolo usada, un código de estado/error y un texto con el significado de dicho código. 
++ Una línea de estado donde figura la **versión** del protocolo usada, un **código de estado/error** y un **texto** con el significado de dicho código. 
 
 + Los posibles códigos de estado se identifican con números de tres cifras y se clasifican en cinco grupos según sean informativos (1xx), de éxito en la solicitud (2xx), para redireccionar la solicitud (3xx), por error generado en el cliente (4xx) o bien por errores generados en el servidor (5xx) → [Códigos de estado/error](https://developer.mozilla.org/es/docs/Web/HTTP/Status)
 
-+ Los campos del encabezado de la respuesta. Conjunto de lineas opcionales que aportan información adicional sobre la respuesta y/o el servidor. 
++ Los **campos del encabezado** de la respuesta. Conjunto de lineas opcionales que aportan información adicional sobre la respuesta y/o el servidor. 
 
-+ El cuerpo de la respuesta que contiene el recurso (objeto) solicitado.
++ El **cuerpo** de la respuesta que contiene el recurso (objeto) solicitado.
 
  ![](../img/response.png)
 
@@ -133,34 +133,22 @@ La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor env�
 Cada respuesta HTTP incluye un **código de estado** que indica si la petición se pudo resolver con éxito o no.  
 Existen cinco tipos de códigos de estado:
 
----
-
-## 1xx - Respuestas informativas
-- **100 - Continue**: Indica que la petición ha sido recibida y el cliente puede continuar con su petición.
-
----
-
-## 2xx - Respuestas correctas
-- **200 - OK**: La petición se completó con éxito.
-
----
-
-## 3xx - Redirecciones
-- **301 - Moved Permanently**: Indica que el recurso solicitado se ha movido permanentemente a una nueva ubicación y se proporciona la URL actualizada.
-
----
-
-## 4xx - Errores del cliente
-- **403 - Forbidden**: Indica que el servidor comprende la petición del cliente, pero no se permite su acceso.
-- **404 - Not Found**: El recurso solicitado no se encontró en el servidor.
-
----
-
-## 5xx - Errores del Servidor
-- **500 - Internal Server Error**: Hubo un error en el servidor al procesar la petición.
++ **1xx - Respuestas informativas**
+  + `100 - Continue`: Indica que la petición ha sido recibida y el cliente puede continuar con su petición.
++ **2xx - Respuestas correctas**
+  + `200 - OK`: La petición se completó con éxito.
++ **3xx - Redirecciones**
+  + `301 - Moved Permanently`: Indica que el recurso solicitado se ha movido permanentemente a una nueva ubicación y se proporciona la URL actualizada.
++ **4xx - Errores del cliente**
+  + `403 - Forbidden`: Indica que el servidor comprende la petición del cliente, pero no se permite su acceso.
+  + `404 - Not Found`: El recurso solicitado no se encontró en el servidor.
++ **5xx - Errores del Servidor**
+  + `500 - Internal Server Error`: Hubo un error en el servidor al procesar la petición.
 
 
- ![Imagen obtenida de [ByteByteGo.com](https://github.com/ByteByteGoHq/system-design-101)](../img/httpStatusCodes.jpeg)
+ ![Imagen códigos de estado HTTP](../img/httpStatusCodes.jpeg)
+
+*Imagen obtenida de [ByteByteGo.com](https://github.com/ByteByteGoHq/system-design-101)*
 
 ### Cabeceras HTTP
 
@@ -192,23 +180,3 @@ Algunos ejemplos de identificadores de tipo de medio comunes son:
 - image/jpeg: Imagen en formato JPEG.
 - audio/mp3: Archivo de audio en formato MP3.
 - video/mp4: Archivo de video en formato MP4.
-
-## HTTPS
-
-El Protocolo seguro de transferencia de hipertexto (en inglés, Hypertext Transfer Protocol Secure o HTTPS) es un protocolo de aplicación basado en el protocolo HTTP, destinado a la transferencia segura de datos de hipertexto, es decir, es la versión segura de HTTP. 
-
-**La web es insegura por naturaleza.** Cuando se diseñaron los protocolos en los que está basada (TCP/IP) no se tuvieron en cuenta muchos de los problemas que tiene la Internet moderna. Y el protocolo HTTP, para transferir páginas web, no añadió nada al respecto tampoco hasta mucho después, con la introducción del protocolo HTTPS (la "ese" es de "Seguro") allá por 1994 por la empresa Netscape. El protocolo HTTPS original utilizaba SSL (Secure Sockets Layer) como protocolo seguro de intercambio de claves y cifrado, pero en la actualidad está obsoleto y se emplea TLS (Transport Layer Security, que va por su versión 1.3). El estándar de HTTP sobre TLS, en realidad, no se configuró hasta mayo del año 2000. 
-
-Tradicionalmente,** los navegadores le han indicado a sus usuarios que se estaban conectando a un sitio seguro utilizando un iconito, generalmente uno con un candado**. 
-
-Según el navegador el aspecto cambia un poco, pero todos muestran el proverbial "candadito" al lado de la dirección: 
-
-![](../img/https1.png)
-
-Es decir, lo importante aquí es que hasta ahora los navegadores consideran HTTP como la norma, y HTTPS como la excepción, y por eso lo marcan de esta manera. 
-
-### Funcionamiento de HTTPS
-
-El funcionamiento básico de HTTPS se muestra en la página siguiente. Como se puede observar, utiliza conceptos de cifrado con clave simétrica y asimétrica.
-
-![](../img/https2.png)
