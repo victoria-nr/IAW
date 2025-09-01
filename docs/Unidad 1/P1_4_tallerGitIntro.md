@@ -8,7 +8,7 @@ title: "Taller 1: Introducción a git y GitHub"
 * Configurar una cuenta en GitHub, servicio que nos ofrece repositorios remotos.
 * Recordar el ciclo de vida de la gestión de nuestros repositorios: creación, clonación, sincronización, ... y nuestros ficheros:  creación, modificación, borrado.
 
-## Conceptos previos de git
+## Conceptos previos de git y GitHub
 
 Git es un sistema de control de versiones distribuido ampliamente utilizado que permite a los desarrolladores rastrear y gestionar cambios en el código fuente de proyectos de software. Permite la colaboración efectiva en equipos, facilita el seguimiento de revisiones, la gestión de ramas de desarrollo y la reversión a versiones anteriores del código, lo que lo convierte en una herramienta esencial para el desarrollo de software colaborativo y la gestión de proyectos.
 
@@ -66,14 +66,16 @@ git status
 
 Utilizando distintos comandos podemos pasar los archivos de una sección a otra y cambiar su estado. A continuación veremos los comandos básicos que nos permitirán una utilización básica de git usando como repositorio remoto GitHub.
 
+**GitHub** es una plataforma web que utiliza Git y ofrece un espacio en la nube donde los desarrolladores pueden guardar sus repositorios, colaborar con otros usuarios, compartir su código y aprovechar herramientas adicionales como gestión de incidencias, integración continua y documentación. Puedes acceder a través del siguiente enlace: [GitHub](https://github.com/).
+
 
 ## ¿Qué tienes que hacer?
 
 1. Crea una cuenta en GitHub (**Si no la tienes!!!**). La forma de acceder a los repositorios remotos de GitHub va a ser por SSH, por lo tanto debes copiar tu clave pública RSA a GitHub, para ello:
 	* Copia el contenido de tu fichero `~/.ssh/id_rsa.pub`, para ello: añade una nueva clave SSH en el apartado "SSH keys" de tu perfil en GitHub y pega el contenido de tu clave pública.
-	* Si no tienes ese fichero, puedes generar una nueva clave ssh pública: [http://librosweb.es/pro_git/capitulo_4/generando_tu_clave_publica_ssh.html](http://librosweb.es/pro_git/capitulo_4/generando_tu_clave_publica_ssh.html).
+	* Si no tienes ningún par de llaves SSH, puedes generarlas y copiar la llave pública a GitHub. En el siguiente enlace dispones de toda la información sobre cómo generar el par de llaves y cómo añadir la llave pública a GitHub. [Documentación sobre conectarse a GitHub mediante SSH](https://docs.github.com/en/authentication/connecting-to-github-with-ssh).
 
-2. Crea en GitHub un repositorio con el nombre **repo_IAW_tu_nombre** (inicializa el repositorio con un fichero README) y la descripción **Repositorio para la asignatura de IAW de 2ASIX**.
+2. Crea desde la plataforma web de GitHub un repositorio con el nombre **repo_IAW_tu_nombre** (inicializa el repositorio con un fichero README) y la descripción **Repositorio para la asignatura de IAW de 2ASIX**.
 
 3. Instala git en tu ordenador (**si no lo tienes instalado!!!**).
 		```sh
@@ -86,7 +88,7 @@ Utilizando distintos comandos podemos pasar los archivos de una sección a otra 
 		```
 	De nuevo, sólo necesitas hacer esto una vez si especificas la opción `--global`, ya que Git siempre usará esta información para todo lo que hagas en ese sistema.
 
-5. Clonar el repositorio remoto. Copia la url SSH del repositorio (**no copies la URL https**) y vamos a clonar el repositorio en nuestro ordenador. Sitúate en un directorio, dentro del cual quieras clonar el repositorio remoto. Al clonarlo, se creará una carpeta con el nombre del repositorio y sus contenidos.
+5. Clonar el repositorio remoto. Vamos a clonar el repositorio remoto que acabas de crear en GitHub a nuestro ordenador. Para ello, copia la url SSH del repositorio  (**no copies la URL https**). A continuación, sitúate en un directorio en tu ordenador en local, dentro del cual quieras clonar el repositorio remoto. Al clonarlo, se creará una carpeta con el nombre del repositorio y sus contenidos.
 		```sh
 		git clone git@github.com:xxxxxxx/xxxxxxx.git
 		```

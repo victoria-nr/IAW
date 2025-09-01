@@ -1,12 +1,14 @@
 ---
-title: '2.5. Los protocolos HTTP y HTTPS'
+title: '2.6. El protocolo HTTP'
 ---
 
-# **Los protocolos HTTP y HTTPS**
+# **El protocolo HTTP**
+
+HTTP es un protocolo de la capa de aplicación que establece las reglas que deben seguir un cliente y un servidor para comunicarse en la web (World Wide Web). Su principal objetivo es permitir que los usuarios soliciten y recuperen recursos, como páginas web, imágenes y archivos, desde servidores en la web.
 
 ### Historia
 
-El protocolo de transferencia de hipertexto (HTTP, Hypertext Transfer Protocol) es el motor que da vida a Internet, ya que es la base para la web (www, world wide web). 
+El protocolo de transferencia de hipertexto (HTTP, Hypertext Transfer Protocol) es el motor que da vida a Internet, ya que es la base para la web. 
 
 Desde un punto de vista histórico, la web fue creada en 1989 en el Consejo Europeo para la Investigación Nuclear (CERN, Centro Europeene pour la Recherche Nucléaire), con sede en Ginebra, justo en la frontera entre Suiza y Francia. Cabe decir que este organismo disponía (y dispone) de una amplia plantilla de científicos de diferentes países de Europa que trabajan en sus aceleradores de partículas. En consecuencia, muchos equipos de trabajadores están integrados por miembros de nacionalidades diferentes. Además, muchos de los experimentos que se realizan destacan por su complejidad y requieren años y años de planificación y de construcción de equipamientos. 
 
@@ -45,19 +47,24 @@ Según pasaban los años, las páginas web se volvían cada vez más amplias y c
 
 Por esta razón, Google desarrolló un nuevo y experimental protocolo, el SPDY o Speedy, que despertó un gran interés entre los desarrolladores y permitió que en 2015 se publicara la versión HTTP/2 del protocolo. Este estándar incluye múltiples mejoras que tienen como objetivo acelerar la carga de las páginas web. 
 
-La versión HTTP/2 se extendió rápidamente y las páginas web con mucho tráfico fueron de las primeras en adoptarla. Actualmente (con fecha de enero de 2020), según W3Techs, un 42 % de las páginas web utilizan la versión HTTP/2. 
+La versión HTTP/2 se extendió rápidamente y las páginas web con mucho tráfico fueron de las primeras en adoptarla. A fecha de enero de 2020, según W3Techs, un 42 % de las páginas web utilizaban la versión HTTP/2. 
 
 ![](../img/http2.png)
 
-#### El futuro: HTTP/3
+#### HTTP/3 en la actualidad
 
-Un punto débil de todas las versiones de HTTP usadas hasta ahora es el protocolo de control de transmisión (TCP) en el que se basan. Este protocolo requiere que el receptor de cada paquete de datos confirme la recepción antes de que pueda enviarse el siguiente paquete. De este modo, basta con que se pierda un paquete para que todos los demás tengan que esperar a que dicho paquete sea transmitido de nuevo. 
+Un punto débil de las versiones anteriores de HTTP es que se basan en el protocolo de control de transmisión (TCP), que exige que cada paquete de datos sea confirmado antes de enviar el siguiente. Esto provoca que, si un paquete se pierde, los demás tengan que esperar a que se retransmita, generando demoras. 
 
-Para evitarlos, la nueva versión HTTP/3 no funcionará con TCP, sino con UDP, que no aplica este tipo de medidas correctivas. A partir de UDP, se ha creado el protocolo QUIC (Quick UDP Internet Connections), que será la base de HTTP/3.
+Para superar esta limitación, HTTP/3 utiliza el protocolo QUIC (Quick UDP Internet Connections), construido sobre UDP. QUIC permite multiplexar conexiones, reducir la latencia y mejorar el rendimiento en redes inestables, como las móviles. Gracias a estas ventajas, HTTP/3 ya está en uso en muchos de los servicios web más populares (Google, YouTube, Facebook, Cloudflare, etc.) y es soportado de forma nativa por los navegadores modernos.
 
 ## Funcionamiento del protocolo HTTP
 
 Ya hemos comentado que el protocolo HTTP tiene un funcionamiento bastante sencillo basado en el envío de mensajes entre cliente y servidor. 
+
+- **Cliente**: Es el software o equipo que realiza peticiones a un servidor. Ejemplo: Un navegador web, como Chrome o Firefox.
+
+- **Servidor**: El servidor HTTP es un software o equipo que almacena y entrega recursos solicitados por los clientes. Ejemplo: Los servidores web, como Apache, Nginx o Microsoft IIS.
+
 
 Gráficamente podemos resumir el proceso de comunicación HTTP como sigue: 
 
@@ -81,42 +88,35 @@ HTTP define un conjunto de métodos de petición para indicar la acción que se 
 
 ![](../img/metodos.png){: style="height:420px;width:600px"}
 
-El estándar HTTP/1.0 recoge únicamente tres comandos, que representan las operaciones de recepción y envío de información y chequeo de estado: 
+Algunos de los métodos más comunes son:
 
 * **GET**: se utiliza para solicitar cualquier tipo de información o recurso al servidor. Cada vez que se pulsa sobre un enlace o se teclea directamente a una URL se usa este comando. Como resultado, el servidor HTTP enviará el recurso correspondiente. 
 
-+ **HEAD**: se utiliza para solicitar información sobre el recurso: su tamaño, su tipo, su fecha de modificación… Es usado por los gestores de cachés de páginas o los servidores proxy, para conocer cuándo es necesario actualizar la copia que se mantiene del recurso. Con HEAD se podrá comprobar la última fecha de modificación de un recurso antes de traer una nueva copia del mismo. 
+* **POST**: sirve para enviar información al servidor, por ejemplo, los datos contenidos en un formulario. El servidor pasará esta información a un proceso encargado de su tratamiento. 
 
-- **POST**: sirve para enviar información al servidor, por ejemplo, los datos contenidos en un formulario. El servidor pasará esta información a un proceso encargado de su tratamiento. 
+* **PUT**: actualiza un recurso existente o crea uno nuevo si no existe. La diferencia con POST puede ser algo confusa; mientras que POST está orientado a la creación de nuevos contenidos, PUT está más orientado a la actualización de los mismos (aunque también podría crearlos). 
 
-La versión 1.1 del protocolo incorpora unos pocos comandos más como son: OPTIONS, PUT, DELETE, TRACE y CONNECT. Veamos algunos de ellos: 
+* **DELETE**: sirve para eliminar un recurso especificado en la URL, aunque pocas veces sera permitido por un servidor web. 
+  
+* **HEAD**: solicita únicamente la cabecera de la respuesta HTTP. Se suele utilizar para averiguar información sobre el recurso: su tamaño, su tipo, su fecha de modificación… Es usado por los gestores de cachés de páginas o los servidores proxy, para conocer cuándo es necesario actualizar la copia que se mantiene del recurso. Con HEAD se podrá comprobar la última fecha de modificación de un recurso antes de traer una nueva copia del mismo. 
 
-+ **OPTIONS**: Devuelve los métodos HTTP que el servidor soporta para una URL específica. Esto puede ser utilizado para comprobar la funcionalidad de un servidor web mediante petición en lugar de un recurso específico. 
 
-+ **DELETE**: sirve para eliminar un recurso especificado en la URL, aunque pocas veces sera permitido por un servidor web. 
+### Ejemplo de petición (Request)
 
-+ **TRACE**: comando que permite hacer un sondeo para saber todos los dispositivos de la red por los que pasa nuestra petición. Así podremos descubrir si la petición pasa a través dispositivos intermedios o proxys antes de llegar al servidor Web. 
+Una petición HTTP es un conjunto de líneas que el navegador envía al servidor. Incluye: 
 
-+ **PUT**: puede verse como el comando inverso a GET. Nos permite escribir datos en el servidor o, lo que es lo mismo, poner un recurso en la URL que se especifique. Si el recurso no existe lo crea sino lo reemplaza. La diferencia con POST puede ser algo confusa; mientras que POST está orientado a la creación de nuevos contenidos, PUT está más orientado a la actualización de los mismos (aunque también podría crearlos). 
++ En la primera linea, el método que se aplicará, el recurso solicitado y la versión del protocolo utilizada. 
 
-HTTP/2 no incluye métodos nuevos. 
++ Los campos del encabezado de petición, que suelen llamarse **cabeceras http**: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la petición y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. 
 
-### Ejemplo de petición y respuesta
-
-Una solicitud HTTP es un conjunto de líneas que el navegador envía al servidor. Incluye: 
-
-+ El recurso solicitado, el método que se aplicará y la versión del protocolo utilizada. 
-
-+ Los campos del encabezado de solicitud, que suelen llamarse **cabeceras http**: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la solicitud y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. 
-
-+ El cuerpo de la solicitud: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. 
++ El cuerpo de la petición: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. 
 
 ![](../img/request.png)
  
 
-La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor envía al navegador. Incluye: 
+### Ejemplo de respuesta (Response)
 
- ![](../img/response.png)
+La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor envía al navegador. Incluye: 
 
 + Una línea de estado donde figura la versión del protocolo usada, un código de estado/error y un texto con el significado de dicho código. 
 
@@ -125,6 +125,42 @@ La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor env�
 + Los campos del encabezado de la respuesta. Conjunto de lineas opcionales que aportan información adicional sobre la respuesta y/o el servidor. 
 
 + El cuerpo de la respuesta que contiene el recurso (objeto) solicitado.
+
+ ![](../img/response.png)
+
+### Códigos de estado de las respuestas HTTP
+
+Cada respuesta HTTP incluye un **código de estado** que indica si la petición se pudo resolver con éxito o no.  
+Existen cinco tipos de códigos de estado:
+
+---
+
+## 1xx - Respuestas informativas
+- **100 - Continue**: Indica que la petición ha sido recibida y el cliente puede continuar con su petición.
+
+---
+
+## 2xx - Respuestas correctas
+- **200 - OK**: La petición se completó con éxito.
+
+---
+
+## 3xx - Redirecciones
+- **301 - Moved Permanently**: Indica que el recurso solicitado se ha movido permanentemente a una nueva ubicación y se proporciona la URL actualizada.
+
+---
+
+## 4xx - Errores del cliente
+- **403 - Forbidden**: Indica que el servidor comprende la petición del cliente, pero no se permite su acceso.
+- **404 - Not Found**: El recurso solicitado no se encontró en el servidor.
+
+---
+
+## 5xx - Errores del Servidor
+- **500 - Internal Server Error**: Hubo un error en el servidor al procesar la petición.
+
+
+ ![Imagen obtenida de [ByteByteGo.com](https://github.com/ByteByteGoHq/system-design-101)](../img/httpStatusCodes.jpeg)
 
 ### Cabeceras HTTP
 

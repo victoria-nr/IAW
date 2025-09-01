@@ -70,3 +70,8 @@ nav:
   - ... | Unidad 3/*.md
   - ... | Unidad 4/*.md
   - ... | Unidad 5/*.md 
+
+#Comandos para generar site
+# docker run --rm -it -u $(id -u):$(id -g) -v "$PWD":/docs mimkdocs  build
+#Comando para publicarlo en Github pages
+# docker run --rm -it -v ~/.ssh:/root/.ssh -v "$PWD":/docs mimkdocs gh-deploy
