@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/Ud2_5_HTTP/">
+        <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%202/Ud2_6_HTTP/">
       
       
-        <link rel="prev" href="../Ud2_4_Serv_web/">
+        <link rel="prev" href="../Ud2_5_Infraestructura_despliegue/">
       
       
-        <link rel="next" href="../P2_1_nginx/">
+        <link rel="next" href="../Ud2_7_HTTPS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>2.5. Los protocolos HTTP y HTTPS - Implantación de aplicaciones web</title>
+        <title>2.6. El protocolo HTTP - Implantación de aplicaciones web</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#los-protocolos-http-y-https" class="md-skip">
+        <a href="#el-protocolo-http" class="md-skip">
           Saltar a contenido
         </a>
       
@@ -121,7 +121,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              2.5. Los protocolos HTTP y HTTPS
+              2.6. El protocolo HTTP
             
           </span>
         </div>
@@ -591,6 +591,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ud2_5_Infraestructura_despliegue/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.5. Infraestructura para el despliegue de aplicaciones web
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -607,7 +628,7 @@
           
   
   <span class="md-ellipsis">
-    2.5. Los protocolos HTTP y HTTPS
+    2.6. El protocolo HTTP
   </span>
   
 
@@ -618,7 +639,7 @@
         
   
   <span class="md-ellipsis">
-    2.5. Los protocolos HTTP y HTTPS
+    2.6. El protocolo HTTP
   </span>
   
 
@@ -686,9 +707,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#el-futuro-http3" class="md-nav__link">
+  <a href="#http3-en-la-actualidad" class="md-nav__link">
     <span class="md-ellipsis">
-      El futuro: HTTP/3
+      HTTP/3 en la actualidad
     </span>
   </a>
   
@@ -719,13 +740,82 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#ejemplo-de-peticion-y-respuesta" class="md-nav__link">
+  <a href="#ejemplo-de-peticion-request" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejemplo de petición y respuesta
+      Ejemplo de petición (Request)
     </span>
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#ejemplo-de-respuesta-response" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ejemplo de respuesta (Response)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigos-de-estado-de-las-respuestas-http" class="md-nav__link">
+    <span class="md-ellipsis">
+      Códigos de estado de las respuestas HTTP
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1xx-respuestas-informativas" class="md-nav__link">
+    <span class="md-ellipsis">
+      1xx - Respuestas informativas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2xx-respuestas-correctas" class="md-nav__link">
+    <span class="md-ellipsis">
+      2xx - Respuestas correctas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3xx-redirecciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      3xx - Redirecciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4xx-errores-del-cliente" class="md-nav__link">
+    <span class="md-ellipsis">
+      4xx - Errores del cliente
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5xx-errores-del-servidor" class="md-nav__link">
+    <span class="md-ellipsis">
+      5xx - Errores del Servidor
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5xx - Errores del Servidor">
+      <ul class="md-nav__list">
         
           <li class="md-nav__item">
   <a href="#cabeceras-http" class="md-nav__link">
@@ -789,6 +879,27 @@
   
   
   
+    <li class="md-nav__item">
+      <a href="../Ud2_7_HTTPS/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2.7. El protocolo HTTPS
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     
     
     
@@ -797,10 +908,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_8" >
         
           
-          <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2_8" id="__nav_2_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -811,8 +922,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2_6">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_8">
             <span class="md-nav__icon md-icon"></span>
             Prácticas
           </label>
@@ -1480,9 +1591,10 @@
                   
 
 
-<h1 id="los-protocolos-http-y-https"><strong>Los protocolos HTTP y HTTPS</strong></h1>
+<h1 id="el-protocolo-http"><strong>El protocolo HTTP</strong></h1>
+<p>HTTP es un protocolo de la capa de aplicación que establece las reglas que deben seguir un cliente y un servidor para comunicarse en la web (World Wide Web). Su principal objetivo es permitir que los usuarios soliciten y recuperen recursos, como páginas web, imágenes y archivos, desde servidores en la web.</p>
 <h3 id="historia">Historia</h3>
-<p>El protocolo de transferencia de hipertexto (HTTP, Hypertext Transfer Protocol) es el motor que da vida a Internet, ya que es la base para la web (www, world wide web). </p>
+<p>El protocolo de transferencia de hipertexto (HTTP, Hypertext Transfer Protocol) es el motor que da vida a Internet, ya que es la base para la web. </p>
 <p>Desde un punto de vista histórico, la web fue creada en 1989 en el Consejo Europeo para la Investigación Nuclear (CERN, Centro Europeene pour la Recherche Nucléaire), con sede en Ginebra, justo en la frontera entre Suiza y Francia. Cabe decir que este organismo disponía (y dispone) de una amplia plantilla de científicos de diferentes países de Europa que trabajan en sus aceleradores de partículas. En consecuencia, muchos equipos de trabajadores están integrados por miembros de nacionalidades diferentes. Además, muchos de los experimentos que se realizan destacan por su complejidad y requieren años y años de planificación y de construcción de equipamientos. </p>
 <p>Fue a raíz de la necesidad de disponer de múltiples grupos de científicos repartidos por el mundo y colaborando entre ellos (enviándose informes, dibujos, esquemas, fotos y todo tipo de documentos) que nació la web. </p>
 <p><img alt="" src="../../img/primer-ordenador.png" /></p>
@@ -1513,13 +1625,21 @@
 <h4 id="un-protocolo-de-mayor-rendimiento-http2">Un protocolo de mayor rendimiento HTTP/2</h4>
 <p>Según pasaban los años, las páginas web se volvían cada vez más amplias y complejas. Para cargar una web moderna en el navegador, este tiene que solicitar muchos megabytes de datos y enviar hasta cien solicitudes HTTP. HTTP/1.1 está pensado para procesar solicitudes una tras otra en una misma conexión, de manera que cuanto más compleja sea una página web, más tardará en cargarse y mostrarse. </p>
 <p>Por esta razón, Google desarrolló un nuevo y experimental protocolo, el SPDY o Speedy, que despertó un gran interés entre los desarrolladores y permitió que en 2015 se publicara la versión HTTP/2 del protocolo. Este estándar incluye múltiples mejoras que tienen como objetivo acelerar la carga de las páginas web. </p>
-<p>La versión HTTP/2 se extendió rápidamente y las páginas web con mucho tráfico fueron de las primeras en adoptarla. Actualmente (con fecha de enero de 2020), según W3Techs, un 42 % de las páginas web utilizan la versión HTTP/2. </p>
+<p>La versión HTTP/2 se extendió rápidamente y las páginas web con mucho tráfico fueron de las primeras en adoptarla. A fecha de enero de 2020, según W3Techs, un 42 % de las páginas web utilizaban la versión HTTP/2. </p>
 <p><img alt="" src="../../img/http2.png" /></p>
-<h4 id="el-futuro-http3">El futuro: HTTP/3</h4>
-<p>Un punto débil de todas las versiones de HTTP usadas hasta ahora es el protocolo de control de transmisión (TCP) en el que se basan. Este protocolo requiere que el receptor de cada paquete de datos confirme la recepción antes de que pueda enviarse el siguiente paquete. De este modo, basta con que se pierda un paquete para que todos los demás tengan que esperar a que dicho paquete sea transmitido de nuevo. </p>
-<p>Para evitarlos, la nueva versión HTTP/3 no funcionará con TCP, sino con UDP, que no aplica este tipo de medidas correctivas. A partir de UDP, se ha creado el protocolo QUIC (Quick UDP Internet Connections), que será la base de HTTP/3.</p>
+<h4 id="http3-en-la-actualidad">HTTP/3 en la actualidad</h4>
+<p>Un punto débil de las versiones anteriores de HTTP es que se basan en el protocolo de control de transmisión (TCP), que exige que cada paquete de datos sea confirmado antes de enviar el siguiente. Esto provoca que, si un paquete se pierde, los demás tengan que esperar a que se retransmita, generando demoras. </p>
+<p>Para superar esta limitación, HTTP/3 utiliza el protocolo QUIC (Quick UDP Internet Connections), construido sobre UDP. QUIC permite multiplexar conexiones, reducir la latencia y mejorar el rendimiento en redes inestables, como las móviles. Gracias a estas ventajas, HTTP/3 ya está en uso en muchos de los servicios web más populares (Google, YouTube, Facebook, Cloudflare, etc.) y es soportado de forma nativa por los navegadores modernos.</p>
 <h2 id="funcionamiento-del-protocolo-http">Funcionamiento del protocolo HTTP</h2>
 <p>Ya hemos comentado que el protocolo HTTP tiene un funcionamiento bastante sencillo basado en el envío de mensajes entre cliente y servidor. </p>
+<ul>
+<li>
+<p><strong>Cliente</strong>: Es el software o equipo que realiza peticiones a un servidor. Ejemplo: Un navegador web, como Chrome o Firefox.</p>
+</li>
+<li>
+<p><strong>Servidor</strong>: El servidor HTTP es un software o equipo que almacena y entrega recursos solicitados por los clientes. Ejemplo: Los servidores web, como Apache, Nginx o Microsoft IIS.</p>
+</li>
+</ul>
 <p>Gráficamente podemos resumir el proceso de comunicación HTTP como sigue: </p>
 <p><img alt="" src="../../img/funcionamiento-http.png" /></p>
 <ol>
@@ -1543,50 +1663,40 @@
 <h3 id="comandos-o-metodos-http">Comandos o métodos HTTP</h3>
 <p>HTTP define un conjunto de métodos de petición para indicar la acción que se desea realizar para un recurso determinado. </p>
 <p><img alt="" src="../../img/metodos.png" style="height:420px;width:600px" /></p>
-<p>El estándar HTTP/1.0 recoge únicamente tres comandos, que representan las operaciones de recepción y envío de información y chequeo de estado: </p>
+<p>Algunos de los métodos más comunes son:</p>
 <ul>
 <li>
 <p><strong>GET</strong>: se utiliza para solicitar cualquier tipo de información o recurso al servidor. Cada vez que se pulsa sobre un enlace o se teclea directamente a una URL se usa este comando. Como resultado, el servidor HTTP enviará el recurso correspondiente. </p>
 </li>
 <li>
-<p><strong>HEAD</strong>: se utiliza para solicitar información sobre el recurso: su tamaño, su tipo, su fecha de modificación… Es usado por los gestores de cachés de páginas o los servidores proxy, para conocer cuándo es necesario actualizar la copia que se mantiene del recurso. Con HEAD se podrá comprobar la última fecha de modificación de un recurso antes de traer una nueva copia del mismo. </p>
-</li>
-<li>
 <p><strong>POST</strong>: sirve para enviar información al servidor, por ejemplo, los datos contenidos en un formulario. El servidor pasará esta información a un proceso encargado de su tratamiento. </p>
 </li>
-</ul>
-<p>La versión 1.1 del protocolo incorpora unos pocos comandos más como son: OPTIONS, PUT, DELETE, TRACE y CONNECT. Veamos algunos de ellos: </p>
-<ul>
 <li>
-<p><strong>OPTIONS</strong>: Devuelve los métodos HTTP que el servidor soporta para una URL específica. Esto puede ser utilizado para comprobar la funcionalidad de un servidor web mediante petición en lugar de un recurso específico. </p>
+<p><strong>PUT</strong>: actualiza un recurso existente o crea uno nuevo si no existe. La diferencia con POST puede ser algo confusa; mientras que POST está orientado a la creación de nuevos contenidos, PUT está más orientado a la actualización de los mismos (aunque también podría crearlos). </p>
 </li>
 <li>
 <p><strong>DELETE</strong>: sirve para eliminar un recurso especificado en la URL, aunque pocas veces sera permitido por un servidor web. </p>
 </li>
 <li>
-<p><strong>TRACE</strong>: comando que permite hacer un sondeo para saber todos los dispositivos de la red por los que pasa nuestra petición. Así podremos descubrir si la petición pasa a través dispositivos intermedios o proxys antes de llegar al servidor Web. </p>
-</li>
-<li>
-<p><strong>PUT</strong>: puede verse como el comando inverso a GET. Nos permite escribir datos en el servidor o, lo que es lo mismo, poner un recurso en la URL que se especifique. Si el recurso no existe lo crea sino lo reemplaza. La diferencia con POST puede ser algo confusa; mientras que POST está orientado a la creación de nuevos contenidos, PUT está más orientado a la actualización de los mismos (aunque también podría crearlos). </p>
+<p><strong>HEAD</strong>: solicita únicamente la cabecera de la respuesta HTTP. Se suele utilizar para averiguar información sobre el recurso: su tamaño, su tipo, su fecha de modificación… Es usado por los gestores de cachés de páginas o los servidores proxy, para conocer cuándo es necesario actualizar la copia que se mantiene del recurso. Con HEAD se podrá comprobar la última fecha de modificación de un recurso antes de traer una nueva copia del mismo. </p>
 </li>
 </ul>
-<p>HTTP/2 no incluye métodos nuevos. </p>
-<h3 id="ejemplo-de-peticion-y-respuesta">Ejemplo de petición y respuesta</h3>
-<p>Una solicitud HTTP es un conjunto de líneas que el navegador envía al servidor. Incluye: </p>
+<h3 id="ejemplo-de-peticion-request">Ejemplo de petición (Request)</h3>
+<p>Una petición HTTP es un conjunto de líneas que el navegador envía al servidor. Incluye: </p>
 <ul>
 <li>
-<p>El recurso solicitado, el método que se aplicará y la versión del protocolo utilizada. </p>
+<p>En la primera linea, el método que se aplicará, el recurso solicitado y la versión del protocolo utilizada. </p>
 </li>
 <li>
-<p>Los campos del encabezado de solicitud, que suelen llamarse <strong>cabeceras http</strong>: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la solicitud y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. </p>
+<p>Los campos del encabezado de petición, que suelen llamarse <strong>cabeceras http</strong>: es un conjunto de líneas opcionales que permiten aportar información adicional sobre la petición y/o el cliente (navegador, sistema operativo, etc.). Cada una de estas líneas está formada por un nombre que describe el tipo de encabezado, seguido de dos puntos (:) y el valor del encabezado. </p>
 </li>
 <li>
-<p>El cuerpo de la solicitud: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. </p>
+<p>El cuerpo de la petición: es un conjunto de líneas opcionales que deben estar separadas de las líneas precedentes por una línea en blanco y que, por ejemplo, permiten la transmisión de datos al servidor de un formulario a través del método POST. </p>
 </li>
 </ul>
 <p><img alt="" src="../../img/request.png" /></p>
+<h3 id="ejemplo-de-respuesta-response">Ejemplo de respuesta (Response)</h3>
 <p>La sintaxis de una respuesta HTTP es un conjunto de líneas que el servidor envía al navegador. Incluye: </p>
-<p><img alt="" src="../../img/response.png" /></p>
 <ul>
 <li>
 <p>Una línea de estado donde figura la versión del protocolo usada, un código de estado/error y un texto con el significado de dicho código. </p>
@@ -1601,6 +1711,37 @@
 <p>El cuerpo de la respuesta que contiene el recurso (objeto) solicitado.</p>
 </li>
 </ul>
+<p><img alt="" src="../../img/response.png" /></p>
+<h3 id="codigos-de-estado-de-las-respuestas-http">Códigos de estado de las respuestas HTTP</h3>
+<p>Cada respuesta HTTP incluye un <strong>código de estado</strong> que indica si la petición se pudo resolver con éxito o no.<br />
+Existen cinco tipos de códigos de estado:</p>
+<hr />
+<h2 id="1xx-respuestas-informativas">1xx - Respuestas informativas</h2>
+<ul>
+<li><strong>100 - Continue</strong>: Indica que la petición ha sido recibida y el cliente puede continuar con su petición.</li>
+</ul>
+<hr />
+<h2 id="2xx-respuestas-correctas">2xx - Respuestas correctas</h2>
+<ul>
+<li><strong>200 - OK</strong>: La petición se completó con éxito.</li>
+</ul>
+<hr />
+<h2 id="3xx-redirecciones">3xx - Redirecciones</h2>
+<ul>
+<li><strong>301 - Moved Permanently</strong>: Indica que el recurso solicitado se ha movido permanentemente a una nueva ubicación y se proporciona la URL actualizada.</li>
+</ul>
+<hr />
+<h2 id="4xx-errores-del-cliente">4xx - Errores del cliente</h2>
+<ul>
+<li><strong>403 - Forbidden</strong>: Indica que el servidor comprende la petición del cliente, pero no se permite su acceso.</li>
+<li><strong>404 - Not Found</strong>: El recurso solicitado no se encontró en el servidor.</li>
+</ul>
+<hr />
+<h2 id="5xx-errores-del-servidor">5xx - Errores del Servidor</h2>
+<ul>
+<li><strong>500 - Internal Server Error</strong>: Hubo un error en el servidor al procesar la petición.</li>
+</ul>
+<p><img alt="Imagen obtenida de ByteByteGo.com" src="../../img/httpStatusCodes.jpeg" /></p>
 <h3 id="cabeceras-http">Cabeceras HTTP</h3>
 <p>Las <strong>cabeceras HTTP</strong> son los parámetros que se envían en una petición o respuesta HTTP al cliente o al servidor para proporcionar información esencial sobre la transacción en curso. Estas cabeceras proporcionan información mediante la sintaxis <strong><em>'Cabecera: Valor'</em></strong> y son enviadas automáticamente por el navegador o el servidor Web.  → <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Headers">Cabeceras HTTP</a> </p>
 <h3 id="tipos-mime">Tipos MIME</h3>
