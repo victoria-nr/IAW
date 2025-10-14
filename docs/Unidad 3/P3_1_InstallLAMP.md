@@ -58,7 +58,14 @@ Como antes, comprobamos que el servicio está en marcha. Como MariaDB está basa
 sudo systemctl status mysql
 ```
 
-Una vez iniciado, no podremos iniciar sesión con MariaDB porque no hemos configurado aún el servidor para ello. Vamos a ejecutar este script que ayuda a securizar el servicio:
+Según la versión de MariaDB que se haya instalado, deberás configurar o no el servidor. A partir de MariaDB 10.11, el usuario root se crea sin contraseña pero autenticado mediante unix_socket, por tanto, puedes entrar con ```sudo mysql``` sin contraseña. Si quieres permitir el acceso con contraseña, ejecuta lo siguiente:
+
+```bash
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'TuContraseñaSegura';
+FLUSH PRIVILEGES;
+```
+
+Si la versión de MariaDB es inferior, ejecutaremos este script que ayuda a securizar el servicio:
 
 ```bash
 sudo mysql_secure_installation
@@ -227,7 +234,7 @@ Si tenemos problemas de acceso podemos ver los logs del servidor:
 
 ### Comprobación acceso a la base de datos
 
-Si necesitas crear una base de datos y un usuario que tenga acceso a la misma, deberás entrar en el servidor de la base de datos con el comando ```mysql -u root -p``` y una vez dentro ejecutar los siguientes pasos:
+Si necesitas crear una base de datos y un usuario que tenga acceso a la misma, deberás entrar en el servidor de la base de datos con el comando ```mysql -u root -p``` (o bien ```sudo mysql``` si no has configurado contraseña para el root)  y una vez dentro ejecutar los siguientes pasos:
 
 ```shell
 	CREATE DATABASE newdb;
