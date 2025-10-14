@@ -58,7 +58,14 @@ Como antes, comprobamos que el servicio está en marcha. Como MariaDB está basa
 sudo systemctl status mysql
 ```
 
-Según la versión de MariaDB que se haya instalado, deberás configurar o no el servidor. A partir de MariaDB 10.11, el usuario root se crea sin contraseña pero autenticado mediante unix_socket, por tanto, puedes entrar con ```sudo mysql``` sin contraseña. Si quieres permitir el acceso con contraseña, ejecuta lo siguiente:
+Según la versión de MariaDB que se haya instalado, deberás configurar o no el servidor. A partir de MariaDB 10.11, el usuario root se crea sin contraseña pero autenticado mediante unix_socket, por tanto, puedes entrar con ```sudo mysql``` sin contraseña. 
+
+
+<!--
+Esto era para versiones anteriores. No recomiendo poner contraseña a root porque luego hay problemas para instalar phpmyadmin.
+Con versiones nuevas no hace falta configurar mysql_secure_instalation
+
+Si quieres permitir el acceso con contraseña, ejecuta lo siguiente:
 
 ```bash
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'TuContraseñaSegura';
@@ -110,6 +117,10 @@ Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
 
 MariaDB [(none)]>
 ```
+
+-->
+
+
 Puedes conocer los distintos comandos con `help` o `\h`. Para salir `\q`.
 
 
