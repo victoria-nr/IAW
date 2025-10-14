@@ -96,10 +96,10 @@ Y si todo va bien estarás dentro para poder gestionar las bases de datos de tu 
 
 
 
-!!!Question "Tarea de ampliación 1"
+** Tarea de ampliación 1 **
     Descarga el fichero [`musica.sql`](https://gvaedu-my.sharepoint.com/:u:/g/personal/mv_nebotromero_edu_gva_es/EbWYNXryFetAg32Gl1qijfUBgQLyYqXHoaphd00rjt9YwA?e=qY2lF5) y después impórtalo a tu servidor MySQL a través de la interfaz de **phpMyAdmin**. Despliega y observa todas las tablas que tiene la base de datos.
 
-!!!Question "Tarea de ampliación 2"
+** Tarea de ampliación 2 **
     En la interfaz de **phpMyAdmin**, realiza las consultas del Anexo I del siguiente [documento](https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/EWPqtwnNL3BPu65FBNHw1TQBCMqvp8Zmc5ai1_nRDdlwaw?e=mDsTFU), en donde tienes una descripción de la base de datos `musica.sql` que acabas de importar en la tarea anterior.
 
 ## Instalación Adminer
