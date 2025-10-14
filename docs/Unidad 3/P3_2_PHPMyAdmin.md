@@ -67,15 +67,26 @@ La instalación es bastante automática, aunque nos hará algunas preguntas.
 
 * Después nos preguntará si gestionamos la configuración de phpMyAdmin con "dbconfig-common". Le diremos que si.
 
-* Y finalmente nos pedirá la contraseña de root de MySQL. Recuerda que le pusimos "ieselcaminas".
+Como hemos optado por "dbconfig-common", normalmente se crea automáticamente:
+
+* Base de datos: phpmyadmin
+* Usuario: phpmyadmin
+* Contraseña: la que pusiste durante la instalación (si no pusiste ninguna, suele generar una aleatoria y la guarda en /etc/phpmyadmin/config-db.php)
+
+Abre /etc/phpmyadmin/config-db.php para comprobar la contraseña exacta
   
-* Reinicia apache con `sudo systemctl restart apache2`
+Habilita phpmyadmin en Apache y reinicia apache:
+
+```bash
+sudo ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
+sudo systemctl restart apache2
+```
 
 Ahora ya puedes acceder a la página de phpMyAdmin con
 
 `http://IPservidorDebian/phpmyadmin`
 
-Te pedirá el usuario y contraseña. Recuerda usuario:`root` y pass:`ieselcaminas`.
+Te pedirá el usuario y contraseña. Recuerda que están en /etc/phpmyadmin/config-db.php.
 
 ![Imagen LAMP](P3_1/05.png)
 
@@ -83,16 +94,7 @@ Y si todo va bien estarás dentro para poder gestionar las bases de datos de tu 
 
 ![Imagen LAMP](P3_1/06.png)
 
-Si con lo anterior no pudieras acceder a Phpmyadmin, añade este enlace simbólico:
 
-```sh
-sudo ln -s /usr/share/phpmyadmin/ /var/www/html/phpmyadmin
-```
-<!--
-
-!!!Question "Tarea 1"
-    Realiza esta tarea en la máquina virtual donde has instalado la pila LAMP. Sigue el siguiente [tutorial](https://gvaedu-my.sharepoint.com/:w:/g/personal/mv_nebotromero_edu_gva_es/ESF1fgeUWEJLrcbYgA2K2csBAGQgqFCbXzH4mH_R_56qCw?e=uezLXZ) sobre la instalación y uso de **phpMyAdmin**.
--->
 
 !!!Question "Tarea de ampliación 1"
     Descarga el fichero [`musica.sql`](https://gvaedu-my.sharepoint.com/:u:/g/personal/mv_nebotromero_edu_gva_es/EbWYNXryFetAg32Gl1qijfUBgQLyYqXHoaphd00rjt9YwA?e=qY2lF5) y después impórtalo a tu servidor MySQL a través de la interfaz de **phpMyAdmin**. Despliega y observa todas las tablas que tiene la base de datos.
