@@ -1,5 +1,5 @@
 ---
-title: "Práctica 3.4: Instalación de la aplicación BookMedik"
+title: "Práctica 3.4: Implantación de la aplicación PHP BookMedik"
 ---
 
 ## ¿Qué vas a aprender en esta práctica?
@@ -36,13 +36,13 @@ Si nos fijamos en la configuración de php para apache2 con el módulo:
 
 Para realizar la instalación sigue los siguientes pasos:
 
-1. Crea un virtualhost con el que accederás con el nombre `bookmedik.tunombre.org`.  Copia en el *DocumentRoot* (`/var/www`) el directorio con los ficheros de la aplicación. Para ello, puedes clonar con git el repositorio en `/var/www`. 
+1. Crea un virtualhost con el que accederás con el nombre `bookmedik.tunombre.org`.  Copia en el *DocumentRoot* (`/var/www`) el directorio con los ficheros de la aplicación. Para ello, puedes clonar con git el repositorio en `/var/www`. Si has configurado bien el virtual host y has modificado el fichero `/etc/hosts` del cliente, deberías poder acceder desde el navegador a la interfaz web inicial de la aplicación web mediante: `http://bookmedik.tunombre.org`
    
-2. Crea la base de datos y las tablas necesarias recuperando la copia de seguridad de la base de datos que encuentras en el fichero `schema.sql`. Este fichero se encuentra dentro del directorio `bookmedik`. Para ello, puedes restaurar la copia de seguridad desde el terminal ejecutando `mariadb -u root -p < schema.sql` o bien importando el fichero `schema.sql` desde phpmyadmin. En cualquier caso, comprueba que se ha creado la base de datos  `bookmedik` con sus correspondientes tablas. 
+2. Crea la base de datos y las tablas necesarias recuperando la copia de seguridad de la base de datos que encuentras en el fichero `schema.sql`. Este fichero se encuentra dentro del directorio `bookmedik`. Para ello, puedes restaurar la copia de seguridad desde el terminal ejecutando `sudo mariadb < schema.sql` o bien importando el fichero `schema.sql` desde phpmyadmin. En cualquier caso, comprueba que se ha creado la base de datos  `bookmedik` con sus correspondientes tablas. 
    
-3.  Crea un usuario que tenga privilegios sobre dicha base de datos. Para ello, puedes hacerlo desde el terminal accediendo a mariadb con  `mariadb -u root -p` tal y como hicimos en la primera práctica o desde la interfaz de phpmyadmin.
+3.  Crea un usuario que tenga privilegios sobre dicha base de datos. Para ello, puedes hacerlo desde el terminal accediendo a mariadb con  `sudo mariadb` tal y como hicimos en la primera práctica o desde la interfaz de phpmyadmin.
 
-4. Vamos a configurar el acceso a la base de datos desde la aplicación, para ello cambia el fichero `core\controller\Database.php` indicando el usuario de acceso (el que has creado en el punto 3), su contraseña, la base de datos que se llama `bookmedik` y la dirección donde se encuentra la base de datos, que en este caso es `localhost`. Esto lo tienes que cambiar en la línea donde se establece la conexión a la base de datos `$con = new myssqli(...)`.
+4. Vamos a configurar el acceso a la base de datos desde la aplicación, para ello cambia el fichero `core\controller\Database.php` indicando el usuario de acceso (el que has creado en el punto 3), su contraseña, la base de datos que se llama `bookmedik` y la dirección donde se encuentra la base de datos, que en este caso es `localhost`. Esto lo tienes que cambiar en la línea donde se establece la conexión a la base de datos `$con = new myssqli(...)`.[^1]
    
 5. Accede a la aplicación web desde el navegador usando la URL configurada en el virtualhost. Debería aparecer la siguiente imagen:
    ![Imagen inicio aplicación bookmedik](P3_1/bookmedik_ini.png) 
@@ -51,6 +51,9 @@ Para realizar la instalación sigue los siguientes pasos:
    ![Imagen aplicación bookmedik](P3_1/bookmedik_dentro.png) 
 
 7. Para esta aplicación no es necesario, pero en determinadas aplicaciones es posible que necesitemos cambiar la memoria RAM que puede utilizar. Cambia la memoria máxima de uso de un script PHP (parámetro `memory_limit`) a 256Mb. ¿En qué fichero lo tienes que cambiar?.
+
+[^1]: Esta práctica de "hardcodear" en el código PHP los datos de conexión a la base de datos (`host`, `usuario`, `contraseña`, `nombre de BD`) no es la más limpia ni elegante. Si quieres implementar una posible solución a este problema, te recomiendo que sigas la siguiente [extensión de la práctica](P3_4_AppBookMedik_extension_config_ini.md). 
+
 
 <!--
 ## Evaluación

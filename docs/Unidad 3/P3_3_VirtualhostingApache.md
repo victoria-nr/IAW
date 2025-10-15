@@ -83,7 +83,7 @@ En el fichero de configuración general `/etc/apache2/apache2.conf` nos encontra
 !!!Question "Tarea 1"
 	Queremos construir en nuestro servidor web apache dos sitios web con las siguientes características:
 
-    * El nombre de dominio del primero será `www.iescaminas.org`, su directorio base será `/var/www/iescaminas` y contendrá una página llamada `index.html`, donde sólo se verá una bienvenida a la página del Instituto El Caminàs.
+    * El nombre de dominio del primero será `www.iescaminas_local.org`, su directorio base será `/var/www/iescaminas` y contendrá una página llamada `index.html`, donde sólo se verá una bienvenida a la página del Instituto El Caminàs.
     * En el segundo sitio vamos a crear una página donde se pondrán noticias por parte de los departamentos, el nombre de este sitio será `www.departamentosiescaminas.org`, y su directorio base será `/var/www/departamentos`. En este sitio sólo tendremos una página inicial `index.html`, dando la bienvenida a la página de los departamentos del instituto.
 
 Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:
@@ -94,7 +94,7 @@ Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:
 	cp 000-default.conf iescaminas.conf
 	cp 000-default.conf departamentos.conf
 ```
-	De esta manera tendremos un fichero llamado `iescaminas.conf` para realizar la configuración del sitio web `www.iescaminas.org`, y otro llamado `departamentos.conf` para el sitio web `www.departamentosiescaminas.org`.
+	De esta manera tendremos un fichero llamado `iescaminas.conf` para realizar la configuración del sitio web `www.iescaminas_local.org`, y otro llamado `departamentos.conf` para el sitio web `www.departamentosiescaminas.org`.
 
 2. Modificamos los ficheros `iescaminas.conf` y `departamentos.conf`, para indicar el nombre que vamos a usar para acceder al host virtual (`ServerName`) y el directorio de trabajo (`DocumentRoot`). Además vamos cambiar los nombres de los ficheros log de acceso y de error.
    
@@ -109,7 +109,7 @@ Para conseguir estos dos sitios virtuales debes seguir los siguientes pasos:
 
 5. Para terminar lo único que tendremos que hacer es cambiar el fichero hosts (**resolución estática**) en el cliente y poner dos nuevas líneas donde se haga la conversión entre los dos nombre de dominio y la dirección IP del servidor.
 
-6. Comprueba que puedes acceder desde el cliente a los dos sitios web utilizando sus nombres de dominio `www.iescaminas.org` y `www.departamentosiescaminas.org`.
+6. Comprueba que puedes acceder desde el cliente a los dos sitios web utilizando sus nombres de dominio `www.iescaminas_local.org` y `www.departamentosiescaminas.org`.
 
 <!--
 
