@@ -345,6 +345,8 @@ Ahora ya podrás instalar cualquier aplicación o servicio que requiera dicha pl
 
 Recuerda al finalizar la práctica parar el laboratorio AWS Academy para no seguir consumiendo recursos innecesariamente.
 
+Consulta el siguiente [recurso](https://josejuansanchez.org/iaw/practica-01-01-teoria/index.html) para más detalle sobre la pila LAMP y comando útiles sobre cada uno de sus componentes.
+
 ## Referencias
 
 * [Instalación de servidor web LAMP en Debian 11](https://voidnull.es/instalacion-de-servidor-web-lamp-en-debian-11/)

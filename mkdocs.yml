@@ -71,6 +71,9 @@ nav:
   - ... | Unidad 4/*.md
   - ... | Unidad 5/*.md 
 
+#Crear un servidor de desarrollo local
+#docker run --rm -it -p 8000:8000 -u $(id -u):$(id -g) -v "$PWD":/docs mimkdocs
+
 #Comandos para generar site
 # docker run --rm -it -u $(id -u):$(id -g) -v "$PWD":/docs mimkdocs  build
 #Comando para publicarlo en Github pages
