@@ -6,11 +6,11 @@ title: '3 Principales acciones con Docker'
 
 En este apartado vamos a empezar a realizar acciones con Docker. Para ello seguiremos este documento.
 
-[Principales acciones con Docker](CursoIntroDocker_sergab1_2024/UD 03.01 - Principales acciones con Docker.pdf)
+[Principales acciones con Docker](CursoDockerKubernetes_2025/UD03.01-Principales_acciones_con_Docker.pdf)
 
 Para ir recordando los distintos comandos que vayamos usando imprime y ve marcando los comandos que uses en este CheatSheet:
 
-[Cheatsheet](CursoIntroDocker_sergab1_2024/UD 03.02 - Docker CheatSheet - Version UD03.pdf)
+[Cheatsheet](CursoDockerKubernetes_2025/UD03.02-Docker_CheatSheet_Version_UD03.pdf)
 
 ## Docker exec
 
@@ -63,7 +63,7 @@ En el apartado 10. COPIANDO FICHEROS ENTRE ANFITRIÓN Y CONTENEDORES CON “ DOC
 
 ## Docker attach
 
-Para probar los comandos del apartado 11. A CCEDIENDO A UN PROCESO EN EJECUCIÓN CON “ DOCKER ATTACH ” sal del contenedor `ubuntu_pruebas` en `terminal1`. Ahora no deberías estar dentro de ningún contenedor en ninguno de los 2 terminales que tienes abiertos.
+Para probar los comandos del apartado 11. ACCEDIENDO A UN PROCESO EN EJECUCIÓN CON “ DOCKER ATTACH ” sal del contenedor `ubuntu_pruebas` en `terminal1`. Ahora no deberías estar dentro de ningún contenedor en ninguno de los 2 terminales que tienes abiertos.
 
 En `terminal1` lanzaremos el comando que nos propone el manual:
 
@@ -77,20 +77,20 @@ Vemos cómo hemos anlazado la salida del contenedor `muchotexto` a la salida est
 
 ## Docker logs
 
-Para probar este comando mantén el contenedor `muchotexto funcionando`. En `terminal2` ejecuta:
+Para probar este comando mantén el contenedor `muchotexto` funcionando. En `terminal2` ejecuta:
 
     docker logs -f --until=2s muchotexto
 
 ## Docker run: redirección de puertos
 
-Cuando pruebes los comandos del apartado 14.4 EJEMPLO 3: LANZANDO UN SERVIDOR WEB EN BACKGROUND Y ASOCIANDO SUS PUERTOS, fíjate en que nuestra máquina está en AWS, por tanto, tendremos que añadir una regla de entrada para abrir el puerto 1200. Podemos probar que el servidor nginx del contenedor funciona desde el navegador de nuestro ordenador introduciendo en la barra de navegación http://IPservidor:1200 en lugar de http://localhost:1200. Deberíamos ver el mensaje de bienvenida de Nginx.
+Cuando pruebes los comandos del apartado 14.5 EJEMPLO 5: LANZANDO UN SERVIDOR WEB EN BACKGROUND Y ASOCIANDO SUS PUERTOS, fíjate en que si la máquina sobre la que hacemos las pruebas está en AWS, tendremos que añadir una regla de entrada para abrir el puerto 1200. Podemos probar que el servidor nginx del contenedor funciona desde el navegador de nuestro ordenador introduciendo en la barra de navegación http://IPservidor:1200 en lugar de http://localhost:1200. Deberíamos ver el mensaje de bienvenida de Nginx.
 
 
 Una vez finalices la parte teórica prueba a realizar estas prácticas para afianzar conocimientos:
 
-[Caso práctico 01- Práctica de comandos en contenedor Docker](CursoIntroDocker_sergab1_2024/UD 03.03 - Caso practico 01 - Practica de comandos en contendor Docker.pdf)
+[Caso práctico 01- Práctica de comandos en contenedor Docker](CursoDockerKubernetes_2025/UD03.03-Caso_practico_01_-_Practica_de_comandos_en_contendor_Docker.pdf)
 
 
-[Caso práctico 02- Instalando LAMP + Wordpress en un contenedor](CursoIntroDocker_sergab1_2024/UD 03.04 - Caso practico 02 - Instalando LAMP + Wordpress en contenedor.pdf)
+[Caso práctico 02- Instalando LAMP + Wordpress en un contenedor](CursoDockerKubernetes_2025/UD03.04-Caso practico_02_-_Instalando_LAMP_y_Wordpress_en_contenedor.pdf)
 
 En esta práctica, cuando hagas el "Apartado 3.1 Actualizando repositorio e instalando LAMP + Wordpress", al igual que has hecho anteriormente, tendrás que añadir una regla de entrada en tu instancia EC2 para abrir el puerto 8080. Podemos probar que el servidor Apache del contenedor funciona desde el navegador de nuestro ordenador introduciendo en la barra de navegación http://IPservidor:8080 en lugar de http://localhost:8080. Deberíamos ver el mensaje de bienvenida de Apache.

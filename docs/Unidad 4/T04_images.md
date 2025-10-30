@@ -10,21 +10,21 @@ Por ejemplo, si estamos creando un proyecto con PHP, incorporará el intérprete
 
 En este apartado vamos a ver el manejo de imágenes con Docker. Para ello seguiremos este documento.
 
-[Imágenes Docker](CursoIntroDocker_sergab1_2024/UD 04.01 - Gestión de imagenes en Docker.pdf)
+[Imágenes Docker](CursoDockerKubernetes_2025/UD04.01-Gestion_de_imagenes_en_Docker.pdf)
 
 Para ir recordando los distintos comandos que vayamos usando imprime y ve marcando los comandos que uses en este CheatSheet:
 
-[Cheatsheet](CursoIntroDocker_sergab1_2024/UD 04.02 - Docker CheatSheet - Version UD04.pdf)
+[Cheatsheet](CursoDockerKubernetes_2025/UD04.02-Docker_CheatSheet_Version_UD04.pdf)
 
 Una vez finalices la parte teórica prueba a realizar estas dos prácticas para afianzar conocimientos:
 
 ## Caso práctico 01 - Creando una imagen Ubuntu con nano
 
-[Caso práctico 01 - Creando una imagen Ubuntu con nano](CursoIntroDocker_sergab1_2024/UD 04.03 - Caso practico 01 - Creando imagen Ubuntu con nano.pdf)
+[Caso práctico 01 - Creando una imagen Ubuntu con nano](CursoDockerKubernetes_2025/UD04.03-Caso_practico_01-Creando_imagen_Ubuntu_con_nano.pdf)
 
 ## Caso práctico 02 - Apache 2 con PHP desde Alpine
 
-[Caso práctico 02 - Apache 2 con PHP desde Alpine](CursoIntroDocker_sergab1_2024/UD 04.05 - Caso practico 03 - Apache2 con PHP desde Alpine.pdf)
+[Caso práctico 02 - Apache 2 con PHP desde Alpine](CursoDockerKubernetes_2025/UD04.05-Caso_practico_03-Apache2_con_PHP_desde_Alpine.pdf)
 
 
 En esta práctica, en el punto 2 veréis que el Dockerfile contiene la línea "ADD ./start.sh /start.sh". Tenéis que crear en el mismo directorio donde está el Dockerfile un archivo `start.sh` con este contenido:

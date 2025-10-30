@@ -69,7 +69,7 @@ nav:
   - ... | Unidad 2/*.md
   - ... | Unidad 3/*.md
   - ... | Unidad 4/*.md
-  - ... | Unidad 5/*.md 
+  #- ... | Unidad 5/*.md 
 
 #Crear un servidor de desarrollo local
 #docker run --rm -it -p 8000:8000 -u $(id -u):$(id -g) -v "$PWD":/docs mimkdocs

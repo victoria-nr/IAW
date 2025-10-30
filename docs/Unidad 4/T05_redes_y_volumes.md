@@ -149,16 +149,16 @@ $ docker volume rm wordpress-db
 
 Para profundizar más en el manejo de redes y volúmenes en Docker seguiremos el siguiente documento:
 
-[Redes y volúmenes](CursoIntroDocker_sergab1_2024/UD 05.01 - Redes y volúmenes en Docker.pdf)
+[Redes y volúmenes](CursoDockerKubernetes_2025/UD05.01-Redes_y_volumenes_en_Docker.pdf)
 
 Para ir recordando los distintos comandos que vayamos usando imprime y ve marcando los comandos que uses en este CheatSheet:
 
-[Cheatsheet](CursoIntroDocker_sergab1_2024/UD 05.02 - Docker CheatSheet - Version UD05.pdf)
+[Cheatsheet](CursoDockerKubernetes_2025/UD05.02-Docker_CheatSheet_Version_UD05.pdf)
 
 Una vez finalices la parte teórica prueba a realizar estas dos prácticas para afianzar conocimientos:
 
-[Caso práctico 01 - Wordpress + MariaDB](CursoIntroDocker_sergab1_2024/UD 05.03 - Caso practico 01 - Wordpress + MariaDB.pdf)
+[Caso práctico 01 - Wordpress + MariaDB](CursoDockerKubernetes_2025/UD05.03-Caso_practico_01-Wordpress_y_MariaDB.pdf)
 
-[Caso práctico 02 - Balanceo de carga con HAProxy](CursoIntroDocker_sergab1_2024/UD 05.04 - Caso practico 02 - Balanceo de carga con HAProxy.pdf)
+[Caso práctico 02 - Balanceo de carga con HAProxy](CursoDockerKubernetes_2025/UD05.04-Caso_practico_02-Balanceo_de_carga_con_HAProxy.pdf)
 
-Para esta práctica necesitarás los siguientes [archivos](CursoIntroDocker_sergab1_2024/UD05-CasoPractico02-HAProxy.zip).
+Para esta práctica necesitarás los siguientes [archivos](CursoDockerKubernetes_2025/UD05-CasoPractico02-HAProxy.zip). Cuando te los descargues, asegúrate de que los ficheros `index.html` tienen los permisos adecuados (644) para que los pueda servir apache en todas las carpetas en las que existen.

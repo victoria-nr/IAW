@@ -10,7 +10,7 @@ En esta unidad, realizaremos una introducción al concepto de contenedores. Nos 
 
 Para ello vamos a utilizar los contenidos de este fantástico curso:
 
-[Introducción a los contenedores y a Docker](CursoIntroDocker_sergab1_2024/UD 01.01 - Introducción a los contenedores y a Docker.pdf)
+[Introducción a los contenedores y a Docker](CursoDockerKubernetes_2025/UD01.01-Introduccion_a_los_contenedores_y_a_Docker.pdf)
 
 Para nuestro curso estudiaremos con atención los apartados:
 
@@ -24,7 +24,9 @@ Para nuestro curso estudiaremos con atención los apartados:
 
     2.3. ¿Qué es una máquina virtual de proceso?
 
-    2.4. ¿Qué es un hipervisor?
+    2.4. ¿Qué es un emulador?
+
+    2.5. ¿Qué es un hipervisor?
 
 3 . Contenedores
 
@@ -68,11 +70,11 @@ Los siguientes capítulos resultan interesantes aunque no los veremos ni evaluar
 
     5.4. Docker corriendo contenedores Windows Server Core y contenedores MacOS
 
-8 . Conclusión
+6 . Conclusión
 
-9 . Bibliografía
+7 . Bibliografía
 
-10 . Licencias de elementos externos utilizados
+8 . Licencias de elementos externos utilizados
 
 
 

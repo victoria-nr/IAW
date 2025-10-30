@@ -6,8 +6,10 @@ title: '2 Instalación'
 
 En el curso que estamos utilizando tenemos un capítulo completo dedicado a la instalación de Docker tanto en Linux, Windows y MacOSX. Puedes consultarlo aquí:
 
-[Instalación de Docker](CursoIntroDocker_sergab1_2024/UD 02.01 - Instalación de Docker.pdf)
 
+[Instalación de Docker](CursoDockerKubernetes_2025/UD02.01-Instalacion_de_Docker.pdf)
+
+                      
 Vamos a aprender a usar Docker sobre una distribución Linux Debian como hemos hecho hasta ahora. Si cuentas con un sistema operativo Linux basado en Debian puedes seguir el curso directamente sobre tu S.O. Sino, te aconsejo crear una máquina virtual en AWS con un Debian con opciones por defecto y seguir allí el curso. Recuerda, lo primero actualizar paquetes para contar con las últimas versiones disponibles:
 
     sudo apt-get update && sudo apt-get upgrade
@@ -99,15 +101,8 @@ Si estamos usando _Docker_ en nuestro ordenador personal, podemos configurar nue
 
 Para que los nuevos permisos surtan efecto, debes cerrar y volver a abrir la sesión. Para problemas relacionados con los permisos visitad [la página del manual oficial](https://docs.docker.com/install/linux/linux-postinstall/#manage-docker-as-a-non-root-user).
 
-### Instalar Docker Compose
+### Sobre Docker Compose
 
-También es necesario traer una herramienta llamada `Docker Compose`. Puedes instalarla con las instrucciones que hay en la página de [Instalación de Docker Compose](https://docs.docker.com/compose/install/).
+`Docker Compose` es una herramienta muy útil que veremos en el siguiente tema y que nos permitirá automatizar despliegues de aplicaciones que necesitan varios contenedores o servicios.
 
-Sin embargo, si usas _Ubuntu_ o _Debian_ puedes instalarlo de forma más fácil con _apt_:
-
-!!! example
-    Instalación de _Docker Compose_:
-
-        sudo apt install docker-compose
-
-Llegados a este punto deberíamos tener todas las herramientas necesarias para seguir este curso.
+En versiones recientes de Docker ya se incluye en la propia instalación de Docker.
