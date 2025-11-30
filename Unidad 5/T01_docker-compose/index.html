@@ -11,8 +11,10 @@
         <link rel="canonical" href="https://victoria-nr.github.io/IAW/Unidad%205/T01_docker-compose/">
       
       
-        <link rel="prev" href="../P5_1_docker-compose-practicas/">
+        <link rel="prev" href="../../Unidad%204/T05_redes_y_volumes/">
       
+      
+        <link rel="next" href="../P5_1_docker-compose-practicas/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -1180,6 +1182,145 @@
   
 
     
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Unidad 5
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Unidad 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5.1. Docker Compose
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_5_2" id="__nav_5_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Prácticas
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5_2">
+            <span class="md-nav__icon md-icon"></span>
+            Prácticas
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../P5_1_docker-compose-practicas/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Prácticas con Docker Compose
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -1213,7 +1354,7 @@
 <p>No obstante, te recomiendo que actualices  <code>Docker</code> a su última versión para tener todo integrado.</p>
 <h1 id="usos-de-docker-compose">Usos de Docker Compose</h1>
 <p><em>Compose</em> es una herramienta para definir y ejecutar aplicaciones multi-contenedor. Con un solo comando podremos crear e iniciar todos los servicios que necesitamos para nuestra aplicación.</p>
-<p>Los casos de uso más habituales para docker-compose son:</p>
+<p>Los casos de uso más habituales para docker compose son:</p>
 <ul>
 <li>Entornos de desarrollo</li>
 <li>Entornos de testeo automáticos (integración contínua)</li>
@@ -1228,9 +1369,9 @@
 </ul>
 <h1 id="como-funciona-docker-compose">Cómo funciona Docker Compose</h1>
 <p>Para iniciarse en el funcionamiento de <code>Docker Compose</code> seguiremos el siguiente tutorial:</p>
-<p><a href="../../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.01%20-%20Docker%20Compose.pdf">Docker Compose</a></p>
+<p><a href="../../Unidad%204/CursoDockerKubernetes_2025/UD06.01-Docker_Compose.pdf">Docker Compose</a></p>
 <p>En este cheatsheet tienes los principales comandos de Docker Compose:</p>
-<p><a href="../../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.02%20-%20Docker%20CheatSheet%20-%20Version%20UD06.pdf">Cheatsheet</a></p>
+<p><a href="../../Unidad%204/CursoDockerKubernetes_2025/UD06.02-Docker_CheatSheet-Version_UD06.pdf">Cheatsheet</a></p>
 <p>No obstante, vamos a resumir los contenidos más destacables del tutorial de una manera organizada.</p>
 <h2 id="creacion-de-contenedores-automatizada">Creación de contenedores automatizada</h2>
 <p>La forma de automatizar la creación de todos los servicios que necesita nuestra aplicación es mediante un fichero llamado <code>docker-compose.yaml</code> . A continuación se muestra un ejemplo:</p>
@@ -1293,7 +1434,7 @@
 <a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="go">d9204884cec5  mariadb:10.3.9   &quot;docker.s…&quot;  11 seconds ago  Up 10 seconds  3306/tcp               wordpress_db_1</span>
 </code></pre></div>
 También podemos ver los contenedores con <em>Compose</em>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>docker-compose<span class="w"> </span>ps
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="gp">$ </span>docker<span class="w"> </span>compose<span class="w"> </span>ps
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="go">    Name                    Command               State          Ports        </span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="go">-------------------------------------------------------------------------------</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="go">wordpress_db_1    docker-entrypoint.sh mysqld      Up      3306/tcp            </span>
