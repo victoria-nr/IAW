@@ -32,7 +32,7 @@ No obstante, te recomiendo que actualices  `Docker` a su última versión para t
 
 _Compose_ es una herramienta para definir y ejecutar aplicaciones multi-contenedor. Con un solo comando podremos crear e iniciar todos los servicios que necesitamos para nuestra aplicación.
 
-Los casos de uso más habituales para docker-compose son:
+Los casos de uso más habituales para docker compose son:
 
 * Entornos de desarrollo
 * Entornos de testeo automáticos (integración contínua)
@@ -49,11 +49,11 @@ _Compose_ tiene comandos para manejar todo el ciclo de vida de nuestra aplicaci�
 
 Para iniciarse en el funcionamiento de `Docker Compose` seguiremos el siguiente tutorial:
 
-[Docker Compose](../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.01%20-%20Docker%20Compose.pdf)
+[Docker Compose](../Unidad%204/CursoDockerKubernetes_2025/UD06.01-Docker_Compose.pdf)
 
 En este cheatsheet tienes los principales comandos de Docker Compose:
 
-[Cheatsheet](../Unidad%204/CursoIntroDocker_sergab1_2024/UD%2006.02%20-%20Docker%20CheatSheet%20-%20Version%20UD06.pdf)
+[Cheatsheet](../Unidad%204/CursoDockerKubernetes_2025/UD06.02-Docker_CheatSheet-Version_UD06.pdf)
 
 No obstante, vamos a resumir los contenidos más destacables del tutorial de una manera organizada.
 
@@ -134,7 +134,7 @@ d9204884cec5  mariadb:10.3.9   "docker.s…"  11 seconds ago  Up 10 seconds  330
 También podemos ver los contenedores con _Compose_:
 
 ```console
-$ docker-compose ps
+$ docker compose ps
     Name                    Command               State          Ports        
 -------------------------------------------------------------------------------
 wordpress_db_1    docker-entrypoint.sh mysqld      Up      3306/tcp            
